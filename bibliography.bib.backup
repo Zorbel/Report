@@ -4,10 +4,10 @@
       howpublished = "\\\url{http://googlecode.blogspot.com.es/2009/05/hello-world-meet-google-wave.html}"
 }
 
-@misc{ref:wave_over_xmpp,
-    author = "Google, Inc.",
-    title = "{Google Wave Federation Protocol Over XMPP}",
-    howpublished = "\\\url{http://wave-protocol.googlecode.com/hg/spec/federation/wavespec.html}"
+@misc{ref:wave_federated_protocol,
+      author = "Google, Inc.",
+      title = "{Wave Federated Protocol}",
+      howpublished = "\\\url{https://wave-protocol.googlecode.com/hg/spec/federation/wavespec.html}"
 }
 
 @misc{ref:wave_federation,
@@ -89,6 +89,12 @@
   note = "\\RFC 6120 Available at \url{http://tools.ietf.org/html/rfc6120}"
 }
 
+@misc{ref:wave_over_xmpp,
+    author = "Google, Inc.",
+    title = "{Google Wave Federation Protocol Over XMPP}",
+    howpublished = "\\\url{http://wave-protocol.googlecode.com/hg/spec/federation/wavespec.html}"
+}
+
 @misc{ref:wave_in_a_box,
     author = "Apache",
     title = "{Wave In A Box}",
@@ -125,23 +131,8 @@
     howpublished = "\\\url{http://www.gwtproject.org/}"
 }
 
-@misc{ref:p2pvalue,
-    author = "P2PValue",
-    title = "{P2P Value European Project}",
-    howpublished = "\\\url{http://www.p2pvalue.eu/}"
-}
 
-@misc{ref:swellRT_github,
-    author = "P2PValue",
-    title = "{SwellRT, a real-time federated collaboration framework}",
-    howpublished = "\\\url{https://github.com/P2Pvalue/swellrt}"
-}
 
-@misc{ref:android_platform,
-    author = "Google, Inc.",
-    title = "{Android Developers Site}",
-    howpublished = "\\\url{http://developer.android.com/index.html}"
-}
 
 
 @article{ref:federating_websites_google_wave,

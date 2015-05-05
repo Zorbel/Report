@@ -1,3 +1,127 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
+
+\bibitem{ref:wave_announcement}
+Inc. Google.
+\newblock {Meet Google Wave}.
+\newblock
+  \\\url{http://googlecode.blogspot.com.es/2009/05/hello-world-meet-google-wave.html}.
+
+\bibitem{ref:wave_over_xmpp}
+Inc. Google.
+\newblock {Google Wave Federation Protocol Over XMPP}.
+\newblock
+  \\\url{http://wave-protocol.googlecode.com/hg/spec/federation/wavespec.html}.
+
+\bibitem{ref:google_wave_end}
+Inc. Google.
+\newblock {End of Google Wave}.
+\newblock \\\url{https://support.google.com/answer/1083134?hl=en}.
+
+\bibitem{ref:google_docs}
+{Google Docs}.
+\newblock \\\url{https://drive.google.com/}.
+
+\bibitem{ref:google_plus}
+{Google+}.
+\newblock \\\url{https://plus.google.com/}.
+
+\bibitem{ref:apache_wave_about}
+Apache.
+\newblock {Apache Wave (Incubating)}.
+\newblock \\\url{http://incubator.apache.org/wave/about.html}.
+
+\bibitem{ref:apache_license}
+Apache.
+\newblock {Apache License 2.0}.
+\newblock \\\url{http://www.apache.org/licenses/LICENSE-2.0}.
+
+\bibitem{ref:wave_federation}
+Inc. Google.
+\newblock {Wave Federation}.
+\newblock \\\url{http://www.waveprotocol.org/federation}.
+
+\bibitem{ref:wave_white_paper}
+Google.
+\newblock {Google Wave Federation Architecture White Paper}.
+\newblock
+  \\\url{http://wave-protocol.googlecode.com/hg/whitepapers/google-wave-architecture/google-wave-architecture.html}.
+
+\bibitem{ref:xmpp}
+Peter Saint-Andre.
+\newblock Extensible messaging and presence protocol (xmpp): Core.
+\newblock 2011.
+\newblock \\RFC 6120 Available at \url{http://tools.ietf.org/html/rfc6120}.
+
+\bibitem{ref:how_ot_works}
+{Understanding Operational Transformation}.
+\newblock
+  \\\url{http://www.codecommit.com/blog/java/understanding-and-applying-operational-transformation}.
+
+\bibitem{ref:wave_ot}
+Inc. Google.
+\newblock {Google Wave Operational Transformation}.
+\newblock
+  \\\url{http://www.waveprotocol.org/whitepapers/operational-transform}.
+
+\bibitem{ref:wave_conversation_model}
+Inc. Google.
+\newblock {Google Wave Conversation Model}.
+\newblock
+  \\\url{https://wave-protocol.googlecode.com/hg/spec/conversation/convspec.html}.
+
+\bibitem{ref:wave_api_overview}
+Inc. Google.
+\newblock {Google Wave API Overview}.
+\newblock \\\url{http://www.waveprotocol.org/wave-apis}.
+
+\bibitem{ref:wave_extensions}
+Inc. Google.
+\newblock {Google Wave Extensions}.
+\newblock \\\url{http://www.waveprotocol.org/wave-apis/extensions}.
+
+\bibitem{ref:wave_in_a_box}
+Apache.
+\newblock {Wave In A Box}.
+\newblock \\\url{http://www.waveprotocol.org/wave-in-a-box/}.
+
+\bibitem{ref:openjdk}
+Oracle.
+\newblock {OpenJDK}.
+\newblock \\\url{http://openjdk.java.net/}.
+
+\bibitem{ref:gwt}
+Inc. Google.
+\newblock {Google Web Toolkit}.
+\newblock \\\url{http://www.gwtproject.org/}.
+
+\bibitem{ref:wave_in_a_box_wiki}
+Apache.
+\newblock {Install WIAB}.
+\newblock
+  \\\url{https://cwiki.apache.org/confluence/display/WAVE/Install+WIAB}.
+
+\bibitem{ref:wave_in_a_box_github}
+Apache.
+\newblock {WIAB Repository}.
+\newblock \\\url{https://github.com/apache/incubator-wave}.
+
+\bibitem{ref:wave_in_a_box_server}
+{WIAB Server Example}.
+\newblock \\\url{http://waveinabox.net/}.
+
+\bibitem{ref:p2pvalue}
+P2PValue.
+\newblock {P2P Value European Project}.
+\newblock \\\url{http://www.p2pvalue.eu/}.
+
+\bibitem{ref:swellRT_github}
+P2PValue.
+\newblock {SwellRT, a real-time federated collaboration framework}.
+\newblock \\\url{https://github.com/P2Pvalue/swellrt}.
+
+\bibitem{ref:android_platform}
+Inc. Google.
+\newblock {Android Developers Site}.
+\newblock \\\url{http://developer.android.com/index.html}.
 
 \end{thebibliography}
