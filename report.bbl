@@ -190,4 +190,96 @@ Google Inc.
 \newblock {ProGuard}.
 \newblock \\\url{http://developer.android.com/tools/help/proguard.html}.
 
+\bibitem{ref:ant}
+Apache Foundation.
+\newblock {Apache Ant}.
+\newblock \\\url{http://ant.apache.org/}.
+
+\bibitem{ref:android_cmd_line}
+Google Inc.
+\newblock {Building and Running from the Command Line}.
+\newblock
+  \\\url{https://developer.android.com/tools/building/building-cmdline-ant.html}.
+
+\bibitem{ref:android_device_setUp}
+Google Inc.
+\newblock {Setting up a Device for Development}.
+\newblock \\\url{https://developer.android.com/tools/device.html#setting-up}.
+
+\bibitem{ref:android_adb}
+Google Inc.
+\newblock {Android Debug Bridge}.
+\newblock \\\url{http://developer.android.com/tools/help/adb.html}.
+
+\bibitem{ref:android_activities}
+Google Inc.
+\newblock {Activities}.
+\newblock
+  \\\url{https://developer.android.com/guide/components/activities.html}.
+
+\bibitem{ref:http_authentication}
+Roy Fielding.
+\newblock Hypertext transfer protocol (http/1.1): Authentication.
+\newblock 2014.
+\newblock \\RFC 7235 Available at \url{https://tools.ietf.org/html/rfc7235}.
+
+\bibitem{ref:webSocket_ref}
+Ian Fette and Alexey Melnikov.
+\newblock Hypertext transfer protocol (http/1.1): Authentication.
+\newblock 2011.
+\newblock \\RFC 6455 Available at \url{https://tools.ietf.org/html/rfc6455}.
+
+\bibitem{ref:android_permissions}
+Google Inc.
+\newblock {System Permissions}.
+\newblock
+  \\\url{https://developer.android.com/guide/topics/security/permissions.html}.
+
+\bibitem{ref:android_manifest}
+Google Inc.
+\newblock {App Manifest}.
+\newblock
+  \\\url{https://developer.android.com/guide/topics/manifest/manifest-intro.html}.
+
+\bibitem{ref:android_netAddress}
+Google Inc.
+\newblock {Emulator Networking: Network Address Space}.
+\newblock
+  \\\url{https://developer.android.com/tools/devices/emulator.html#emulatornetworking}.
+
+\bibitem{ref:android_logcat}
+Google Inc.
+\newblock {Android LogCat}.
+\newblock \\\url{https://developer.android.com/tools/help/logcat.html}.
+
+\bibitem{ref:apache_http}
+Google Inc.
+\newblock {Apache HTTP Library}.
+\newblock
+  \\\url{https://developer.android.com/reference/org/apache/http/package-summary.html}.
+
+\bibitem{ref:http_recommmendations}
+Google Inc.
+\newblock {Android’s HTTP Clients}.
+\newblock
+  \\\url{http://android-developers.blogspot.com.es/2011/09/androids-http-clients.html}.
+
+\bibitem{ref:android_httpUrlConnection}
+Google Inc.
+\newblock {HttpURLConnection Library}.
+\newblock
+  \\\url{https://developer.android.com/reference/java/net/HttpURLConnection.html}.
+
+\bibitem{ref:android_processes}
+Google Inc.
+\newblock {Processes and Threads}.
+\newblock
+  \\\url{https://developer.android.com/guide/components/processes-and-threads.html}.
+
+\bibitem{ref:android_networking}
+Google Inc.
+\newblock {Connecting to the Network}.
+\newblock
+  \\\url{https://developer.android.com/training/basics/network-ops/connecting.html}.
+
 \end{thebibliography}
