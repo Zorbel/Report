@@ -9,46 +9,50 @@ A level-1 auxiliary file: results.aux
 A level-1 auxiliary file: futureWork.aux
 The style file: unsrt.bst
 Database file #1: bibliography.bib
+Repeated entry---line 259 of file bibliography.bib
+ : @misc{ref:eclipse
+ :                  ,
+I'm skipping whatever remains of this entry
 Warning--empty journal in ref:xmpp
-You've used 24 entries,
+You've used 37 entries,
             1791 wiz_defined-function locations,
-            531 strings with 6079 characters,
-and the built_in function-call counts, 2934 in all, are:
-= -- 234
-> -- 84
+            574 strings with 7443 characters,
+and the built_in function-call counts, 4559 in all, are:
+= -- 364
+> -- 136
 < -- 0
-+ -- 44
-- -- 20
++ -- 70
+- -- 33
 * -- 5
-:= -- 433
-add.period$ -- 69
-call.type$ -- 24
-change.case$ -- 24
+:= -- 680
+add.period$ -- 108
+call.type$ -- 37
+change.case$ -- 37
 chr.to.int$ -- 0
-cite$ -- 25
-duplicate$ -- 123
-empty$ -- 429
-format.name$ -- 20
-if$ -- 708
+cite$ -- 38
+duplicate$ -- 188
+empty$ -- 663
+format.name$ -- 33
+if$ -- 1098
 int.to.chr$ -- 0
-int.to.str$ -- 24
+int.to.str$ -- 37
 missing$ -- 1
-newline$ -- 120
-num.names$ -- 20
-pop$ -- 123
+newline$ -- 185
+num.names$ -- 33
+pop$ -- 188
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 121
+skip$ -- 186
 stack$ -- 0
 substring$ -- 0
-swap$ -- 23
+swap$ -- 36
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 20
-width$ -- 26
-write$ -- 212
-(There was 1 warning)
+while$ -- 33
+width$ -- 39
+write$ -- 329
+(There was 1 error message)

@@ -124,4 +124,70 @@ Inc. Google.
 \newblock {Android Developers Site}.
 \newblock \\\url{http://developer.android.com/index.html}.
 
+\bibitem{ref:android_sdk}
+Inc. Google.
+\newblock {Android SDK}.
+\newblock \\\url{https://developer.android.com/sdk/index.html}.
+
+\bibitem{ref:eclipse}
+Eclipse Foundation.
+\newblock {Eclipse IDE}.
+\newblock \\\url{https://eclipse.org/ide/}.
+
+\bibitem{ref:android_studio}
+Inc. Google.
+\newblock {Android Studio IDE}.
+\newblock \\\url{https://developer.android.com/tools/studio/index.html}.
+
+\bibitem{ref:intelliJ_Idea}
+JetBrains.
+\newblock {IntelliJ IDEA IDE}.
+\newblock \\\url{https://www.jetbrains.com/idea/}.
+
+\bibitem{ref:eclipse_adt}
+Google Inc.
+\newblock {Eclipse Android Development Tools (ADT)}.
+\newblock \\\url{https://developer.android.com/tools/help/adt.html}.
+
+\bibitem{ref:android_api_reference}
+Google Inc.
+\newblock {Android API Reference}.
+\newblock \\\url{http://developer.android.com/reference/packages.html}.
+
+\bibitem{ref:android_vdm}
+Google Inc.
+\newblock {Android Virtual Device Manager}.
+\newblock
+  \\\url{http://developer.android.com/tools/devices/managing-avds.html}.
+
+\bibitem{ref:android_emulator}
+Google Inc.
+\newblock {Using the Android Emulator}.
+\newblock \\\url{http://developer.android.com/tools/devices/emulator.html}.
+
+\bibitem{ref:android_sdk_manager}
+Google Inc.
+\newblock {Android SDK Manager}.
+\newblock \\\url{https://developer.android.com/tools/help/sdk-manager.html}.
+
+\bibitem{ref:android_ddms}
+Google Inc.
+\newblock {Android Dalvik Debug Monitor Server}.
+\newblock \\\url{http://developer.android.com/tools/debugging/ddms.html}.
+
+\bibitem{ref:android_dist}
+Google Inc.
+\newblock {Android Versions Distribution}.
+\newblock \\\url{https://developer.android.com/about/dashboards/index.html}.
+
+\bibitem{ref:android_limit65k}
+Google Inc.
+\newblock {Building Apps with Over 65K Methods}.
+\newblock \\\url{https://developer.android.com/tools/building/multidex.html}.
+
+\bibitem{ref:android_proguard}
+Google Inc.
+\newblock {ProGuard}.
+\newblock \\\url{http://developer.android.com/tools/help/proguard.html}.
+
 \end{thebibliography}
