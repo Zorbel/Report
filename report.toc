@@ -37,27 +37,34 @@
 \contentsline {chapter}{\numberline {3}Creaci\IeC {\'o}n de aplicaci\IeC {\'o}n Android (AppName)}{21}{chapter.3}
 \contentsline {section}{\numberline {3.1}Introducci\IeC {\'o}n}{21}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Adentr\IeC {\'a}ndonos en la idea}{23}{subsection.3.1.1}
-\contentsline {section}{\numberline {3.2}1\IeC {\textordfeminine } Parte: Programas Pol\IeC {\'\i }ticos}{23}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Estado del Arte}{23}{subsection.3.2.1}
-\contentsline {subsubsection}{UPyD Parla}{24}{section*.12}
+\contentsline {subsection}{\numberline {3.1.2}Pol\IeC {\'\i }tica en el mundo de la Inform\IeC {\'a}tica}{24}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Democracia}{24}{subsection.3.1.3}
+\contentsline {subsubsection}{Democracia representativa}{24}{section*.12}
+\contentsline {subsubsection}{Democracia participativa}{24}{section*.12}
+\contentsline {subsubsection}{Democracia directa}{24}{section*.12}
+\contentsline {subsubsection}{Democracia deliberativa}{24}{section*.12}
+\contentsline {section}{\numberline {3.2}1\IeC {\textordfeminine } Parte: Programas Pol\IeC {\'\i }ticos}{24}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Estado del Arte}{24}{subsection.3.2.1}
+\contentsline {subsubsection}{UPyD Parla}{24}{section*.13}
 \contentsline {subsubsection}{$\sharp $RecuperaC\IeC {\'o}rdoba}{25}{figure.3.2}
-\contentsline {subsubsection}{PP Canarias}{25}{figure.3.3}
-\contentsline {subsection}{\numberline {3.2.2}Intenci\IeC {\'o}n}{26}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}Objetivos}{27}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Usabilidad}{29}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}Revisi\IeC {\'o}n de la aplicaci\IeC {\'o}n}{29}{subsection.3.2.5}
-\contentsline {section}{\numberline {3.3}2\IeC {\textordfeminine } Parte: Propuestas y Comparativas}{30}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Estado del Arte}{30}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Intencion}{30}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Objetivos}{30}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Usabilidad}{30}{subsection.3.3.4}
-\contentsline {section}{\numberline {3.4}Tecnologias y Metodolog\IeC {\'\i }as de la app}{30}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Base de Datos}{30}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Service REST}{30}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Frontend}{30}{subsection.3.4.3}
-\contentsline {chapter}{\numberline {4}Resultados y Conclusiones}{31}{chapter.4}
-\contentsline {section}{\numberline {4.1}Discusion de Resultados}{31}{section.4.1}
-\contentsline {section}{\numberline {4.2}Conclusiones}{31}{section.4.2}
-\contentsline {chapter}{\numberline {5}Trabajo a Futuro}{33}{chapter.5}
-\contentsline {section}{\numberline {5.1}Mejoras}{33}{section.5.1}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliograf\IeC {\'\i }a}{33}{section.5.1}
+\contentsline {subsubsection}{PP Canarias}{26}{figure.3.3}
+\contentsline {subsection}{\numberline {3.2.2}Intenci\IeC {\'o}n}{27}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Objetivos}{28}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Usabilidad}{30}{subsection.3.2.4}
+\contentsline {subsection}{\numberline {3.2.5}Revisi\IeC {\'o}n de la aplicaci\IeC {\'o}n}{30}{subsection.3.2.5}
+\contentsline {section}{\numberline {3.3}2\IeC {\textordfeminine } Parte: Propuestas y Comparativas}{31}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Estado del Arte}{31}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Intenci\IeC {\'o}n}{31}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Objetivos}{31}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Usabilidad}{31}{subsection.3.3.4}
+\contentsline {section}{\numberline {3.4}Tecnologias y Metodolog\IeC {\'\i }as de la app}{31}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Back-end}{31}{subsection.3.4.1}
+\contentsline {subsubsection}{Base de Datos}{31}{section*.14}
+\contentsline {subsubsection}{Service REST}{32}{figure.3.7}
+\contentsline {subsection}{\numberline {3.4.2}Frontend}{32}{subsection.3.4.2}
+\contentsline {chapter}{\numberline {4}Resultados y Conclusiones}{33}{chapter.4}
+\contentsline {section}{\numberline {4.1}Discusion de Resultados}{33}{section.4.1}
+\contentsline {section}{\numberline {4.2}Conclusiones}{33}{section.4.2}
+\contentsline {chapter}{\numberline {5}Trabajo a Futuro}{35}{chapter.5}
+\contentsline {section}{\numberline {5.1}Mejoras}{35}{section.5.1}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliograf\IeC {\'\i }a}{35}{section.5.1}

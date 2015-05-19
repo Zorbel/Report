@@ -33,6 +33,19 @@ Por otra parte, la aplicación también debería ofrecer alguna herramienta dond
 
 Desde un primer punto de vista subjetivo, la aplicación quedó dividida en dos partes. Por un lado tendríamos los programas políticos que presentaran las formaciones políticas. Y por otro, todas las propuestas que elaboraran los ciudadanos individualmente o en colectivos sociales.
 
+\subsection{Política en el mundo de la Informática}
+
+\subsection{Democracia}
+
+	\subsubsection{Democracia representativa}\label{sssec:Democracia_representativa}
+	
+	\subsubsection{Democracia participativa}\label{sssec:Democracia_participativa}
+	
+	\subsubsection{Democracia directa}\label{sssec:Democracia_directa}
+	
+	\subsubsection{Democracia deliberativa}\label{sssec:Democracia_deliberativa}
+	
+
 \section{1ª Parte: Programas Políticos}
 En esta sección se desarrollará en profundidad todo lo relacionado con los partidos políticos.
 
@@ -106,22 +119,32 @@ Sin olvidarnos de la parte social, en cada sección podemos hacer comentarios pa
 	
 	\subsection{Revisión de la aplicación}
 Una vez que habíamos implementado todos los objetivos fundamentales de la aplicación, decidimos hacer una revisión para poner a prueba la aplicación. Para ello nos reunimos con un grupo de \cite{ref:labodemo}, responsables del desarrollo de los portales de participación ciudadana del partido político \cite{ref:podemos} y la candidatura de unidad popular \cite{ref:ahoramadrid}.
-
-
-
   
 \section{2ª Parte: Propuestas y Comparativas}
   \subsection{Estado del Arte}
 
-  \subsection{Intencion}
+  \subsection{Intención}
   \subsection{Objetivos}
   \subsection{Usabilidad}
-
   
   
 \section{Tecnologias y Metodologías de la app}
 
-  \subsection{Base de Datos}
-  \subsection{Service REST}
+	\subsection{Back-end}
+
+  		\subsubsection{Base de Datos}\label{sssec:database}
+Para la implementación de la base de datos, se ha utilizado un modelo relacional para la definición de las tablas. Utilizando \cite{ref:MySQL} como sistema de gestión de base de datos \cite{ref:phpMyAdmin} como herramienta de gestión gráfica de la base de datos.
+
+La base de datos está formada por un total de 12 tablas donde se almacena toda la información relacionada con los programas de los partidos políticos, las propuestas ciudadanas, encuestas, comparativas, …, y otros datos más técnicos como la gestión de los usuarios, la relación de los comentarios o la relación entre las secciones y comparativas entre otras.
+
+	\begin{figure}[H]
+      \centering
+	\includegraphics[keepaspectratio, scale=0.30]{Media/Captures/database.png}
+      \caption{Modelo entidad-relación de la base de datos.}
+      \label{fig:brainstorming}
+    \end{figure}
+  
+  
+		\subsubsection{Service REST}\label{sssec:rest}
 
   \subsection{Frontend}
