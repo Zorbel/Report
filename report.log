@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.6)  19 MAY 2015 22:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.6)  20 MAY 2015 14:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -688,13 +688,13 @@ LaTeX Info: Redefining \nameref on input line 63.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
  (./frontpage.tex
-<Media/ucmlogo.png, id=263, 1583.9175pt x 1814.78pt>
+<Media/ucmlogo.png, id=267, 1583.9175pt x 1814.78pt>
 File: Media/ucmlogo.png Graphic file (type png)
  <use Media/ucmlogo.png>
 Package pdftex.def Info: Media/ucmlogo.png used on input line 23.
 (pdftex.def)             Requested size: 190.06189pt x 217.7642pt.
 
-<Media/cc.png, id=264, 97.0827pt x 33.9669pt>
+<Media/cc.png, id=268, 97.0827pt x 33.9669pt>
 File: Media/cc.png Graphic file (type png)
  <use Media/cc.png>
 Package pdftex.def Info: Media/cc.png used on input line 41.
@@ -1403,7 +1403,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 39.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 39.
- <Media/Captures/waveEntities.png, id=466, 457.71pt x 290.08376pt>
+ <Media/Captures/waveEntities.png, id=472, 457.71pt x 290.08376pt>
 File: Media/Captures/waveEntities.png Graphic file (type png)
 
 <use Media/Captures/waveEntities.png>
@@ -1473,7 +1473,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 65.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 65.
-<Media/Captures/WIAB_Server.png, id=481, 1284.8pt x 803.0pt>
+<Media/Captures/WIAB_Server.png, id=486, 1284.8pt x 803.0pt>
 File: Media/Captures/WIAB_Server.png Graphic file (type png)
 
 <use Media/Captures/WIAB_Server.png>
@@ -1672,7 +1672,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 97.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 97.
-[8] <Media/Captures/androidUsage.png, id=526, 501.875pt x 250.9375pt>
+[8] <Media/Captures/androidUsage.png, id=531, 501.875pt x 250.9375pt>
 File: Media/Captures/androidUsage.png Graphic file (type png)
 
 <use Media/Captures/androidUsage.png>
@@ -1838,7 +1838,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--154
 
  []
 
-<Media/Captures/emulator_api_19.png, id=563, 596.2275pt x 778.91pt>
+<Media/Captures/emulator_api_19.png, id=568, 596.2275pt x 778.91pt>
 File: Media/Captures/emulator_api_19.png Graphic file (type png)
 
 <use Media/Captures/emulator_api_19.png>
@@ -2033,7 +2033,7 @@ File: lstlang1.sty 2013/08/26 1.5b listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 )
-<Media/Captures/logcat_example.png, id=596, 1284.8pt x 803.0pt>
+<Media/Captures/logcat_example.png, id=601, 1284.8pt x 803.0pt>
 File: Media/Captures/logcat_example.png Graphic file (type png)
 
 <use Media/Captures/logcat_example.png>
@@ -2377,7 +2377,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 5.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 5.
-<Media/Captures/brainstorming.jpg, id=682, 2569.6pt x 1927.2pt>
+<Media/Captures/brainstorming.jpg, id=687, 2569.6pt x 1927.2pt>
 File: Media/Captures/brainstorming.jpg Graphic file (type jpg)
 
 <use Media/Captures/brainstorming.jpg>
@@ -2624,7 +2624,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 56.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 56.
-<Media/Captures/UPyDParla.png, id=695, 507.8975pt x 903.375pt>
+<Media/Captures/UPyDParla.png, id=700, 507.8975pt x 903.375pt>
 File: Media/Captures/UPyDParla.png Graphic file (type png)
 
 <use Media/Captures/UPyDParla.png>
@@ -2692,7 +2692,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 66.
 
-<Media/Captures/IURecuperaCordoba.png, id=701, 507.8975pt x 903.375pt>
+<Media/Captures/IURecuperaCordoba.png, id=705, 507.8975pt x 903.375pt>
 File: Media/Captures/IURecuperaCordoba.png Graphic file (type png)
 
 <use Media/Captures/IURecuperaCordoba.png>
@@ -2755,7 +2755,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 76.
 
-<Media/Captures/ppcanarias.png, id=707, 507.8975pt x 903.375pt>
+<Media/Captures/ppcanarias.png, id=711, 507.8975pt x 903.375pt>
 File: Media/Captures/ppcanarias.png Graphic file (type png)
 
 <use Media/Captures/ppcanarias.png>
@@ -2869,7 +2869,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 95.
 
-<Media/Captures/captTopSections.png, id=716, 380.17032pt x 761.84625pt>
+<Media/Captures/captTopSections.png, id=721, 380.17032pt x 761.84625pt>
 File: Media/Captures/captTopSections.png Graphic file (type png)
 
 <use Media/Captures/captTopSections.png>
@@ -2912,7 +2912,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 107.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 107.
-[28] <Media/Captures/section.png, id=722, 376.40625pt x 753.5653pt>
+[28] <Media/Captures/section.png, id=726, 376.40625pt x 753.5653pt>
 File: Media/Captures/section.png Graphic file (type png)
 
 <use Media/Captures/section.png>
@@ -2985,19 +2985,9 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 120.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 120.
-
-
-LaTeX Warning: Citation `ref:labodemo' on page 30 undefined on input line 121.
-
-
-LaTeX Warning: Citation `ref:podemos' on page 30 undefined on input line 121.
-
-
-LaTeX Warning: Citation `ref:ahoramadrid' on page 30 undefined on input line 12
-1.
-
 LaTeX Info: Redefining \. on input line 122.
 LaTeX Info: Redefining \% on input line 122.
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 15.71667pt.
@@ -3136,14 +3126,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 135.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 135.
-
-LaTeX Warning: Citation `ref:MySQL' on page 31 undefined on input line 136.
-
-
-LaTeX Warning: Citation `ref:phpMyAdmin' on page 31 undefined on input line 136
-.
-
-<Media/Captures/database.png, id=733, 1364.09625pt x 768.8725pt>
+<Media/Captures/database.png, id=743, 1364.09625pt x 768.8725pt>
 File: Media/Captures/database.png Graphic file (type png)
 
 <use Media/Captures/database.png>
@@ -3192,29 +3175,29 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 146.
 [31]
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 148.
+(babel)             in language  on input line 152.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 148.
+(babel)             in language  on input line 152.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 148.
+(babel)             in language  on input line 152.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 148.
+(babel)             in language  on input line 152.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 148.
+(babel)             in language  on input line 152.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 148.
+(babel)             in language  on input line 152.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 150.
+(babel)             in language  on input line 154.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 150.
+(babel)             in language  on input line 154.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 150.
+(babel)             in language  on input line 154.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 150.
+(babel)             in language  on input line 154.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 150.
+(babel)             in language  on input line 154.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 150.
+(babel)             in language  on input line 154.
 )
 LaTeX Info: Redefining \. on input line 91.
 LaTeX Info: Redefining \% on input line 91.
@@ -3683,15 +3666,9 @@ LaTeX Info: Redefining \% on input line 23.
 (./waveMigration.aux) (./androidApp.aux) (./results.aux) (./futureWork.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 97.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 97.
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: A8DC8441F10B829C53D1A8154BA8D3E7;4764.
 
-
-Package rerunfilecheck Warning: File `report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `report.out':
-(rerunfilecheck)             Before: 2480A8198C0A9362DAB4EB85241D8ED8;4663
-(rerunfilecheck)             After:  A8DC8441F10B829C53D1A8154BA8D3E7;4764.
 
 LaTeX Warning: There were undefined references.
 
@@ -3701,11 +3678,11 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 97.
  ) 
 Here is how much of TeX's memory you used:
- 9922 strings out of 493304
- 140323 string characters out of 6139872
- 338775 words of memory out of 5000000
- 12958 multiletter control sequences out of 15000+600000
- 10058 words of font info for 36 fonts, out of 8000000 for 9000
+ 9930 strings out of 493304
+ 140448 string characters out of 6139872
+ 338951 words of memory out of 5000000
+ 12960 multiletter control sequences out of 15000+600000
+ 10405 words of font info for 37 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  39i,15n,51p,1490b,2065s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
@@ -3715,12 +3692,13 @@ ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/typ
 e1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmtt12.pfb>
-Output written on report.pdf (53 pages, 4801424 bytes).
+lic/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmtt12.pfb>
+Output written on report.pdf (53 pages, 4813673 bytes).
 PDF statistics:
- 938 PDF objects out of 1000 (max. 8388607)
- 844 compressed objects within 9 object streams
- 227 named destinations out of 1000 (max. 500000)
- 607 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 962 PDF objects out of 1000 (max. 8388607)
+ 867 compressed objects within 9 object streams
+ 232 named destinations out of 1000 (max. 500000)
+ 615 words of extra memory for PDF output out of 10000 (max. 10000000)
 
