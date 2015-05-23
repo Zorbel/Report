@@ -127,6 +127,13 @@ Una vez que habíamos implementado todos los objetivos fundamentales de la aplic
   \subsection{Objetivos}
   \subsection{Usabilidad}
   
+\section{3ª Parte: Encuestas de intención de voto}
+  \subsection{Estado del Arte}
+
+  \subsection{Intención}
+  \subsection{Objetivos}
+  \subsection{Usabilidad}
+  
   
 \section{Tecnologias y Metodologías de la app}
 
@@ -141,7 +148,7 @@ La base de datos está formada por un total de 12 tablas donde se almacena toda 
       \centering
 	\includegraphics[keepaspectratio, scale=0.30]{Media/Captures/database.png}
       \caption{Modelo entidad-relación de la base de datos.}
-      \label{fig:brainstorming}
+      \label{fig:ermodel}
     \end{figure}
     
 Las tablas section y \textit{political-party} son utilizadas para guardar información estática en la aplicación. Es decir, en la tabla \textit{political-party} se almacenan los partidos políticos que se presentan a unas elecciones, y en la tabla \textit{section}, las diferentes secciones de un programa electoral. Tan sólo modificaremos las columnas de \textit{likes}, \textit{dislikes}, \textit{not-understood} y \textit{views} para obtener estadísticas de uso de cada sección. El resto de las columnas permanecerán intactas.
@@ -150,5 +157,20 @@ Las demás tablas serán utilizadas para guardar datos dinámicos en la aplicaci
 
     
 		\subsubsection{Service REST}\label{sssec:rest}
+		
+Para establecer la conexión de la base de datos con la aplicación desarrollada en Android, hemos utilizado Laravel como servicio web. Laravel es un framework de código abierto para desarrollar aplicaciones web con PHP 5.
+
+Laravel nos permite montar un sistema de RESTful para que el cliente móvil pueda hacer peticiones al servicio web. Estas peticiones se realizan mediante el protocolo HTTP, en función de la operación que deseemos hacer, haremos una petición GET, POST, PUT, …, etcétera.
+
+	\begin{figure}[H]
+      \centering
+	\includegraphics[keepaspectratio, scale=0.30]{Media/Captures/laravel5.png}
+      \caption{Pantalla principal de Laravel 5.}
+      \label{fig:laravel5}
+    \end{figure}
+
+Establecer un servicio RESTful nos proporciona una gran flexibilidad. Pues no solo podremos hacer peticiones desde el cliente en Android, si no que más adelante si pretendemos desarrollar una versión web o incluso un cliente para iOS, las peticiones serán las mismas.
+
+Para organizar las diferentes peticiones en función de su uso y requisitos, Laravel permite montar una API REST (Representational State Transfer), un estilo de arquitectura software para sistemas hipermedia distribuidos como la World Wide Web. Este término se originó en una tesis doctoral sobre la web escrita por Roy Fielding \cite{ref:RESTPhd}.
 
   \subsection{Frontend}
