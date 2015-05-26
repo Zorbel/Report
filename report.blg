@@ -13,50 +13,61 @@ Repeated entry---line 375 of file bibliography.bib
  : @misc{ref:eclipse
  :                  ,
 I'm skipping whatever remains of this entry
+You're missing a field name---line 445 of file bibliography.bib
+ :  
+ :  %address = "",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 454 of file bibliography.bib
+ :  
+ :  title   = "{10 Best Practices for Better RESTful API | Thinking Mobile}"
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "ref_android_avd_params"
 Warning--I didn't find a database entry for "ref:android:asynctask"
 Warning--empty journal in ref:xmpp
 Warning--empty journal in ref:http_authentication
 Warning--empty journal in ref:webSocket_ref
-You've used 58 entries,
+Warning--empty year in ref:RESTPhd
+You've used 61 entries,
             1791 wiz_defined-function locations,
-            648 strings with 9794 characters,
-and the built_in function-call counts, 7101 in all, are:
-= -- 569
-> -- 209
+            660 strings with 10152 characters,
+and the built_in function-call counts, 7424 in all, are:
+= -- 596
+> -- 215
 < -- 0
-+ -- 108
-- -- 50
-* -- 13
-:= -- 1044
-add.period$ -- 168
-call.type$ -- 58
-change.case$ -- 58
++ -- 112
+- -- 51
+* -- 19
+:= -- 1086
+add.period$ -- 175
+call.type$ -- 61
+change.case$ -- 60
 chr.to.int$ -- 0
-cite$ -- 61
-duplicate$ -- 299
-empty$ -- 1033
-format.name$ -- 50
-if$ -- 1715
+cite$ -- 65
+duplicate$ -- 316
+empty$ -- 1080
+format.name$ -- 51
+if$ -- 1793
 int.to.chr$ -- 0
-int.to.str$ -- 58
+int.to.str$ -- 61
 missing$ -- 3
-newline$ -- 287
-num.names$ -- 49
-pop$ -- 296
+newline$ -- 300
+num.names$ -- 50
+pop$ -- 311
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 293
+skip$ -- 307
 stack$ -- 0
 substring$ -- 0
-swap$ -- 55
+swap$ -- 58
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 3
-while$ -- 49
-width$ -- 60
-write$ -- 512
-(There was 1 error message)
+warning$ -- 4
+while$ -- 50
+width$ -- 63
+write$ -- 536
+(There were 3 error messages)

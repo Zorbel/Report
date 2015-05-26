@@ -137,19 +137,6 @@ Una vez que habíamos implementado todos los objetivos fundamentales de la aplic
   
 \section{Tecnologias y Metodologías de la app}
 
-  \subsection{Arquitectura de la aplicacción}
-  
-La arquitectura está compuesta por tres módulos principales de los que hablaremos en profundidad en las siguientes subsecciones. Como cliente móvil tendremos la aplicación desarrollada en Android, que realizará peticiones HTTP al servicio web alojado en OpenShift, una plataforma que permite alojar servicios web de forma gratuita. Dentro del servicio contaremos con una API RESTful que será quien gestione las peticiones de la aplicación móvil mediante el protocolo HTTP.
-
-	\begin{figure}[H]
-      \centering
-	\includegraphics[keepaspectratio, scale=0.4]{Media/Captures/architecture.png}
-      \caption{Arquitectura de la aplicacción.}
-      \label{fig:architecture}
-    \end{figure}
-
-Por último, la base de datos MySQL alojada en el servidor de OpenShift \cite{ref:OpenShift}, almacenará toda la información relacionada con la aplicación. La API RESTful será quien gestione las operaciones de la base de datos.
-
 	\subsection{Back-end}
 
   		\subsubsection{Base de Datos}\label{sssec:database}
