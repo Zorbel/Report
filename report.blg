@@ -13,61 +13,50 @@ Repeated entry---line 375 of file bibliography.bib
  : @misc{ref:eclipse
  :                  ,
 I'm skipping whatever remains of this entry
-You're missing a field name---line 445 of file bibliography.bib
- :  
- :  %address = "",
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 454 of file bibliography.bib
- :  
- :  title   = "{10 Best Practices for Better RESTful API | Thinking Mobile}"
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "ref_android_avd_params"
 Warning--I didn't find a database entry for "ref:android:asynctask"
 Warning--empty journal in ref:xmpp
 Warning--empty journal in ref:http_authentication
 Warning--empty journal in ref:webSocket_ref
-Warning--empty year in ref:RESTPhd
-You've used 61 entries,
+You've used 62 entries,
             1791 wiz_defined-function locations,
-            660 strings with 10152 characters,
-and the built_in function-call counts, 7424 in all, are:
-= -- 596
-> -- 215
+            664 strings with 10238 characters,
+and the built_in function-call counts, 7523 in all, are:
+= -- 605
+> -- 216
 < -- 0
-+ -- 112
++ -- 113
 - -- 51
-* -- 19
-:= -- 1086
-add.period$ -- 175
-call.type$ -- 61
-change.case$ -- 60
+* -- 17
+:= -- 1096
+add.period$ -- 177
+call.type$ -- 62
+change.case$ -- 61
 chr.to.int$ -- 0
 cite$ -- 65
-duplicate$ -- 316
-empty$ -- 1080
+duplicate$ -- 321
+empty$ -- 1098
 format.name$ -- 51
-if$ -- 1793
+if$ -- 1821
 int.to.chr$ -- 0
-int.to.str$ -- 61
+int.to.str$ -- 62
 missing$ -- 3
-newline$ -- 300
+newline$ -- 304
 num.names$ -- 50
-pop$ -- 311
+pop$ -- 316
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 307
+skip$ -- 313
 stack$ -- 0
 substring$ -- 0
-swap$ -- 58
+swap$ -- 59
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 4
+warning$ -- 3
 while$ -- 50
-width$ -- 63
-write$ -- 536
-(There were 3 error messages)
+width$ -- 64
+write$ -- 544
+(There was 1 error message)

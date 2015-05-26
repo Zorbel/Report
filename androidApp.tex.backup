@@ -37,13 +37,13 @@ Desde un primer punto de vista subjetivo, la aplicación quedó dividida en dos 
 
 \subsection{Democracia}
 
-	\subsubsection{Democracia representativa}\label{sssec:Democracia_representativa}
+	\subsubsection{Democracia representativa}
 	
-	\subsubsection{Democracia participativa}\label{sssec:Democracia_participativa}
+	\subsubsection{Democracia participativa}
 	
-	\subsubsection{Democracia directa}\label{sssec:Democracia_directa}
+	\subsubsection{Democracia directa}
 	
-	\subsubsection{Democracia deliberativa}\label{sssec:Democracia_deliberativa}
+	\subsubsection{Democracia deliberativa}
 	
 
 \section{1ª Parte: Programas Políticos}
@@ -53,7 +53,7 @@ En esta sección se desarrollará en profundidad todo lo relacionado con los par
 En la actualidad no existe ningún tipo de aplicación orientada a debatir los programas electorales de los partidos políticos. Concretamente no hay ningún tipo de plataforma que agrupe los programas electorales de las diferentes candidaturas.
 Lo más parecido que hemos podido encontrar han sido aplicaciones elaboradas por un partido político, orientada a dar a conocer su candidatura. En ella podremos ver la candidatura, vídeos y el programa electoral entre otros. Por ello pasamos a analizar las aplicaciones encontradas:
 
-	\subsubsection{UPyD Parla}\label{sssec:UPyDParla}
+	\subsubsection{UPyD Parla}
 La aplicación que presenta el candidato de UpyD Carlos Alt Bustelo para la alcaldía de Parla. Se trata de una alicación divulgativa donde podemos conocer todo lo esencial de la candidatura de UpyD para las elecciones del municiono de Parla en Mayo de 2015. Los candidatos, el programa, vídeos, etcétera.
 
 	\begin{figure}[H]
@@ -63,7 +63,7 @@ La aplicación que presenta el candidato de UpyD Carlos Alt Bustelo para la alca
       \label{fig:upydparla}
     \end{figure}
 
-	\subsubsection{$\sharp$RecuperaCórdoba}\label{sssec:RecuperaCordoba}
+	\subsubsection{$\sharp$RecuperaCórdoba}
 De forma similar a la anterior, la candidatura de Pedro García a la provincia de Córdoba de Izquierda Unida, presenta su propuesta de gobierno de forma compacta. En la aplicación podremos encontrar la lista de los candidatos propuestos a la comunidad cordobesa, el programa electoral de la formación, las propuestas del partido, noticias de última hora y vídeos.
 
 	\begin{figure}[H]
@@ -73,7 +73,7 @@ De forma similar a la anterior, la candidatura de Pedro García a la provincia d
       \label{fig:recuperacordoba}
     \end{figure}
     
-    	\subsubsection{PP Canarias}\label{sssec:pp_canarias}
+    	\subsubsection{PP Canarias}
     	
 La delegación del Partido Popular en Canarias, presenta su aplicación móvil para promocionar a sus candidatos para las elecciones autonómicas y municipales de Mayo de 2015. La aplicación nos avisará de los eventos electorales, podremos consultar los candidatos, novedades, galería de imágenes y por su puesto el programa electoral.
 
@@ -119,8 +119,21 @@ Sin olvidarnos de la parte social, en cada sección podemos hacer comentarios pa
 	
 	\subsection{Revisión de la aplicación}
 Una vez que habíamos implementado todos los objetivos fundamentales de la aplicación, decidimos hacer una revisión para poner a prueba la aplicación. Para ello nos reunimos con un grupo de Labodemo \cite{ref:labodemo}, responsables del desarrollo de los portales de participación ciudadana del partido político Podemos \cite{ref:podemos} y la candidatura ciudadana de unidad popular Ahora Madrid \cite{ref:ahoramadrid}.
+
+	\subsubsection{Reunión con miembros de Labodemo}
+Tuvimos la oportunidad de establecer una conversación con dos miembros de Labodemo, en la que aprovechamos la oportunidad de mostrarles la aplicación que estábamos desarrollando. Ambos tenían experiencia en el desarrollo de plataformas de participación ciudadana en internet y nuevas tecnologías. Además fueron los responsables del desarrollo de los portales de participación del partido político Podemos y la candidatura ciudadana de unidad popular Ahora Madrid.
+
+Limitarnos a mostrar las diferentes secciones de cada programa les resultó útil. Aunque no suficiente como para atraer a una cantidad considerable de usuarios. Antes de hablar con ellos, habíamos planteado desarrollar propuestas colaborativas en tiempo real aprovechando Wave. Pero no comprendieron la libertad de dar al usuarios la creación de propuestas colaborativas en tiempo real.
+
+Dándole una vuelta al desarrollo de las propuestas de la aplicación, nos sugirieron que para atraer a usuarios a utilizar nuestra aplicación, deberíamos dejar cierta libertad a colectivos sociales. Por ejemplo, un grupo de animalistas debería tener un “espacio” en la aplicación donde poder crear sus propias propuestas, e incluso hacer comparativas personalizadas de lo que proponen los diferentes programas sobre los animales. Así surgirían propuestas y comparativas divididas por colectivos que abarcarían diferentes temáticas. Un usuario poco activo podría buscar un colectivo de profesores porque resulta ser su profesión, y ver las propuestas que se llevan a cabo o visualizar una comparativa respecto las medidas de educación de los diferentes programas políticos.
+
+Organizar estas propuestas no sería tarea sencilla. En un principio se propuso como diferentes temas que puede tener un foro, en forma de post. Más tarde llegamos a la conclusión de que sería más cómodo para los colectivos dar la libertad de crear sus propios hilos, y en cada uno de ellos publicar las propuestas relacionadas con su colectivo.
+	
+	
+	
+	\subsubsection{Reunión con Javier de la Cueva}
   
-\section{2ª Parte: Propuestas y Comparativas}
+\section{2ª Parte: Propuestas y Categorización}
   \subsection{Estado del Arte}
 
   \subsection{Intención}
@@ -136,6 +149,19 @@ Una vez que habíamos implementado todos los objetivos fundamentales de la aplic
   
   
 \section{Tecnologias y Metodologías de la app}
+
+  \subsection{Arquitectura de la aplicacción}
+  
+La arquitectura está compuesta por tres módulos principales de los que hablaremos en profundidad en las siguientes subsecciones. Como cliente móvil tendremos la aplicación desarrollada en Android, que realizará peticiones HTTP al servicio web alojado en OpenShift, una plataforma que permite alojar servicios web de forma gratuita. Dentro del servicio contaremos con una API RESTful que será quien gestione las peticiones de la aplicación móvil mediante el protocolo HTTP.
+
+	\begin{figure}[H]
+      \centering
+	\includegraphics[keepaspectratio, scale=0.4]{Media/Captures/architecture.png}
+      \caption{Arquitectura de la aplicacción.}
+      \label{fig:architecture}
+    \end{figure}
+
+Por último, la base de datos MySQL alojada en el servidor de OpenShift \cite{ref:OpenShift}, almacenará toda la información relacionada con la aplicación. La API RESTful será quien gestione las operaciones de la base de datos.
 
 	\subsection{Back-end}
 

@@ -52,26 +52,30 @@
 \contentsline {subsection}{\numberline {3.2.3}Objetivos}{28}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Usabilidad}{30}{subsection.3.2.4}
 \contentsline {subsection}{\numberline {3.2.5}Revisi\IeC {\'o}n de la aplicaci\IeC {\'o}n}{30}{subsection.3.2.5}
-\contentsline {section}{\numberline {3.3}2\IeC {\textordfeminine } Parte: Propuestas y Comparativas}{31}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Estado del Arte}{31}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Intenci\IeC {\'o}n}{31}{subsection.3.3.2}
-\contentsline {subsection}{\numberline {3.3.3}Objetivos}{31}{subsection.3.3.3}
-\contentsline {subsection}{\numberline {3.3.4}Usabilidad}{31}{subsection.3.3.4}
-\contentsline {section}{\numberline {3.4}3\IeC {\textordfeminine } Parte: Encuestas de intenci\IeC {\'o}n de voto}{31}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Estado del Arte}{31}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}Intenci\IeC {\'o}n}{31}{subsection.3.4.2}
-\contentsline {subsection}{\numberline {3.4.3}Objetivos}{31}{subsection.3.4.3}
-\contentsline {subsection}{\numberline {3.4.4}Usabilidad}{31}{subsection.3.4.4}
-\contentsline {section}{\numberline {3.5}Tecnologias y Metodolog\IeC {\'\i }as de la app}{31}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Arquitectura de la aplicacci\IeC {\'o}n}{31}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Back-end}{32}{subsection.3.5.2}
-\contentsline {subsubsection}{Base de Datos}{32}{section*.14}
-\contentsline {subsubsection}{Service REST}{33}{figure.3.8}
-\contentsline {subsection}{\numberline {3.5.3}Frontend}{34}{subsection.3.5.3}
-\contentsline {chapter}{\numberline {4}Resultados y Conclusiones}{35}{chapter.4}
-\contentsline {section}{\numberline {4.1}Discusion de Resultados}{35}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Evaluaci\IeC {\'o}n con usuarios}{35}{subsection.4.1.1}
-\contentsline {section}{\numberline {4.2}Conclusiones}{35}{section.4.2}
-\contentsline {chapter}{\numberline {5}Trabajo a Futuro}{37}{chapter.5}
-\contentsline {section}{\numberline {5.1}Mejoras}{37}{section.5.1}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliograf\IeC {\'\i }a}{37}{section.5.1}
+\contentsline {subsubsection}{Reuni\IeC {\'o}n con Labodemo}{31}{section*.14}
+\contentsline {subsubsection}{Conclusi\IeC {\'o}n}{32}{section*.14}
+\contentsline {subsubsection}{Reuni\IeC {\'o}n con Javier de la Cueva}{33}{section*.14}
+\contentsline {subsubsection}{Conclusi\IeC {\'o}n}{33}{section*.14}
+\contentsline {section}{\numberline {3.3}2\IeC {\textordfeminine } Parte: Propuestas y Categorizaci\IeC {\'o}n}{33}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Estado del Arte}{33}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Intenci\IeC {\'o}n}{33}{subsection.3.3.2}
+\contentsline {subsection}{\numberline {3.3.3}Objetivos}{33}{subsection.3.3.3}
+\contentsline {subsection}{\numberline {3.3.4}Usabilidad}{33}{subsection.3.3.4}
+\contentsline {section}{\numberline {3.4}3\IeC {\textordfeminine } Parte: Encuestas de intenci\IeC {\'o}n de voto}{33}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Estado del Arte}{33}{subsection.3.4.1}
+\contentsline {subsection}{\numberline {3.4.2}Intenci\IeC {\'o}n}{33}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.3}Objetivos}{33}{subsection.3.4.3}
+\contentsline {subsection}{\numberline {3.4.4}Usabilidad}{33}{subsection.3.4.4}
+\contentsline {section}{\numberline {3.5}Tecnologias y Metodolog\IeC {\'\i }as de la app}{33}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Arquitectura de la aplicacci\IeC {\'o}n}{33}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Back-end}{34}{subsection.3.5.2}
+\contentsline {subsubsection}{Base de Datos}{34}{section*.15}
+\contentsline {subsubsection}{Service REST}{35}{figure.3.8}
+\contentsline {subsection}{\numberline {3.5.3}Frontend}{36}{subsection.3.5.3}
+\contentsline {chapter}{\numberline {4}Resultados y Conclusiones}{37}{chapter.4}
+\contentsline {section}{\numberline {4.1}Discusion de Resultados}{37}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Evaluaci\IeC {\'o}n con usuarios}{37}{subsection.4.1.1}
+\contentsline {section}{\numberline {4.2}Conclusiones}{37}{section.4.2}
+\contentsline {chapter}{\numberline {5}Trabajo a Futuro}{39}{chapter.5}
+\contentsline {section}{\numberline {5.1}Mejoras}{39}{section.5.1}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliograf\IeC {\'\i }a}{39}{section.5.1}
