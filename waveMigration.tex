@@ -282,14 +282,100 @@ private class LoginTask extends AsyncTask<String, Void, String> {
 	    
 \textbf{Llegados a este punto, tenemos un proceso de login Http que hace uso de la libreria HttpUrlConnection y de un AsyncTask para realizar esa primera conexión al servidor.} Depuramos la aplicación y comprobamos que efectivamente el login Http se realiza correctamente (la respuesta del servidor tiene código 200). \textbf{Sin embargo la aplicacion aun no funciona correctamente, pues se cierra al intentar ejecutar el código que se encarga del siguiente paso del login: la conexión por WebSocket.}    
     
-    \subsubsection{Conexion WebSocket}
+    \subsubsection{Conexión WebSocket}
+    
+    Para realizar una conexión con el servidor Wave es necesaria una conexión mediante WebSockets\cite{ref:webSocket_ref}, tecnología que permite conexiones bidireccionales (recordemos que la conexion en el modelo cliente-servidor tradicional está definida como unidireccional de cliente a servidor) y asíncronas entre el servidor y el cliente, de manera que cualquiera de los dos puede iniciar una conexión con el otro en cualquier momento e intercambiar información con éste. En el caso del protocolo Wave este comportamiento es el deseable, ya que al tratarse de un protocolo de comunicaciones federado en el que cualquiera en la red puede ser cliente o servidor, es importante que la conexión sea bidireccional. Además la asincronía es necesaria ya que para mantener la consistencia en tiempo real \ref{sssec:realTime} hace falta que el servidor que contiene las waves pueda iniciar una conexión con los clientes para notificar los cambios que se produzcan en dichas waves.Por tanto, nuestro cliente Android debe ahora establecer una conexión WebSocket con el servidor WIAB. 
+    
+    La metodología a utilizar será la misma que para la conexión HTTP, se ejecutará el código de SwellRT para identificar donde falla y por tanto cómo está estructurada la creación y gestión de WebSockets en la versión GWT.
+    
+    El cliente SwellRT original realiza esta conexión utilizando una librería llamada Atmosphere \cite{ref:atmosphere}, que proporciona un framework para Java que permite gestionar conexiones WebSocket junto a la conexión HTTP que subyace por debajo. Sin embargo, esta librería se encarga solo de gestionar la conexión, no de crear el WebSocket propiamente dicho. En el caso de SwellRT este WebSocket se crea utilizando la implementación que proporciona GWT llamada también WebSocket (WebSocket.java). Esta clase nos define las funciones básicas que debería tener nuestro WebSocket: \textbf{onOpen()} para establecer la conexión, \textbf{onMessage()} para recibir mensajes por el WebSocket, \textbf{send()} para enviar mensajes y \textbf{onClose()} para cerrar la conexión. Asímismo nuestro Websocket deberá también implementar una serie de callbacks (definidos en la interfaz WebSocketCallback.java) para notificar a la aplicación de la llegada de estos eventos del servidor. Los callbacks son: \textbf{onConnect()}, \textbf{onDisconnect()} y \textbf{onMessage(message)} respectivamente.
+	
+	Este WebSocket se crea utilizando un \textbf{patrón de diseño Factory}, que abstrae la creación de un objeto de su implementación, de manera que el desarrollador tenga acceso al objeto sin tener que preocuparse de cómo este implementado el WebSocket por debajo (ver WaveSocketFactory.java en SwellRT).En este caso, como ya se ha dicho con Atmosphere y WebSocket GWT. No obstante, la aplicación no funciona tal y como está hecho en SwellRT ya que android no soporta GWT de forma nativa. Hay que sustituir este código buscando una librería open-source que implemente un WebSocket en Android sobre Atmosphere y que porporcione las mismas funciones básicas descritas en el párrafo anterior.
+	
+	La solución encontrada fue importar al proyecto e utilizar wAsync\cite{ref:wAsync_github}, librería proporcionada por Atmosphere para trabajar con Websockets en Node.js, Java y Android. wAsync trabaja creando un socket que responde a eventos diversos, estando entre ellos eventos similares a los utilizados por la versión GWT de SwellRT: \textbf{on(EVENT.name())}, siendo EVENT el nombre del evento al que debe responder. Un ejemplo sencillo de utilización de wAsync sería el siguiente:
+	
+	\lstset{language=Java, breaklines=true, autogobble=true, basicstyle=\ttfamily\footnotesize, commentstyle=\color{OliveGreen}, keywordstyle=\color{MidnightBlue}}
+	  \begin{lstlisting}[frame=single]	  	  
+	  //Create the atmosphere client
+	  AtmosphereClient client = ClientFactory.getDefault().newClient(AtmosphereClient.class);
+
+	  //Configure client with URL
+      AtmosphereRequestBuilder requestBuilder = client.newRequestBuilder()
+          .method(Request.METHOD.GET).trackMessageLength(true).uri(WaveSocketWAsync.this.urlBase)
+          .transport(Request.TRANSPORT.WEBSOCKET)
+
+	 //Create and configure socket
+      WaveSocketWAsync.this.socket = client.create(client.newOptionsBuilder().runtime(ahc).build())
+          .on(Event.OPEN.name(), new Function<String>() { //Equivalent to GWT onOpen() method
+            @Override
+            public void on(String arg0) {
+			// set the actions to do and call the proper callback function (callback.onConnect())
+            }
+          }).on(Event.CLOSE.name(), new Function<String>() { //Equivalent to GWT onClose() method
+            @Override
+            public void on(String arg0) {
+            // set the actions to do and call the proper callback function (callback.onDisconnect())
+            }
+          }).on(Event.MESSAGE.name(), new Function<String>() {
+            @Override
+            public void on(String arg) { //Equivalent to GWT onMessage() method
+            // set the actions to do and call the proper callback function (callback.onMessage())
+            }
+          }).on(new Function<Throwable>() {
+            @Override
+            public void on(Throwable t) {
+   			// catch possible exceptions
+            }
+          });
+
+      try {
+      	// connect to the server
+        socket.open(requestBuilder.build());
+      } catch (IOException e) {
+		// catch possible exceptions
+      }
+      
+      //send a given message to the server, equivalent to GWT send(msg) method 
+      socket.fire(Data);
+	
+	\end{lstlisting}
+	
+	Como la arquitectura Wave utilizaba el patrón factoria, fue necesario sustituir la clase de WebSocket GWT por una de nueva creación llamada \textbf{WaveSocketWAsync.java}\cite{ref:wave_migration_github} que implementa los métodos de creación y configuración de un Websocket y de callback antes descritos. Asimismo se modificó la clase WaveSocketFactory.java para hacer uso ahora de esta nueva implementación del WebSocket compatible con Android. 
+	
+	Sin embargo, ejecutamos esta nueva versión de código y nos encontramos con que la librería WAsync incluye dependencias a código que no está presente en la propia librería y que es necesario para crear el cliente AsyncHTTPClient que gestiona la conexión HTTP que subyace por debajo del WebSocket. Concretamente hace falta utilizar un HTTPProvider compatible con Atmosphere, tal y como recomienda hacer wAsync en su wiki\ref{cite:httpProvider_wAsync}. Para ello basta con añadir al proyecto las siguientes librerias y configurar el cliente segun lo descrito en dicha wiki:
+	
+	\begin{itemize}
+		\item \textbf{AsyncHttpClient 1.8.14}\cite{ref:asyncHttpClient}
+		\item \textbf{Grizzly 2.3.18}\cite{ref:grizzly}
+	\end{itemize}
+	
+	\lstset{language=Java, breaklines=true, autogobble=true, basicstyle=\ttfamily\footnotesize, commentstyle=\color{OliveGreen}, keywordstyle=\color{MidnightBlue}}
+	  \begin{lstlisting}[frame=single]	
+	  AsyncHttpClientConfig ahcConfig = new AsyncHttpClientConfig.Builder().build();
+      AsyncHttpClient ahc = new AsyncHttpClient(new GrizzlyAsyncHttpProvider(ahcConfig));
+      \end{lstlisting}
+      
+      Ahora, al ejecutar la aplicación comprobamos que la conexión al servidor se produce correctamente. Para completar esta parte del proyecto solo falta pedir al usuario su user y su password, ya que hasta ahora las habiamos especificado nosotros en el propio código para realizar pruebas.
+	    
+    \subsubsection{Login y Logging}
+    
+    Para probar que la aplicación migrada es funcional y es capaz de utilizar las características nativas de Android haremos una pequeña y sencilla pantalla de Login que pedirá al usuario la dirección del servidor Wave, un usuario y una contraseña.
+    
+    En el diseño de aplicaciones Android el componente principal de una app es la Actividad, que se corresponde con la pantalla con la que interactúa el usuario. La interfaz gráfica se usuario (UI) de las pantallas se encuentra separada del código de la aplicación en ficheros xml de Layout\cite{ref:android_ui}. A una Actividad se le especifica cuál es su archivo de layout en su método onCreate(), responsable de la creación de la actividad y sus recursos. 
+    
+    Creamos una Actividad llamada WaveAndroid.java que haga uso del layout Main.xml, en el cual incluimos tres cajas de texto (llamadas EditText en Android) para que el usuario introduzca los datos. Además guardamos una referencia a estas cajas de texto en la Actividad para poder acceder al texto introducido y pasárselo al método login de Wave que hemos migrado anteriormente.
+    
+    	\begin{figure}[H]
+      \centering
+	\includegraphics[keepaspectratio, scale=0.6]{Media/Captures/waveAndroidLogin.png}
+      \caption{Pantalla de Login de WaveAndroid}
+      \label{fig:android_waveLogin}
+    \end{figure}
     
     
     
-    
-    \subsubsection{Login}
   
   \subsection{Organización y Resultados}
     \subsubsection{Servicio Android}
-    \subsubsection{Resultado de la Migracion}
+    \subsubsection{Resultado de la Migración}
     \subsubsection{Diagramas y Dependencias}
