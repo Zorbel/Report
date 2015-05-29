@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.5)  27 MAY 2015 21:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.5)  29 MAY 2015 22:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -684,13 +684,13 @@ LaTeX Info: Redefining \nameref on input line 63.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
  (./frontpage.tex
-<Media/ucmlogo.png, id=308, 1583.9175pt x 1814.78pt>
+<Media/ucmlogo.png, id=309, 1583.9175pt x 1814.78pt>
 File: Media/ucmlogo.png Graphic file (type png)
  <use Media/ucmlogo.png>
 Package pdftex.def Info: Media/ucmlogo.png used on input line 23.
 (pdftex.def)             Requested size: 190.06189pt x 217.7642pt.
 
-<Media/cc.png, id=309, 97.0827pt x 33.9669pt>
+<Media/cc.png, id=310, 97.0827pt x 33.9669pt>
 File: Media/cc.png Graphic file (type png)
  <use Media/cc.png>
 Package pdftex.def Info: Media/cc.png used on input line 41.
@@ -1424,7 +1424,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 39.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 39.
- <Media/Captures/waveEntities.png, id=532, 457.71pt x 290.08376pt>
+ <Media/Captures/waveEntities.png, id=537, 457.71pt x 290.08376pt>
 File: Media/Captures/waveEntities.png Graphic file (type png)
 
 <use Media/Captures/waveEntities.png>
@@ -1494,7 +1494,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 65.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 65.
-<Media/Captures/WIAB_Server.png, id=546, 1284.8pt x 803.0pt>
+<Media/Captures/WIAB_Server.png, id=551, 1284.8pt x 803.0pt>
 File: Media/Captures/WIAB_Server.png Graphic file (type png)
 
 <use Media/Captures/WIAB_Server.png>
@@ -1693,7 +1693,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 97.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 97.
-[8] <Media/Captures/androidUsage.png, id=591, 501.875pt x 250.9375pt>
+[8] <Media/Captures/androidUsage.png, id=596, 501.875pt x 250.9375pt>
 File: Media/Captures/androidUsage.png Graphic file (type png)
 
 <use Media/Captures/androidUsage.png>
@@ -1859,7 +1859,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 153--154
 
  []
 
-<Media/Captures/emulator_api_19.png, id=629, 596.2275pt x 778.91pt>
+<Media/Captures/emulator_api_19.png, id=634, 596.2275pt x 778.91pt>
 File: Media/Captures/emulator_api_19.png Graphic file (type png)
 
 <use Media/Captures/emulator_api_19.png>
@@ -2054,7 +2054,7 @@ File: lstlang1.sty 2013/08/26 1.5b listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 )
-<Media/Captures/logcat_example.png, id=662, 1284.8pt x 803.0pt>
+<Media/Captures/logcat_example.png, id=667, 1284.8pt x 803.0pt>
 File: Media/Captures/logcat_example.png Graphic file (type png)
 
 <use Media/Captures/logcat_example.png>
@@ -2239,15 +2239,6 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 288.
 [18]
-
-LaTeX Warning: Citation `ref:atmosphere' on page 19 undefined on input line 291
-.
-
-
-LaTeX Warning: Citation `ref:wAsync_github' on page 19 undefined on input line 
-295.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 LaTeX Info: Redefining \. on input line 296.
@@ -2321,19 +2312,8 @@ Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 331.
 [20]
 
-LaTeX Warning: Citation `ref:wave_migration_github' on page 21 undefined on inp
-ut line 343.
-
-
 LaTeX Warning: Reference `cite:httpProvider_wAsync' on page 21 undefined on inp
 ut line 345.
-
-
-LaTeX Warning: Citation `ref:asyncHttpClient' on page 21 undefined on input lin
-e 348.
-
-
-LaTeX Warning: Citation `ref:grizzly' on page 21 undefined on input line 349.
 
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 360.
@@ -2384,66 +2364,201 @@ Package babel Info: Redefining spanish shorthand "?
 LaTeX Warning: Citation `ref:android_ui' on page 22 undefined on input line 364
 .
 
-<Media/Captures/waveAndroidLogin.png, id=799, 283.0575pt x 468.75125pt>
+<Media/Captures/waveAndroidLogin.png, id=813, 283.0575pt x 468.75125pt>
 File: Media/Captures/waveAndroidLogin.png Graphic file (type png)
 
 <use Media/Captures/waveAndroidLogin.png>
 Package pdftex.def Info: Media/Captures/waveAndroidLogin.png used on input line
  370.
 (pdftex.def)             Requested size: 169.8358pt x 281.25291pt.
+LaTeX Info: Redefining \. on input line 376.
+LaTeX Info: Redefining \% on input line 376.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 15.71667pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 378.
+(babel)             in language  on input line 376.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 378.
+(babel)             in language  on input line 376.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 378.
+(babel)             in language  on input line 376.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 378.
+(babel)             in language  on input line 376.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 378.
+(babel)             in language  on input line 376.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 378.
+(babel)             in language  on input line 376.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 376.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 376.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 376.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 376.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 376.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 376.
+[22pdfTeX warning (ext4): destination with the same identifier (name{figure.2.6
+}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.376 
+       <./Media/Captures/waveAndroidLogin.png>]
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 379.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 379.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 379.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 379.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 379.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 379.
 
 
 Package hyperref Warning: The anchor of a bookmark and its parent's must not
-(hyperref)                be the same. Added a new anchor on input line 379.
+(hyperref)                be the same. Added a new anchor on input line 383.
 
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 383.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 383.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 383.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 383.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 383.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 379.
+(babel)             in language  on input line 383.
+
+LaTeX Warning: Citation `ref:android:asynctask' on page 23 undefined on input l
+ine 389.
+
+
+Overfull \hbox (31.1332pt too wide) in paragraph at lines 389--390
+[]\OT1/cmr/m/n/12 Hasta aho-ra hab^^S^^Pamos uti-li-za-do pa-ra ello una Ac-ti-
+vi-dad que co-ten^^S^^Pa el AsyncTask[[]]
+ []
+
+LaTeX Info: Redefining \. on input line 391.
+LaTeX Info: Redefining \% on input line 391.
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 15.71667pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 380.
+(babel)             in language  on input line 391.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 380.
+(babel)             in language  on input line 391.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 380.
+(babel)             in language  on input line 391.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 380.
+(babel)             in language  on input line 391.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 380.
+(babel)             in language  on input line 391.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 380.
+(babel)             in language  on input line 391.
 Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 381.
+(babel)             in language  on input line 391.
 Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 381.
+(babel)             in language  on input line 391.
 Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 381.
+(babel)             in language  on input line 391.
 Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 381.
+(babel)             in language  on input line 391.
 Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 381.
+(babel)             in language  on input line 391.
 Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 381.
+(babel)             in language  on input line 391.
+[23]
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 402.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 402.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 402.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 402.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 402.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 402.
+
+Overfull \hbox (3.29037pt too wide) in paragraph at lines 404--405
+[]\OT1/cmr/m/n/12 Despu^^Ses de to-dos es-tos pa-sos dis-pon^^S^^Pamos de una v
+er-si^^Son fun-cio-nal de SwellRT
+ []
+
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 411.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 411.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 411.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 411.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 411.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 411.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 414.
+LaTeX Info: Redefining \% on input line 414.
+
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 15.71667pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 414.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 414.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 414.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 414.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 414.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 414.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 414.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 414.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 414.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 414.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 414.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 414.
+[24]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 420.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 420.
+
+Underfull \hbox (badness 3977) in paragraph at lines 424--425
+[]\OT1/cmr/m/n/10 WebSockets/HTTP Client Li-
+ []
+
 )
 LaTeX Info: Redefining \. on input line 90.
 LaTeX Info: Redefining \% on input line 90.
@@ -2478,47 +2593,13 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 90.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 90.
-[22pdfTeX warning (ext4): destination with the same identifier (name{figure.2.6
-}) has been already used, duplicate ignored
+[25pdfTeX warning (ext4): destination with the same identifier (name{table.2.1}
+) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
 l.90 \include{waveMigration}
-                             <./Media/Captures/waveAndroidLogin.png>]
-LaTeX Info: Redefining \. on input line 90.
-LaTeX Info: Redefining \% on input line 90.
-
-
-Package Fancyhdr Warning: \headheight is too small (12.0pt): 
- Make it at least 15.71667pt.
- We now make it that large for the rest of the document.
- This may cause the page layout to be inconsistent, however.
-
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 90.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 90.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 90.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 90.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 90.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 90.
-Package babel Info: Redefining spanish shorthand <<
-(babel)             in language  on input line 90.
-Package babel Info: Redefining spanish shorthand >>
-(babel)             in language  on input line 90.
-Package babel Info: Redefining spanish shorthand "=
-(babel)             in language  on input line 90.
-Package babel Info: Redefining spanish shorthand "~
-(babel)             in language  on input line 90.
-Package babel Info: Redefining spanish shorthand "!
-(babel)             in language  on input line 90.
-Package babel Info: Redefining spanish shorthand "?
-(babel)             in language  on input line 90.
-[23]
+                            ]
 \openout2 = `androidApp.aux'.
 
  (./androidApp.tex
@@ -2546,7 +2627,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 3.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 3.
- [24
+ [26
 
 
 
@@ -2576,7 +2657,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 5.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 5.
-<Media/Captures/brainstorming.jpg, id=814, 2569.6pt x 1927.2pt>
+<Media/Captures/brainstorming.jpg, id=851, 2569.6pt x 1927.2pt>
 File: Media/Captures/brainstorming.jpg Graphic file (type jpg)
 
 <use Media/Captures/brainstorming.jpg>
@@ -2610,7 +2691,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 22.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 22.
- [25]
+ [27]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 27.
 Package babel Info: Redefining spanish shorthand >>
@@ -2659,7 +2740,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 29.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 29.
-[26pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
+[28pdfTeX warning (ext4): destination with the same identifier (name{figure.3.1
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2793,7 +2874,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 52.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 52.
-[27]
+[29]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 52.
 Package babel Info: Redefining spanish shorthand >>
@@ -2823,7 +2904,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 56.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 56.
-<Media/Captures/UPyDParla.png, id=827, 507.8975pt x 903.375pt>
+<Media/Captures/UPyDParla.png, id=865, 507.8975pt x 903.375pt>
 File: Media/Captures/UPyDParla.png Graphic file (type png)
 
 <use Media/Captures/UPyDParla.png>
@@ -2865,7 +2946,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 65.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 65.
-[28]
+[30]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 66.
 Package babel Info: Redefining spanish shorthand >>
@@ -2891,7 +2972,7 @@ Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
 (hyperref)                removing `math shift' on input line 66.
 
-<Media/Captures/IURecuperaCordoba.png, id=832, 507.8975pt x 903.375pt>
+<Media/Captures/IURecuperaCordoba.png, id=871, 507.8975pt x 903.375pt>
 File: Media/Captures/IURecuperaCordoba.png Graphic file (type png)
 
 <use Media/Captures/IURecuperaCordoba.png>
@@ -2934,7 +3015,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 75.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 75.
-[29pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2
+[31pdfTeX warning (ext4): destination with the same identifier (name{figure.3.2
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -2954,7 +3035,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 76.
 
-<Media/Captures/ppcanarias.png, id=837, 507.8975pt x 903.375pt>
+<Media/Captures/ppcanarias.png, id=876, 507.8975pt x 903.375pt>
 File: Media/Captures/ppcanarias.png Graphic file (type png)
 
 <use Media/Captures/ppcanarias.png>
@@ -2996,7 +3077,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 86.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 86.
-[30pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3
+[32pdfTeX warning (ext4): destination with the same identifier (name{figure.3.3
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -3048,7 +3129,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 95.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 95.
-[31pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4
+[33pdfTeX warning (ext4): destination with the same identifier (name{figure.3.4
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -3068,7 +3149,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 95.
 
-<Media/Captures/captTopSections.png, id=848, 380.17032pt x 761.84625pt>
+<Media/Captures/captTopSections.png, id=885, 380.17032pt x 761.84625pt>
 File: Media/Captures/captTopSections.png Graphic file (type png)
 
 <use Media/Captures/captTopSections.png>
@@ -3111,7 +3192,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 107.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 107.
-[32] <Media/Captures/section.png, id=853, 376.40625pt x 753.5653pt>
+[34] <Media/Captures/section.png, id=890, 376.40625pt x 753.5653pt>
 File: Media/Captures/section.png Graphic file (type png)
 
 <use Media/Captures/section.png>
@@ -3153,7 +3234,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 116.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 116.
-[33pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5
+[35pdfTeX warning (ext4): destination with the same identifier (name{figure.3.5
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -3217,7 +3298,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 122.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 122.
-[34pdfTeX warning (ext4): destination with the same identifier (name{figure.3.6
+[36pdfTeX warning (ext4): destination with the same identifier (name{figure.3.6
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -3278,7 +3359,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 133.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 133.
-[35]
+[37]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 134.
 Package babel Info: Redefining spanish shorthand >>
@@ -3495,7 +3576,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 169.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 169.
-[36] <Media/Captures/architecture.png, id=881, 612.2875pt x 682.55pt>
+[38] <Media/Captures/architecture.png, id=918, 612.2875pt x 682.55pt>
 File: Media/Captures/architecture.png Graphic file (type png)
 
 <use Media/Captures/architecture.png>
@@ -3535,7 +3616,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 176.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 176.
-[37]
+[39]
 Package babel Info: Redefining spanish shorthand <<
 (babel)             in language  on input line 179.
 Package babel Info: Redefining spanish shorthand >>
@@ -3565,7 +3646,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 181.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 181.
-<Media/Captures/database.png, id=889, 1364.09625pt x 768.8725pt>
+<Media/Captures/database.png, id=926, 1364.09625pt x 768.8725pt>
 File: Media/Captures/database.png Graphic file (type png)
 
 <use Media/Captures/database.png>
@@ -3608,7 +3689,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 192.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 192.
-[38pdfTeX warning (ext4): destination with the same identifier (name{figure.3.7
+[40pdfTeX warning (ext4): destination with the same identifier (name{figure.3.7
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -3628,7 +3709,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 198.
 
-<Media/Captures/laravel5.png, id=899, 930.47626pt x 629.35126pt>
+<Media/Captures/laravel5.png, id=936, 930.47626pt x 629.35126pt>
 File: Media/Captures/laravel5.png Graphic file (type png)
 
 <use Media/Captures/laravel5.png>
@@ -3667,7 +3748,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 210.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 210.
-[39pdfTeX warning (ext4): destination with the same identifier (name{figure.3.8
+[41pdfTeX warning (ext4): destination with the same identifier (name{figure.3.8
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -3720,7 +3801,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 91.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 91.
-[40pdfTeX warning (ext4): destination with the same identifier (name{figure.3.9
+[42pdfTeX warning (ext4): destination with the same identifier (name{figure.3.9
 }) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
@@ -3804,7 +3885,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 92.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 92.
- [41
+ [43
 
 
 
@@ -3836,7 +3917,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 3.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 3.
- [42
+ [44
 
 
 
@@ -3903,242 +3984,331 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 93.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 93.
- [43]
-No file report.bbl.
+ [45] (./report.bbl
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 1.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 1.
+ [46
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 4--8
+[]$\OT1/cmtt/m/n/12 http : / / googlecode . blogspot . com . es / 2009 / 05 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 10--14
+[]$\OT1/cmtt/m/n/12 http : / / wave-[]protocol . googlecode . com / hg / spec /
+ federation /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--48
+[]$\OT1/cmtt/m/n/12 http : / / wave-[]protocol . googlecode . com / hg / whitep
+apers /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--59
+[]$\OT1/cmtt/m/n/12 http : / / www . codecommit . com / blog / java /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 61--65
+[]$\OT1/cmtt/m/n/12 http : / / www . waveprotocol . org / whitepapers /
+ []
+
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 65.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 65.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 65.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 65.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 65.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 65.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 65.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 65.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 65.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 65.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 65.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 65.
+[47]
+Underfull \hbox (badness 10000) in paragraph at lines 67--71
+[]$\OT1/cmtt/m/n/12 https : / / wave-[]protocol . googlecode . com / hg / spec 
+/ conversation /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 98--102
+[]$\OT1/cmtt/m/n/12 https : / / cwiki . apache . org / confluence / display / W
+AVE / Install +
+ []
+
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 141.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 141.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 141.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 141.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 141.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 141.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 141.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 141.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 141.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 141.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 141.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 141.
+[48]
+Underfull \hbox (badness 10000) in paragraph at lines 158--162
+[]$\OT1/cmtt/m/n/12 http : / / developer . android . com / tools / devices / ma
+naging-[]avds .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 199--203
+[]$\OT1/cmtt/m/n/12 https : / / developer . android . com / tools / building /
+ []
+
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 213.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 213.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 213.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 213.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 213.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 213.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 213.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 213.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 213.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 213.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 213.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 213.
+[49]
+Underfull \hbox (badness 10000) in paragraph at lines 215--219
+[]$\OT1/cmtt/m/n/12 https : / / developer . android . com / guide / components 
+/ activities .
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--237
+[]$\OT1/cmtt/m/n/12 https : / / developer . android . com / guide / topics / se
+curity /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 239--243
+[]$\OT1/cmtt/m/n/12 https : / / developer . android . com / guide / topics / ma
+nifest /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 245--249
+[]$\OT1/cmtt/m/n/12 https : / / developer . android . com / tools / devices / e
+mulator . html #
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--260
+[]$\OT1/cmtt/m/n/12 https : / / developer . android . com / reference / org / a
+pache / http /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 262--266
+[]$\OT1/cmtt/m/n/12 http : / / android-[]developers . blogspot . com . es / 201
+1 / 09 /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 268--272
+[]$\OT1/cmtt/m/n/12 https : / / developer . android . com / reference / java / 
+net /
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--278
+[]$\OT1/cmtt/m/n/12 https : / / developer . android . com / guide / components 
+/
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 280--284
+[]$\OT1/cmtt/m/n/12 https : / / developer . android . com / training / basics /
+ network-[]ops /
+ []
+
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 284.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 284.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 284.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 284.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 284.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 284.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 284.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 284.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 284.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 284.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 284.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 284.
+[50]
+Underfull \hbox (badness 10000) in paragraph at lines 316--319
+[]$\OT1/cmtt/m/n/12 https : / / developer . android . com / guide / components 
+/ services .
+ []
+
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 349.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 349.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 349.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 349.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 349.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 349.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 349.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 349.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 349.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 349.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 349.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 349.
+[51])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 97.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 97.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 97.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 97.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 97.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 97.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 97.
+Package babel Info: Redefining spanish shorthand <<
+(babel)             in language  on input line 97.
+Package babel Info: Redefining spanish shorthand >>
+(babel)             in language  on input line 97.
+Package babel Info: Redefining spanish shorthand "=
+(babel)             in language  on input line 97.
+Package babel Info: Redefining spanish shorthand "~
+(babel)             in language  on input line 97.
+Package babel Info: Redefining spanish shorthand "!
+(babel)             in language  on input line 97.
+Package babel Info: Redefining spanish shorthand "?
+(babel)             in language  on input line 97.
+ [52]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 97.
-(./report.aux
+ (./report.aux
 LaTeX Info: Redefining \. on input line 23.
 LaTeX Info: Redefining \% on input line 23.
- (./abstract.aux) (./introduction.aux) (./waveMigration.aux)
-(./androidApp.aux) (./results.aux) (./futureWork.aux))
+ (./abstract.aux) (./introduction.aux)
+(./waveMigration.aux) (./androidApp.aux) (./results.aux) (./futureWork.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 97.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 97.
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: 057666F7F7485C06B46B2E22FAA6CB45;5604.
 
-
-Package rerunfilecheck Warning: File `report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `report.out':
-(rerunfilecheck)             Before: 7E77F577A395FC26552CB7F6962092C0;5589
-(rerunfilecheck)             After:  057666F7F7485C06B46B2E22FAA6CB45;5604.
 
 LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 97.
  ) 
 Here is how much of TeX's memory you used:
- 10086 strings out of 493304
- 142827 string characters out of 6139872
- 389908 words of memory out of 5000000
- 13053 multiletter control sequences out of 15000+600000
- 10405 words of font info for 37 fonts, out of 8000000 for 9000
+ 10127 strings out of 493304
+ 143426 string characters out of 6139872
+ 390472 words of memory out of 5000000
+ 13072 multiletter control sequences out of 15000+600000
+ 10713 words of font info for 38 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  39i,15n,51p,1490b,2065s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{cite.ref:RESTPhd} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:laravel} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:phpMyAdmin} has been referenced but does n
-ot exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:MySQL} has been referenced but does not ex
-ist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:OpenShift} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:jdelacueva} has been referenced but does n
-ot exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:ahoramadrid} has been referenced but does 
-not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:podemos} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:labodemo} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:android_networking} has been referenced bu
-t does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:android_processes} has been referenced but
- does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:android_httpUrlConnection} has been refere
-nced but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:http_recommmendations} has been referenced
- but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:apache_http} has been referenced but does 
-not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:android_logcat} has been referenced but do
-es not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:android_netAddress} has been referenced bu
-t does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:android_manifest} has been referenced but 
-does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:android_permissions} has been referenced b
-ut does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:webSocket_ref} has been referenced but doe
-s not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:http_authentication} has been referenced b
-ut does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:android_activities} has been referenced bu
-t does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:android_adb} has been referenced but does 
-not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:android_device_setUp} has been referenced 
-but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:android_cmd_line} has been referenced but 
-does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:ant} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:android_proguard} has been referenced but 
-does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:android_limit65k} has been referenced but 
-does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:android_dist} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:android_ddms} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:android_sdk_manager} has been referenced b
-ut does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:android_emulator} has been referenced but 
-does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:android_vdm} has been referenced but does 
-not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:android_api_reference} has been referenced
- but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:eclipse_adt} has been referenced but does 
-not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:intelliJ_Idea} has been referenced but doe
-s not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:android_studio} has been referenced but do
-es not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:eclipse} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:android_sdk} has been referenced but does 
-not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:android_platform} has been referenced but 
-does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:swellRT_github} has been referenced but do
-es not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:p2pvalue} has been referenced but does not
- exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:wave_in_a_box_server} has been referenced 
-but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:wave_in_a_box_github} has been referenced 
-but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:wave_in_a_box_wiki} has been referenced bu
-t does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:gwt} has been referenced but does not exis
-t, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:openjdk} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:wave_in_a_box} has been referenced but doe
-s not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:wave_extensions} has been referenced but d
-oes not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:wave_api_overview} has been referenced but
- does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:wave_conversation_model} has been referenc
-ed but does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:wave_ot} has been referenced but does not 
-exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:how_ot_works} has been referenced but does
- not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:xmpp} has been referenced but does not exi
-st, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:wave_white_paper} has been referenced but 
-does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:wave_federation} has been referenced but d
-oes not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:apache_license} has been referenced but do
-es not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:apache_wave_about} has been referenced but
- does not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:google_plus} has been referenced but does 
-not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:google_docs} has been referenced but does 
-not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:google_wave_end} has been referenced but d
-oes not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:wave_over_xmpp} has been referenced but do
-es not exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{cite.ref:wave_announcement} has been referenced but
- does not exist, replaced by a fixed one
-
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmtt12.pfb>
-Output written on report.pdf (56 pages, 4870576 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
+t10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pf
+b>
+Output written on report.pdf (65 pages, 4926454 bytes).
 PDF statistics:
- 1028 PDF objects out of 1200 (max. 8388607)
- 924 compressed objects within 10 object streams
- 294 named destinations out of 1000 (max. 500000)
+ 1194 PDF objects out of 1200 (max. 8388607)
+ 1078 compressed objects within 11 object streams
+ 313 named destinations out of 1000 (max. 500000)
  718 words of extra memory for PDF output out of 10000 (max. 10000000)
 

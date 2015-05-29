@@ -74,7 +74,7 @@
       \label{fig:wiab_client}
     \end{figure}
    
-    \subsubsection{SwellRT}
+    \subsubsection{SwellRT}\label{sssec:swellRT}
     
     Como parte del proyecto europeo P2PValue \cite{ref:p2pvalue} existe SwellRT, un fork de WIAB que amplía las características de éste último añadiendo un nuevo modelo de datos (Modelo de Datos Colaborativo) más allá del Modelo de Datos Conversacional de Wave original. Proporciona también un API escrito en Java que permite trabajar sobre los datos de ese nuevo modelo en forma de tres tipos básicos: mapas, listas y strings. Es por tanto un framework de colaboración en tiempo real que basa su funcionamiento en Apache Wave y cuyo principal popósito es permitir la integracion de la tecnología Wave en otras aplicaciones, que podrán compartir objetos (de los tipos antes mencionados) de forma federada y en tiempo real. Su código fuente está disponible en GitHub \cite{ref:swellRT_github}, así como sus instrucciones de instalación (Ver el Readme en GitHub).\\[.2cm]
 
@@ -191,7 +191,7 @@ Una vez hecho esto, cada vez que ejecutemos la aplicacion saldrá un mensaje de 
 	  principal (waveAndroid.java) que se ejecutará al lanzar la aplicación y que por el momento intentará conectarse al servidor especificando por código el usuario y contraseña que hemos creado antes en el servidor. Wave realiza este login contra el servidor usando dos tecnologias: HTTP \cite{ref:http_authentication} y WebSockets \cite{ref:webSocket_ref}.
 	  
   
-    \subsubsection{Conexion HTTP}
+    \subsubsection{Conexion HTTP}\label{sssec:conHttp}
 	
 	Wave fue desarrollado para utilizar el protocolo WebSocket para la conexión al servidor, pero esta tecnología necesita realizar una autenticación HTTP previa. Lo primero que haremos será otorgar \textbf{permisos de conexión a internet} a nuestra aplicación. Android utiliza un \textbf{sistema de permisos} \cite{ref:android_permissions} para controlar los privilegios de cada aplicación. Estos permisos se declaran en el \textbf{Manifiesto} de la aplicación \cite{ref:android_manifest}, archivo que declara sus características. Para ello basta con añadir lo siguiente al manifest.xml de la aplicación:
 	  
@@ -282,7 +282,7 @@ private class LoginTask extends AsyncTask<String, Void, String> {
 	    
 \textbf{Llegados a este punto, tenemos un proceso de login Http que hace uso de la libreria HttpUrlConnection y de un AsyncTask para realizar esa primera conexión al servidor.} Depuramos la aplicación y comprobamos que efectivamente el login Http se realiza correctamente (la respuesta del servidor tiene código 200). \textbf{Sin embargo la aplicacion aun no funciona correctamente, pues se cierra al intentar ejecutar el código que se encarga del siguiente paso del login: la conexión por WebSocket.}    
     
-    \subsubsection{Conexión WebSocket}
+    \subsubsection{Conexión WebSocket}\label{sssec:conWave}
     
     Para realizar una conexión con el servidor Wave es necesaria una conexión mediante WebSockets\cite{ref:webSocket_ref}, tecnología que permite conexiones bidireccionales (recordemos que la conexion en el modelo cliente-servidor tradicional está definida como unidireccional de cliente a servidor) y asíncronas entre el servidor y el cliente, de manera que cualquiera de los dos puede iniciar una conexión con el otro en cualquier momento e intercambiar información con éste. En el caso del protocolo Wave este comportamiento es el deseable, ya que al tratarse de un protocolo de comunicaciones federado en el que cualquiera en la red puede ser cliente o servidor, es importante que la conexión sea bidireccional. Además la asincronía es necesaria ya que para mantener la consistencia en tiempo real \ref{sssec:realTime} hace falta que el servidor que contiene las waves pueda iniciar una conexión con los clientes para notificar los cambios que se produzcan en dichas waves.Por tanto, nuestro cliente Android debe ahora establecer una conexión WebSocket con el servidor WIAB. 
     
@@ -372,10 +372,66 @@ private class LoginTask extends AsyncTask<String, Void, String> {
       \label{fig:android_waveLogin}
     \end{figure}
     
-    
-    
-  
+        Además decidimos mejorar el sistema de mensajes de Log de la aplicación sustituyendo el framework de la librería SLF4J para Java usada por SwellRT por una versión más reciente desarrollada para Android\cite{ref:slf4j_android}.
+        
+    Por último instalamos la aplicación en el emulador o el dispositivo móvil y probamos que se nos muestra la pantalla de login anterior. Introducimos los datos del servidor WIAB (en este caso utilizaremos el servidor de P2PValue desplegado para pruebas en https://wave.p2pvalue.eu/), de usuario y contraseña; y comprobamos que hemos conseguido el objetivo de esta parte del proyecto: \textbf{el login del cliente Android contra el servidor WIAB se realiza de forma correcta y sin fallos.} 
+     
   \subsection{Organización y Resultados}
+
+	Una vez conseguida la conexión al servidor desde Android, decidimos revisar el código para intentar optimizarlo y organizarlo de manera que aproveche mejor las características de Android. Además el API que permite gestionar el modelo de datos de SwellRT (Ver Sección \ref{sssec:swellRT} está escrito en java, por lo que es plenamente funcional y compatible con el código de nuestra migración a Android.  En los siguientes puntos hablaremos de dicha reorganización de código y del resultado final de esta parte del proyecto.
+   
     \subsubsection{Servicio Android}
+    
+    NO TERMINADO
+    
+	Como ya se ha comentado anteriormente, el proceso de login se debe hacer en un hilo de ejecución separado del hilo principal o de UX, ya que Android no recomienda\cite{ref:android_processes} que tareas que tarden mucho tiempo en ejecutarse (cómo por ejemplo descarga de datos de la red) se ejecuten en el mismo hilo que la interfaz de usuario, pudiendo bloquear dicho hilo y obstaculizando por tanto la interacción del usuario con el dispositivo.
+	
+	Hasta ahora habíamos utilizado para ello una Actividad que cotenía el AsyncTask\cite{ref:android:asynctask} encargado de ejecutar el código de conexión al servidor en un hilo separado del UI Thread. Sin embargo, tal y como está definida la arquitectura de Wave y de SwellRT, la utilización de callbacks (ver secciones \ref{sssec:conHttp} y \ref{sssec:conWave}) es necesaria para notificar al resto de la aplicación de los eventos relacionados con el intercambio de datos con el servidor. Un AsyncTask ejecuta de una sola vez y de forma asíncrona el código que se le asigne a su método doInBackground(), de manera que en nuestro caso no podríamos utilizar los callbacks PORQUE... 
+
+Además cada vez que quisiéramos realizar algún tipo de interacción con el servidor habría que utilizar un AsyncTask específico para ello, lo cual no hace sino añadir más código a la aplicación. Otra desventaja de los AsyncTask en la implementación actual es que si la Actividad que lo esta ejecutando pasa a segundo plano (por ejemplo si el usuario cambia de aplicación) se detiene el proceso de conexión. 
+
+Considerando todo esto decidimos utilizar otro componente de Android pensado para ejecutar tareas en background y con la opción de hacerlo de forma independiente de la aplicación: el Servicio\cite{ref:android_service}.
+
+	Un Servicio Android se diferencia de una Actividad en que es un componente que se ejecuta en segundo plano y no proporciona una interfaz de usuario con la que éste pueda interactuar. Un Servicio ejecuta tareas de larga duración (cómo la descarga de datos de la red) a petición de otros componentes de la aplicación que estén "suscritos" (el término utilizado por android es "bind") a dicho Servicio, a modo de cliente-servidor. De esta manera la Actividad (cliente) que se suscriba al Servicio (servidor) puede interactuar con éste último haciendo peticiones y recibiendo notificaciones cuando el Servicio obtenga resultados. Pero un Servicio se ejecuta dentro del mismo proceso que el UI Thread, por lo que aun así tendremos que utilizar 
+	
+	WebSocket usa AsyncTask?
+	HANDLER -> MENSAJES
+    CIERRE DE APLICACIÓN
+    
+    
     \subsubsection{Resultado de la Migración}
+    
+    Después de todos estos pasos disponíamos de una versión funcional de SwellRT capaz de conectarse al servidor WIAB de forma nativa desde Android. \textbf{El resultado de esto se puede ver en el GitHub de esta parte del proyecto}\cite{ref:wave_migration_github}.
+    
+    Solo restaba poner el API de SwellRT encima de lo nuestro para poder acceder y trabajar a nivel de wave con el modelo de datos de SwellRT. De esto se encargó uno de los desarrolladores del proyecto inicial, Pablo Ojanguren, con el cual habiamos trabajado para realizar lo anteriormente descrito.
+    
+    El API con el cliente de SwellRT adaptado a Android, con el cual trabajaremos en la siguiente parte del proyecto para crear una aplicación Android que haga uso de ella, se encuentra en el GitHub de SwellRT\cite{ref:swellRT_android_github}. 
+    
+    
     \subsubsection{Diagramas y Dependencias}
+    
+    	El cliente Android de SwellRT migrado y desarrollado en esta parte del proyecto hace uso de las siguientes dependencias con librerías externas a Android:
+    	
+    	
+    	TABLA 
+    	\begin{table}[h]
+  \footnotesize
+  \begin{center}
+    \begin{tabular}{ | c | c | p{5cm} | }
+      \hline
+      \textbf{Nombre} & \textbf{Versión} & \textbf{Descripción}\\
+      \hline
+      WAsync\cite{ref:wAsync_github} & 1.4.3 & WebSockets/HTTP Client Library for Asynchronous Communication \\
+      \hline
+      AsyncHttpClient \cite{ref:asyncHttpClient} & 1.8.14 & Library that allows Java applications to easily execute HTTP requests and asynchronously process the HTTP responses. \\
+      \hline
+      Grizzly \cite{ref:grizzly} & 2.3.18 \\
+      \hline
+      \hline
+    \end{tabular}
+  \end{center}
+  \caption{Technologies Summary}
+  \label{fig:technologies}
+\end{table}
+    	
+    	
