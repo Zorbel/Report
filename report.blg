@@ -5,6 +5,16 @@ A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: introduction.aux
 A level-1 auxiliary file: waveMigration.aux
 A level-1 auxiliary file: androidApp.aux
+I couldn't open auxiliary file methodology.aux
+---line 33 of file report.aux
+ : \@input{methodology.aux
+ :                        }
+I'm skipping whatever remains of this command
+I couldn't open auxiliary file architecture.aux
+---line 34 of file report.aux
+ : \@input{architecture.aux
+ :                         }
+I'm skipping whatever remains of this command
 A level-1 auxiliary file: results.aux
 A level-1 auxiliary file: futureWork.aux
 The style file: unsrt.bst
@@ -16,48 +26,49 @@ I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "ref_android_avd_params"
 Warning--I didn't find a database entry for "ref:android:asynctask"
 Warning--I didn't find a database entry for "ref:android_ui"
+Warning--I didn't find a database entry for "ref:changeOrg"
 Warning--empty journal in ref:xmpp
 Warning--empty journal in ref:http_authentication
 Warning--empty journal in ref:webSocket_ref
-You've used 70 entries,
+You've used 63 entries,
             1791 wiz_defined-function locations,
-            695 strings with 11195 characters,
-and the built_in function-call counts, 8498 in all, are:
-= -- 683
-> -- 245
+            673 strings with 10703 characters,
+and the built_in function-call counts, 7776 in all, are:
+= -- 623
+> -- 235
 < -- 0
-+ -- 128
-- -- 58
-* -- 17
-:= -- 1238
-add.period$ -- 200
-call.type$ -- 70
-change.case$ -- 69
++ -- 120
+- -- 57
+* -- 13
+:= -- 1159
+add.period$ -- 185
+call.type$ -- 63
+change.case$ -- 63
 chr.to.int$ -- 0
-cite$ -- 73
-duplicate$ -- 361
-empty$ -- 1242
-format.name$ -- 58
-if$ -- 2058
+cite$ -- 66
+duplicate$ -- 324
+empty$ -- 1123
+format.name$ -- 57
+if$ -- 1871
 int.to.chr$ -- 0
-int.to.str$ -- 70
+int.to.str$ -- 63
 missing$ -- 3
-newline$ -- 343
-num.names$ -- 57
-pop$ -- 357
+newline$ -- 314
+num.names$ -- 56
+pop$ -- 319
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 354
+skip$ -- 316
 stack$ -- 0
 substring$ -- 0
-swap$ -- 67
+swap$ -- 60
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 57
-width$ -- 72
-write$ -- 614
-(There was 1 error message)
+while$ -- 56
+width$ -- 65
+write$ -- 561
+(There were 3 error messages)

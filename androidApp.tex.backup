@@ -1,6 +1,6 @@
 \newpage
 \thispagestyle{sectioned}
-\chapter{Creación de aplicación Android (AppName)}
+\chapter{Construyendo la idea: DemoCritics}
 
 \section{Introducción}
 Una vez que habíamos elegido la tecnología que soportaría el núcleo de nuestra aplicación, teníamos que decir que implementación le íbamos a dar a nuestra aplicación móvil. Para ello teníamos que tener en cuenta las características que nos ofrecía Wave:
@@ -13,16 +13,37 @@ Consistencia.
 
 Después de darle unas cuantas vueltas de las posibles implementaciones que podríamos realizar sobre estas características potenciales, decidimos realizar una sesión de brain storming. En esta sesión aparecieron temas tan dispersos como wikis colaborativas, aplicaciones con inteligencia artificial, aportaciones colaborativas en política, edición de vídeos y música, cursos de formación colaborativos, etcétera.
 
-	\begin{figure}[H]
-      \centering
-	\includegraphics[keepaspectratio, scale=0.15]{Media/Captures/brainstorming.jpg}
-      \caption{Brainstorming sobre la idea a desarrollar}
-      \label{fig:brainstorming}
-    \end{figure}
-    
+\begin{figure}[H]
+\centering
+\includegraphics[keepaspectratio, scale=0.15]{Media/Captures/brainstorming.jpg}
+\caption{Brainstorming sobre la idea a desarrollar}
+\label{fig:brainstorming}
+\end{figure}
+
 Con un gran repertorio de ideas expuestas sobre la sesión, descartamos aquellas que no nos motivaban llevarlas a cabo. Por lo que nos quedamos con tres ideas fundamentales a desarrollar en nuestra aplicación: Política, Música, Inteligencia Artificial y Mapas. Surgieron varias ideas colaborativas como desarrollar documentos políticos, programas electorales, comunicación entre colectivos en tiempo real, aprendizaje de música, edición de partituras y obras, aplicaciones colaborativas con inteligencia artificial, edición de mapas en tiempo real, lexicalización, etcétera.
 
 Finalmente debido a intereses comunes, decimos realizar una aplicación colaborativa relacionado con el mundo de la política. Con el objetivo de que pudiera tener cierta repercusión y utilidad en las próximas citas electorales durante el año 2015. En esta aplicación podríamos recurrir a la edición de contenidos en tiempo real, ya fueran propuestas políticas, programas electorales y otro tipo de documentos. Como también hacer uso de alguna herramienta de Inteligencia Artificial para automatizar algunas tareas o realizar recomendaciones sociales.
+
+\subsection{Política en el mundo de la Informática}
+
+A primera vista podemos pensar que la informática no parece entusiasmar a os informáticos. Pues podemos ubicar la política como una parte de las ciencias sociales, situando la informática en ciencias formales. Pero si factores como la gestión de los privilegios de una aplicación entre los que definiremos de alguna forma una jerarquía, estaremos haciendo política de alguna manera. También encontraremos características políticas en el diseño relacional de una base de datos. Definiendo los campos de una base de datos podemos encontraremos con algunos valores como el sexo, la nacionalidad, la edad o incluso las relaciones o restricciones que existen entre las tablas. Estaremos definiendo unas reglas básicas funcionamiento de la base de datos establecidas por unos principios políticos.
+
+Además sumergiéndonos en el mundo de las licencias de uso en el desarrollo de software encontraremos más política aún. Licencias que determinan el uso de un tipo de software, ya sea para compartir, vender, distribuir copias, entre otros. Multitud de reglas políticas definidas en una licencia de uso. Así como las restricciones que establecemos en la metodología orientada a objetos, estableciendo las relaciones de herencia, restricción de métodos, variables, etcétera.
+
+Regresando a la actualidad y basándonos en no muy lejanos acontecimientos pasados, habremos oído cómo algunos gobiernos recopilan datos de la actividad de los usuarios en las redes sociales, analizando todo el contenido que generan. Incluso vemos cómo algunas aplicaciones móviles piden aprobar permisos con los que operar libremente en tu dispositivo.
+
+Como podemos observar la política está más integrada en la informática de lo que parece, dejando a un lado la informática más científica, más formal, pasando a la informática social, la de los gobiernos, la de los negocios o la de las relaciones sociales.
+
+\subsection{Democracia}
+
+\subsubsection{Democracia representativa}
+
+\subsubsection{Democracia participativa}
+
+\subsubsection{Democracia directa}
+
+\subsubsection{Democracia deliberativa}
+
 
 \subsection{Adentrándonos en la idea}
 La idea a desarrollar generada en una época dónde la política parecía haber despertado el interés de una parte considerable de la ciudadanía, podría ser una herramienta útil para participar en temas políticos que forma sencilla y atractiva. Dejando atrás los tópicos yo no entiendo de política, la política es aburrida, no sé a quién votar o no he leído nunca un programa electoral entre otros.
@@ -33,94 +54,87 @@ Por otra parte, la aplicación también debería ofrecer alguna herramienta dond
 
 Desde un primer punto de vista subjetivo, la aplicación quedó dividida en dos partes. Por un lado tendríamos los programas políticos que presentaran las formaciones políticas. Y por otro, todas las propuestas que elaboraran los ciudadanos individualmente o en colectivos sociales.
 
-\subsection{Política en el mundo de la Informática}
+\section{Estado del Arte}
 
-\subsection{Democracia}
+En esta sección exploraremos las principales aplicaciones informáticas destinadas a la participación ciudadana en propuestas, lectura de programas electorales o divulgación de candidaturas.
 
-	\subsubsection{Democracia representativa}
-	
-	\subsubsection{Democracia participativa}
-	
-	\subsubsection{Democracia directa}
-	
-	\subsubsection{Democracia deliberativa}
-	
+\subsection{Programas Políticos}
 
-\section{1ª Parte: Programas Políticos}
-En esta sección se desarrollará en profundidad todo lo relacionado con los partidos políticos.
-
-  \subsection{Estado del Arte}
 En la actualidad no existe ningún tipo de aplicación orientada a debatir los programas electorales de los partidos políticos. Concretamente no hay ningún tipo de plataforma que agrupe los programas electorales de las diferentes candidaturas.
 Lo más parecido que hemos podido encontrar han sido aplicaciones elaboradas por un partido político, orientada a dar a conocer su candidatura. En ella podremos ver la candidatura, vídeos y el programa electoral entre otros. Por ello pasamos a analizar las aplicaciones encontradas:
 
-	\subsubsection{UPyD Parla}
+\subsubsection{UPyD Parla}
 La aplicación que presenta el candidato de UpyD Carlos Alt Bustelo para la alcaldía de Parla. Se trata de una alicación divulgativa donde podemos conocer todo lo esencial de la candidatura de UpyD para las elecciones del municiono de Parla en Mayo de 2015. Los candidatos, el programa, vídeos, etcétera.
 
-	\begin{figure}[H]
-      \centering
-	\includegraphics[keepaspectratio, scale=0.35]{Media/Captures/UPyDParla.png}
-      \caption{UPyD Parla}
-      \label{fig:upydparla}
-    \end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[keepaspectratio, scale=0.35]{Media/Captures/UPyDParla.png}
+\caption{UPyD Parla}
+\label{fig:upydparla}
+\end{figure}
 
-	\subsubsection{$\sharp$RecuperaCórdoba}
+\subsubsection{$\sharp$RecuperaCórdoba}
 De forma similar a la anterior, la candidatura de Pedro García a la provincia de Córdoba de Izquierda Unida, presenta su propuesta de gobierno de forma compacta. En la aplicación podremos encontrar la lista de los candidatos propuestos a la comunidad cordobesa, el programa electoral de la formación, las propuestas del partido, noticias de última hora y vídeos.
 
-	\begin{figure}[H]
-      \centering
-	\includegraphics[keepaspectratio, scale=0.35]{Media/Captures/IURecuperaCordoba.png}
-      \caption{$\sharp$RecuperaCórdoba}
-      \label{fig:recuperacordoba}
-    \end{figure}
-    
-    	\subsubsection{PP Canarias}
-    	
+\begin{figure}[H]
+\centering
+\includegraphics[keepaspectratio, scale=0.35]{Media/Captures/IURecuperaCordoba.png}
+\caption{$\sharp$RecuperaCórdoba}
+\label{fig:recuperacordoba}
+\end{figure}
+
+\subsubsection{PP Canarias}
+
 La delegación del Partido Popular en Canarias, presenta su aplicación móvil para promocionar a sus candidatos para las elecciones autonómicas y municipales de Mayo de 2015. La aplicación nos avisará de los eventos electorales, podremos consultar los candidatos, novedades, galería de imágenes y por su puesto el programa electoral.
 
-	\begin{figure}[H]
-      \centering
-	\includegraphics[keepaspectratio, scale=0.35]{Media/Captures/ppcanarias.png}
-      \caption{PP Canarias}
-      \label{fig:ppcanarias}
-    \end{figure}
+\begin{figure}[H]
+\centering
+\includegraphics[keepaspectratio, scale=0.35]{Media/Captures/ppcanarias.png}
+\caption{PP Canarias}
+\label{fig:ppcanarias}
+\end{figure}
 
-	\subsection{Intención}
+\subsection{Participación Ciudadana}
+
+Centrándonos en la participación ciudadana ya sea generación de propuestas, desarrollo colaborativo de programas o recogida de firmas, existen numerosos portales en internet y aplicaciones móviles destinadas a ello. Realizaremos un breve repaso a las aplicaciones más destacadas.
+
+\subsection{Intención}
 
 La intención fundamental de la aplicación es llevar los programas electorales a los bolsillos de los ciudadanos. Vivimos en una sociedad digital, donde cada vez son más las personas que utilizan los teléfonos inteligentes para realizar todo tipo de tareas en su vida cotidiana.
 
 En los últimos años las diferentes formaciones políticas han subido sus programas electorales a un documento en formato pdf que estaba disponible en su página web. Este documento generalmente extenso, no es un medio fácil de divulgar y mostrar a la ciudadanía. Por ello pensamos que una aplicación que pudiera visualizar las principales secciones de los programas políticos, podría ser especialmente útil para acercar los programas a los electores.
 
 Llegando a crear un espacio donde poder informase sobre las distintas ofertas electorales, debatir las propuestas que propone cada formación política reducido en una aplicación que podremos consultar en cualquier momento.
-  
-	\subsection{Objetivos}
-	
+
+\subsection{Objetivos}
+
 La aplicación pretende llevar las principales partes de los programas electorales de los partidos que se presenten a las elecciones. Por tanto, cualquier usuario podrá visualizar el apartado que desee consultar de cualquier partido político. Siendo esta la forma menos amigable de leerlo, se utilizarán distintas formas para compartir o divulgar determinadas secciones más populares.
 
 Al inicio de la aplcación, mostrará una lista de las secciones de los programas más valoradas, más debatidas, peor valoradas e incluso las más incomprendidas. Por tanto creemos que puede ser una forma de acercar aquellas secciones más populares de forma más eficaz, al contrario que tener que consultar una determinada página dentro de un extenso pdf.
 
-	\begin{figure}[H]
-      \centering
-	\includegraphics[keepaspectratio, scale=0.5]{Media/Captures/captTopSections.png}
-      \caption{Vista principal de secciones}
-      \label{fig:captTopSections}
-    \end{figure}
-    
+\begin{figure}[H]
+\centering
+\includegraphics[keepaspectratio, scale=0.5]{Media/Captures/captTopSections.png}
+\caption{Vista principal de secciones}
+\label{fig:captTopSections}
+\end{figure}
+
 Dentro de cada sección podemos visualizar el contenido de la sección a la que referencia el programa, y tendremos la opción de valorarla de forma positiva o negativa. También añadimos la posibilidad de indicar que no se ha entendido la sección. Pues a la hora de leer una propuesta de gobierno ubicada en una sección del programa, bien nos puede gustar, disgustar o simplemente no haber entendido la idea y por ello no votarla de forma positiva o negativa.
 
-	\begin{figure}[H]
-      \centering
-	\includegraphics[keepaspectratio, scale=0.5]{Media/Captures/section.png}
-      \caption{Visualizando una sección}
-      \label{fig:captSection}
-    \end{figure}
-    
+\begin{figure}[H]
+\centering
+\includegraphics[keepaspectratio, scale=0.5]{Media/Captures/section.png}
+\caption{Visualizando una sección}
+\label{fig:captSection}
+\end{figure}
+
 Sin olvidarnos de la parte social, en cada sección podemos hacer comentarios para intentar debatir las ideas fundamentales que propone la sección. O incluso hacer referencia a una determinada frase o párrafo.
-	\subsection{Usabilidad}
-	
-	\subsection{Revisión de la aplicación}
+\subsection{Usabilidad}
+
+\subsection{Revisión de la aplicación}
 Una vez que habíamos implementado todos los objetivos fundamentales de la aplicación, decidimos hacer una revisión para poner a prueba la aplicación. Para ello nos reunimos con un grupo de Labodemo \cite{ref:labodemo}, responsables del desarrollo de los portales de participación ciudadana del partido político Podemos \cite{ref:podemos} y la candidatura ciudadana de unidad popular Ahora Madrid \cite{ref:ahoramadrid}.
 
-	\subsubsection{Reunión con miembros de Labodemo}
+\subsubsection{Reunión con Labodemo}
 Tuvimos la oportunidad de establecer una conversación con dos miembros de Labodemo, en la que aprovechamos la oportunidad de mostrarles la aplicación que estábamos desarrollando. Ambos tenían experiencia en el desarrollo de plataformas de participación ciudadana en internet y nuevas tecnologías. Además fueron los responsables del desarrollo de los portales de participación del partido político Podemos y la candidatura ciudadana de unidad popular Ahora Madrid.
 
 Limitarnos a mostrar las diferentes secciones de cada programa les resultó útil. Aunque no suficiente como para atraer a una cantidad considerable de usuarios. Antes de hablar con ellos, habíamos planteado desarrollar propuestas colaborativas en tiempo real aprovechando Wave. Pero no comprendieron la libertad de dar al usuarios la creación de propuestas colaborativas en tiempo real.
@@ -128,75 +142,21 @@ Limitarnos a mostrar las diferentes secciones de cada programa les resultó úti
 Dándole una vuelta al desarrollo de las propuestas de la aplicación, nos sugirieron que para atraer a usuarios a utilizar nuestra aplicación, deberíamos dejar cierta libertad a colectivos sociales. Por ejemplo, un grupo de animalistas debería tener un “espacio” en la aplicación donde poder crear sus propias propuestas, e incluso hacer comparativas personalizadas de lo que proponen los diferentes programas sobre los animales. Así surgirían propuestas y comparativas divididas por colectivos que abarcarían diferentes temáticas. Un usuario poco activo podría buscar un colectivo de profesores porque resulta ser su profesión, y ver las propuestas que se llevan a cabo o visualizar una comparativa respecto las medidas de educación de los diferentes programas políticos.
 
 Organizar estas propuestas no sería tarea sencilla. En un principio se propuso como diferentes temas que puede tener un foro, en forma de post. Más tarde llegamos a la conclusión de que sería más cómodo para los colectivos dar la libertad de crear sus propios hilos, y en cada uno de ellos publicar las propuestas relacionadas con su colectivo.
-	
-	
-	
-	\subsubsection{Reunión con Javier de la Cueva}
-  
-\section{2ª Parte: Propuestas y Categorización}
-  \subsection{Estado del Arte}
 
-  \subsection{Intención}
-  \subsection{Objetivos}
-  \subsection{Usabilidad}
-  
-\section{3ª Parte: Encuestas de intención de voto}
-  \subsection{Estado del Arte}
+Por último insistieron mucho en el tema de las comparativas. Sería de gran utilidad que la aplicación tuviera una parte de comparativas en la que los usuarios pudieran comparar los programas políticos en vez de leerlos sección por sección. Resultaría de gran interés a un autónomo visualizar las medidas que proponen los diferentes partidos políticos para los autónomos. Pero estas comparativas no podría realizarlas cualquiera, por lo que deberían realizarlas periodistas o expertos que hubieran realizado algún tipo de comparativa similar anteriormente. Nos sugirieron contactar con periodistas o colectivos que hubieran publicado algún tipo de comparativa en cuando a programas o medidas, para obtener algún tipo de ayuda o consejo a seguir.
 
-  \subsection{Intención}
-  \subsection{Objetivos}
-  \subsection{Usabilidad}
-  
-  
-\section{Tecnologias y Metodologías de la app}
+\subsubsection{Conclusión}
 
-  \subsection{Arquitectura de la aplicacción}
-  
-La arquitectura está compuesta por tres módulos principales de los que hablaremos en profundidad en las siguientes subsecciones. Como cliente móvil tendremos la aplicación desarrollada en Android, que realizará peticiones HTTP al servicio web alojado en OpenShift, una plataforma que permite alojar servicios web de forma gratuita. Dentro del servicio contaremos con una API RESTful que será quien gestione las peticiones de la aplicación móvil mediante el protocolo HTTP.
+La reunión con dos de los miembros de Labodemo resultó de gran interés. Pues desde que decidimos la idea que íbamos a implementar, nunca habíamos puesto en práctica la aplicación o al menos no la habíamos verificado con el “mundo real”.
 
-	\begin{figure}[H]
-      \centering
-	\includegraphics[keepaspectratio, scale=0.4]{Media/Captures/architecture.png}
-      \caption{Arquitectura de la aplicacción.}
-      \label{fig:architecture}
-    \end{figure}
+Los integrantes de Labodemo eran expertos en desarrollo de portales de participación ciudadana. Y sobre todo estaban muy familiarizados con el uso común que les suele dar la gente a este tipo de aplicación. Por lo que sabían determinar las claves para que una aplicación tuviera un movimiento considerable de usuarios desde el comienzo.
 
-Por último, la base de datos MySQL alojada en el servidor de OpenShift \cite{ref:OpenShift}, almacenará toda la información relacionada con la aplicación. La API RESTful será quien gestione las operaciones de la base de datos.
+El tema de visualizar los programas políticos no les gustó demasiado. Expusieron que un ciudadano de a pie, no iba a molestarse en leer los programas políticos. Bien porque no los entienda o porque les resulte aburridos. Ellos argumentaban que los colectivos sociales serían los usuarios más activos en nuestra aplicación, por lo que debíamos enfocar más el desarrollo hacia la partición ciudadana y el uso de propuestas o comparativas por colectivo.
 
-	\subsection{Back-end}
+Tras esta reunión decidimos replantear la aplicación en base a los consejos que obtuvimos con la reunión de Labodemo. Incluimos las propuestas como parte de nuestra aplicación y empezamos a pensar la forma de colaborar de grupos y colectivos. También intentamos contactar con colectivos y personas interesadas en el desarrollo de la aplicación. Finalmente, conseguimos concretar una entrevista con Javier de la Cueva \cite{ref:jdelacueva}.
 
-  		\subsubsection{Base de Datos}\label{sssec:database}
-Para la implementación de la base de datos, se ha utilizado un modelo relacional para la definición de las tablas. Utilizando MySQL \cite{ref:MySQL} como sistema de gestión de base de datos phpMyAdmin \cite{ref:phpMyAdmin} como herramienta de gestión gráfica de la base de datos.
+\subsubsection{Reunión con Javier de la Cueva}
 
-La base de datos está formada por un total de 12 tablas donde se almacena toda la información relacionada con los programas de los partidos políticos, las propuestas ciudadanas, encuestas, comparativas, …, y otros datos más técnicos como la gestión de los usuarios, la relación de los comentarios o la relación entre las secciones y comparativas entre otras.
+\subsubsection{Conclusión}
 
-	\begin{figure}[H]
-      \centering
-	\includegraphics[keepaspectratio, scale=0.30]{Media/Captures/database.png}
-      \caption{Modelo entidad-relación de la base de datos.}
-      \label{fig:ermodel}
-    \end{figure}
-    
-Las tablas section y \textit{political-party} son utilizadas para guardar información estática en la aplicación. Es decir, en la tabla \textit{political-party} se almacenan los partidos políticos que se presentan a unas elecciones, y en la tabla \textit{section}, las diferentes secciones de un programa electoral. Tan sólo modificaremos las columnas de \textit{likes}, \textit{dislikes}, \textit{not-understood} y \textit{views} para obtener estadísticas de uso de cada sección. El resto de las columnas permanecerán intactas.
 
-Las demás tablas serán utilizadas para guardar datos dinámicos en la aplicación. Datos que normalmente genera un usuario visitando una sección de un programa, creando una propusta, haciendo un comentario, etc.
-
-    
-		\subsubsection{Service REST}\label{sssec:rest}
-		
-Para establecer la conexión de la base de datos con la aplicación desarrollada en Android, hemos utilizado Laravel como servicio web. Laravel \cite{ref:laravel}  un framework de código abierto para desarrollar aplicaciones web con PHP 5.
-
-Laravel nos permite montar un sistema de RESTful para que el cliente móvil pueda hacer peticiones al servicio web. Estas peticiones se realizan mediante el protocolo HTTP, en función de la operación que deseemos hacer, haremos una petición GET, POST, PUT, …, etcétera.
-
-	\begin{figure}[H]
-      \centering
-	\includegraphics[keepaspectratio, scale=0.30]{Media/Captures/laravel5.png}
-      \caption{Pantalla principal de Laravel 5.}
-      \label{fig:laravel5}
-    \end{figure}
-
-Establecer un servicio RESTful nos proporciona una gran flexibilidad. Pues no solo podremos hacer peticiones desde el cliente en Android, si no que más adelante si pretendemos desarrollar una versión web o incluso un cliente para iOS, las peticiones serán las mismas.
-
-Para organizar las diferentes peticiones en función de su uso y requisitos, Laravel permite montar una API REST (Representational State Transfer), un estilo de arquitectura software para sistemas hipermedia distribuidos como la World Wide Web. Este término se originó en una tesis doctoral sobre la web escrita por Roy Fielding \cite{ref:RESTPhd}.
-
-  \subsection{Frontend}
