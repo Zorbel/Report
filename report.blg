@@ -15,6 +15,11 @@ Repeated entry---line 429 of file bibliography.bib
  : @misc{ref:eclipse
  :                  ,
 I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 547 of file bibliography.bib
+ :     
+ :     author    = "Javier de la Cueva",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "ref_android_avd_params"
 Warning--I didn't find a database entry for "ref:android:asynctask"
 Warning--I didn't find a database entry for "ref:android_ui"
@@ -22,36 +27,40 @@ Warning--I didn't find a database entry for "ref:changeOrg"
 Warning--empty journal in ref:xmpp
 Warning--empty journal in ref:http_authentication
 Warning--empty journal in ref:webSocket_ref
-You've used 72 entries,
+Warning--empty author and editor in ref:manualCiberactivista
+Warning--empty title in ref:manualCiberactivista
+Warning--empty publisher in ref:manualCiberactivista
+Warning--empty year in ref:manualCiberactivista
+You've used 73 entries,
             1791 wiz_defined-function locations,
-            706 strings with 11523 characters,
-and the built_in function-call counts, 8698 in all, are:
-= -- 699
-> -- 247
+            712 strings with 11760 characters,
+and the built_in function-call counts, 8863 in all, are:
+= -- 708
+> -- 251
 < -- 0
-+ -- 130
-- -- 58
-* -- 17
-:= -- 1256
-add.period$ -- 204
-call.type$ -- 72
-change.case$ -- 71
++ -- 132
+- -- 59
+* -- 32
+:= -- 1277
+add.period$ -- 206
+call.type$ -- 73
+change.case$ -- 70
 chr.to.int$ -- 0
-cite$ -- 75
-duplicate$ -- 371
-empty$ -- 1278
-format.name$ -- 58
-if$ -- 2112
+cite$ -- 80
+duplicate$ -- 387
+empty$ -- 1298
+format.name$ -- 59
+if$ -- 2146
 int.to.chr$ -- 0
-int.to.str$ -- 72
-missing$ -- 3
-newline$ -- 351
-num.names$ -- 57
-pop$ -- 369
+int.to.str$ -- 73
+missing$ -- 6
+newline$ -- 355
+num.names$ -- 58
+pop$ -- 381
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 366
+skip$ -- 367
 stack$ -- 0
 substring$ -- 0
 swap$ -- 69
@@ -59,8 +68,8 @@ text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 3
-while$ -- 57
-width$ -- 74
-write$ -- 628
-(There was 1 error message)
+warning$ -- 7
+while$ -- 58
+width$ -- 75
+write$ -- 635
+(There were 2 error messages)
