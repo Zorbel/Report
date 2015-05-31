@@ -5,42 +5,42 @@
 \BOOKMARK [1][-]{section.1.1}{Objetivos del Proyecto}{chapter.1}% 5
 \BOOKMARK [1][-]{section.1.2}{Estructura del Documento}{chapter.1}% 6
 \BOOKMARK [0][-]{chapter.2}{Migraci\363n de Wave a Android}{}% 7
-\BOOKMARK [1][-]{section.2.1}{Estado del Arte}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.2}{Wave}{chapter.2}% 9
-\BOOKMARK [2][-]{subsection.2.2.1}{Google Wave}{section.2.2}% 10
-\BOOKMARK [2][-]{subsection.2.2.2}{Apache Wave}{section.2.2}% 11
-\BOOKMARK [1][-]{section.2.3}{Tecnologias y Caracteristicas de Wave}{chapter.2}% 12
-\BOOKMARK [2][-]{subsection.2.3.1}{Caracteristicas de Wave}{section.2.3}% 13
-\BOOKMARK [3][-]{section*.7}{Federaci\363n}{subsection.2.3.1}% 14
-\BOOKMARK [3][-]{section*.7}{Consistencia en tiempo real}{subsection.2.3.1}% 15
-\BOOKMARK [3][-]{section*.7}{Escalabilidad}{subsection.2.3.1}% 16
-\BOOKMARK [3][-]{section*.7}{Modelo Wave}{subsection.2.3.1}% 17
-\BOOKMARK [2][-]{subsection.2.3.2}{Servidores Wave}{section.2.3}% 18
-\BOOKMARK [3][-]{section*.9}{Wave in a Box}{subsection.2.3.2}% 19
-\BOOKMARK [3][-]{figure.caption.10}{SwellRT}{subsection.2.3.2}% 20
-\BOOKMARK [1][-]{section.2.4}{Metodolog\355a de Migraci\363n}{chapter.2}% 21
-\BOOKMARK [2][-]{subsection.2.4.1}{Objetivo}{section.2.4}% 22
-\BOOKMARK [2][-]{subsection.2.4.2}{Plataforma: Entorno de Desarrollo, Construcci\363n y Depuraci\363n}{section.2.4}% 23
-\BOOKMARK [3][-]{section*.11}{Eclipse}{subsection.2.4.2}% 24
-\BOOKMARK [3][-]{figure.caption.12}{Proceso de Construcci\363n por Consola}{subsection.2.4.2}% 25
-\BOOKMARK [3][-]{lstnumber.-4.1}{Proceso de Depuraci\363n}{subsection.2.4.2}% 26
-\BOOKMARK [2][-]{subsection.2.4.3}{Migraci\363n: Identificaci\363n y Soluci\363n de Problemas}{section.2.4}% 27
-\BOOKMARK [3][-]{section*.14}{Conexi\363n HTTP}{subsection.2.4.3}% 28
-\BOOKMARK [3][-]{lstnumber.-7.15}{Conexi\363n WebSocket}{subsection.2.4.3}% 29
-\BOOKMARK [3][-]{lstnumber.-9.2}{Conexi\363n final y Logging}{subsection.2.4.3}% 30
-\BOOKMARK [3][-]{figure.caption.16}{Organizaci\363n del c\363digo: Servicio Android}{subsection.2.4.3}% 31
-\BOOKMARK [2][-]{subsection.2.4.4}{Dependencias}{section.2.4}% 32
-\BOOKMARK [2][-]{subsection.2.4.5}{Resultado de la Migraci\363n}{section.2.4}% 33
-\BOOKMARK [0][-]{chapter.3}{Construyendo la idea de la aplicaci\363n: DemoCritics}{}% 34
-\BOOKMARK [1][-]{section.3.1}{Introducci\363n}{chapter.3}% 35
-\BOOKMARK [2][-]{section*.21}{Brainstorming de ideas}{section.3.1}% 36
-\BOOKMARK [2][-]{subsection.3.1.1}{Pol\355tica en el mundo de la Inform\341tica}{section.3.1}% 37
-\BOOKMARK [2][-]{subsection.3.1.2}{Democracia}{section.3.1}% 38
-\BOOKMARK [3][-]{section*.23}{Democracia representativa}{subsection.3.1.2}% 39
-\BOOKMARK [3][-]{section*.23}{Democracia participativa}{subsection.3.1.2}% 40
-\BOOKMARK [3][-]{section*.23}{Democracia directa}{subsection.3.1.2}% 41
-\BOOKMARK [3][-]{section*.23}{Democracia deliberativa}{subsection.3.1.2}% 42
-\BOOKMARK [2][-]{subsection.3.1.3}{Adentr\341ndonos en la idea}{section.3.1}% 43
+\BOOKMARK [1][-]{section.2.1}{Wave}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.1.1}{Google Wave}{section.2.1}% 9
+\BOOKMARK [2][-]{subsection.2.1.2}{Apache Wave}{section.2.1}% 10
+\BOOKMARK [1][-]{section.2.2}{Tecnologias y Caracteristicas de Wave}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.1}{Caracteristicas de Wave}{section.2.2}% 12
+\BOOKMARK [3][-]{section*.7}{Federaci\363n}{subsection.2.2.1}% 13
+\BOOKMARK [3][-]{section*.7}{Consistencia en tiempo real}{subsection.2.2.1}% 14
+\BOOKMARK [3][-]{section*.7}{Escalabilidad}{subsection.2.2.1}% 15
+\BOOKMARK [3][-]{section*.7}{Modelo Wave}{subsection.2.2.1}% 16
+\BOOKMARK [2][-]{subsection.2.2.2}{Servidores Wave}{section.2.2}% 17
+\BOOKMARK [3][-]{section*.9}{Wave in a Box}{subsection.2.2.2}% 18
+\BOOKMARK [3][-]{figure.caption.10}{SwellRT}{subsection.2.2.2}% 19
+\BOOKMARK [1][-]{section.2.3}{Metodolog\355a de Migraci\363n}{chapter.2}% 20
+\BOOKMARK [2][-]{subsection.2.3.1}{Objetivo}{section.2.3}% 21
+\BOOKMARK [2][-]{subsection.2.3.2}{Plataforma: Entorno de Desarrollo, Construcci\363n y Depuraci\363n}{section.2.3}% 22
+\BOOKMARK [3][-]{section*.11}{Eclipse}{subsection.2.3.2}% 23
+\BOOKMARK [3][-]{figure.caption.12}{Proceso de Construcci\363n por Consola}{subsection.2.3.2}% 24
+\BOOKMARK [3][-]{lstnumber.-4.1}{Proceso de Depuraci\363n}{subsection.2.3.2}% 25
+\BOOKMARK [2][-]{subsection.2.3.3}{Migraci\363n: Identificaci\363n y Soluci\363n de Problemas}{section.2.3}% 26
+\BOOKMARK [3][-]{section*.14}{Conexi\363n HTTP}{subsection.2.3.3}% 27
+\BOOKMARK [3][-]{lstnumber.-7.15}{Conexi\363n WebSocket}{subsection.2.3.3}% 28
+\BOOKMARK [3][-]{lstnumber.-9.2}{Conexi\363n final y Logging}{subsection.2.3.3}% 29
+\BOOKMARK [3][-]{figure.caption.16}{Organizaci\363n del c\363digo: Servicio Android}{subsection.2.3.3}% 30
+\BOOKMARK [2][-]{subsection.2.3.4}{Dependencias}{section.2.3}% 31
+\BOOKMARK [2][-]{subsection.2.3.5}{Resultado de la Migraci\363n}{section.2.3}% 32
+\BOOKMARK [0][-]{chapter.3}{Construyendo la idea de la aplicaci\363n: DemoCritics}{}% 33
+\BOOKMARK [1][-]{section.3.1}{Introducci\363n}{chapter.3}% 34
+\BOOKMARK [2][-]{section*.21}{Brainstorming de ideas}{section.3.1}% 35
+\BOOKMARK [1][-]{section.3.2}{Marco te\363rico de la idea}{chapter.3}% 36
+\BOOKMARK [2][-]{subsection.3.2.1}{Pol\355tica en el mundo de la Inform\341tica}{section.3.2}% 37
+\BOOKMARK [2][-]{subsection.3.2.2}{Democracia}{section.3.2}% 38
+\BOOKMARK [3][-]{section*.23}{Democracia representativa}{subsection.3.2.2}% 39
+\BOOKMARK [3][-]{section*.23}{Democracia participativa}{subsection.3.2.2}% 40
+\BOOKMARK [3][-]{section*.23}{Democracia directa}{subsection.3.2.2}% 41
+\BOOKMARK [3][-]{section*.23}{Democracia deliberativa}{subsection.3.2.2}% 42
+\BOOKMARK [1][-]{section.3.3}{Adentr\341ndonos en la idea}{chapter.3}% 43
 \BOOKMARK [0][-]{chapter.4}{Estado del Arte}{}% 44
 \BOOKMARK [1][-]{section.4.1}{Servidor: Wave}{chapter.4}% 45
 \BOOKMARK [1][-]{section.4.2}{Aplicaci\363n Android: DemoCritics}{chapter.4}% 46
@@ -54,38 +54,44 @@
 \BOOKMARK [3][-]{figure.caption.30}{Change.org}{subsection.4.2.2}% 54
 \BOOKMARK [3][-]{figure.caption.31}{Programas Colaborativos de Ahora Madrid y Zaragoza en Com\372n}{subsection.4.2.2}% 55
 \BOOKMARK [3][-]{figure.caption.33}{Appgree}{subsection.4.2.2}% 56
-\BOOKMARK [0][-]{chapter.5}{Metodolog\355a del Proyecto}{}% 57
-\BOOKMARK [1][-]{section.5.1}{Uso de Software Libre}{chapter.5}% 58
-\BOOKMARK [1][-]{section.5.2}{Metodolog\355a de Migraci\363n de Wave a Android}{chapter.5}% 59
-\BOOKMARK [1][-]{section.5.3}{Dise\361o de la Aplicaci\363n: Dise\361o Guiado Por Objetivos}{chapter.5}% 60
-\BOOKMARK [2][-]{subsection.5.3.1}{Investigaci\363n}{section.5.3}% 61
-\BOOKMARK [3][-]{section*.35}{Intenci\363n Inicial: Prototipo b\341sico}{subsection.5.3.1}% 62
-\BOOKMARK [3][-]{section*.35}{Entrevista con Labodemo}{subsection.5.3.1}% 63
-\BOOKMARK [3][-]{section*.35}{Conclusi\363n}{subsection.5.3.1}% 64
-\BOOKMARK [3][-]{section*.35}{Entrevista con Javier de la Cueva}{subsection.5.3.1}% 65
-\BOOKMARK [3][-]{section*.35}{Conclusi\363n}{subsection.5.3.1}% 66
-\BOOKMARK [2][-]{subsection.5.3.2}{Modelado}{section.5.3}% 67
-\BOOKMARK [2][-]{subsection.5.3.3}{Definici\363n de Requisitos}{section.5.3}% 68
-\BOOKMARK [2][-]{subsection.5.3.4}{Framework de dise\361o}{section.5.3}% 69
-\BOOKMARK [3][-]{section*.36}{Metodolog\355a}{subsection.5.3.4}% 70
-\BOOKMARK [3][-]{section*.36}{Prototipos en papel}{subsection.5.3.4}% 71
-\BOOKMARK [3][-]{section*.36}{Prototipos intermedios}{subsection.5.3.4}% 72
-\BOOKMARK [3][-]{figure.caption.38}{Prototipo final}{subsection.5.3.4}% 73
-\BOOKMARK [2][-]{subsection.5.3.5}{An\341lisis de Usabilidad}{section.5.3}% 74
-\BOOKMARK [1][-]{section.5.4}{Implementaci\363n de DemoCritics}{chapter.5}% 75
-\BOOKMARK [1][-]{section.5.5}{Evaluaci\363n con Usuarios}{chapter.5}% 76
-\BOOKMARK [0][-]{chapter.6}{Arquitectura de DemoCritics}{}% 77
-\BOOKMARK [1][-]{section.6.1}{Arquitectura de Wave}{chapter.6}% 78
-\BOOKMARK [1][-]{section.6.2}{Arquitectura de la aplicaci\363n}{chapter.6}% 79
-\BOOKMARK [2][-]{subsection.6.2.1}{Back-end}{section.6.2}% 80
-\BOOKMARK [3][-]{section*.40}{Base de Datos}{subsection.6.2.1}% 81
-\BOOKMARK [3][-]{figure.caption.41}{Service REST}{subsection.6.2.1}% 82
-\BOOKMARK [3][-]{figure.caption.42}{Servicio Android de conexi\363n con Wave}{subsection.6.2.1}% 83
-\BOOKMARK [2][-]{subsection.6.2.2}{Front-end: Cliente Android}{section.6.2}% 84
-\BOOKMARK [0][-]{chapter.7}{Resultados y Conclusiones}{}% 85
-\BOOKMARK [1][-]{section.7.1}{Discusion de Resultados}{chapter.7}% 86
-\BOOKMARK [2][-]{subsection.7.1.1}{Evaluaci\363n con usuarios}{section.7.1}% 87
-\BOOKMARK [1][-]{section.7.2}{Conclusiones}{chapter.7}% 88
-\BOOKMARK [0][-]{chapter.8}{Trabajo a Futuro}{}% 89
-\BOOKMARK [1][-]{section.8.1}{Mejoras}{chapter.8}% 90
-\BOOKMARK [0][-]{section.8.1}{Bibliograf\355a}{}% 91
+\BOOKMARK [0][-]{chapter.5}{Tecnolog\355as de DemoCritics}{}% 57
+\BOOKMARK [1][-]{section.5.1}{Tecnolog\355as de Wave}{chapter.5}% 58
+\BOOKMARK [1][-]{section.5.2}{Tecnolog\355as de la Aplicaci\363n}{chapter.5}% 59
+\BOOKMARK [2][-]{subsection.5.2.1}{Android}{section.5.2}% 60
+\BOOKMARK [1][-]{section.5.3}{Protocolos}{chapter.5}% 61
+\BOOKMARK [1][-]{section.5.4}{Herramientas de Desarrollo utilizadas}{chapter.5}% 62
+\BOOKMARK [0][-]{chapter.6}{Metodolog\355a del Proyecto}{}% 63
+\BOOKMARK [1][-]{section.6.1}{Uso de Software Libre}{chapter.6}% 64
+\BOOKMARK [1][-]{section.6.2}{Metodolog\355a de Migraci\363n de Wave a Android}{chapter.6}% 65
+\BOOKMARK [1][-]{section.6.3}{Dise\361o de la Aplicaci\363n: Dise\361o Guiado Por Objetivos}{chapter.6}% 66
+\BOOKMARK [2][-]{subsection.6.3.1}{Investigaci\363n}{section.6.3}% 67
+\BOOKMARK [3][-]{section*.35}{Intenci\363n Inicial: Prototipo b\341sico}{subsection.6.3.1}% 68
+\BOOKMARK [3][-]{section*.35}{Entrevista con Labodemo}{subsection.6.3.1}% 69
+\BOOKMARK [3][-]{section*.35}{Conclusi\363n}{subsection.6.3.1}% 70
+\BOOKMARK [3][-]{section*.35}{Entrevista con Javier de la Cueva}{subsection.6.3.1}% 71
+\BOOKMARK [3][-]{section*.35}{Conclusi\363n}{subsection.6.3.1}% 72
+\BOOKMARK [2][-]{subsection.6.3.2}{Modelado}{section.6.3}% 73
+\BOOKMARK [2][-]{subsection.6.3.3}{Definici\363n de Requisitos}{section.6.3}% 74
+\BOOKMARK [2][-]{subsection.6.3.4}{Framework de dise\361o}{section.6.3}% 75
+\BOOKMARK [3][-]{section*.36}{Metodolog\355a}{subsection.6.3.4}% 76
+\BOOKMARK [3][-]{section*.36}{Prototipos en papel}{subsection.6.3.4}% 77
+\BOOKMARK [3][-]{section*.36}{Prototipos intermedios}{subsection.6.3.4}% 78
+\BOOKMARK [3][-]{figure.caption.38}{Prototipo final}{subsection.6.3.4}% 79
+\BOOKMARK [2][-]{subsection.6.3.5}{An\341lisis de Usabilidad}{section.6.3}% 80
+\BOOKMARK [1][-]{section.6.4}{Implementaci\363n de DemoCritics}{chapter.6}% 81
+\BOOKMARK [1][-]{section.6.5}{Evaluaci\363n con Usuarios}{chapter.6}% 82
+\BOOKMARK [0][-]{chapter.7}{Arquitectura de DemoCritics}{}% 83
+\BOOKMARK [1][-]{section.7.1}{Arquitectura de Wave}{chapter.7}% 84
+\BOOKMARK [1][-]{section.7.2}{Arquitectura de la aplicaci\363n}{chapter.7}% 85
+\BOOKMARK [2][-]{subsection.7.2.1}{Back-end}{section.7.2}% 86
+\BOOKMARK [3][-]{section*.40}{Base de Datos}{subsection.7.2.1}% 87
+\BOOKMARK [3][-]{figure.caption.41}{Service REST}{subsection.7.2.1}% 88
+\BOOKMARK [3][-]{figure.caption.42}{Servicio Android de conexi\363n con Wave}{subsection.7.2.1}% 89
+\BOOKMARK [2][-]{subsection.7.2.2}{Front-end: Cliente Android}{section.7.2}% 90
+\BOOKMARK [0][-]{chapter.8}{Resultados y Conclusiones}{}% 91
+\BOOKMARK [1][-]{section.8.1}{Discusion de Resultados}{chapter.8}% 92
+\BOOKMARK [2][-]{subsection.8.1.1}{Evaluaci\363n con usuarios}{section.8.1}% 93
+\BOOKMARK [1][-]{section.8.2}{Conclusiones}{chapter.8}% 94
+\BOOKMARK [0][-]{chapter.9}{Trabajo a Futuro}{}% 95
+\BOOKMARK [1][-]{section.9.1}{Mejoras}{chapter.9}% 96
+\BOOKMARK [0][-]{section.9.1}{Bibliograf\355a}{}% 97
