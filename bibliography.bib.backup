@@ -1,3 +1,15 @@
+@misc{ref:wave_migration_github,
+      author = "",
+      title = "{Wave Client for Android}",
+      howpublished = "\\\url{https://github.com/Zorbel/swell-android}"
+}
+
+@misc{ref:swellRT_android_github,
+      author = "P2PValue",
+      title = "{SwellRT Client for Android}",
+      howpublished = "\\\url{https://github.com/P2Pvalue/swellrt/tree/master/android}"
+}
+
 @misc{ref:wave_announcement,
       author = "Google, Inc.",
       title = "{Meet Google Wave}",
@@ -339,6 +351,48 @@
     howpublished = "\\\url{https://developer.android.com/tools/devices/emulator.html#emulatornetworking}"
 }
 
+@misc{ref:atmosphere,
+    author = "Async-IO.org.",
+    title = "{Atmosphere: The Asynchronous WebSocket/Comet Framework}",
+    howpublished = "\\\url{https://github.com/Atmosphere/atmosphere}"
+}
+
+@misc{ref:wAsync_github,
+    author = "Async-IO.org.",
+    title = "{wAsync: A WebSockets/HTTP Client Library for Asynchronous Communication}",
+    howpublished = "\\\url{https://github.com/Atmosphere/wasync}"
+}
+
+@misc{ref:httpProvider_wAsync,
+    author = "Async-IO.org.",
+    title = "{Configuring the underlying AHC provider}",
+    howpublished = "\\\url{https://github.com/Atmosphere/wasync/wiki/Configuring-the-underlying-AHC-provider}"
+}
+
+@misc{ref:asyncHttpClient,
+    author = "Async-IO.org.",
+    title = "{Async Http Client}",
+    howpublished = "\\\url{https://github.com/AsyncHttpClient/async-http-client}"
+}
+
+@misc{ref:grizzly,
+    author = "Project Grizzly",
+    title = "{Project Grizzly: NIO Event Development Simplified}",
+    howpublished = "\\\url{https://grizzly.java.net/index.html}"
+}
+
+@misc{ref:slf4j_android,
+    author = "QOS.ch",
+    title = "{SLF4J for Android}",
+    howpublished = "\\\url{http://www.slf4j.org/android/}"
+}
+
+@misc{ref:android_service,
+    author = "Google Inc.",
+    title = "{Android Services}",
+    howpublished = "\\\url{https://developer.android.com/guide/components/services.html}"
+}
+
 @article{ref:federating_websites_google_wave,
     author  = "Torben Weis and Arno Wacker",
     title   = "{F}ederating {W}ebsites with the {G}oogle {W}ave {P}rotocol",
@@ -442,9 +496,56 @@
 	author		= "Roy Thomas Fielding",
 	title		= "Architectural Styles and the Design of Network-based Software Architectures",
 	school		= "University of California, Irvine",
-	%address	= "",
-	year		= "2000",
-	%month		= "",
-	%keywords	= "",
-	%note		= "",
+	year		= "2000"
+}
+
+@misc{ref:practicesRESTful_API,
+	author		= "Stefan Jauker",
+	title 		= "{10 Best Practices for Better RESTful API | Thinking Mobile}",
+	howpublished 	="\\\url{http://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/}"
+}
+
+@misc{ref:OpenShift,
+	author		= "",
+	title 		= "{OpenShift by Red Hat}",
+	howpublished 	="\\\url{https://www.openshift.com/}"
+}
+
+@misc{ref:jdelacueva,
+  title     = "{Javier de la Cueva, abogado, doctor en Filosofía y estudioso de las relaciones entre el Derecho y la Tecnología}",
+  howpublished  ="\\\url{http://javierdelacueva.es/bio/}"
+}  
+  
+@misc{ref:reddit,
+  title     	= "{reddit: the front page of the internet}",
+  howpublished  = "\\\url{https://www.reddit.com/}"
+}
+
+@misc{ref:plazaPodemos,
+  title     	= "{Plaza Podemos: ¡Sí se puede!}",
+  howpublished  = "\\\url{https://www.reddit.com/r/podemos/}"
+}
+
+@misc{ref:change.org,
+  title		= "{Change.org · La mayor plataforma de peticiones del mundo}",
+  howpublished	= "\\\url{https://www.change.org/}"
+}
+
+@misc{ref:zaragonzaEnComun,
+  title		= "{Programa colaborativo de Zaragoza en Común}",
+  howpublished	= "\\\url{http://programa.ganemoszaragoza.com/}"
+}
+
+@book{ref:bookAlanCooper,
+    author    = "Alan Copper",
+    title     = "The Inmates Are Running the Asylum: Why High Tech Products Drive Us Crazy and How to Restore the Sanity",
+    year      = "2004",
+    publisher = "Sams Publishing"
+}
+
+@book{ref:manualCiberactivista
+    author    = "Javier de la Cueva",
+    title     = "Manual del ciberactivista. Teoría y práctica de las acciones micropolíticas",
+    year      = "2015",
+    publisher = "Bandaàparte Editores"
 }

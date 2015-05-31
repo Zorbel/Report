@@ -11,11 +11,7 @@ A level-1 auxiliary file: results.aux
 A level-1 auxiliary file: futureWork.aux
 The style file: unsrt.bst
 Database file #1: bibliography.bib
-Repeated entry---line 429 of file bibliography.bib
- : @misc{ref:eclipse
- :                  ,
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 547 of file bibliography.bib
+I was expecting a `,' or a `}'---line 540 of file bibliography.bib
  :     
  :     author    = "Javier de la Cueva",
 (Error may have been on previous line)
@@ -31,45 +27,45 @@ Warning--empty author and editor in ref:manualCiberactivista
 Warning--empty title in ref:manualCiberactivista
 Warning--empty publisher in ref:manualCiberactivista
 Warning--empty year in ref:manualCiberactivista
-You've used 73 entries,
+You've used 74 entries,
             1791 wiz_defined-function locations,
-            712 strings with 11760 characters,
-and the built_in function-call counts, 8863 in all, are:
-= -- 708
-> -- 251
+            716 strings with 11923 characters,
+and the built_in function-call counts, 9013 in all, are:
+= -- 720
+> -- 258
 < -- 0
-+ -- 132
-- -- 59
++ -- 135
+- -- 61
 * -- 32
-:= -- 1277
-add.period$ -- 206
-call.type$ -- 73
-change.case$ -- 70
+:= -- 1306
+add.period$ -- 210
+call.type$ -- 74
+change.case$ -- 71
 chr.to.int$ -- 0
-cite$ -- 80
-duplicate$ -- 387
-empty$ -- 1298
-format.name$ -- 59
-if$ -- 2146
+cite$ -- 81
+duplicate$ -- 392
+empty$ -- 1316
+format.name$ -- 61
+if$ -- 2179
 int.to.chr$ -- 0
-int.to.str$ -- 73
+int.to.str$ -- 74
 missing$ -- 6
-newline$ -- 355
-num.names$ -- 58
-pop$ -- 381
+newline$ -- 361
+num.names$ -- 60
+pop$ -- 385
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 367
+skip$ -- 371
 stack$ -- 0
 substring$ -- 0
-swap$ -- 69
+swap$ -- 70
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 7
-while$ -- 58
-width$ -- 75
-write$ -- 635
-(There were 2 error messages)
+while$ -- 60
+width$ -- 76
+write$ -- 646
+(There was 1 error message)
