@@ -18,78 +18,76 @@
 \contentsline {subsubsection}{Escalabilidad}{5}{section*.7}
 \contentsline {subsubsection}{Modelo Wave}{5}{section*.7}
 \contentsline {subsection}{\numberline {2.3.2}Servidores Wave}{6}{subsection.2.3.2}
-\contentsline {subsubsection}{Wave in a Box}{6}{section*.8}
-\contentsline {subsubsection}{SwellRT}{7}{figure.2.2}
+\contentsline {subsubsection}{Wave in a Box}{6}{section*.9}
+\contentsline {subsubsection}{SwellRT}{7}{figure.caption.10}
 \contentsline {section}{\numberline {2.4}Metodolog\IeC {\'\i }a de Migraci\IeC {\'o}n}{8}{section.2.4}
 \contentsline {subsection}{\numberline {2.4.1}Objetivo}{8}{subsection.2.4.1}
 \contentsline {subsection}{\numberline {2.4.2}Plataforma: Entorno de Desarrollo, Construcci\IeC {\'o}n y Depuraci\IeC {\'o}n}{8}{subsection.2.4.2}
-\contentsline {subsubsection}{Eclipse}{8}{section*.9}
-\contentsline {subsubsection}{Proceso de Construcci\IeC {\'o}n por Consola}{11}{figure.2.3}
+\contentsline {subsubsection}{Eclipse}{8}{section*.11}
+\contentsline {subsubsection}{Proceso de Construcci\IeC {\'o}n por Consola}{11}{figure.caption.12}
 \contentsline {subsubsection}{Proceso de Depuraci\IeC {\'o}n}{13}{lstnumber.-4.1}
 \contentsline {subsection}{\numberline {2.4.3}Migraci\IeC {\'o}n: Identificaci\IeC {\'o}n y Soluci\IeC {\'o}n de Problemas}{14}{subsection.2.4.3}
-\contentsline {subsubsection}{Conexi\IeC {\'o}n HTTP}{15}{section*.10}
+\contentsline {subsubsection}{Conexi\IeC {\'o}n HTTP}{15}{section*.14}
 \contentsline {subsubsection}{Conexi\IeC {\'o}n WebSocket}{19}{lstnumber.-7.15}
 \contentsline {subsubsection}{Conexi\IeC {\'o}n final y Logging}{21}{lstnumber.-9.2}
-\contentsline {subsubsection}{Organizaci\IeC {\'o}n del c\IeC {\'o}digo: Servicio Android}{23}{figure.2.6}
+\contentsline {subsubsection}{Organizaci\IeC {\'o}n del c\IeC {\'o}digo: Servicio Android}{23}{figure.caption.16}
 \contentsline {subsection}{\numberline {2.4.4}Dependencias}{26}{subsection.2.4.4}
 \contentsline {subsection}{\numberline {2.4.5}Resultado de la Migraci\IeC {\'o}n}{27}{subsection.2.4.5}
-\contentsline {chapter}{\numberline {3}Construyendo la idea: DemoCritics}{29}{chapter.3}
+\contentsline {chapter}{\numberline {3}Construyendo la idea de la aplicaci\IeC {\'o}n: DemoCritics}{29}{chapter.3}
 \contentsline {section}{\numberline {3.1}Introducci\IeC {\'o}n}{29}{section.3.1}
-\contentsline {subsubsection}{Brainstorming de ideas}{29}{section*.11}
+\contentsline {subsubsection}{Brainstorming de ideas}{29}{section*.21}
 \contentsline {subsection}{\numberline {3.1.1}Pol\IeC {\'\i }tica en el mundo de la Inform\IeC {\'a}tica}{31}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Democracia}{32}{subsection.3.1.2}
-\contentsline {subsubsection}{Democracia representativa}{32}{section*.12}
-\contentsline {subsubsection}{Democracia participativa}{32}{section*.12}
-\contentsline {subsubsection}{Democracia directa}{32}{section*.12}
-\contentsline {subsubsection}{Democracia deliberativa}{32}{section*.12}
+\contentsline {subsubsection}{Democracia representativa}{32}{section*.23}
+\contentsline {subsubsection}{Democracia participativa}{32}{section*.23}
+\contentsline {subsubsection}{Democracia directa}{32}{section*.23}
+\contentsline {subsubsection}{Democracia deliberativa}{32}{section*.23}
 \contentsline {subsection}{\numberline {3.1.3}Adentr\IeC {\'a}ndonos en la idea}{32}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Estado del Arte}{33}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Programas Pol\IeC {\'\i }ticos}{33}{subsection.3.2.1}
-\contentsline {subsubsection}{UPyD Parla}{33}{section*.13}
-\contentsline {subsubsection}{$\sharp $RecuperaC\IeC {\'o}rdoba}{34}{figure.3.2}
-\contentsline {subsubsection}{PP Canarias}{35}{figure.3.3}
-\contentsline {subsection}{\numberline {3.2.2}Participaci\IeC {\'o}n Ciudadana}{36}{subsection.3.2.2}
-\contentsline {subsubsection}{Reddit}{36}{section*.14}
-\contentsline {subsubsection}{Change.org}{37}{figure.3.5}
-\contentsline {subsubsection}{Programa Colaborativo AhoraMadrid}{38}{figure.3.6}
-\contentsline {chapter}{\numberline {4}Tecnolog\IeC {\'\i }as de DemoCritics}{41}{chapter.4}
-\contentsline {section}{\numberline {4.1}Tecnolog\IeC {\'\i }as de Wave}{41}{section.4.1}
-\contentsline {section}{\numberline {4.2}Tecnolog\IeC {\'\i }as de la Aplicaci\IeC {\'o}n}{41}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Android}{41}{subsection.4.2.1}
-\contentsline {section}{\numberline {4.3}Protocolos}{41}{section.4.3}
-\contentsline {section}{\numberline {4.4}Herramientas de Desarrollo utilizadas}{41}{section.4.4}
-\contentsline {chapter}{\numberline {5}Metodolog\IeC {\'\i }a del Proyecto}{43}{chapter.5}
-\contentsline {section}{\numberline {5.1}Uso de Software Libre}{43}{section.5.1}
-\contentsline {section}{\numberline {5.2}Metodolog\IeC {\'\i }a de Migraci\IeC {\'o}n de Wave a Android}{43}{section.5.2}
-\contentsline {section}{\numberline {5.3}Dise\IeC {\~n}o de la Aplicaci\IeC {\'o}n: Dise\IeC {\~n}o Guiado Por Objetivos}{43}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Investigaci\IeC {\'o}n}{44}{subsection.5.3.1}
-\contentsline {subsubsection}{Intenci\IeC {\'o}n Inicial: Prototipo b\IeC {\'a}sico}{44}{section*.15}
-\contentsline {subsubsection}{Entrevista con Labodemo}{45}{section*.15}
-\contentsline {subsubsection}{Conclusi\IeC {\'o}n}{46}{section*.15}
-\contentsline {subsubsection}{Entrevista con Javier de la Cueva}{47}{section*.15}
-\contentsline {subsubsection}{Conclusi\IeC {\'o}n}{48}{section*.15}
-\contentsline {subsection}{\numberline {5.3.2}Modelado}{48}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Definici\IeC {\'o}n de Requisitos}{50}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Framework de dise\IeC {\~n}o}{51}{subsection.5.3.4}
-\contentsline {subsubsection}{Metodolog\IeC {\'\i }a}{52}{section*.16}
-\contentsline {subsubsection}{Prototipos en papel}{52}{section*.16}
-\contentsline {subsubsection}{Prototipos intermedios}{52}{section*.16}
-\contentsline {subsubsection}{Prototipo final}{54}{figure.5.2}
-\contentsline {subsection}{\numberline {5.3.5}An\IeC {\'a}lisis de Usabilidad}{54}{subsection.5.3.5}
-\contentsline {section}{\numberline {5.4}Implementaci\IeC {\'o}n de DemoCritics}{55}{section.5.4}
-\contentsline {section}{\numberline {5.5}Evaluaci\IeC {\'o}n con Usuarios}{55}{section.5.5}
-\contentsline {chapter}{\numberline {6}Arquitectura de DemoCritics}{57}{chapter.6}
-\contentsline {section}{\numberline {6.1}Arquitectura de Wave}{57}{section.6.1}
-\contentsline {section}{\numberline {6.2}Arquitectura de la aplicaci\IeC {\'o}n}{57}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Back-end}{58}{subsection.6.2.1}
-\contentsline {subsubsection}{Base de Datos}{58}{section*.17}
-\contentsline {subsubsection}{Service REST}{60}{figure.6.2}
-\contentsline {subsubsection}{Servicio Android de conexi\IeC {\'o}n con Wave}{61}{figure.6.3}
-\contentsline {subsection}{\numberline {6.2.2}Front-end: Cliente Android}{61}{subsection.6.2.2}
-\contentsline {chapter}{\numberline {7}Resultados y Conclusiones}{63}{chapter.7}
-\contentsline {section}{\numberline {7.1}Discusion de Resultados}{63}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Evaluaci\IeC {\'o}n con usuarios}{63}{subsection.7.1.1}
-\contentsline {section}{\numberline {7.2}Conclusiones}{63}{section.7.2}
-\contentsline {chapter}{\numberline {8}Trabajo a Futuro}{65}{chapter.8}
-\contentsline {section}{\numberline {8.1}Mejoras}{65}{section.8.1}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliograf\IeC {\'\i }a}{65}{section.8.1}
+\contentsline {chapter}{\numberline {4}Estado del Arte}{35}{chapter.4}
+\contentsline {section}{\numberline {4.1}Servidor: Wave}{35}{section.4.1}
+\contentsline {section}{\numberline {4.2}Aplicaci\IeC {\'o}n Android: DemoCritics}{35}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Programas Pol\IeC {\'\i }ticos}{35}{subsection.4.2.1}
+\contentsline {subsubsection}{UPyD Parla}{35}{section*.24}
+\contentsline {subsubsection}{$\sharp $RecuperaC\IeC {\'o}rdoba}{37}{figure.caption.25}
+\contentsline {subsubsection}{PSOE Andaluc\IeC {\'\i }a}{37}{figure.caption.26}
+\contentsline {subsubsection}{PP Canarias}{38}{figure.caption.27}
+\contentsline {subsection}{\numberline {4.2.2}Participaci\IeC {\'o}n Ciudadana}{39}{subsection.4.2.2}
+\contentsline {subsubsection}{Reddit}{39}{section*.29}
+\contentsline {subsubsection}{Change.org}{41}{figure.caption.30}
+\contentsline {subsubsection}{Programas Colaborativos de Ahora Madrid y Zaragoza en Com\IeC {\'u}n}{42}{figure.caption.31}
+\contentsline {subsubsection}{Appgree}{44}{figure.caption.33}
+\contentsline {chapter}{\numberline {5}Metodolog\IeC {\'\i }a del Proyecto}{47}{chapter.5}
+\contentsline {section}{\numberline {5.1}Uso de Software Libre}{47}{section.5.1}
+\contentsline {section}{\numberline {5.2}Metodolog\IeC {\'\i }a de Migraci\IeC {\'o}n de Wave a Android}{47}{section.5.2}
+\contentsline {section}{\numberline {5.3}Dise\IeC {\~n}o de la Aplicaci\IeC {\'o}n: Dise\IeC {\~n}o Guiado Por Objetivos}{47}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Investigaci\IeC {\'o}n}{48}{subsection.5.3.1}
+\contentsline {subsubsection}{Intenci\IeC {\'o}n Inicial: Prototipo b\IeC {\'a}sico}{48}{section*.35}
+\contentsline {subsubsection}{Entrevista con Labodemo}{49}{section*.35}
+\contentsline {subsubsection}{Conclusi\IeC {\'o}n}{50}{section*.35}
+\contentsline {subsubsection}{Entrevista con Javier de la Cueva}{51}{section*.35}
+\contentsline {subsubsection}{Conclusi\IeC {\'o}n}{52}{section*.35}
+\contentsline {subsection}{\numberline {5.3.2}Modelado}{52}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Definici\IeC {\'o}n de Requisitos}{54}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Framework de dise\IeC {\~n}o}{55}{subsection.5.3.4}
+\contentsline {subsubsection}{Metodolog\IeC {\'\i }a}{56}{section*.36}
+\contentsline {subsubsection}{Prototipos en papel}{56}{section*.36}
+\contentsline {subsubsection}{Prototipos intermedios}{56}{section*.36}
+\contentsline {subsubsection}{Prototipo final}{58}{figure.caption.38}
+\contentsline {subsection}{\numberline {5.3.5}An\IeC {\'a}lisis de Usabilidad}{58}{subsection.5.3.5}
+\contentsline {section}{\numberline {5.4}Implementaci\IeC {\'o}n de DemoCritics}{59}{section.5.4}
+\contentsline {section}{\numberline {5.5}Evaluaci\IeC {\'o}n con Usuarios}{59}{section.5.5}
+\contentsline {chapter}{\numberline {6}Arquitectura de DemoCritics}{61}{chapter.6}
+\contentsline {section}{\numberline {6.1}Arquitectura de Wave}{61}{section.6.1}
+\contentsline {section}{\numberline {6.2}Arquitectura de la aplicaci\IeC {\'o}n}{61}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Back-end}{62}{subsection.6.2.1}
+\contentsline {subsubsection}{Base de Datos}{62}{section*.40}
+\contentsline {subsubsection}{Service REST}{63}{figure.caption.41}
+\contentsline {subsubsection}{Servicio Android de conexi\IeC {\'o}n con Wave}{65}{figure.caption.42}
+\contentsline {subsection}{\numberline {6.2.2}Front-end: Cliente Android}{65}{subsection.6.2.2}
+\contentsline {chapter}{\numberline {7}Resultados y Conclusiones}{67}{chapter.7}
+\contentsline {section}{\numberline {7.1}Discusion de Resultados}{67}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Evaluaci\IeC {\'o}n con usuarios}{67}{subsection.7.1.1}
+\contentsline {section}{\numberline {7.2}Conclusiones}{67}{section.7.2}
+\contentsline {chapter}{\numberline {8}Trabajo a Futuro}{69}{chapter.8}
+\contentsline {section}{\numberline {8.1}Mejoras}{69}{section.8.1}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliograf\IeC {\'\i }a}{69}{section.8.1}

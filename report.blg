@@ -5,7 +5,7 @@ A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: introduction.aux
 A level-1 auxiliary file: waveMigration.aux
 A level-1 auxiliary file: androidApp.aux
-A level-1 auxiliary file: technologies.aux
+A level-1 auxiliary file: artState.aux
 A level-1 auxiliary file: methodology.aux
 A level-1 auxiliary file: architecture.aux
 A level-1 auxiliary file: results.aux
@@ -15,49 +15,48 @@ Database file #1: bibliography.bib
 Warning--I didn't find a database entry for "ref_android_avd_params"
 Warning--I didn't find a database entry for "ref:android:asynctask"
 Warning--I didn't find a database entry for "ref:android_ui"
-Warning--I didn't find a database entry for "ref:changeOrg"
 Warning--empty journal in ref:xmpp
 Warning--empty journal in ref:http_authentication
 Warning--empty journal in ref:webSocket_ref
-You've used 74 entries,
+You've used 77 entries,
             1791 wiz_defined-function locations,
-            721 strings with 12060 characters,
-and the built_in function-call counts, 9040 in all, are:
-= -- 727
-> -- 261
+            731 strings with 12345 characters,
+and the built_in function-call counts, 9415 in all, are:
+= -- 757
+> -- 273
 < -- 0
-+ -- 136
-- -- 62
++ -- 142
+- -- 65
 * -- 23
-:= -- 1322
-add.period$ -- 212
-call.type$ -- 74
-change.case$ -- 71
+:= -- 1379
+add.period$ -- 221
+call.type$ -- 77
+change.case$ -- 74
 chr.to.int$ -- 0
-cite$ -- 77
-duplicate$ -- 391
-empty$ -- 1316
-format.name$ -- 62
-if$ -- 2188
+cite$ -- 80
+duplicate$ -- 406
+empty$ -- 1370
+format.name$ -- 65
+if$ -- 2278
 int.to.chr$ -- 0
-int.to.str$ -- 74
+int.to.str$ -- 77
 missing$ -- 7
-newline$ -- 363
-num.names$ -- 61
-pop$ -- 381
+newline$ -- 378
+num.names$ -- 64
+pop$ -- 396
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 368
+skip$ -- 383
 stack$ -- 0
 substring$ -- 0
-swap$ -- 71
+swap$ -- 74
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 61
-width$ -- 76
-write$ -- 652
-(There were 7 warnings)
+while$ -- 64
+width$ -- 79
+write$ -- 679
+(There were 6 warnings)

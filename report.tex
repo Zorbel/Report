@@ -16,6 +16,8 @@
 \usepackage{pbox} %paragraph box formatting text
 \usepackage{listings, lstautogobble} %show code in boxes
 \usepackage{array}
+\usepackage{caption}
+\usepackage{subcaption}
 
 \setlength{\marginparwidth}{0pt} %right margin width
 \setlength{\parindent}{0pt} %no indent on the first line of a paragraph
@@ -24,7 +26,7 @@
 
 \newcommand\anotacion[1]{\Large\textcolor{red}{\\#1\\}\normalsize} %Comamands for annotations
 \newcommand\ant[1]{{\color{green}{#1}}}
-\includeonly{summary, abstract, introduction, waveMigration, androidApp, technologies, methodology, architecture, results, futureWork, ref, append} %include archives
+\includeonly{summary, abstract, introduction, artState, waveMigration, androidApp, methodology, architecture, results, futureWork, ref, append} %include archives
 
 %\renewcommand{\chaptername}{}
 %\renewcommand{\thechapter}{}
@@ -90,7 +92,7 @@ backgroundcolor=\color{gray!70},
 \include{introduction}
 \include{waveMigration}
 \include{androidApp}
-\include{technologies}
+\include{artState}
 \include{methodology}
 \include{architecture}
 \include{results}
