@@ -5,17 +5,13 @@ A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: introduction.aux
 A level-1 auxiliary file: waveMigration.aux
 A level-1 auxiliary file: androidApp.aux
+A level-1 auxiliary file: technologies.aux
 A level-1 auxiliary file: methodology.aux
 A level-1 auxiliary file: architecture.aux
 A level-1 auxiliary file: results.aux
 A level-1 auxiliary file: futureWork.aux
 The style file: unsrt.bst
 Database file #1: bibliography.bib
-I was expecting a `,' or a `}'---line 540 of file bibliography.bib
- :     
- :     author    = "Javier de la Cueva",
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "ref_android_avd_params"
 Warning--I didn't find a database entry for "ref:android:asynctask"
 Warning--I didn't find a database entry for "ref:android_ui"
@@ -23,49 +19,45 @@ Warning--I didn't find a database entry for "ref:changeOrg"
 Warning--empty journal in ref:xmpp
 Warning--empty journal in ref:http_authentication
 Warning--empty journal in ref:webSocket_ref
-Warning--empty author and editor in ref:manualCiberactivista
-Warning--empty title in ref:manualCiberactivista
-Warning--empty publisher in ref:manualCiberactivista
-Warning--empty year in ref:manualCiberactivista
 You've used 74 entries,
             1791 wiz_defined-function locations,
-            716 strings with 11923 characters,
-and the built_in function-call counts, 9013 in all, are:
-= -- 720
-> -- 258
+            721 strings with 12060 characters,
+and the built_in function-call counts, 9040 in all, are:
+= -- 727
+> -- 261
 < -- 0
-+ -- 135
-- -- 61
-* -- 32
-:= -- 1306
-add.period$ -- 210
++ -- 136
+- -- 62
+* -- 23
+:= -- 1322
+add.period$ -- 212
 call.type$ -- 74
 change.case$ -- 71
 chr.to.int$ -- 0
-cite$ -- 81
-duplicate$ -- 392
+cite$ -- 77
+duplicate$ -- 391
 empty$ -- 1316
-format.name$ -- 61
-if$ -- 2179
+format.name$ -- 62
+if$ -- 2188
 int.to.chr$ -- 0
 int.to.str$ -- 74
-missing$ -- 6
-newline$ -- 361
-num.names$ -- 60
-pop$ -- 385
+missing$ -- 7
+newline$ -- 363
+num.names$ -- 61
+pop$ -- 381
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 371
+skip$ -- 368
 stack$ -- 0
 substring$ -- 0
-swap$ -- 70
+swap$ -- 71
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 7
-while$ -- 60
+warning$ -- 3
+while$ -- 61
 width$ -- 76
-write$ -- 646
-(There was 1 error message)
+write$ -- 652
+(There were 7 warnings)

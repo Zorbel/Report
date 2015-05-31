@@ -3,15 +3,20 @@
 \chapter{Construyendo la idea: DemoCritics}
 
 \section{Introducción}
-Una vez que habíamos elegido la tecnología que soportaría el núcleo de nuestra aplicación, teníamos que decir que implementación le íbamos a dar a nuestra aplicación móvil. Para ello teníamos que tener en cuenta las características que nos ofrecía Wave:
 
-Edición colaborativa.
+Una vez que habíamos migrado la tecnología de Wave que soportaría el núcleo de nuestra aplicación, era hora de decidir qué aplicación le íbamos a dar de cara a desarrollar una app Android que hiciera uso de ello. Era importante tener en cuenta las características que nos ofrecía Wave:
 
-Tiempo real.
+ - Edición colaborativa.
 
-Consistencia.
+ - Tiempo real.
 
-Después de darle unas cuantas vueltas de las posibles implementaciones que podríamos realizar sobre estas características potenciales, decidimos realizar una sesión de brain storming. En esta sesión aparecieron temas tan dispersos como wikis colaborativas, aplicaciones con inteligencia artificial, aportaciones colaborativas en política, edición de vídeos y música, cursos de formación colaborativos, etcétera.
+ - Consistencia.
+ 
+\subsubsection{Brainstorming de ideas}
+
+EXPLICAR UN POQUILLO BRAINSTORMING
+
+Después de darle nosotros mismo unas cuantas vueltas a posibles ideas de implementaciones que podrían hacer uso de estas características, decidimos realizar una sesión de brainstorming junto a nuestros profesores para identificar ideas potenciales. En esta sesión aparecieron temas tan variados como wikis colaborativas, aplicaciones de inteligencia artificial, aportaciones colaborativas en política, edición de vídeos y música, cursos de formación colaborativos, visualizacion de mapas, etc.
 
 \begin{figure}[H]
 \centering
@@ -20,13 +25,15 @@ Después de darle unas cuantas vueltas de las posibles implementaciones que podr
 \label{fig:brainstorming}
 \end{figure}
 
-Con un gran repertorio de ideas expuestas sobre la sesión, descartamos aquellas que no nos motivaban llevarlas a cabo. Por lo que nos quedamos con tres ideas fundamentales a desarrollar en nuestra aplicación: Política, Música, Inteligencia Artificial y Mapas. Surgieron varias ideas colaborativas como desarrollar documentos políticos, programas electorales, comunicación entre colectivos en tiempo real, aprendizaje de música, edición de partituras y obras, aplicaciones colaborativas con inteligencia artificial, edición de mapas en tiempo real, lexicalización, etcétera.
+Con un gran repertorio de ideas expuestas en la sesión, decidimos centrarnos primero en descartar aquellas que a nosotros no nos motivaba llevar a cabo. De esta manera nos quedamos con cuatro ideas fundamentales a desarrollar en nuestra aplicación: Política, Música, Inteligencia Artificial y Mapas. Centrándonos ahora solo en estos temas, surgieron varias ideas colaborativas como: desarrollar documentos políticos, programas electorales, comunicación entre colectivos en tiempo real, aprendizaje de música, edición de partituras y obras, aplicaciones colaborativas con inteligencia artificial, edición de mapas en tiempo real, lexicalización, etc.
 
-Finalmente debido a intereses comunes, decimos realizar una aplicación colaborativa relacionado con el mundo de la política. Con el objetivo de que pudiera tener cierta repercusión y utilidad en las próximas citas electorales durante el año 2015. En esta aplicación podríamos recurrir a la edición de contenidos en tiempo real, ya fueran propuestas políticas, programas electorales y otro tipo de documentos. Como también hacer uso de alguna herramienta de Inteligencia Artificial para automatizar algunas tareas o realizar recomendaciones sociales.
+Finalmente, ya que ambos teniamos interes por la política, decidimos realizar una aplicación colaborativa relacionada con dicho mundo. En esta aplicación podríamos recurrir a la edición de contenidos en tiempo real, ya fueran propuestas políticas, programas electorales u otro tipo de documentos. Más adelante también podriamos hacer uso incluso de alguna herramienta de Inteligencia Artificial para automatizar algunas tareas o realizar recomendaciones sociales.
+
+Lo que sí que tuvimos claro desde el principio es la idoneidad del momento actual dado que nos encontramos en año electoral. Nos propusimos el objetivo de desarrollar algo que pudiera tener cierta repercusión y utilidad en las próximas citas electorales de este año 2015. Intentariamos pensar en la aplicación no solo como un Trabajo de Fin de Grado sino como algo que pudiéramos llevar más allá y resultar útil a la sociedad.
 
 \subsection{Política en el mundo de la Informática}
 
-A primera vista podemos pensar que la informática no parece entusiasmar a os informáticos. Pues podemos ubicar la política como una parte de las ciencias sociales, situando la informática en ciencias formales. Pero si factores como la gestión de los privilegios de una aplicación entre los que definiremos de alguna forma una jerarquía, estaremos haciendo política de alguna manera. También encontraremos características políticas en el diseño relacional de una base de datos. Definiendo los campos de una base de datos podemos encontraremos con algunos valores como el sexo, la nacionalidad, la edad o incluso las relaciones o restricciones que existen entre las tablas. Estaremos definiendo unas reglas básicas funcionamiento de la base de datos establecidas por unos principios políticos.
+A primera vista podemos pensar que la informática no parece entusiasmar a los informáticos. Podemos ubicar la política como una parte de las ciencias sociales, situando la informática en ciencias formales. Pero si factores como la gestión de los privilegios de una aplicación entre los que definiremos de alguna forma una jerarquía, estaremos haciendo política de alguna manera. También encontraremos características políticas en el diseño relacional de una base de datos. Definiendo los campos de una base de datos podemos encontraremos con algunos valores como el sexo, la nacionalidad, la edad o incluso las relaciones o restricciones que existen entre las tablas. Estaremos definiendo unas reglas básicas funcionamiento de la base de datos establecidas por unos principios políticos.
 
 Además sumergiéndonos en el mundo de las licencias de uso en el desarrollo de software encontraremos más política aún. Licencias que determinan el uso de un tipo de software, ya sea para compartir, vender, distribuir copias, entre otros. Multitud de reglas políticas definidas en una licencia de uso. Así como las restricciones que establecemos en la metodología orientada a objetos, estableciendo las relaciones de herencia, restricción de métodos, variables, etcétera.
 
@@ -46,6 +53,7 @@ Como podemos observar la política está más integrada en la informática de lo
 
 
 \subsection{Adentrándonos en la idea}
+
 La idea a desarrollar generada en una época dónde la política parecía haber despertado el interés de una parte considerable de la ciudadanía, podría ser una herramienta útil para participar en temas políticos que forma sencilla y atractiva. Dejando atrás los tópicos yo no entiendo de política, la política es aburrida, no sé a quién votar o no he leído nunca un programa electoral entre otros.
 
 La herramienta ofrecería una nueva forma de participar en la política y de llevar a los ciudadanos los programas electorales ofertados por las diferentes formaciones políticas. De tal forma que los ciudadanos pudieran leer aquellos puntos de los programas más leídos, debatidos, comentados, etcétera. Así cualquier usuario tendría todos programas electorales en su bolsillo, por lo que no tendría que ir a la página web de cada formación política y descargarse un documento de 200 páginas. Pensamos que esta forma de presentar un programa político en un mundo donde las posibilidades de  comunicarnos se han desarrollado exponencialmente, no era la mejor manera de llegar a la mayor parte de la ciudadanía.
@@ -98,7 +106,7 @@ La delegación del Partido Popular en Canarias, presenta su aplicación móvil p
 
 Centrándonos en la participación ciudadana ya sea generación de propuestas, desarrollo colaborativo de programas o recogida de firmas, existen numerosos portales en internet y aplicaciones móviles destinadas a ello. Realizaremos un breve repaso a las aplicaciones más destacadas.
 
-\subsubsection{reddit}
+\subsubsection{Reddit}
 
 Reddit \cite{ref:reddit} es un sitio web donde los usuarios pueden crear temas, propuestas o compartir enlaces web a otros sitios. A primera vista puede parecer un foro, la principal diferencia respecto a este último radica en que oros usuarios pueden votar a favor o en contra de los enlaces, haciendo que aparezcan más o menos destacados. De tal forma que los temas de conversación, enlaces, o propuestas aparecerán en el orden que haya escogido la comunidad según la puntuación positiva o negativa.
 En principio el uso de reddit está destinado a todos los temas, donde podemos encontrar algunos ejemplos relacionados fuertemente con la participación ciudadana en Plaza Podemos \cite{ref:plazaPodemos}. Un espacio utilizado para que la ciudadanía pueda expresar sus propuestas, compartir noticias relacionadas con la actualidad política o debatir aquellos temas que más preocupan. Así de un simple vistazo podemos saber qué es lo más debatido entre la ciudadanía, las propuestas que quieren llevar a cabo en en el gobierno o cuales son los temas que más preocupan.
@@ -106,7 +114,7 @@ En principio el uso de reddit está destinado a todos los temas, donde podemos e
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio, scale=0.35]{Media/Captures/plazaPodemos.png}
-\caption{Plaza Podemos utilizando reddit}
+\caption{Plaza Podemos utilizando la plataforma Reddit}
 \label{fig:plazaPodemos}
 \end{figure}
 

@@ -10,6 +10,8 @@
 
 Para elaborar el diseño de la aplicación, nos hemos basado en la metodología del Diseño Guiado por Objetivos, que implementa el proceso de la Ingeniería de la Usabilidad propuesto por Alan Cooper \cite{ref:bookAlanCooper}. Este proceso constará de las siguientes fases:
 
+EXPLICARLOS: TEMA 3 PAGINA 21 DSI
+
 \begin{itemize}
 	\item \textbf{1. Investigación}
 	\item \textbf{2. Modelado}
@@ -25,7 +27,8 @@ Queremos insistir eso sí en que únicamente nos hemos basado en esta metodolog�
 
 ¿HABLAR DE INTENCION FUTURA PARA ELECCIONES?
 
-Programas electorales
+
+\underline{Programas electorales}
 
 La intención fundamental de la aplicación es llevar los programas electorales a los bolsillos de los ciudadanos y generar interés en participar más activamente en la política, ya sea emitiendo opiniones sobre dichos programas o elaborando nuevas propuestas. Vivimos en una sociedad digital, donde cada vez son más las personas que utilizan sus smartphones para realizar todo tipo de tareas en su vida cotidiana.
 
@@ -35,7 +38,7 @@ Además también intentariamos darle una estructura a estos programas, de manera
 
 En definitiva, queríamos crear un espacio donde poder informarse sobre las distintas ofertas electorales y poder debatir sobre las propuestas que propone cada formación política, todo ello en forma una aplicación que podremos consultar en cualquier momento. 
 
-Propuestas y Wave
+\underline{Propuestas y Wave}
 
 Por otro lado,y en línea con los últimos movimientos políticos ciudadanos, pretendíamos crear también un portal de propuestas ciudadanas en el móvil. Los usuarios podrían visualizar las propuestas de otros usuarios y tener la posibilidad de crear nuevas propuestas. Además, como queríamos aprovechar las características de la migración de Wave previamente desarrollada, pensamos en la posibilidad de elaborar estas propuestas de forma colaborativa y en tiempo real entre muchos usuarios.
 
@@ -44,6 +47,8 @@ Actualmente existen multitud de portales (en su gran mayoría web) donde la ciud
 También pensamos en la posibilidad de categorizar el contenido de la aplicación (Programas y Propuestas) por temas, para proporcionar filtros a la hora de navegar por dicho contenido. Sin embargo no teníamos muy clara la elección de temas, asi como si debiamos darle al usuario la posibilidad de crear nuevos temas o dar nosotros unos temas preestablecidos.
  
 Una vez pensada la intención y los principales objetivos de la aplicación, procedimos a realizar unos primeros prototipos en papel de nuestra idea y a implementar un prototipo básico en el móvil (Ver Sección \ref{ssec:prototypes}) que mostraba programas políticos estructurados y permitía navegar a nivel de Sección por ellos para leer y emitir opiniones (likes, dislikes, comentarios, etc.).  
+
+HIPOTESIS DE PERSONAS pag 24
 
  El siguiente paso sería estudiar la viabilidad de esta aplicación entrevistando gente para realizar una investigación sobre sus necesidades prácticas. Por otra parte también sería útil enseñarles los prototipos básicos que manejábamos para verificarlos. Entendimos que el tipo de persona con el que nos entrevistáramos debía de estar relacionado de alguna manera con el mundo de la política, pues nada mejor que hablar con gente ya interesada en dichos temas para orientarnos por el buen camino.
 
@@ -65,7 +70,7 @@ Nos insistieron mucho en el tema de las comparativas. Sería de gran utilidad qu
 
 \subsubsection{Conclusión}
 
-¿PROTOTIPOS? 
+¿QUE OPINAN Y COMO CAMBIAN LOS PROTOTIPOS? 
 
 La reunión con dos de los miembros de Labodemo resultó de gran interés. Se trataba de personas que tenían mucha experiencia en desarrollo de portales de participación ciudadana y que sobre todo estaban muy familiarizados con el uso común que le suele dar la gente a este tipo de aplicaciones. A priori, sabían mejor que nosotros cómo determinar las claves para que una aplicación tuviera una aceptación y uso considerable de los usuarios desde el principio.
 
@@ -89,11 +94,15 @@ Por último, centrándonos en las Propuestas ciudadanas, surgió la idea de elab
 
 \subsubsection{Conclusión}
 
+¿QUE OPINAN Y COMO CAMBIAN LOS PROTOTIPOS? 
+
 Javier trató de abrirnos un poco más la mente, para plantearnos ideas que no están representadas en la sociedad. En la actualidad encontramos diversas plataformas de participación ciudadana que acaban convirtiéndose en un foro. Para evitar caer en esto, debíamos innovar algo más para volver a repetir esto, debíamos de intentar desarrollar nuevas formas de participación.
 
-Clasificar las secciones de un programa así como también las propuestas ciudadanas en diferentes categorías y temas era algo que descartamos en un principio, pero nuevamente volvió a llamar nuestro interés. Aunque para dar cierta libertad, podríamos incluir la posibilidad de crear categorías personalizadas o ir añadiendo categorías semanalmente.
+Clasificar nosotros las secciones de un programa así como también las propuestas ciudadanas en diferentes categorías y temas era algo que descartamos en un principio tras la reunión con Labodemo. Aunque para dar cierta libertad, podríamos incluir la posibilidad de crear categorías personalizadas o ir añadiendo categorías semanalmente.
 
 \subsection{Modelado}
+
+¿QUE SON LAS PERSONAS? -> REPRESENTACION GRAFICA
 
 En esta fase definiremos el tipo de persona que interactuará con nuestra aplicación. Para ello hemos identificado dos tipos de personas primarias:
 
@@ -194,13 +203,15 @@ A través de su móvil puede explorar las diferentes propuestas por categorías.
 
 \subsection{Framework de diseño} \label{ssec:prototypes}
 
-En esta sección detallaremos todos los aspectos relacionados con el aspecto visual de la aplicación. Detallaremos los prototipos desarrollados en papel, algunos prototipos intermedios y el prototipo final de la aplicación.
+En esta sección detallaremos todos los aspectos relacionados con el desarrollo del aspecto visual y la interacción con la aplicación. Detallaremos los prototipos desarrollados en papel, algunos prototipos intermedios y el prototipo final de la aplicación presentado.
 
 \subsubsection{Metodología} 
 
 En una primera fase procedimos a realizar una serie de prototipos rápidos a papel para visualizar una interacción de las principales características de la aplicación. A continuación llevamos estas ideas en papel a nuestra aplicación desarrollada en Android. Obteniendo un prototipo de media-alta fidelidad sobre la funcionalidad de la aplicación. Este fue el prototipo que enseñamos en las entrevistas durante la fase de investigación.
 
 Cuando quisimos añadir nuevas características tras sacar conclusiones de las entrevistas, volvimos a desarrollar nuevos prototipos en papel de las pantallas a desarrollar. Por último, se desarrollaron las nuevas pantallas y se refinaron las anteriores para llegar a un prototipo de alta fidelidad o una versión alpha de la aplicación.
+
+ELEMENTOS DE DATOS Y FUNCIONALES: DSI tema 3 pag 54
 
 \subsubsection{Prototipos en papel}
 
@@ -236,7 +247,8 @@ Sin olvidarnos de la parte social, en cada sección podemos hacer comentarios pa
 
 Hablar de las reglas de oro, principios de diseño,...
 
+HEURISTICA NIELSEN
+
 \section{Implementación de DemoCritics}
 
 \section{Evaluación con Usuarios}
-
