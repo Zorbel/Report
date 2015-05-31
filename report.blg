@@ -3,7 +3,6 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: report.aux
 A level-1 auxiliary file: abstract.aux
 A level-1 auxiliary file: introduction.aux
-A level-1 auxiliary file: waveMigration.aux
 A level-1 auxiliary file: androidApp.aux
 A level-1 auxiliary file: artState.aux
 A level-1 auxiliary file: technologies.aux
@@ -21,7 +20,7 @@ Warning--empty journal in ref:http_authentication
 Warning--empty journal in ref:webSocket_ref
 You've used 77 entries,
             1791 wiz_defined-function locations,
-            732 strings with 12361 characters,
+            731 strings with 12344 characters,
 and the built_in function-call counts, 9415 in all, are:
 = -- 757
 > -- 273

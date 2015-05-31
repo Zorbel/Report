@@ -1,8 +1,34 @@
 \newpage
 \thispagestyle{sectioned}
-\chapter{Arquitectura de DemoCritics}
+\chapter{Arquitectura del Proyecto}
 
 \section{Arquitectura de Wave}
+
+    \subsection{Modelo Wave}\label{sec:waveModel}
+    
+    Además de definir el protocolo del que hace uso Wave, Google definió un Modelo de Datos Conversacional \cite{ref:wave_conversation_model} que refleja la arquitectura de los datos que componen las conversaciones en Wave. Así, a grandes rasgos, podemos ver dichas conversaciones como documentos XML sobre los que los usuarios participantes (cualquiera es libre de unirse a una conversación en cualquier momento) actúan creando nuevos elementos o modificando los ya existentes. Este modelo de datos define una nomenclatura propia para los elementos que componen esta tecnología \cite{ref:wave_api_overview} \cite{ref:wave_white_paper}:
+    
+      \begin{itemize}
+	\item \textbf{Wave}: Conjunto de wavelets (conversaciones).
+	\item \textbf{Wavelet}: conjunto de documentos de una conversación y sus participantes.
+	\item \textbf{Blip}: documento con el contenido de un mensaje en la conversación. Un blip puede tener otros blips dentro de él y los blips pueden ser publicados o no en función de si su visibilidad se extiende o no al resto de participantes de la conversación respectivamente.
+	\item \textbf{Manifiesto conversacional}: documento con metadatos que definen la estructura de una conversación. 
+	\item \textbf{Hilo conversacional}: conjunto de Blips consecutivos que forman parte de una conversación.
+	\item \textbf{Extensiones} \cite{ref:wave_extensions}: pequeñas aplicaciones que se ejecutan dentro de una Wave y aportan nuevas funcionalidades que no forman parte del modelo conversacional básico. Pueden ser de dos tipos:
+	  \begin{itemize}
+	    \item \textbf{Gadget}: aplicación que se ejecuta en el contexto de una Wave y en la que todos sus usuarios participan.
+	    \item \textbf{Robot}: aplicación que participa en una Wave a modo de usuario automatizado e interactúa con el contenido pudiendo modificarlo y responder a eventos por acciones de otros usuarios reales.
+	  \end{itemize}
+      \end{itemize}
+      
+       \begin{figure}[H]
+	  \centering
+	    \includegraphics[keepaspectratio, scale=0.8]{Media/Captures/waveEntities.png}
+	  \caption{Modelo Conversacional de Wave}
+	  \label{fig:wave_model}
+	\end{figure}
+	
+	\subsection{Modelo SwellRT}
 
 \section{Arquitectura de la aplicación}
 
@@ -85,6 +111,8 @@ REORDENAR LO DE WAVE
 \subsection{Front-end: Cliente Android}
 
 INTERFAZ GRAFICA -> PRESENTACION AL USUARIO
+
+ALGORITMO ESTRUCTURACION DE PROGRAMA
 
 ARQUITECTURA DE PETICIONES AL REST
 
