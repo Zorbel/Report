@@ -18,45 +18,45 @@ Warning--I didn't find a database entry for "ref:android_ui"
 Warning--empty journal in ref:xmpp
 Warning--empty journal in ref:http_authentication
 Warning--empty journal in ref:webSocket_ref
-You've used 77 entries,
+You've used 79 entries,
             1791 wiz_defined-function locations,
-            731 strings with 12344 characters,
-and the built_in function-call counts, 9415 in all, are:
-= -- 757
-> -- 273
+            741 strings with 12750 characters,
+and the built_in function-call counts, 9665 in all, are:
+= -- 777
+> -- 281
 < -- 0
-+ -- 142
-- -- 65
++ -- 146
+- -- 67
 * -- 23
-:= -- 1379
-add.period$ -- 221
-call.type$ -- 77
-change.case$ -- 74
+:= -- 1417
+add.period$ -- 227
+call.type$ -- 79
+change.case$ -- 76
 chr.to.int$ -- 0
-cite$ -- 80
-duplicate$ -- 406
-empty$ -- 1370
-format.name$ -- 65
-if$ -- 2278
+cite$ -- 82
+duplicate$ -- 416
+empty$ -- 1406
+format.name$ -- 67
+if$ -- 2338
 int.to.chr$ -- 0
-int.to.str$ -- 77
+int.to.str$ -- 79
 missing$ -- 7
-newline$ -- 378
-num.names$ -- 64
-pop$ -- 396
+newline$ -- 388
+num.names$ -- 66
+pop$ -- 406
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 383
+skip$ -- 393
 stack$ -- 0
 substring$ -- 0
-swap$ -- 74
+swap$ -- 76
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 64
-width$ -- 79
-write$ -- 679
+while$ -- 66
+width$ -- 81
+write$ -- 697
 (There were 6 warnings)

@@ -81,15 +81,17 @@
 \contentsline {subsection}{\numberline {6.1.1}Modelo Wave}{59}{subsection.6.1.1}
 \contentsline {subsection}{\numberline {6.1.2}Modelo SwellRT}{60}{subsection.6.1.2}
 \contentsline {section}{\numberline {6.2}Arquitectura de la aplicaci\IeC {\'o}n}{60}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Back-end}{61}{subsection.6.2.1}
-\contentsline {subsubsection}{Base de Datos}{61}{section*.40}
-\contentsline {subsubsection}{Service REST}{62}{figure.caption.41}
-\contentsline {subsubsection}{Servicio Android de conexi\IeC {\'o}n con Wave}{64}{figure.caption.42}
-\contentsline {subsection}{\numberline {6.2.2}Front-end: Cliente Android}{64}{subsection.6.2.2}
-\contentsline {chapter}{\numberline {7}Resultados y Conclusiones}{65}{chapter.7}
-\contentsline {section}{\numberline {7.1}Discusion de Resultados}{65}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Evaluaci\IeC {\'o}n con usuarios}{65}{subsection.7.1.1}
-\contentsline {section}{\numberline {7.2}Conclusiones}{65}{section.7.2}
-\contentsline {chapter}{\numberline {8}Trabajo a Futuro}{67}{chapter.8}
-\contentsline {section}{\numberline {8.1}Mejoras}{67}{section.8.1}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliograf\IeC {\'\i }a}{67}{section.8.1}
+\contentsline {subsection}{\numberline {6.2.1}Base de datos}{61}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Service REST}{62}{subsection.6.2.2}
+\contentsline {subsubsection}{Arquitectura}{65}{table.caption.43}
+\contentsline {subsubsection}{Rutas}{67}{figure.caption.44}
+\contentsline {subsubsection}{Controladores}{69}{lstnumber.-15.11}
+\contentsline {subsection}{\numberline {6.2.3}Servicio Android de conexi\IeC {\'o}n con Wave}{71}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}Cliente Android}{72}{subsection.6.2.4}
+\contentsline {chapter}{\numberline {7}Resultados y Conclusiones}{73}{chapter.7}
+\contentsline {section}{\numberline {7.1}Discusion de Resultados}{73}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Evaluaci\IeC {\'o}n con usuarios}{73}{subsection.7.1.1}
+\contentsline {section}{\numberline {7.2}Conclusiones}{73}{section.7.2}
+\contentsline {chapter}{\numberline {8}Trabajo a Futuro}{75}{chapter.8}
+\contentsline {section}{\numberline {8.1}Mejoras}{75}{section.8.1}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliograf\IeC {\'\i }a}{75}{section.8.1}

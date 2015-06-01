@@ -79,15 +79,17 @@
 \BOOKMARK [2][-]{subsection.6.1.1}{Modelo Wave}{section.6.1}% 79
 \BOOKMARK [2][-]{subsection.6.1.2}{Modelo SwellRT}{section.6.1}% 80
 \BOOKMARK [1][-]{section.6.2}{Arquitectura de la aplicaci\363n}{chapter.6}% 81
-\BOOKMARK [2][-]{subsection.6.2.1}{Back-end}{section.6.2}% 82
-\BOOKMARK [3][-]{section*.40}{Base de Datos}{subsection.6.2.1}% 83
-\BOOKMARK [3][-]{figure.caption.41}{Service REST}{subsection.6.2.1}% 84
-\BOOKMARK [3][-]{figure.caption.42}{Servicio Android de conexi\363n con Wave}{subsection.6.2.1}% 85
-\BOOKMARK [2][-]{subsection.6.2.2}{Front-end: Cliente Android}{section.6.2}% 86
-\BOOKMARK [0][-]{chapter.7}{Resultados y Conclusiones}{}% 87
-\BOOKMARK [1][-]{section.7.1}{Discusion de Resultados}{chapter.7}% 88
-\BOOKMARK [2][-]{subsection.7.1.1}{Evaluaci\363n con usuarios}{section.7.1}% 89
-\BOOKMARK [1][-]{section.7.2}{Conclusiones}{chapter.7}% 90
-\BOOKMARK [0][-]{chapter.8}{Trabajo a Futuro}{}% 91
-\BOOKMARK [1][-]{section.8.1}{Mejoras}{chapter.8}% 92
-\BOOKMARK [0][-]{section.8.1}{Bibliograf\355a}{}% 93
+\BOOKMARK [2][-]{subsection.6.2.1}{Base de datos}{section.6.2}% 82
+\BOOKMARK [2][-]{subsection.6.2.2}{Service REST}{section.6.2}% 83
+\BOOKMARK [3][-]{table.caption.43}{Arquitectura}{subsection.6.2.2}% 84
+\BOOKMARK [3][-]{figure.caption.44}{Rutas}{subsection.6.2.2}% 85
+\BOOKMARK [3][-]{lstnumber.-15.11}{Controladores}{subsection.6.2.2}% 86
+\BOOKMARK [2][-]{subsection.6.2.3}{Servicio Android de conexi\363n con Wave}{section.6.2}% 87
+\BOOKMARK [2][-]{subsection.6.2.4}{Cliente Android}{section.6.2}% 88
+\BOOKMARK [0][-]{chapter.7}{Resultados y Conclusiones}{}% 89
+\BOOKMARK [1][-]{section.7.1}{Discusion de Resultados}{chapter.7}% 90
+\BOOKMARK [2][-]{subsection.7.1.1}{Evaluaci\363n con usuarios}{section.7.1}% 91
+\BOOKMARK [1][-]{section.7.2}{Conclusiones}{chapter.7}% 92
+\BOOKMARK [0][-]{chapter.8}{Trabajo a Futuro}{}% 93
+\BOOKMARK [1][-]{section.8.1}{Mejoras}{chapter.8}% 94
+\BOOKMARK [0][-]{section.8.1}{Bibliograf\355a}{}% 95
