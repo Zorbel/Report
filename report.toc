@@ -64,52 +64,53 @@
 \contentsline {subsection}{\numberline {4.2.12}POP: Prototyping On Paper}{33}{subsection.4.2.12}
 \contentsline {chapter}{\numberline {5}Metodolog\IeC {\'\i }a del Proyecto}{35}{chapter.5}
 \contentsline {section}{\numberline {5.1}Uso de Software Libre}{35}{section.5.1}
-\contentsline {section}{\numberline {5.2}Metodolog\IeC {\'\i }a de Migraci\IeC {\'o}n de Wave a Android}{35}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}Objetivo}{35}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Plataforma: Entorno de Desarrollo, Construcci\IeC {\'o}n y Depuraci\IeC {\'o}n}{35}{subsection.5.2.2}
-\contentsline {subsubsection}{Eclipse}{36}{section*.25}
-\contentsline {subsubsection}{Proceso de Construcci\IeC {\'o}n por Consola}{38}{figure.caption.26}
+\contentsline {section}{\numberline {5.2}Metodolog\IeC {\'\i }a de Migraci\IeC {\'o}n de Wave a Android}{36}{section.5.2}
+\contentsline {subsection}{\numberline {5.2.1}Objetivo}{36}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Plataforma: Entorno de Desarrollo, Construcci\IeC {\'o}n y Depuraci\IeC {\'o}n}{36}{subsection.5.2.2}
+\contentsline {subsubsection}{Eclipse}{36}{section*.26}
+\contentsline {subsubsection}{Proceso de Construcci\IeC {\'o}n por Consola}{39}{figure.caption.27}
 \contentsline {subsubsection}{Proceso de Depuraci\IeC {\'o}n}{41}{lstnumber.-4.1}
-\contentsline {subsection}{\numberline {5.2.3}Migraci\IeC {\'o}n: Identificaci\IeC {\'o}n y Soluci\IeC {\'o}n de Problemas}{41}{subsection.5.2.3}
-\contentsline {subsubsection}{Conexi\IeC {\'o}n HTTP}{42}{section*.28}
-\contentsline {subsubsection}{Conexi\IeC {\'o}n WebSocket}{46}{lstnumber.-7.15}
+\contentsline {subsection}{\numberline {5.2.3}Migraci\IeC {\'o}n: Identificaci\IeC {\'o}n y Soluci\IeC {\'o}n de Problemas}{42}{subsection.5.2.3}
+\contentsline {subsubsection}{Conexi\IeC {\'o}n HTTP}{43}{section*.29}
+\contentsline {subsubsection}{Conexi\IeC {\'o}n WebSocket}{47}{lstnumber.-7.15}
 \contentsline {subsubsection}{Conexi\IeC {\'o}n final y Logging}{49}{lstnumber.-9.2}
-\contentsline {subsubsection}{Organizaci\IeC {\'o}n del c\IeC {\'o}digo: Servicio Android}{50}{figure.caption.30}
+\contentsline {subsubsection}{Organizaci\IeC {\'o}n del c\IeC {\'o}digo: Servicio Android}{51}{figure.caption.31}
 \contentsline {subsection}{\numberline {5.2.4}Dependencias}{54}{subsection.5.2.4}
-\contentsline {subsection}{\numberline {5.2.5}Resultado de la Migraci\IeC {\'o}n}{54}{subsection.5.2.5}
-\contentsline {section}{\numberline {5.3}Dise\IeC {\~n}o de la Aplicaci\IeC {\'o}n: Dise\IeC {\~n}o Guiado Por Objetivos}{56}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Investigaci\IeC {\'o}n}{56}{subsection.5.3.1}
-\contentsline {subsubsection}{Intenci\IeC {\'o}n Inicial: Prototipo b\IeC {\'a}sico}{56}{section*.35}
-\contentsline {subsubsection}{Entrevista con Labodemo}{58}{section*.35}
-\contentsline {subsubsection}{Conclusi\IeC {\'o}n}{59}{section*.35}
-\contentsline {subsubsection}{Entrevista con Javier de la Cueva}{60}{section*.35}
-\contentsline {subsubsection}{Conclusi\IeC {\'o}n}{61}{section*.35}
-\contentsline {subsection}{\numberline {5.3.2}Modelado de Personas}{61}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Definici\IeC {\'o}n de Escenarios y Requisitos}{62}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Framework de dise\IeC {\~n}o}{64}{subsection.5.3.4}
-\contentsline {subsubsection}{Metodolog\IeC {\'\i }a}{64}{section*.36}
-\contentsline {subsubsection}{Prototipos en papel}{64}{section*.36}
-\contentsline {subsubsection}{Prototipos intermedios}{64}{section*.36}
-\contentsline {subsubsection}{Prototipo final}{66}{figure.caption.38}
-\contentsline {subsection}{\numberline {5.3.5}An\IeC {\'a}lisis de Usabilidad}{66}{subsection.5.3.5}
-\contentsline {section}{\numberline {5.4}Implementaci\IeC {\'o}n de DemoCritics}{67}{section.5.4}
-\contentsline {section}{\numberline {5.5}Evaluaci\IeC {\'o}n con Usuarios}{67}{section.5.5}
-\contentsline {chapter}{\numberline {6}Arquitectura del Proyecto}{69}{chapter.6}
-\contentsline {section}{\numberline {6.1}Arquitectura de Wave}{69}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Modelo Wave}{69}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Modelo SwellRT}{70}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}Arquitectura de la aplicaci\IeC {\'o}n}{70}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Base de datos}{71}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Service REST}{72}{subsection.6.2.2}
-\contentsline {subsubsection}{Arquitectura}{75}{table.caption.44}
-\contentsline {subsubsection}{Rutas}{77}{figure.caption.45}
-\contentsline {subsubsection}{Controladores}{79}{lstnumber.-15.11}
-\contentsline {subsection}{\numberline {6.2.3}Servicio Android de conexi\IeC {\'o}n con Wave}{81}{subsection.6.2.3}
-\contentsline {subsection}{\numberline {6.2.4}Cliente Android}{81}{subsection.6.2.4}
-\contentsline {chapter}{\numberline {7}Resultados y Conclusiones}{83}{chapter.7}
-\contentsline {section}{\numberline {7.1}Discusion de Resultados}{83}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Evaluaci\IeC {\'o}n con usuarios}{83}{subsection.7.1.1}
-\contentsline {section}{\numberline {7.2}Conclusiones}{83}{section.7.2}
-\contentsline {chapter}{\numberline {8}Trabajo a Futuro}{85}{chapter.8}
-\contentsline {section}{\numberline {8.1}Mejoras}{85}{section.8.1}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliograf\IeC {\'\i }a}{85}{section.8.1}
+\contentsline {subsection}{\numberline {5.2.5}Resultado de la Migraci\IeC {\'o}n}{55}{subsection.5.2.5}
+\contentsline {section}{\numberline {5.3}Dise\IeC {\~n}o de la Aplicaci\IeC {\'o}n: Dise\IeC {\~n}o Guiado Por Objetivos}{57}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Investigaci\IeC {\'o}n}{58}{subsection.5.3.1}
+\contentsline {subsubsection}{Intenci\IeC {\'o}n Inicial: Prototipo b\IeC {\'a}sico}{58}{section*.36}
+\contentsline {subsubsection}{Hip\IeC {\'o}tesis de personas}{59}{section*.36}
+\contentsline {subsubsection}{Entrevista con Labodemo}{60}{section*.36}
+\contentsline {subsubsection}{Conclusi\IeC {\'o}n}{62}{section*.36}
+\contentsline {subsubsection}{Entrevista con Javier de la Cueva}{63}{section*.36}
+\contentsline {subsubsection}{Conclusi\IeC {\'o}n}{64}{section*.36}
+\contentsline {subsection}{\numberline {5.3.2}Modelado de Personas}{64}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Definici\IeC {\'o}n de Escenarios y Requisitos}{66}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.4}Framework de dise\IeC {\~n}o}{67}{subsection.5.3.4}
+\contentsline {subsubsection}{Metodolog\IeC {\'\i }a}{67}{section*.37}
+\contentsline {subsubsection}{Prototipos en papel}{67}{section*.37}
+\contentsline {subsubsection}{Prototipos intermedios}{68}{section*.37}
+\contentsline {subsubsection}{Prototipo final}{70}{figure.caption.39}
+\contentsline {subsection}{\numberline {5.3.5}An\IeC {\'a}lisis de Usabilidad}{70}{subsection.5.3.5}
+\contentsline {section}{\numberline {5.4}Implementaci\IeC {\'o}n de DemoCritics}{71}{section.5.4}
+\contentsline {section}{\numberline {5.5}Evaluaci\IeC {\'o}n con Usuarios}{71}{section.5.5}
+\contentsline {chapter}{\numberline {6}Arquitectura del Proyecto}{73}{chapter.6}
+\contentsline {section}{\numberline {6.1}Arquitectura de Wave}{73}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Modelo Wave}{73}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Modelo SwellRT}{74}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Arquitectura de la aplicaci\IeC {\'o}n}{74}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Base de datos}{75}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Service REST}{76}{subsection.6.2.2}
+\contentsline {subsubsection}{Arquitectura}{79}{table.caption.45}
+\contentsline {subsubsection}{Rutas}{81}{figure.caption.46}
+\contentsline {subsubsection}{Controladores}{83}{lstnumber.-15.11}
+\contentsline {subsection}{\numberline {6.2.3}Servicio Android de conexi\IeC {\'o}n con Wave}{85}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}Cliente Android}{85}{subsection.6.2.4}
+\contentsline {chapter}{\numberline {7}Resultados y Conclusiones}{87}{chapter.7}
+\contentsline {section}{\numberline {7.1}Discusion de Resultados}{87}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Evaluaci\IeC {\'o}n con usuarios}{87}{subsection.7.1.1}
+\contentsline {section}{\numberline {7.2}Conclusiones}{87}{section.7.2}
+\contentsline {chapter}{\numberline {8}Trabajo a Futuro}{89}{chapter.8}
+\contentsline {section}{\numberline {8.1}Mejoras}{89}{section.8.1}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliograf\IeC {\'\i }a}{89}{section.8.1}

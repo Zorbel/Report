@@ -24,45 +24,45 @@ Warning--empty journal in ref:xmpp
 Warning--empty journal in ref:http
 Warning--empty journal in ref:webSocket_ref
 Warning--empty journal in ref:http_authentication
-You've used 93 entries,
+You've used 94 entries,
             1791 wiz_defined-function locations,
-            792 strings with 14126 characters,
-and the built_in function-call counts, 11477 in all, are:
-= -- 923
-> -- 343
+            797 strings with 14291 characters,
+and the built_in function-call counts, 11602 in all, are:
+= -- 933
+> -- 347
 < -- 0
-+ -- 176
-- -- 83
++ -- 178
+- -- 84
 * -- 26
-:= -- 1709
-add.period$ -- 272
-call.type$ -- 93
-change.case$ -- 90
+:= -- 1728
+add.period$ -- 275
+call.type$ -- 94
+change.case$ -- 91
 chr.to.int$ -- 0
-cite$ -- 97
-duplicate$ -- 489
-empty$ -- 1654
-format.name$ -- 83
-if$ -- 2763
+cite$ -- 98
+duplicate$ -- 494
+empty$ -- 1672
+format.name$ -- 84
+if$ -- 2793
 int.to.chr$ -- 0
-int.to.str$ -- 93
+int.to.str$ -- 94
 missing$ -- 8
-newline$ -- 461
-num.names$ -- 82
-pop$ -- 473
+newline$ -- 466
+num.names$ -- 83
+pop$ -- 478
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 459
+skip$ -- 464
 stack$ -- 0
 substring$ -- 0
-swap$ -- 89
+swap$ -- 90
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 4
-while$ -- 82
-width$ -- 95
-write$ -- 829
+while$ -- 83
+width$ -- 96
+write$ -- 838
 (There was 1 error message)

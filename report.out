@@ -65,49 +65,50 @@
 \BOOKMARK [1][-]{section.5.2}{Metodolog\355a de Migraci\363n de Wave a Android}{chapter.5}% 65
 \BOOKMARK [2][-]{subsection.5.2.1}{Objetivo}{section.5.2}% 66
 \BOOKMARK [2][-]{subsection.5.2.2}{Plataforma: Entorno de Desarrollo, Construcci\363n y Depuraci\363n}{section.5.2}% 67
-\BOOKMARK [3][-]{section*.25}{Eclipse}{subsection.5.2.2}% 68
-\BOOKMARK [3][-]{figure.caption.26}{Proceso de Construcci\363n por Consola}{subsection.5.2.2}% 69
+\BOOKMARK [3][-]{section*.26}{Eclipse}{subsection.5.2.2}% 68
+\BOOKMARK [3][-]{figure.caption.27}{Proceso de Construcci\363n por Consola}{subsection.5.2.2}% 69
 \BOOKMARK [3][-]{lstnumber.-4.1}{Proceso de Depuraci\363n}{subsection.5.2.2}% 70
 \BOOKMARK [2][-]{subsection.5.2.3}{Migraci\363n: Identificaci\363n y Soluci\363n de Problemas}{section.5.2}% 71
-\BOOKMARK [3][-]{section*.28}{Conexi\363n HTTP}{subsection.5.2.3}% 72
+\BOOKMARK [3][-]{section*.29}{Conexi\363n HTTP}{subsection.5.2.3}% 72
 \BOOKMARK [3][-]{lstnumber.-7.15}{Conexi\363n WebSocket}{subsection.5.2.3}% 73
 \BOOKMARK [3][-]{lstnumber.-9.2}{Conexi\363n final y Logging}{subsection.5.2.3}% 74
-\BOOKMARK [3][-]{figure.caption.30}{Organizaci\363n del c\363digo: Servicio Android}{subsection.5.2.3}% 75
+\BOOKMARK [3][-]{figure.caption.31}{Organizaci\363n del c\363digo: Servicio Android}{subsection.5.2.3}% 75
 \BOOKMARK [2][-]{subsection.5.2.4}{Dependencias}{section.5.2}% 76
 \BOOKMARK [2][-]{subsection.5.2.5}{Resultado de la Migraci\363n}{section.5.2}% 77
 \BOOKMARK [1][-]{section.5.3}{Dise\361o de la Aplicaci\363n: Dise\361o Guiado Por Objetivos}{chapter.5}% 78
 \BOOKMARK [2][-]{subsection.5.3.1}{Investigaci\363n}{section.5.3}% 79
-\BOOKMARK [3][-]{section*.35}{Intenci\363n Inicial: Prototipo b\341sico}{subsection.5.3.1}% 80
-\BOOKMARK [3][-]{section*.35}{Entrevista con Labodemo}{subsection.5.3.1}% 81
-\BOOKMARK [3][-]{section*.35}{Conclusi\363n}{subsection.5.3.1}% 82
-\BOOKMARK [3][-]{section*.35}{Entrevista con Javier de la Cueva}{subsection.5.3.1}% 83
-\BOOKMARK [3][-]{section*.35}{Conclusi\363n}{subsection.5.3.1}% 84
-\BOOKMARK [2][-]{subsection.5.3.2}{Modelado de Personas}{section.5.3}% 85
-\BOOKMARK [2][-]{subsection.5.3.3}{Definici\363n de Escenarios y Requisitos}{section.5.3}% 86
-\BOOKMARK [2][-]{subsection.5.3.4}{Framework de dise\361o}{section.5.3}% 87
-\BOOKMARK [3][-]{section*.36}{Metodolog\355a}{subsection.5.3.4}% 88
-\BOOKMARK [3][-]{section*.36}{Prototipos en papel}{subsection.5.3.4}% 89
-\BOOKMARK [3][-]{section*.36}{Prototipos intermedios}{subsection.5.3.4}% 90
-\BOOKMARK [3][-]{figure.caption.38}{Prototipo final}{subsection.5.3.4}% 91
-\BOOKMARK [2][-]{subsection.5.3.5}{An\341lisis de Usabilidad}{section.5.3}% 92
-\BOOKMARK [1][-]{section.5.4}{Implementaci\363n de DemoCritics}{chapter.5}% 93
-\BOOKMARK [1][-]{section.5.5}{Evaluaci\363n con Usuarios}{chapter.5}% 94
-\BOOKMARK [0][-]{chapter.6}{Arquitectura del Proyecto}{}% 95
-\BOOKMARK [1][-]{section.6.1}{Arquitectura de Wave}{chapter.6}% 96
-\BOOKMARK [2][-]{subsection.6.1.1}{Modelo Wave}{section.6.1}% 97
-\BOOKMARK [2][-]{subsection.6.1.2}{Modelo SwellRT}{section.6.1}% 98
-\BOOKMARK [1][-]{section.6.2}{Arquitectura de la aplicaci\363n}{chapter.6}% 99
-\BOOKMARK [2][-]{subsection.6.2.1}{Base de datos}{section.6.2}% 100
-\BOOKMARK [2][-]{subsection.6.2.2}{Service REST}{section.6.2}% 101
-\BOOKMARK [3][-]{table.caption.44}{Arquitectura}{subsection.6.2.2}% 102
-\BOOKMARK [3][-]{figure.caption.45}{Rutas}{subsection.6.2.2}% 103
-\BOOKMARK [3][-]{lstnumber.-15.11}{Controladores}{subsection.6.2.2}% 104
-\BOOKMARK [2][-]{subsection.6.2.3}{Servicio Android de conexi\363n con Wave}{section.6.2}% 105
-\BOOKMARK [2][-]{subsection.6.2.4}{Cliente Android}{section.6.2}% 106
-\BOOKMARK [0][-]{chapter.7}{Resultados y Conclusiones}{}% 107
-\BOOKMARK [1][-]{section.7.1}{Discusion de Resultados}{chapter.7}% 108
-\BOOKMARK [2][-]{subsection.7.1.1}{Evaluaci\363n con usuarios}{section.7.1}% 109
-\BOOKMARK [1][-]{section.7.2}{Conclusiones}{chapter.7}% 110
-\BOOKMARK [0][-]{chapter.8}{Trabajo a Futuro}{}% 111
-\BOOKMARK [1][-]{section.8.1}{Mejoras}{chapter.8}% 112
-\BOOKMARK [0][-]{section.8.1}{Bibliograf\355a}{}% 113
+\BOOKMARK [3][-]{section*.36}{Intenci\363n Inicial: Prototipo b\341sico}{subsection.5.3.1}% 80
+\BOOKMARK [3][-]{section*.36}{Hip\363tesis de personas}{subsection.5.3.1}% 81
+\BOOKMARK [3][-]{section*.36}{Entrevista con Labodemo}{subsection.5.3.1}% 82
+\BOOKMARK [3][-]{section*.36}{Conclusi\363n}{subsection.5.3.1}% 83
+\BOOKMARK [3][-]{section*.36}{Entrevista con Javier de la Cueva}{subsection.5.3.1}% 84
+\BOOKMARK [3][-]{section*.36}{Conclusi\363n}{subsection.5.3.1}% 85
+\BOOKMARK [2][-]{subsection.5.3.2}{Modelado de Personas}{section.5.3}% 86
+\BOOKMARK [2][-]{subsection.5.3.3}{Definici\363n de Escenarios y Requisitos}{section.5.3}% 87
+\BOOKMARK [2][-]{subsection.5.3.4}{Framework de dise\361o}{section.5.3}% 88
+\BOOKMARK [3][-]{section*.37}{Metodolog\355a}{subsection.5.3.4}% 89
+\BOOKMARK [3][-]{section*.37}{Prototipos en papel}{subsection.5.3.4}% 90
+\BOOKMARK [3][-]{section*.37}{Prototipos intermedios}{subsection.5.3.4}% 91
+\BOOKMARK [3][-]{figure.caption.39}{Prototipo final}{subsection.5.3.4}% 92
+\BOOKMARK [2][-]{subsection.5.3.5}{An\341lisis de Usabilidad}{section.5.3}% 93
+\BOOKMARK [1][-]{section.5.4}{Implementaci\363n de DemoCritics}{chapter.5}% 94
+\BOOKMARK [1][-]{section.5.5}{Evaluaci\363n con Usuarios}{chapter.5}% 95
+\BOOKMARK [0][-]{chapter.6}{Arquitectura del Proyecto}{}% 96
+\BOOKMARK [1][-]{section.6.1}{Arquitectura de Wave}{chapter.6}% 97
+\BOOKMARK [2][-]{subsection.6.1.1}{Modelo Wave}{section.6.1}% 98
+\BOOKMARK [2][-]{subsection.6.1.2}{Modelo SwellRT}{section.6.1}% 99
+\BOOKMARK [1][-]{section.6.2}{Arquitectura de la aplicaci\363n}{chapter.6}% 100
+\BOOKMARK [2][-]{subsection.6.2.1}{Base de datos}{section.6.2}% 101
+\BOOKMARK [2][-]{subsection.6.2.2}{Service REST}{section.6.2}% 102
+\BOOKMARK [3][-]{table.caption.45}{Arquitectura}{subsection.6.2.2}% 103
+\BOOKMARK [3][-]{figure.caption.46}{Rutas}{subsection.6.2.2}% 104
+\BOOKMARK [3][-]{lstnumber.-15.11}{Controladores}{subsection.6.2.2}% 105
+\BOOKMARK [2][-]{subsection.6.2.3}{Servicio Android de conexi\363n con Wave}{section.6.2}% 106
+\BOOKMARK [2][-]{subsection.6.2.4}{Cliente Android}{section.6.2}% 107
+\BOOKMARK [0][-]{chapter.7}{Resultados y Conclusiones}{}% 108
+\BOOKMARK [1][-]{section.7.1}{Discusion de Resultados}{chapter.7}% 109
+\BOOKMARK [2][-]{subsection.7.1.1}{Evaluaci\363n con usuarios}{section.7.1}% 110
+\BOOKMARK [1][-]{section.7.2}{Conclusiones}{chapter.7}% 111
+\BOOKMARK [0][-]{chapter.8}{Trabajo a Futuro}{}% 112
+\BOOKMARK [1][-]{section.8.1}{Mejoras}{chapter.8}% 113
+\BOOKMARK [0][-]{section.8.1}{Bibliograf\355a}{}% 114

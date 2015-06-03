@@ -2,7 +2,32 @@
 \thispagestyle{sectioned}
 \chapter{Metodología del Proyecto}
 
+A continuación se exponen las diferentes metodologías que hemos utilizado durante el desarrollo del \textit{Trabajo de Fin de Grado}.
+
 \section{Uso de Software Libre}
+
+Para el desarrollo de todo el software que compone el proyecto, siempre hemos utilizado software libre. Tanto con las herramientas necesarias para el desarrollo como el resultado final de nuestra aplicación están desarrolladas con software libre. Dando libertad para que otros usuarios puedan visualizar el código desarrollado o utilizar las herramientas libremente. Y realizando aportaciones a toda la comunidad subiendo el código del proyecto a \textbf{GitHub} bajo una licencia \textbf{GNU GPLv3} \cite{ref:GPLv3}.
+
+A continuación se expone un breve resumen del software libre utilizado y las licencias que poseen:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+{\bf Software} & {\bf Licencia}                 \\ \hline
+Eclipse        & Eclipse Public License         \\ \hline
+Android Studio & Apache License 2.0             \\ \hline
+Laravel        & MIT License                    \\ \hline
+Apache Wave    & Apache License                 \\ \hline
+phpMyAdmin     & GNU GPLv2                      \\ \hline
+MySQL          & GNU GPL                        \\ \hline
+PHP            & PHP License                    \\ \hline
+Android        & Apache License 2.0 y GNU GPLv2 \\ \hline
+Java           & GNU GPL                        \\ \hline
+OpenShift      & Apache License 2.0             \\ \hline
+\end{tabular}
+\caption{Software libre utilizado durante el desarrollo.}
+\end{table}
 
 \section{Metodología de Migración de Wave a Android}
 
@@ -65,7 +90,7 @@ Existen dos formas de realizar la construcción en modo debug de una app: \\[.2c
 		$ android avd
 	 \end{lstlisting}
  	 
- 	 Lo que nos despliega la herramienta Android Virtual Device Manager (Ver Seccion \ref{sssec:eclipse}) para que elijamos/creemos el emulador que queremos ejecutar. Podemos elegir multitud de parámetros \cite{ref_android_avd_params} para el dispositivo que emula (resolución y tamaño de pantalla, de memoria Ram, elementos hardware emulados, etc.) siendo lo más importante elegir un API (versión de Android) que se corresponda con el API que hemos elegido para nuestra aplicación (en nuestro caso API 19). Es recomendable también elegir una imagen del sistema que use un procesador con arquitectura Intel x86, ya que si elegimos la opción por defecto de ARM (los dispositivos móviles actuales usan procesadores ARM) la ejecución del emulador se ralentiza mucho al tener que emular una arquitectura de procesador distinta a la suya (los ordenadores actuales usan arquitectura Intel x86 en su mayoría). Esto únicamente afecta al rendimiento del emulador, la aplicación es independiente de la arquitectura que haya por debajo. \\[.2cm]
+ 	 Lo que nos despliega la herramienta Android Virtual Device Manager (Ver Seccion \ref{sssec:eclipse}) para que elijamos/creemos el emulador que queremos ejecutar. Podemos elegir multitud de parámetros \cite{ref_android_avd_params} para el dispositivo que emula (resolución y tamaño de pantalla, de memoria Ram, elementos hardware emulados, etcétera.) siendo lo más importante elegir un API (versión de Android) que se corresponda con el API que hemos elegido para nuestra aplicación (en nuestro caso API 19). Es recomendable también elegir una imagen del sistema que use un procesador con arquitectura Intel x86, ya que si elegimos la opción por defecto de ARM (los dispositivos móviles actuales usan procesadores ARM) la ejecución del emulador se ralentiza mucho al tener que emular una arquitectura de procesador distinta a la suya (los ordenadores actuales usan arquitectura Intel x86 en su mayoría). Esto únicamente afecta al rendimiento del emulador, la aplicación es independiente de la arquitectura que haya por debajo. \\[.2cm]
  
      Una vez lanzado el emulador/dispositivo móvil, procedemos a instalar la aplicación en él ejecutando el siguiente comando en la primera consola (en la que construimos la aplicacion):
 		      	 
@@ -370,16 +395,27 @@ private class LoginTask extends AsyncTask<String, Void, String> {
 
 \section{Diseño de la Aplicación: Diseño Guiado Por Objetivos}
 
-Para elaborar el diseño de la aplicación, nos hemos basado en la metodología del Diseño Guiado por Objetivos, que implementa el proceso de la Ingeniería de la Usabilidad propuesto por Alan Cooper \cite{ref:bookAlanCooper}. Este proceso constará de las siguientes fases:
+Para elaborar el diseño de la aplicación, nos hemos basado en la metodología del Diseño Guiado por Objetivos (\textbf{DGO} o \textit{Goal-Directed Design}), que implementa el proceso de la Ingeniería de la Usabilidad propuesto por Alan Cooper \cite{ref:bookAlanCooper}. Este proceso constará de las siguientes fases:
 
-EXPLICARLOS: TEMA 3 PAGINA 21 DSI
+\begin{enumerate}
 
-\begin{itemize}
-	\item \textbf{1. Investigación}
-	\item \textbf{2. Modelado}
-	\item \textbf{3. Definición de Requisitos}
-	\item \textbf{4. Framework de Diseño}
-\end{itemize}
+\item \textbf{Investigación}
+
+Esta fase consistirá en la realización de estudios para obtener datos cualitativos sobre los usuarios y/o reales de la aplicación y cuáles son sus necesidades. Se realizarán tareas para comprender a los usuarios, saber sus inquietudes y lograr empatía. A lo largo de esta fase se irán identificando patronos de comportamiento que sugerirán los objetivos y motivaciones del usuario. Por último se realizarán estudios de mercado, revisiones y auditorías que ayudarán al diseñador a comprender el dominio, el modelo y las restricciones técnicas que el sistema debe cumplir.
+
+\item \textbf{Modelado}
+
+A lo largo de esta fase se utilizarán los datos provenientes de la fase previa para crar los modelos del dominio y los usuarios. En esta parte se crearán las \textit{personas}, aquetipos de usuarios que contienen información sobre obejtivlos, motivaciones y comportamientos de los usuarios con el sistema. El resultado final de esta fase serán los tipos de \textit{persona} que representarán a los usuarios del sistema, y que más adelante serán utilizados fases para proporcionar algún tipo de \textit{feedback}.
+
+\item \textbf{Definición de Requisitos}
+
+Durante esta fase se utilizarán las personas y los datos de la fase anterior, para crear los \textit{escenarios} de contexto e identificar los requisitos o necesidades del usuario. Estos requisitos serán definidos en tres componentes: objeto, acciones y contexto. También se definirán requisitos relacionados con el negiocio, la apclicación, requisitos técnicos, etcétera.
+
+\item \textbf{Definición del framework de Diseño}
+
+En esta fase se creará el concepto geenral del sistema, definiendo los comportamientos y diseño visual. Identificaremos el \textbf{framework de interacción}, como un concepto de diseño estable que define la estructura del sistema a partir de patrones y principios de diseño. Por último, se definirá el \textit{framework visual}, como el aspecto visual de la aplicacion (diseño, tipografía, colores, iconos, etcétera).
+
+\end{enumerate}
 
 Queremos insistir eso sí en que únicamente nos hemos basado en esta metodología para seguir el proceso del diseño de la aplicación. No seguiremos todas las fases de esta metodología al pie de la letra ya que el alcance en tiempo de este proyecto escapa a una metodología tan formal y laboriosa (que implica gran cantidad de pruebas y procesos) como esta.
 
@@ -387,8 +423,7 @@ Queremos insistir eso sí en que únicamente nos hemos basado en esta metodolog�
 
 \subsubsection{Intención Inicial: Prototipo básico}  
 
-¿HABLAR DE INTENCION FUTURA PARA ELECCIONES?
-
+Vivimos en una época donde la política parece estar de moda. Esto puede ser debido al cabreo general que muestra la ciudadanía frente a gobiernos conservadores, situaciones de austeridad provocada por la crisis económica, el nacimiento de nuevas fuerzas políticas, …, pero sobre todo las numerosas citas electorales a las que seremos citados en 2015. Por tanto, el proyecto podría ponerse a prueba en un escenario real durante la campaña de las elecciones generales previsiblemente convocadas durante el último trimestre del 2015.
 
 \underline{Programas electorales}
 
@@ -408,11 +443,23 @@ Actualmente existen multitud de portales (en su gran mayoría web) donde la ciud
 
 También pensamos en la posibilidad de categorizar el contenido de la aplicación (Programas y Propuestas) por temas, para proporcionar filtros a la hora de navegar por dicho contenido. Sin embargo no teníamos muy clara la elección de temas, asi como si debiamos darle al usuario la posibilidad de crear nuevos temas o dar nosotros unos temas preestablecidos.
  
-Una vez pensada la intención y los principales objetivos de la aplicación, procedimos a realizar unos primeros prototipos en papel de nuestra idea y a implementar un prototipo básico en el móvil (Ver Sección \ref{ssec:prototypes}) que mostraba programas políticos estructurados y permitía navegar a nivel de Sección por ellos para leer y emitir opiniones (likes, dislikes, comentarios, etc.).  
+Una vez pensada la intención y los principales objetivos de la aplicación, procedimos a realizar unos primeros prototipos en papel de nuestra idea y a implementar un prototipo básico en el móvil (Ver Sección \ref{ssec:protoetctypes}) que mostraba programas políticos estructurados y permitía navegar a nivel de Sección por ellos para leer y emitir opiniones (likes, dislikes, comentarios, etcétera.).  
 
-HIPOTESIS DE PERSONAS pag 24
+\subsubsection{Hipótesis de personas}
 
- El siguiente paso sería estudiar la viabilidad de esta aplicación entrevistando gente para realizar una investigación sobre sus necesidades prácticas. Por otra parte también sería útil enseñarles los prototipos básicos que manejábamos para verificarlos. Entendimos que el tipo de persona con el que nos entrevistáramos debía de estar relacionado de alguna manera con el mundo de la política, pues nada mejor que hablar con gente ya interesada en dichos temas para orientarnos por el buen camino.
+Para identificar a los usuarios objetivo, tenemos que encontrar a miembros representativos de esos usuarios y animarlos a que participen en nuestra investigación. Para ello reuniremos una serie de características básicas que el usuario deberá cumplir para poder aportarnos los objetivos funcionales de la aplicación. Estas son algunas de las caracaerísticas deseadas:
+
+\begin{itemize}
+\item \textbf{Edad}: Entre 16 y 65 años.
+\item \textbf{Sexo}: Indiferente.
+\item \textbf{Profesión}: Indiferente.
+\item \textbf{Aptidudes deseables}: Activismo social, cociencia política, trabajo colaborativo, ... .
+\item \textbf{Habilidades técnicas}: Usuario con experiencia media en uso de aplicaciones móviles.
+\end{itemize}
+
+Simplificando el tipo de persona que queremos encontrar, lo dividiremos en dos tipos de persona. Por un lado buscaremos al activista social, activo en movimientos sociales, participación en portales con carácter social, etcétera. Mientras que por otro lado buscaremos una persona que muestre cierto interés en el mundo de la política, pero que no participe en moviimentos sociales. Finalmente pudimos contactar con dos miembros de Labodemo \cite{ref:labodemo}, una organización que se dedica al desarollo de nuevas formas de participación ciudadana. Este perfil cubiría en caso del activista social, mientras que para el tipo de persona entendido de la política pero no tan involucrado, escogimos a Javier de la Cueva \cite{ref:jdelacueva}.
+
+El siguiente paso sería estudiar la viabilidad de esta aplicación entrevistando a las personas seleccionadas para realizar una investigación sobre sus necesidades prácticas. Por otra parte también sería útil enseñarles los prototipos básicos que manejábamos para verificarlos. Entendimos que el tipo de persona con el que nos entrevistáramos debía de estar relacionado de alguna manera con el mundo de la política, pues nada mejor que hablar con gente ya interesada en dichos temas para orientarnos por el buen camino.
 
 A continuación detallamos las entrevistas que realizamos en la investigación:
 
@@ -432,15 +479,29 @@ Nos insistieron mucho en el tema de las comparativas. Sería de gran utilidad qu
 
 \subsubsection{Conclusión}
 
-¿QUE OPINAN Y COMO CAMBIAN LOS PROTOTIPOS? 
+\underline{Puntos positivos}:
 
-La reunión con dos de los miembros de Labodemo resultó de gran interés. Se trataba de personas que tenían mucha experiencia en desarrollo de portales de participación ciudadana y que sobre todo estaban muy familiarizados con el uso común que le suele dar la gente a este tipo de aplicaciones. A priori, sabían mejor que nosotros cómo determinar las claves para que una aplicación tuviera una aceptación y uso considerable de los usuarios desde el principio.
+\begin{itemize}
+ \item Nueva forma de participación ciudadana de cara a las elecciones.
+ \item Métodos alternativos para discutir propuestas, partidos, programas, etcétera.
+ \item Ligar propuestas a programas concretos.
+\end{itemize}
 
-Visualizar los programas políticos en la app no les entusiasmó demasiado. Expusieron que, a priori, un ciudadano de a pie no iba a molestarse en meterse en la aplicación para leer los programas políticos de los diversos partidos. Ellos argumentaban que los colectivos sociales serían los usuarios más activos en nuestra aplicación, por lo que debíamos enfocar más el desarrollo hacia la participación ciudadana y la generación de Propuestas o Comparativas de Secciones de Programas hechas por tales colectivos. Dichas Comparativas sí que generarían más interés por leer los programas políticos.
+\underline{Puntos negativos}:
 
-Tras la reunión tomamos nota de los consejos que obtuvimos de Labodemo. Incluimos la idea de "Comparativas" y empezamos a pensar la forma de colaborar de grupos y colectivos. También intentamos contactar con colectivos y personas interesadas en el desarrollo de la aplicación. 
+\begin{itemize}
+ \item Visualizar un programa electoral en el móvil puede no resultar demasiado interés para los usuarios.
+ \item Desarrollar propuestas colaborativas en tiempo real no maniene una estabilidad en la aplicación.
+ \item La aplcación debería desarrollarse en otras plataformas móviles y de escritorio.
+\end{itemize}
 
-Finalmente, conseguimos concretar una entrevista con Javier de la Cueva \cite{ref:jdelacueva}.
+\underline{Puntos a tener en cuenta}:
+
+\begin{itemize}
+ \item Dejar libertad a usuarios y colectivos creando sus propias categorías o hilos. "Espacios donde puedan elaborar sus intereses" y generar contenido para la aplicación.
+ \item Desarrollar comparativas por secciones, temas o partidos. De tal forma que un usuario pueda visualizar las diferencias de aquellos temas que le preocupan.
+ \item Contactar con colectivos, asociaciones y/o periodistas que anteriormente hayan elaborado comparativas entre programas políticos en puntos concretos
+\end{itemize}
 
 \subsubsection{Entrevista con Javier de la Cueva}
 
@@ -456,15 +517,33 @@ Por último, centrándonos en las Propuestas ciudadanas, surgió la idea de elab
 
 \subsubsection{Conclusión}
 
-¿QUE OPINAN Y COMO CAMBIAN LOS PROTOTIPOS? 
+\underline{Puntos positivos}:
 
-Javier trató de abrirnos un poco más la mente, para plantearnos ideas que no están representadas en la sociedad. En la actualidad encontramos diversas plataformas de participación ciudadana que acaban convirtiéndose en un foro. Para evitar caer en esto, debíamos innovar algo más para volver a repetir esto, debíamos de intentar desarrollar nuevas formas de participación.
+\begin{itemize}
+  \item Llevar los programas políticos de una forma más atractiva a la ciudadanía es algo esencial en la actualidad.
+  \item Categorizar las secciones de los programas políticos para que se puedan explorar por temas.
+  \item Incluir los recursos necesarios que hacen falta para llevar una propuesta a cabo.
+\end{itemize}
 
-Clasificar nosotros las secciones de un programa así como también las propuestas ciudadanas en diferentes categorías y temas era algo que descartamos en un principio tras la reunión con Labodemo. Aunque para dar cierta libertad, podríamos incluir la posibilidad de crear categorías personalizadas o ir añadiendo categorías semanalmente.
+\underline{Puntos negativos}:
+
+\begin{itemize}
+  \item Tratar de convertir la aplicación en un \textit{foro} inconscientemente.
+  \item Dejar libertad a la hora de crear categorías específicas o hilos puede generar confusión entre los usuarios. 
+\end{itemize}
+
+\underline{Puntos a tener en cuenta}:
+
+\begin{itemize}
+  \item Desarrollar categorías semanales en función de las novedades o actualidad política.
+  \item Añadir la posibilidad de solicitar la ayuda de expertos sobre un tema para elaborar una propuesta.
+  \item Crear una emeroteca de programas políticos para realizar análisis sobre el cumplimiento de los programas en legislaturas pasadas.
+  \item Informar sobre la legilación actual cuando visualicemos una propuesta o sección de un porgrama que quiera mejorar o cambiar la legislación actual.
+\end{itemize}
 
 \subsection{Modelado de Personas}
 
-¿QUE SON LAS PERSONAS? -> REPRESENTACION GRAFICA
+Las \textit{personas} son una herramienta de diseño y ayuda al diseño de la aplicación. El objetivo es centrar el diseño en este tipo de persona, para lograr los objetivos a la hora de utilziar un sistema. La \textit{persona} será nuestro modelo, una descripción detallada de un individuo imaginario que representa a un grupo de usuarios a los que va destinada la aplicación. Es una representación ficticia pero desarrollada con gran detalle, que será fruto de los datos recogidos en la investigación previa de la fase anterior.
 
 En esta fase definiremos el tipo de persona que interactuará con nuestra aplicación. Para ello hemos identificado dos tipos de personas primarias:
 
@@ -518,7 +597,6 @@ Juan coge su móvil y visualiza los diferentes programas electorales por categor
 \begin{enumerate}
 \item Visualizar (acción) las diferentes categorías (objeto), para ver las secciones de los programas de una determinada categoría (contexto).
 \item Mostrar(acción) un listado de todas las secciones de los programas de los partidos  políticos (objeto) en función de la categoría seleccionada por el usuario (contexto).
-\end{enumerate}
 
 \textbf{Escenario II}
 
@@ -528,26 +606,21 @@ A través de su móvil puede explorar las diferentes propuestas por categorías.
 
 \underline{Requisitos:}
 
-\begin{enumerate}
 \item Mostrar (acción) las diferentes categorías (objeto), para visualizar las propuestas ordenadas por la categoría seleccionada (contexto).
 \item Visualizar (acción) el listado de propuestas (objeto), clasificados por la categoría seleccionada por el usuario (contexto).
-\end{enumerate}
 
 \textbf{Escenario III}
 
 \underline{Requisitos:}
 
-\begin{enumerate}
 \item
 \item
 \item
-\end{enumerate}
 
 \textbf{Escenario IV}
 
 \underline{Requisitos:}
 
-\begin{enumerate}
 \item
 \item
 \item
