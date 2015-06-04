@@ -3,33 +3,39 @@
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Brainstorming sobre la idea a desarrollar\relax }}{4}{figure.caption.8}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Capturas de UPyD Parla\relax }}{10}{figure.caption.11}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Capturas de $\sharp $IURecuperaC\IeC {\'o}rdoba\relax }}{11}{figure.caption.12}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Capturas de PSOE Andalucia\relax }}{12}{figure.caption.13}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Capturas de PP Canarias\relax }}{13}{figure.caption.14}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Plaza Podemos utilizando la plataforma Reddit\relax }}{15}{figure.caption.16}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Change.org \IeC {\textperiodcentered } La mayor plataforma de peticiones del mundo\relax }}{16}{figure.caption.17}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Creaci\IeC {\'o}n colaborativa del programa de Ahora Madrid.\relax }}{17}{figure.caption.18}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Creaci\IeC {\'o}n colaborativa del programa de Zaragoza en Com\IeC {\'u}n.\relax }}{18}{figure.caption.19}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Capturas de Appgree\relax }}{19}{figure.caption.20}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Cliente Wave In A Box\relax }}{10}{figure.caption.10}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Capturas de Google Docs\relax }}{13}{figure.caption.13}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Captura de TitanPad: Ejemplo de uso de EtherPad\relax }}{14}{figure.caption.14}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Captura de Colorillo\relax }}{15}{figure.caption.15}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Captura de ShareLaTeX\relax }}{16}{figure.caption.16}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Capturas de Samepage\relax }}{17}{figure.caption.17}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Capturas de Quip\relax }}{18}{figure.caption.18}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Capturas de UPyD Parla\relax }}{19}{figure.caption.20}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Capturas de $\sharp $IURecuperaC\IeC {\'o}rdoba\relax }}{20}{figure.caption.21}
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Capturas de PSOE Andalucia\relax }}{21}{figure.caption.22}
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Capturas de PP Canarias\relax }}{22}{figure.caption.23}
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Plaza Podemos utilizando la plataforma Reddit\relax }}{24}{figure.caption.25}
+\contentsline {figure}{\numberline {3.13}{\ignorespaces Change.org \IeC {\textperiodcentered } La mayor plataforma de peticiones del mundo\relax }}{25}{figure.caption.26}
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Creaci\IeC {\'o}n colaborativa del programa de Ahora Madrid.\relax }}{27}{figure.caption.27}
+\contentsline {figure}{\numberline {3.15}{\ignorespaces Creaci\IeC {\'o}n colaborativa del programa de Zaragoza en Com\IeC {\'u}n.\relax }}{27}{figure.caption.28}
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Capturas de Appgree\relax }}{29}{figure.caption.29}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Cliente Wave In A Box\relax }}{25}{figure.caption.24}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Distribuci\IeC {\'o}n Actual de Versiones Android (Fuente: Google)\relax }}{38}{figure.caption.27}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Emulador Android API 19\relax }}{40}{figure.caption.28}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Ejemplo de Traza de Error en Logcat\relax }}{44}{figure.caption.30}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Pantalla de Login de WaveAndroid\relax }}{50}{figure.caption.31}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Proceso de conexi\IeC {\'o}n Http con Servicio\relax }}{53}{figure.caption.32}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Proceso de conexi\IeC {\'o}n WebSocket con Servicio\relax }}{54}{figure.caption.33}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Esquema de Clases de SwellRT-Android con Servicio\relax }}{56}{figure.caption.35}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Vista principal de secciones\relax }}{69}{figure.caption.38}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces Visualizando una secci\IeC {\'o}n\relax }}{70}{figure.caption.39}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Distribuci\IeC {\'o}n Actual de Versiones Android (Fuente: Google)\relax }}{48}{figure.caption.35}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Emulador Android API 19\relax }}{50}{figure.caption.36}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Ejemplo de Traza de Error en Logcat\relax }}{54}{figure.caption.38}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Pantalla de Login de WaveAndroid\relax }}{60}{figure.caption.39}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Proceso de conexi\IeC {\'o}n Http con Servicio\relax }}{63}{figure.caption.40}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Proceso de conexi\IeC {\'o}n WebSocket con Servicio\relax }}{64}{figure.caption.41}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Esquema de Clases de SwellRT-Android con Servicio\relax }}{66}{figure.caption.43}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Vista principal de secciones\relax }}{79}{figure.caption.46}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Visualizando una secci\IeC {\'o}n\relax }}{80}{figure.caption.47}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Modelo Conversacional de Wave\relax }}{74}{figure.caption.40}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Arquitectura de la aplicacci\IeC {\'o}n.\relax }}{75}{figure.caption.41}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Modelo entidad-relaci\IeC {\'o}n de la base de datos.\relax }}{76}{figure.caption.42}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Pantalla principal de Laravel 5.\relax }}{77}{figure.caption.43}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Arquitectura de Laravel\relax }}{80}{figure.caption.46}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Camino desde la ruta al m\IeC {\'e}todo del controlador.\relax }}{84}{figure.caption.47}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Modelo Conversacional de Wave\relax }}{84}{figure.caption.48}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Arquitectura de la aplicacci\IeC {\'o}n.\relax }}{85}{figure.caption.49}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Modelo entidad-relaci\IeC {\'o}n de la base de datos.\relax }}{86}{figure.caption.50}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Pantalla principal de Laravel 5.\relax }}{87}{figure.caption.51}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Arquitectura de Laravel\relax }}{90}{figure.caption.54}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Camino desde la ruta al m\IeC {\'e}todo del controlador.\relax }}{94}{figure.caption.55}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
