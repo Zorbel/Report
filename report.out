@@ -49,12 +49,12 @@
 \BOOKMARK [2][-]{subsection.4.1.1}{Google Wave}{section.4.1}% 49
 \BOOKMARK [2][-]{subsection.4.1.2}{Apache Wave}{section.4.1}% 50
 \BOOKMARK [2][-]{subsection.4.1.3}{Caracter\355sticas de Wave}{section.4.1}% 51
-\BOOKMARK [3][-]{section*.31}{Federaci\363n}{subsection.4.1.3}% 52
-\BOOKMARK [3][-]{section*.31}{Consistencia en tiempo real}{subsection.4.1.3}% 53
-\BOOKMARK [3][-]{section*.31}{Escalabilidad}{subsection.4.1.3}% 54
+\BOOKMARK [3][-]{section*.32}{Federaci\363n}{subsection.4.1.3}% 52
+\BOOKMARK [3][-]{section*.32}{Consistencia en tiempo real}{subsection.4.1.3}% 53
+\BOOKMARK [3][-]{section*.32}{Escalabilidad}{subsection.4.1.3}% 54
 \BOOKMARK [2][-]{subsection.4.1.4}{Servidores Wave}{section.4.1}% 55
-\BOOKMARK [3][-]{section*.32}{Wave in a Box}{subsection.4.1.4}% 56
-\BOOKMARK [3][-]{section*.32}{SwellRT}{subsection.4.1.4}% 57
+\BOOKMARK [3][-]{section*.33}{Wave in a Box}{subsection.4.1.4}% 56
+\BOOKMARK [3][-]{section*.33}{SwellRT}{subsection.4.1.4}% 57
 \BOOKMARK [2][-]{subsection.4.1.5}{Eclipse}{section.4.1}% 58
 \BOOKMARK [2][-]{subsection.4.1.6}{Java}{section.4.1}% 59
 \BOOKMARK [2][-]{subsection.4.1.7}{GWT}{section.4.1}% 60
@@ -81,41 +81,41 @@
 \BOOKMARK [1][-]{section.5.2}{Metodolog\355a de Migraci\363n de Wave a Android}{chapter.5}% 81
 \BOOKMARK [2][-]{subsection.5.2.1}{Objetivo}{section.5.2}% 82
 \BOOKMARK [2][-]{subsection.5.2.2}{Plataforma: Entorno de Desarrollo, Construcci\363n y Depuraci\363n}{section.5.2}% 83
-\BOOKMARK [3][-]{section*.34}{Eclipse}{subsection.5.2.2}% 84
-\BOOKMARK [3][-]{figure.caption.35}{Proceso de Construcci\363n por Consola}{subsection.5.2.2}% 85
+\BOOKMARK [3][-]{section*.35}{Eclipse}{subsection.5.2.2}% 84
+\BOOKMARK [3][-]{figure.caption.36}{Proceso de Construcci\363n por Consola}{subsection.5.2.2}% 85
 \BOOKMARK [3][-]{lstnumber.-4.1}{Proceso de Depuraci\363n}{subsection.5.2.2}% 86
 \BOOKMARK [2][-]{subsection.5.2.3}{Migraci\363n: Identificaci\363n y Soluci\363n de Problemas}{section.5.2}% 87
-\BOOKMARK [3][-]{section*.37}{Conexi\363n HTTP}{subsection.5.2.3}% 88
+\BOOKMARK [3][-]{section*.38}{Conexi\363n HTTP}{subsection.5.2.3}% 88
 \BOOKMARK [3][-]{lstnumber.-7.15}{Conexi\363n WebSocket}{subsection.5.2.3}% 89
 \BOOKMARK [3][-]{lstnumber.-9.2}{Conexi\363n final y Logging}{subsection.5.2.3}% 90
-\BOOKMARK [3][-]{figure.caption.39}{Organizaci\363n del c\363digo: Servicio Android}{subsection.5.2.3}% 91
+\BOOKMARK [3][-]{figure.caption.40}{Organizaci\363n del c\363digo: Servicio Android}{subsection.5.2.3}% 91
 \BOOKMARK [2][-]{subsection.5.2.4}{Dependencias}{section.5.2}% 92
 \BOOKMARK [2][-]{subsection.5.2.5}{Resultado de la Migraci\363n}{section.5.2}% 93
 \BOOKMARK [1][-]{section.5.3}{Dise\361o de la Aplicaci\363n: Dise\361o Guiado Por Objetivos}{chapter.5}% 94
 \BOOKMARK [2][-]{subsection.5.3.1}{Investigaci\363n}{section.5.3}% 95
-\BOOKMARK [3][-]{section*.44}{Intenci\363n Inicial: Prototipo b\341sico}{subsection.5.3.1}% 96
-\BOOKMARK [3][-]{section*.44}{Hip\363tesis de personas}{subsection.5.3.1}% 97
-\BOOKMARK [3][-]{section*.44}{Entrevista con Labodemo}{subsection.5.3.1}% 98
-\BOOKMARK [3][-]{section*.44}{Conclusi\363n}{subsection.5.3.1}% 99
-\BOOKMARK [3][-]{section*.44}{Entrevista con Javier de la Cueva}{subsection.5.3.1}% 100
-\BOOKMARK [3][-]{section*.44}{Conclusi\363n}{subsection.5.3.1}% 101
+\BOOKMARK [3][-]{section*.45}{Intenci\363n Inicial: Prototipo b\341sico}{subsection.5.3.1}% 96
+\BOOKMARK [3][-]{section*.45}{Hip\363tesis de personas}{subsection.5.3.1}% 97
+\BOOKMARK [3][-]{section*.45}{Entrevista con Labodemo}{subsection.5.3.1}% 98
+\BOOKMARK [3][-]{section*.45}{Conclusi\363n}{subsection.5.3.1}% 99
+\BOOKMARK [3][-]{section*.45}{Entrevista con Javier de la Cueva}{subsection.5.3.1}% 100
+\BOOKMARK [3][-]{section*.45}{Conclusi\363n}{subsection.5.3.1}% 101
 \BOOKMARK [2][-]{subsection.5.3.2}{Modelado de Personas}{section.5.3}% 102
 \BOOKMARK [2][-]{subsection.5.3.3}{Definici\363n de personas}{section.5.3}% 103
 \BOOKMARK [2][-]{subsection.5.3.4}{Definici\363n de Escenarios y Requisitos}{section.5.3}% 104
 \BOOKMARK [2][-]{subsection.5.3.5}{Framework de dise\361o}{section.5.3}% 105
-\BOOKMARK [3][-]{section*.47}{Framework de interacci\363n}{subsection.5.3.5}% 106
+\BOOKMARK [3][-]{section*.48}{Framework de interacci\363n}{subsection.5.3.5}% 106
 \BOOKMARK [3][-]{Item.18}{Metodolog\355a}{subsection.5.3.5}% 107
 \BOOKMARK [3][-]{Item.18}{Prototipos en papel}{subsection.5.3.5}% 108
 \BOOKMARK [3][-]{Item.18}{Prototipos intermedios}{subsection.5.3.5}% 109
-\BOOKMARK [3][-]{figure.caption.49}{Prototipo final}{subsection.5.3.5}% 110
+\BOOKMARK [3][-]{figure.caption.50}{Prototipo final}{subsection.5.3.5}% 110
 \BOOKMARK [2][-]{subsection.5.3.6}{An\341lisis de Usabilidad}{section.5.3}% 111
 \BOOKMARK [1][-]{section.5.4}{Implementaci\363n de DemoCritics}{chapter.5}% 112
 \BOOKMARK [2][-]{subsection.5.4.1}{Metodolog\355a}{section.5.4}% 113
-\BOOKMARK [3][-]{section*.50}{Control de versiones}{subsection.5.4.1}% 114
-\BOOKMARK [3][-]{section*.50}{GitHub}{subsection.5.4.1}% 115
-\BOOKMARK [3][-]{section*.50}{Reparto de tareas}{subsection.5.4.1}% 116
-\BOOKMARK [3][-]{section*.50}{Revisiones de c\363digo}{subsection.5.4.1}% 117
-\BOOKMARK [3][-]{section*.50}{Evaluaciones de usabilidad}{subsection.5.4.1}% 118
+\BOOKMARK [3][-]{section*.51}{Control de versiones}{subsection.5.4.1}% 114
+\BOOKMARK [3][-]{section*.51}{GitHub}{subsection.5.4.1}% 115
+\BOOKMARK [3][-]{section*.51}{Reparto de tareas}{subsection.5.4.1}% 116
+\BOOKMARK [3][-]{section*.51}{Revisiones de c\363digo}{subsection.5.4.1}% 117
+\BOOKMARK [3][-]{section*.51}{Evaluaciones de usabilidad}{subsection.5.4.1}% 118
 \BOOKMARK [1][-]{section.5.5}{Evaluaci\363n con Usuarios}{chapter.5}% 119
 \BOOKMARK [0][-]{chapter.6}{Arquitectura del Proyecto}{}% 120
 \BOOKMARK [1][-]{section.6.1}{Arquitectura de Wave}{chapter.6}% 121
@@ -124,16 +124,16 @@
 \BOOKMARK [1][-]{section.6.2}{Arquitectura de la aplicaci\363n}{chapter.6}% 124
 \BOOKMARK [2][-]{subsection.6.2.1}{Base de datos}{section.6.2}% 125
 \BOOKMARK [2][-]{subsection.6.2.2}{Service REST}{section.6.2}% 126
-\BOOKMARK [3][-]{table.caption.58}{Arquitectura}{subsection.6.2.2}% 127
-\BOOKMARK [3][-]{figure.caption.59}{Rutas}{subsection.6.2.2}% 128
+\BOOKMARK [3][-]{table.caption.59}{Arquitectura}{subsection.6.2.2}% 127
+\BOOKMARK [3][-]{figure.caption.60}{Rutas}{subsection.6.2.2}% 128
 \BOOKMARK [3][-]{lstnumber.-15.11}{Controladores}{subsection.6.2.2}% 129
 \BOOKMARK [2][-]{subsection.6.2.3}{Servicio Android de Conexi\363n con Wave}{section.6.2}% 130
 \BOOKMARK [2][-]{subsection.6.2.4}{Cliente Android}{section.6.2}% 131
-\BOOKMARK [3][-]{section*.61}{Interfaz Gr\341fica}{subsection.6.2.4}% 132
-\BOOKMARK [3][-]{table.caption.64}{Estructuraci\363n de Programas Pol\355ticos}{subsection.6.2.4}% 133
-\BOOKMARK [3][-]{figure.caption.66}{Conexi\363n y Peticiones a Service REST y Base de Datos}{subsection.6.2.4}% 134
-\BOOKMARK [3][-]{figure.caption.67}{Gesti\363n de Usuarios}{subsection.6.2.4}% 135
-\BOOKMARK [3][-]{figure.caption.67}{Peticiones a Wave}{subsection.6.2.4}% 136
+\BOOKMARK [3][-]{section*.62}{Interfaz Gr\341fica}{subsection.6.2.4}% 132
+\BOOKMARK [3][-]{table.caption.65}{Estructuraci\363n de Programas Pol\355ticos}{subsection.6.2.4}% 133
+\BOOKMARK [3][-]{figure.caption.67}{Conexi\363n y Peticiones a Service REST y Base de Datos}{subsection.6.2.4}% 134
+\BOOKMARK [3][-]{figure.caption.68}{Gesti\363n de Usuarios}{subsection.6.2.4}% 135
+\BOOKMARK [3][-]{figure.caption.68}{Peticiones a Wave}{subsection.6.2.4}% 136
 \BOOKMARK [0][-]{chapter.7}{Resultados y Conclusiones}{}% 137
 \BOOKMARK [1][-]{section.7.1}{Discusion de Resultados}{chapter.7}% 138
 \BOOKMARK [2][-]{subsection.7.1.1}{Evaluaci\363n con usuarios}{section.7.1}% 139
