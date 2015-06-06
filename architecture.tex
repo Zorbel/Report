@@ -4,7 +4,25 @@
 
 \section{Arquitectura de Wave}
 
-    \subsection{Modelo Wave}\label{sec:waveModel}
+	La arquitectura que soporta Wave tal y como la diseñó originalmente Google está estructurada en forma de capas que interactuan entre sí. De forma general y de abajo hacia arriba disponemos de las siguientes capas:
+	
+	\begin{itemize}
+		\item Capa de Conexión Cliente/Servidor: Se encarga de gestionar la conexión entre cliente y servidor mediante el protocolo XMPP.
+		\item Capa de Control de OT: Se encarga de gestionar la consistencia en tiempo real de los datos mediante la utilización de Transformaciones Operacionales (OT).
+		\item Capa de Modelo de Datos Wave: Se encarga de gestionar los datos a nivel de las Waves que forman parte de una Conversación.
+		\item Capa de Modelo Conversacional: Se encarga de gestionar los datos a nivel de las Conversaciones, junto a los documentos que las componen y los usuarios participantes (Ver Sección \ref{sec:waveModel}). En el caso de SwellRT se extendió este modelo a otro más generalizado llamado Modelo de Contenidos (Ver Sección \ref{sec:swellRTModel}).
+		\item Capa de Interfaz de Cliente: API con operaciones para que el cliente interactue con el Modelo Conversacional subyacente mediante eventos. En el caso de SwellRT se extendió este API para utilizar el Modelo de Contenidos de esta tecnología. 
+	\end{itemize}
+	
+	\begin{figure}[H]
+	  \centering
+	    \includegraphics[keepaspectratio, scale=0.6]{Media/Captures/waveArch.png}
+	  \caption{Arquitectura de Wave}
+	  \label{fig:waveArch}
+	\end{figure}
+	
+
+    \subsection{Modelo Conversacional Wave}\label{sec:waveModel}
     
     Además de definir el protocolo del que hace uso Wave, Google definió un Modelo de Datos Conversacional \cite{ref:wave_conversation_model} que refleja la arquitectura de los datos que componen las conversaciones en Wave. Así, a grandes rasgos, podemos ver dichas conversaciones como documentos XML sobre los que los usuarios participantes (cualquiera es libre de unirse a una conversación en cualquier momento) actúan creando nuevos elementos o modificando los ya existentes. Este modelo de datos define una nomenclatura propia para los elementos que componen esta tecnología \cite{ref:wave_api_overview} \cite{ref:wave_white_paper}:
     
@@ -21,18 +39,30 @@
 	  \end{itemize}
       \end{itemize}
       
-       \begin{figure}[H]
+    \begin{figure}[H]
 	  \centering
-	    \includegraphics[keepaspectratio, scale=0.8]{Media/Captures/waveEntities.png}
+	    \includegraphics[keepaspectratio, scale=0.7]{Media/Captures/waveEntities.png}
 	  \caption{Modelo Conversacional de Wave}
 	  \label{fig:wave_model}
 	\end{figure}
 	
-	\subsection{Modelo SwellRT}
+	\subsection{Modelo de Contenidos SwellRT}\label{sec:swellRTModel}
+	
+	SwellRT \cite{ref:swellRT_github} (Swell Real Time) es un framework de desarrollo para Wave que forma parte del proyecto europeo P2P Value \cite{ref:p2pvalue}. Está basado en el servidor Wave In A Box \cite{ref:wave_in_a_box} (WIAB) y extiende sus funcionalidades cambiando el Modelo Conversacional original creado por Google por uno nuevo de propósito más general llamado Modelo de Contenidos. En este modelo nuevo podemos intercambiar estructuras de datos de forma colaborativa, federada y en tiempo real que combinen los siguientes 3 tipos: \textbf{Mapas, Listas y Strings.}
+	
+	De esta manera la estructura de datos intercambiada constará siempre de un Mapa inicial (llamado ''root'') del cual colgarán a modo de árbol el resto de estructuras (de cualquiera de los tres tipos que maneja SwellRT) cuyos datos se gestionarán en tiempo real. Para ello existe también una API nueva que se encarga de la gestión de dicho arbol mediante la utilización de eventos que notifican de cambios en las estructuras de datos. Este modelo será el que utilicemos para la aplicación Android. El siguiente es un esquema de los cambios en el modelo original introducidos por SwellRT:
+	
+	
+	\begin{figure}[H]
+	  \centering
+	    \includegraphics[keepaspectratio, scale=0.6]{Media/Captures/waveDataModel.png}
+	  \caption{Cambio de Modelo de Wave}
+	  \label{fig:wave_swellRT}
+	\end{figure}
 
 \section{Arquitectura de la aplicación}
 
-La arquitectura está compuesta por cuatro módulos principales de los que hablaremos en profundidad en las siguientes subsecciones. Como \textbf{Cliente móvil} tendremos la aplicación desarrollada en Android, que realizará peticiones HTTP al servicio web alojado en OpenShift \cite{ref:OpenShift}, una plataforma que permite alojar servicios web de forma gratuita. Dentro del servicio contaremos con una \textbf{API RESTful} que será quien gestione las peticiones de la aplicación móvil mediante el protocolo HTTP.
+La arquitectura de DemoCritics está compuesta por cuatro módulos principales de los que hablaremos en profundidad en las siguientes subsecciones. Como \textbf{Cliente móvil} tendremos la aplicación desarrollada en Android, que realizará peticiones HTTP al servicio web alojado en OpenShift \cite{ref:OpenShift}, una plataforma que permite alojar servicios web de forma gratuita. Dentro del servicio contaremos con una \textbf{API RESTful} que será quien gestione las peticiones de la aplicación móvil mediante el protocolo HTTP.
 
 CAMBIAR FOTO PARA VER INTEGRACION CON WAVE
 
@@ -66,15 +96,15 @@ EXPLICAR RESTO DE TABLAS. DATOS ESTATICOS VS DINAMICOS
 
 Las demás tablas serán utilizadas para guardar datos dinámicos de la aplicación. Datos que normalmente genera un usuario visitando una sección de un programa, creando una propuesta, haciendo un comentario, etc.
 
-\subsection{Service REST}
+\subsection{Service REST} \label{ssec:seviceREST}
 
-Para establecer la conexión de la aplicación desarrollada en Android con la Base de Datos hemos utilizado \textbf{Laravel} como Servicio Web. Laravel \cite{ref:laravel} es un framework de código abierto para desarrollar aplicaciones web con PHP 5. Laravel permite además montar una API REST (Representational State Transfer), un estilo de arquitectura software para sistemas hipermedia distribuidos como la World Wide Web. Este término se originó en una tesis doctoral sobre la web escrita por Roy Fielding \cite{ref:RESTPhd}. La elección de Laravel como framework PHP fue debida a su flexibilidad, la facilidad para programar la aplicación y el gran soporte que tiene de la comunidad. Además Laravel cuenta con una licencia de software libre MIT, lo que nos permite continuar utilizando software en todo el proyecto, y fue el Framework más popular al finales de 2013.
+Para establecer la conexión de la aplicación desarrollada en Android con la Base de Datos hemos utilizado \textbf{Laravel} como Servicio Web. Laravel \cite{ref:laravel} es un framework de código abierto para desarrollar aplicaciones web con PHP 5. Laravel permite además montar una API REST (Representational State Transfer), un estilo de arquitectura software para sistemas hipermedia distribuidos como la World Wide Web. Este término se originó en una tesis doctoral sobre la web escrita por Roy Fielding \cite{ref:RESTPhd}. La elección de Laravel como framework PHP fue debida a su flexibilidad, la facilidad para programar la aplicación y el gran soporte que tiene de la comunidad. Además Laravel cuenta con una licencia de software libre MIT, lo que nos permite continuar utilizando software open-source en todo el proyecto, y es uno de los frameworks más populares actualmente.
 
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio, scale=0.30]{Media/Captures/frameworkPopularity.png}
-\caption{Pantalla principal de Laravel 5.}
-\label{fig:laravel5}
+\caption{Frameworks PHP más populares. Fuente: SitePoint}
+\label{fig:laravel5popularity}
 \end{figure}
 
 Laravel nos permite implementar un sistema RESTful para que el cliente móvil pueda hacer peticiones al servicio web y que dicho servicio responda a éstas de la forma que queramos. Estas peticiones se realizan mediante el protocolo HTTP. En función de la operación que deseemos hacer, clasificaremos estas funciones en el acrónimo \textbf{CRUD} \cite{ref:CRUD} (del original en inglés: \textbf{C}reate, \textbf{R}ead, \textbf{U}pdate and \textbf{D}elete).
@@ -92,7 +122,7 @@ DELETE         & Borrar          & DELETE    & Eliminar un recurso almacenado en
 \label{fig:CRUDtable}
 \end{table}
 
-En función de las peticiones que realicemos al servicio que serán realizadas mediante el protocolo HTTP, el servidor nos devolverá un código de estado para obtener el \textit{feedback} de lo sucedido. Por tanto distinguiremos diferentes códigos de estado cuando queramos obtener un recurso, actualizar un recurso, crear uno nuevo o borrarlo. En la siguiente tabla se definen los códigos de estado que puede devolvernos el servidor en función de nuestras peticiones.
+En función de las peticiones que realicemos al servicio realizadas mediante el protocolo HTTP, el servidor nos devolverá un código de estado para obtener \textit{feedback} de lo sucedido. Por tanto distinguiremos diferentes códigos de estado cuando queramos obtener un recurso, actualizar un recurso, crear uno nuevo o borrarlo. En la siguiente tabla se definen los códigos de estado que puede devolvernos el servidor en función de nuestras peticiones.
 
 \begin{table}[H]
 \begin{tabular}{|c|c|m{7.5cm}|}
@@ -117,7 +147,7 @@ Usar un servicio RESTful nos proporciona una gran flexibilidad a la hora de inde
 
 \subsubsection{Arquitectura}
 
-Laravel utiliza implementa un funcionamiento basado en el patrón \textbf{MVC} (Model–view–controller), separando el modelo de la vista, y delegando la gestión al controlador. En nuestro caso tendríamos un modelo almacenado en las tablas de la base datos, donde se guardará toda la información dinámica y estática de la aplicación. El controlador sería en elcargado de gestionar las peticiones del cliente en Android en función del tipo de operación que requiera. Y por último, tendríamos como vista el resultado devuelto por el servidor con los datos solicitados por el cliente, que a su vez los representaría en la aplicación móvil. Esta estructura de comportamiento hace independiente el modelo controlado por el servidor, de la vista que obtiene el usuario final en su cliente móvil. Con esto conseguimos eleborar un código más claro y sencillo, así como también evitar conflictos entre el modelo y la vista.
+Laravel utiliza e implementa un funcionamiento basado en el patrón \textbf{MVC} (Model–view–controller), separando el modelo de la vista, y delegando la gestión al controlador. En nuestro caso tendríamos un modelo almacenado en las tablas de la base datos, donde se guardará toda la información dinámica y estática de la aplicación. El controlador sería en elcargado de gestionar las peticiones del cliente en Android en función del tipo de operación que requiera. Y por último, tendríamos como vista el resultado devuelto por el servidor con los datos solicitados por el cliente, que a su vez los representaría en la aplicación móvil. Esta estructura de comportamiento hace independiente el modelo controlado por el servidor, de la vista que obtiene el usuario final en su cliente móvil. Con esto conseguimos eleborar un código más claro y sencillo, así como también evitar conflictos entre el modelo y la vista.
 
 \begin{figure}[H]
 \centering
@@ -260,17 +290,183 @@ La conexión a la base de datos se encuentra configurada en el archivo \textit{/
 ]
 \end{lstlisting}
 
-\subsection{Servicio Android de conexión con Wave}
+\subsection{Servicio Android de Conexión con Wave}
 
-REORDENAR LO DE WAVE
+	REORDENAR LO DE WAVE
 
 \subsection{Cliente Android}
 
-INTERFAZ GRAFICA -> PRESENTACION AL USUARIO
+	La plataforma Android divide el desarrollo de una aplicación en dos partes: la implementación de la lógica detras de la aplicación mediante el uso de Activities \cite{ref:android_activities} o Services \cite{ref:android_service}, y la configuración del aspecto de la interfaz mediante Layouts XML \cite{ref:android_layout}. En las siguientes secciones hablaremos de algunos de los aspectos más destacados de este proyecto en referencia a dichas características de Android.
 
-ALGORITMO ESTRUCTURACION DE PROGRAMA
+	\subsubsection{Interfaz Gráfica}
+	
+		En el desarrollo de esta aplicación quisimos utilizar un diseño plano basado en las últimas guias de diseño de Android disponibles en su última versión 5.0. Google denominó a este diseño plano ''Material Design''. 
+	
+		En Android, cuando creamos una Actividad (en su método ''onCreate()'') asignamos una Vista (''View'') a la actividad que representa la interfaz del usuario. Esta vista está definida en un archivo de Layout XML que deberemos modificar para crear la interfaz gráfica añadiendo componentes gráficos \cite{ref:android_widget} (''widgets'') y modificando sus atributos mediante etiquetas XML para adaptarlos a nuestras necesidades. Además podemos asignarles un identificador único para poder movernos por dichos widgets luego desde el código de la aplicación mediante una navegación en árbol utilizando el método ''findViewById()'' proporcionado por Android. 
+		
+		Estos componentes gráficos pueden ser los básicos proporcionados por Android (como cajas de texto, botones, listas, etc.) o se pueden crear \textit{Vistas Personalizadas} en caso de que los widgets básicos no aporten la funcionalidad deseada.
+		
+		En este último caso será necesario definir un Layout para la vista personalizada (que puede a su vez estar compuesto por widgets básicos o no) y una clase que posea referencias a los datos y a los componentes del layout que los albergarán.
+		
+		Sin embargo a menudo querremos usar varias de estas vistas, ya sean básicas o personalizadas, juntas dentro de una lista,  por lo que necesitaremos un \textit{Adaptador}\cite{ref:android_adapter} (''Adapter'') que haga de intermediario entre el layout y la clase que lo define para ''adaptar'' los datos que posee la clase a los componentes del layout que los muestran. 
+		
+		Veamos un ejemplo de esto con nuestra vista (widget) personalizada llamada \textbf{PartyWidget}, creada para mostrar cada uno de los elementos de la lista de Partidos Políticos que se visualiza en la aplicación. El funcionamiento de este widget personalizado esta formado por los siguientes tres elementos:
+		
+		\begin{itemize}
+			\item \textbf{party\_widget.xml}: Layout XML que define la disposición de los dos componentes gráficos básicos que conforman esta vista: un ''ImageView'' para el logo del partido y un ''TextView'' para el nombre del partido.
+			\item \textbf{PartyWidgetView.java}: Clase que define el objeto contiene referencias a los dos componentes anteriores (mediante sus IDs) y los datos de la imagen (de tipo Bitmap) y el nombre (String) del partido.
+			\item \textbf{PartyWidgetAdapter.java}: Clase que extiende de un ''BaseAdapter'' de Android y define el adaptador que se encargará de gestionar una lista de elementos gráficos de un mismo tipo (en nuestro caso del tipo ''PoliticalParty'') y de crear las vistas que muestran los datos almacenados en dicha lista. El método más importante de un Adapter es el ''getView'', que crea la vista personalizada (en nuestro caso de tipo ''PartyWidgetView'') y le asigna los datos que hay dentro de cada elemento de la lista de la forma que nosotros le definamos. 
+		\end{itemize}
+		
+		De esta manera, solo es necesario decirle al elemnto que contiene la lista de Partidos Políticos (en nuestro caso un ''GridView'' que permite visualizarlos en forma de rejilla que se adapta al tamaño de pantalla) que use como adaptador el PartyWidgetAdapter con los datos de la lista de Partidos Políticos que previamente nos hemos descargado. \\
+		
+				
+		\underline{Navegación por Tabs}
+		
+		Tras la fase de investigación decidimos que sería interesante incluir en la aplicación distintos filtros para ver tanto las secciones como las propuestas más valoradas positivamente, más vistas, más comentadas, etc. Para implementar la vista de esta funcionalidad decidimos utilizar un diseño muy parecido al que utiliza Google en su tienda de aplicaciones Google Play para navegar de forma lateral mediante pestañas (''tabs'') deslizantes. En nuestro caso cada una de las tabs mostraría una lista (elemento ''ListView'' de Android) de elementos ordenados por distinto filtro.
+		
+		No obstante, el método utilizado por Google en anteriores versiones de Android basado en añadir Tabs a la barra superior (''Action Bar'')\cite{ref:android_actionBar} de la aplicación está actualmente obsoleto en el API 21, por lo que tuvimos que recurrir a la actual implementación de Google, que no se encuentra todavía dentro del API 21 de desarrollo. Es por eso que hubo que utilizar un par de clases (''SlidingTabLayout'' y ''SlidingTabStrip'') que definen las tabs utilizadas por Google en el diseño con ''Material Design''. Estas clases fueron extraidas del GitHub\cite{ref:android_tabGoogle} de la app que Google mostró en su aplicación de prueba cuando presentó ''Material Design'' a finales de 2014. Este elemento trabaja definiendo el contenido de cada Tab mediante la utilización de Fragmentos\cite{ref:android_fragment} (''Fragment'') de Android, que representan una porción de lo que se muestra dentro de una Actividad.
+		
+		Sin embargo, la vista (Layout) de una Sección y de una Propuesta dentro de esta lista sería muy similar (con su foto, título e indicadores sociales de número de likes, vistas, etc.) por lo que ¿cómo hacer para utilizar la misma vista en dos objetos que son de tipos distintos? La solución que encontramos para utilizar el mismo elemento de visulización (definido en el layout llamado ''top\_ranking\_item'') en ambos casos fue utilizar una interfaz que implementarían tanto la clase  ''Section'' como la clase ''Proposal'': la interfaz ''TopItem''.
+		
+	\begin{figure}[H]
+	  \centering
+	    \includegraphics[keepaspectratio, scale=0.6]{Media/Diagrams/classDiagramTopItemAdapter.png}
+	  \caption{Esquema de Implementación de TopItem (Con vista de Section y Proposal)}
+	  \label{fig:topItemArch}
+	\end{figure}
+	
+	De esta forma, las clases Section y Proposal implementan los métodos ''isSection()'' e ''isProposal()'' de la interfaz devolviendo true en cada caso respectivamente. Así, cuando dentro de nuestro Adaptador (''TopItemAdapter'') tratemos los elementos de su lista de TopItems en su método ''getView()'', podremos preguntar si se trata de un Section o un Proposal para rellenar la vista del ListView con los datos correspondientes a cada caso. Solo hace falta por tanto crear listas de Secciones o Propuestas y pasárselas al nuestro adaptador personalizado después de definirlo como adaptador para el ListView. \\
+		
+		\underline{Menús de Navegación}
+		
+		Con el objetivo de proporcionar al usuario una navegación por la aplicación que permita ir a cualquiera de sus secciones independientemente de en qué pantalla te encuentres actualmente, se decidió utilizar un menú lateral que se puede deslizar desde el lado izquierdo de la pantalla. Android permite añadir menús \cite{ref:android_menu} a las Actividades mediante métodos específicos de éstas, aunque en este caso son menús fotantes sencillos a los que se accede mediante el botón de opciones del móvil o de la app. 
+		
+		Nosotros queriamos utilizar el menú lateral deslizante presente en la mayoría de aplicaciones del estilo ''Material Design'' introducido por Google en su última versión de Android 5.0 (API 21), por lo que utilizamos un componente gŕafico llamado ''Navigation Drawer'' para ello. Este componente está presente en todos los layouts de la aplicación y contiene dentro un ''ListView'' con las entradas del menú. Cada una de estas entradas es asimismo un componente personalizado por nosotros, definido en el layout menu\_left\_item.xml (contiene un logo y el nombre de la entrada de menú). En consecuencia, y tal y como se ha hablado antes en esta sección, existirá también un Adapter ''MenuLeftListAdapter'' que se encargará de gestionar la vista de la lista de entradas del menú. Además, se le ha añadido una cabecera (''Header'') al menú, que contiene la información de nombre de Usuario y un botón para cambiar dicho nombre.
+		
+		Sin embargo, si todas las Actividades que componen la aplicación disponen de este menú, ¿Cómo hacer para evitar repetir el código de generación y configuración de dicho menú en todas las Actividades? La solución encontrada fue utilizar una Actividad padre llamada ''MenuActivity'' que se encargaría de generar y de albergar los métodos que configuran el menú. De esta manera, cualquier Actividad de la aplicación extendería de ''MenuActivity'' y llamaría a sus métodos de generación  coniguración de menú con una referencia a su propia vista de Layout (recordemos que cada Layout contiene el elemento ''Navigation Drawer'' necesario para mostrar el menú).
+		
+	\begin{figure}[H]
+	  \centering
+	    \includegraphics[keepaspectratio, scale=0.6]{Media/Diagrams/classMenuLeft.png}
+	  \caption{Esquema de Implementación de Menú Izquierdo (Con vista del Menú)}
+	  \label{fig:topItemArch}
+	\end{figure}	
+	
+	Existe también en la aplicación un Menú derecho deslizable que muestra un Indice del Programa de un Partido Político para poder navegar por él de manera más sencilla (similar al que  utiliza la aplicación de la Wikipedia para navegar por un artículo). Este menú solo está presente en la actividad ''SectionViewerActivity'', ya que solo es necesario acceder al indice del programa cuando nos encontramos navegando por sus secciones. Utiliza también   para ello un ''Navigation Drawer'' similar al del otro menú antes explicado. No obstante, en este caso decidimos utilizar un tipo distinto de lista (''ExpandableListView'') que se diferencia de la lista normal en que posee dos niveles de navegación que se pueden expandir. De esta forma es necesario definir los layouts de los distintos niveles (''groups'') y los subniveles (''childrens'') dentro de cada uno. 
+	
+\begin{table}[H]
+	\footnotesize
+	\begin{center}
+	\begin{tabular}{| c | c | c | m{5cm} |}
+		\hline
+		Adapter & Layout & Clase & Descripción \\ \hline
+		PartyWidgetAdapter & party\_widget.xml & PartyWidgetView & Widget para mostrar un elemento de la lista de Partidos Políticos \\ \hline
+		MenuLeftListAdapter & menu\_left\_item.xml & MenuLeftItem & Widget para mostrar las entradas del Menú lateral izquierdo. \\ \hline
+		TopItemAdapter & top\_ranking\_item.xml & TopItem & Widget para mostrar un elemento de la lista con los Tops de Secciones y Propuestas. \\ \hline
+		ListIndexAdapter & (solo muestra texto) & No es necesario & TextView (Android) que muestra los nombres del índice de un Programa Político. \\ \hline
+		ExpandableListAdapter & \begin{tabular}[c]{@{}l@{}}list\_child\_item.xml\\ list\_group\_item.xml\end{tabular} & No es necesario & TextView que contienen los titulos de las distintas secciones y subsecciones (desplegables) del índice de un Programa Político. \\ \hline
+		CommentListAdapter & comment\_item.xml & Comment & Widget para mostrar un comentario de un usuario dentro de la lista de comentarios de una Seccion o una Propuesta. \\ \hline
+		SampleFragmentPagerAdapter & tab\_page\_*.xml & TabPageFragment & Widget para definir lo que contiene cada tab mediante Fragmentos cuya vista es generada de forma dinámica. \\ \hline
+	\end{tabular}
+	\end{center}
+	\caption{Adapters, Views y Clases utilizadas en el proyecto}
+	\label{fig:tableAdapters}
+\end{table}
+		
+	\subsubsection{Estructuración de Programas Políticos}
 
-ARQUITECTURA DE PETICIONES AL REST
+		A la hora de almacenar los Programas Políticos en la Base de Datos tuvimos que estudiar la forma más adecuada de hacerlo para poder estructurar dichos programas en distintos niveles de secciones y subsecciones. En definitiva, el problema radicaba en cómo codificar la información de a qué nivel de anidamiento pertenecía cada Sección. Además, teniamos dos opciones: o bien el service REST devolvía un programa ya estructurado o la propia aplicación se encargaba de estructurarlos. \\
+		
+		\underline{Codificación en Base de Datos}
+		
+		En principio queríamos elegir una codificación que nos permitiera realizar una consulta a la base de Datos que devolviera las distintas secciones y subsecciones \textbf{en el orden en el que aparecen en el Programa}. Tras varios intentos con distintos campos de Strings y enteros como atributo de la tabla de Secciones en Base de Datos, decidimos que lo mejor sería utilizar un único número entero que codificara dicha información. Tras estudiar la composición de diversos programas identificamos que \textbf{no serían necesarios más de 4 niveles de anidamiento en subsecciones}. En consecuencia, el número estaría formado por 8 cifras, siendo cada dos cifras un nivel distinto de anidamiento. Veamos varios ejemplos de cómo funciona esta codificación:
+		
+	\begin{figure}[H]
+	  \centering
+	    \includegraphics[keepaspectratio, scale=0.8]{Media/Captures/sectionsCodification.png}
+	  \caption{Ejemplos de Codificación de Secciones y Subsecciones}
+	  \label{fig:secCodification}
+	\end{figure}	
+	
+	Utilizando esta codificación conseguimos que mediante una simple consulta SQL la Base de Datos nos devuelva todas las secciones del programa de un determinado partido de forma ordenada, siendo luego el Service REST el que pasará los resultados de esta consulta en JSON a la aplicación Android. \\ 
+	
+	\underline{Estructuración y Almacenamiento de Secciones}
+	
+	Con dicha codificación conseguiamos ordenar las secciones en el orden e el que aprecen en el programa, pero ahora debiamos guardarlas en la aplicación en unsa estructura que nos permitiera navegar por el programa de forma estructurada pudiendo en cada momento ver las subsecciones o volver a la seccion anterior. Decidimos por tanto \textbf{guardar el programa en una estructura en árbol formada por listas de listas}. De esta forma cada elemento de la lista sería un objeto del tipo Section que contendria la información de dicha seccion (titulo, texto, etc.) y otra lista con las subsecciones.
+	
+	Pero, ¿cómo construir esta estructura a partir de la lista ordenada que nos devuelve el Service REST? La solución encontrada fue utilizar una función que construyera dicho árbol de forma recursiva (Ver clase ''GetProgramsData.java'') sobre una Seccion ''root'' vacía que pertenecería a cada Partido Político. Dicha función recorrería la lista de secciones sin estructurar y para cada sección comprobraría su nivel de anidamiento para saber si colocarlo en el nivel actual, en el siguiente o en el anterior.
+	
+	 \lstset{language=Java, breaklines=true, autogobble=true, basicstyle=\ttfamily\footnotesize, commentstyle=\color{OliveGreen}, keywordstyle=\color{MidnightBlue}}
+	  \begin{lstlisting}[frame=single]	
+	      protected int createIndex(Section parent, List<Section> JSONResult, int index) {
+        // X = currentSection
+        Section currentSection = JSONResult.get(index);
+        if (parent.getlSections() == null) {
+            parent.setlSections(new ArrayList<Section>());
+        }
+        parent.addSubSection(currentSection);
+        // c = nextIndex
+        int nextIndex = index + 1;
+        while ((nextIndex < JSONResult.size()) && (getLevel(JSONResult.get(nextIndex)) >= getLevel(currentSection))) {
+            if (getLevel(JSONResult.get(nextIndex)) == getLevel(currentSection)) {
+                currentSection = JSONResult.get(nextIndex);
+                nextIndex++;
+                parent.addSubSection(currentSection);
+            } else if (getLevel(JSONResult.get(nextIndex)) > getLevel(currentSection))
+                nextIndex = createIndex(currentSection, JSONResult, nextIndex);
+        }
+        return nextIndex;
+    }
 
-ARQUITECTURA DE PETICIONES A WAVE
+    protected int getLevel(Section sec) {
+        int id_sec = sec.getmSection(), level;
+        if (id_sec % 100 != 0) {
+            level = 4;
+        } else if (id_sec % 10000 != 0) {
+            level = 3;
+        } else if (id_sec % 1000000 != 0) {
+            level = 2;
+        } else
+            level = 1;
+        return level;
+    }	   
+	  \end{lstlisting}
+	  
+	  Además, como no queriamos tener que descargarnos el programa continuamente, esta estructura en forma de arbol se guardaría en una clase llamada ''PoliticalGroups'' que alamacenaría el listado de Partidos Politicos y para cada unode ellos almacenaría la estructura en árbol de su programa (su nodo ''root''). Esta clase implementa el \textbf{patrón de diseño Singleton} para asegurar que solo exista una instancia de ella, accesible desde cualquier punto de la aplicación. 
+	  
+	\begin{figure}[H]
+	  \centering
+	    \includegraphics[keepaspectratio, scale=0.6]{Media/Diagrams/classSectionTree.png}
+	  \caption{Esquema de estructura en árbol de Programa Político}
+	  \label{fig:classSecTree}
+	\end{figure}	
+	
+	\subsubsection{Conexión y Peticiones a Service REST y Base de Datos}
+
+		Las peticiones de información a Base de Datos (ya sea para crear datos, descargarlos o modificarlos) se realizan mediante el protocolo HTTP enviando dichas peticiones al Service REST (Ver Sección \ref{ssec:seviceREST}). Para enviar dichas peticiones es necesario por tanto realizar una conexión HTTP al Service REST desde la aplicación Android. Aprovechando la experiencia previa adquirida durante la migración de Wave (Ver Sección \ref{sssec:conHttp}), decidimos utilizar la librería ''HttpURLConnection'' de Android y un esquema basado en AsyncTask que ejecutan el proceso de conexión y descarga de datos en un thread separado del UI Thread tal y como recomienda Google hacer para trabajar con conexiones de red\cite{ref:android_networking}.
+		
+		Así, en función de la operación que se quiera hacer en Base de Datos, para cada tipo de consulta existirá un AsyncTask encargado de conectarse al servidor con la URL apropiada y tratar los datos en JSON que este le pueda devolver, ya sea para mostrarlos o guardarlos en algún objeto de la aplicación. De forma general podemos identificar cuatro tipos de peticiones al servidor (Ver tabla \ref{fig:CRUDtable}).
+
+Con el objetivo de no repetir código decidimos estructurar el esquema de peticiones HTTP mediante herencia de AsyncTasks. El siguiente diagrama esquematiza la estructura: 
+
+	\begin{figure}[H]
+	  \centering
+	    \includegraphics[keepaspectratio, scale=0.6]{Media/Diagrams/classDiagramAsyncTask.png}
+	  \caption{Esquema de Clases de Conexión HTTP mediante AsyncTask}
+	  \label{fig:classConnectionTree}
+	\end{figure}	
+	
+	Hace falta también actualizar la vista del usuario cuando se reciban los datos. Como un AsyncTask se ejecuta en un hilo aparte diferente del UI Thread (para no bloquear la interacción con el usuario).	
+		
+		
+	\subsubsection{Gestión de Usuarios}
+	
+		ID de teléfono
+		
+	\subsubsection{Peticiones a Wave}
+
+		ARQUITECTURA DE PETICIONES A WAVE
+		
+	
 

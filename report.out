@@ -119,20 +119,25 @@
 \BOOKMARK [1][-]{section.5.5}{Evaluaci\363n con Usuarios}{chapter.5}% 119
 \BOOKMARK [0][-]{chapter.6}{Arquitectura del Proyecto}{}% 120
 \BOOKMARK [1][-]{section.6.1}{Arquitectura de Wave}{chapter.6}% 121
-\BOOKMARK [2][-]{subsection.6.1.1}{Modelo Wave}{section.6.1}% 122
-\BOOKMARK [2][-]{subsection.6.1.2}{Modelo SwellRT}{section.6.1}% 123
+\BOOKMARK [2][-]{subsection.6.1.1}{Modelo Conversacional Wave}{section.6.1}% 122
+\BOOKMARK [2][-]{subsection.6.1.2}{Modelo de Contenidos SwellRT}{section.6.1}% 123
 \BOOKMARK [1][-]{section.6.2}{Arquitectura de la aplicaci\363n}{chapter.6}% 124
 \BOOKMARK [2][-]{subsection.6.2.1}{Base de datos}{section.6.2}% 125
 \BOOKMARK [2][-]{subsection.6.2.2}{Service REST}{section.6.2}% 126
-\BOOKMARK [3][-]{table.caption.56}{Arquitectura}{subsection.6.2.2}% 127
-\BOOKMARK [3][-]{figure.caption.57}{Rutas}{subsection.6.2.2}% 128
+\BOOKMARK [3][-]{table.caption.58}{Arquitectura}{subsection.6.2.2}% 127
+\BOOKMARK [3][-]{figure.caption.59}{Rutas}{subsection.6.2.2}% 128
 \BOOKMARK [3][-]{lstnumber.-15.11}{Controladores}{subsection.6.2.2}% 129
-\BOOKMARK [2][-]{subsection.6.2.3}{Servicio Android de conexi\363n con Wave}{section.6.2}% 130
+\BOOKMARK [2][-]{subsection.6.2.3}{Servicio Android de Conexi\363n con Wave}{section.6.2}% 130
 \BOOKMARK [2][-]{subsection.6.2.4}{Cliente Android}{section.6.2}% 131
-\BOOKMARK [0][-]{chapter.7}{Resultados y Conclusiones}{}% 132
-\BOOKMARK [1][-]{section.7.1}{Discusion de Resultados}{chapter.7}% 133
-\BOOKMARK [2][-]{subsection.7.1.1}{Evaluaci\363n con usuarios}{section.7.1}% 134
-\BOOKMARK [1][-]{section.7.2}{Conclusiones}{chapter.7}% 135
-\BOOKMARK [0][-]{chapter.8}{Trabajo a Futuro}{}% 136
-\BOOKMARK [1][-]{section.8.1}{Mejoras}{chapter.8}% 137
-\BOOKMARK [0][-]{section.8.1}{Bibliograf\355a}{}% 138
+\BOOKMARK [3][-]{section*.61}{Interfaz Gr\341fica}{subsection.6.2.4}% 132
+\BOOKMARK [3][-]{table.caption.64}{Estructuraci\363n de Programas Pol\355ticos}{subsection.6.2.4}% 133
+\BOOKMARK [3][-]{figure.caption.66}{Conexi\363n y Peticiones a Service REST y Base de Datos}{subsection.6.2.4}% 134
+\BOOKMARK [3][-]{figure.caption.67}{Gesti\363n de Usuarios}{subsection.6.2.4}% 135
+\BOOKMARK [3][-]{figure.caption.67}{Peticiones a Wave}{subsection.6.2.4}% 136
+\BOOKMARK [0][-]{chapter.7}{Resultados y Conclusiones}{}% 137
+\BOOKMARK [1][-]{section.7.1}{Discusion de Resultados}{chapter.7}% 138
+\BOOKMARK [2][-]{subsection.7.1.1}{Evaluaci\363n con usuarios}{section.7.1}% 139
+\BOOKMARK [1][-]{section.7.2}{Conclusiones}{chapter.7}% 140
+\BOOKMARK [0][-]{chapter.8}{Trabajo a Futuro}{}% 141
+\BOOKMARK [1][-]{section.8.1}{Mejoras}{chapter.8}% 142
+\BOOKMARK [0][-]{section.8.1}{Bibliograf\355a}{}% 143
