@@ -31,21 +31,23 @@
 \contentsline {figure}{\numberline {5.7}{\ignorespaces Esquema de Clases de SwellRT-Android con Servicio\relax }}{66}{figure.caption.44}
 \contentsline {figure}{\numberline {5.8}{\ignorespaces Estudiante universitario\relax }}{76}{figure.caption.46}
 \contentsline {figure}{\numberline {5.9}{\ignorespaces Activista pol\IeC {\'\i }tico\relax }}{77}{figure.caption.47}
-\contentsline {figure}{\numberline {5.10}{\ignorespaces Vista principal de secciones\relax }}{84}{figure.caption.49}
-\contentsline {figure}{\numberline {5.11}{\ignorespaces Visualizando una secci\IeC {\'o}n\relax }}{85}{figure.caption.50}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Modelo de desarrollo de los prototipos.\relax }}{82}{figure.caption.49}
+\contentsline {figure}{\numberline {5.11}{\ignorespaces Primeros protitipos sobre programas electorales.\relax }}{83}{figure.caption.50}
+\contentsline {figure}{\numberline {5.12}{\ignorespaces Prototipos para el desarrollo de propuestas.\relax }}{84}{figure.caption.51}
+\contentsline {figure}{\numberline {5.13}{\ignorespaces Principios de dise\IeC {\~n}o en la aplicaci\IeC {\'o}n.\relax }}{87}{figure.caption.52}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Arquitectura de Wave\relax }}{88}{figure.caption.52}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Modelo Conversacional de Wave\relax }}{89}{figure.caption.53}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Cambio de Modelo de Wave\relax }}{90}{figure.caption.54}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Arquitectura de la aplicacci\IeC {\'o}n.\relax }}{91}{figure.caption.55}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Modelo entidad-relaci\IeC {\'o}n de la base de datos.\relax }}{92}{figure.caption.56}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Frameworks PHP m\IeC {\'a}s populares. Fuente: SitePoint\relax }}{93}{figure.caption.57}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Arquitectura de Laravel\relax }}{96}{figure.caption.60}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Camino desde la ruta al m\IeC {\'e}todo del controlador.\relax }}{100}{figure.caption.61}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Esquema de Implementaci\IeC {\'o}n de TopItem (Con vista de Section y Proposal)\relax }}{104}{figure.caption.63}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Esquema de Implementaci\IeC {\'o}n de Men\IeC {\'u} Izquierdo (Con vista del Men\IeC {\'u})\relax }}{106}{figure.caption.64}
-\contentsline {figure}{\numberline {6.11}{\ignorespaces Ejemplos de Codificaci\IeC {\'o}n de Secciones y Subsecciones\relax }}{108}{figure.caption.66}
-\contentsline {figure}{\numberline {6.12}{\ignorespaces Esquema de estructura en \IeC {\'a}rbol de Programa Pol\IeC {\'\i }tico\relax }}{110}{figure.caption.67}
-\contentsline {figure}{\numberline {6.13}{\ignorespaces Esquema de Clases de Conexi\IeC {\'o}n HTTP mediante AsyncTask\relax }}{111}{figure.caption.68}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Arquitectura de Wave\relax }}{92}{figure.caption.54}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Modelo Conversacional de Wave\relax }}{93}{figure.caption.55}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Cambio de Modelo de Wave\relax }}{94}{figure.caption.56}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Arquitectura de la aplicacci\IeC {\'o}n.\relax }}{95}{figure.caption.57}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Modelo entidad-relaci\IeC {\'o}n de la base de datos.\relax }}{96}{figure.caption.58}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Frameworks PHP m\IeC {\'a}s populares. Fuente: SitePoint\relax }}{97}{figure.caption.59}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Arquitectura de Laravel\relax }}{100}{figure.caption.62}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Camino desde la ruta al m\IeC {\'e}todo del controlador.\relax }}{104}{figure.caption.63}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Esquema de Implementaci\IeC {\'o}n de TopItem (Con vista de Section y Proposal)\relax }}{108}{figure.caption.65}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Esquema de Implementaci\IeC {\'o}n de Men\IeC {\'u} Izquierdo (Con vista del Men\IeC {\'u})\relax }}{110}{figure.caption.66}
+\contentsline {figure}{\numberline {6.11}{\ignorespaces Ejemplos de Codificaci\IeC {\'o}n de Secciones y Subsecciones\relax }}{112}{figure.caption.68}
+\contentsline {figure}{\numberline {6.12}{\ignorespaces Esquema de estructura en \IeC {\'a}rbol de Programa Pol\IeC {\'\i }tico\relax }}{114}{figure.caption.69}
+\contentsline {figure}{\numberline {6.13}{\ignorespaces Esquema de Clases de Conexi\IeC {\'o}n HTTP mediante AsyncTask\relax }}{115}{figure.caption.70}
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -17,6 +17,10 @@ Unbalanced braces---line 400 of file bibliography.bib
  : }
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
+Illegal end of database file---line 748 of file bibliography.bib
+ :   howpublished  = "\\\url{http://www.google.com/design/spec/material-design/introduction.html}"
+ :                                                                                                
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "ref_android_avd_params"
 Warning--I didn't find a database entry for "ref:android:asynctask"
 Warning--I didn't find a database entry for "ref:android_ui"
@@ -24,45 +28,45 @@ Warning--empty journal in ref:xmpp
 Warning--empty journal in ref:http
 Warning--empty journal in ref:webSocket_ref
 Warning--empty journal in ref:http_authentication
-You've used 112 entries,
+You've used 114 entries,
             1791 wiz_defined-function locations,
-            865 strings with 16174 characters,
-and the built_in function-call counts, 13886 in all, are:
-= -- 1113
-> -- 426
+            871 strings with 16392 characters,
+and the built_in function-call counts, 14125 in all, are:
+= -- 1130
+> -- 434
 < -- 0
-+ -- 216
-- -- 104
++ -- 220
+- -- 106
 * -- 28
-:= -- 2082
-add.period$ -- 329
-call.type$ -- 112
-change.case$ -- 109
+:= -- 2117
+add.period$ -- 334
+call.type$ -- 114
+change.case$ -- 111
 chr.to.int$ -- 0
-cite$ -- 116
-duplicate$ -- 584
-empty$ -- 1996
-format.name$ -- 104
-if$ -- 3337
+cite$ -- 118
+duplicate$ -- 594
+empty$ -- 2032
+format.name$ -- 106
+if$ -- 3394
 int.to.chr$ -- 0
-int.to.str$ -- 112
+int.to.str$ -- 114
 missing$ -- 8
-newline$ -- 556
-num.names$ -- 102
-pop$ -- 567
+newline$ -- 565
+num.names$ -- 104
+pop$ -- 577
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 555
+skip$ -- 567
 stack$ -- 0
 substring$ -- 0
-swap$ -- 108
+swap$ -- 110
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 4
-while$ -- 102
-width$ -- 115
-write$ -- 1000
-(There was 1 error message)
+while$ -- 104
+width$ -- 117
+write$ -- 1016
+(There were 2 error messages)

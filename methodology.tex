@@ -584,20 +584,20 @@ En esta fase definiremos el tipo de persona que interactuará con nuestra aplica
 
 \subsection{Definición de personas}
 
-A continuación se exponen una serie de personas ficticias que podrían ser los tipos de \textit{persona} a la que va dirigida la aplicación.
+En las figuras \ref{fig:studentPerson} y \ref{fig:activistPerson} se exponen una serie de personas ficticias que podrían representar en la vida real los tipos de \textit{persona} a la que va dirigida la aplicación.
 
-	\begin{figure}[H]
+	\begin{figure}[!]
       \centering
 	\includegraphics[keepaspectratio, scale=0.45]{Media/Captures/person1.png}
       \caption{Estudiante universitario}
-      \label{fig:android_Usage}
+      \label{fig:studentPerson}
     \end{figure}
     
-	\begin{figure}[H]
+	\begin{figure}[!]
       \centering
 	\includegraphics[keepaspectratio, scale=0.45]{Media/Captures/person2.png}
       \caption{Activista político}
-      \label{fig:android_Usage}
+      \label{fig:activistPerson}
     \end{figure}
 
 
@@ -763,7 +763,7 @@ Pantalla principal de la aplicación. Grupos de elementos funcionales que contie
 
 \textbf{Boceto del framework de interacción}
 
-El proceso de desarrollo de bocetos se ha realizado en espiral, de tal forma que una vez que identificábamos una determinada funcionalidad, la plasmábamos en un mockup a papel para debatirlo y discutirlo en las entrevistas. A continuación trasladábamos el mockup a un prototipo de alto nivel desarrollado en Android. Para las siguientes implementaciones que añadían nueva funcionalidad el proceso era el mismo:
+El proceso de desarrollo de bocetos se ha realizado en espiral, de tal forma que una vez que identificábamos una determinada funcionalidad, la representábamos en un mockup a papel para debatirlo y discutirlo en las entrevistas. A continuación trasladábamos el mockup a un prototipo de alto nivel desarrollado en Android. Para las siguientes implementaciones que añadían nueva funcionalidad el proceso era el mismo:
 
 \begin{enumerate}
  \item Desarrollo de un boceto a papel identificando los elementos funcionales.
@@ -771,67 +771,171 @@ El proceso de desarrollo de bocetos se ha realizado en espiral, de tal forma que
  \item Implementar un prototipo de mayor fidelidad en Android. 
 \end{enumerate}
 
-\textbf{Bocetos de Programas Políticos}
+  \begin{figure}[h]
+   \centering
+	\includegraphics[keepaspectratio, scale=1]{Media/Captures/prototypesDiagram.png}
+    \caption{Modelo de desarrollo de los prototipos.}
+   \label{fig:sequenceDiagram_waveWebSocket}
+  \end{figure}
+  
+De esta forma tuvimos que dar un total de tres vueltas a nuestro modelo en esperial para completar el desarrollo.
 
-Estos fueron los primeros bocetos que definían la interacción de la visualización de los programas políticos:
+\begin{enumerate}
+ \item \textbf{Programas Políticos}
+ 
+ Estos fueron los primeros bocetos que definían la interacción de la visualización de los programas políticos:
+ 
+ 	\begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{Media/Captures/prot1_1.png}
+                \caption{Protipo a papel.}
+                \label{fig:quipDesktop}
+        \end{subfigure}
+        ~
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{Media/Captures/prot1_2.png}
+                \caption{Protipo interactivo en POP.}
+                \label{fig:quipText}
+        \end{subfigure}
+        ~
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{Media/Captures/prot1_3.png}
+                \caption{Implementación en Android.}
+                \label{fig:quipComments}
+        \end{subfigure}
+        \caption{Primeros protitipos sobre programas electorales.}\label{fig:protPrograms}
+	\end{figure}
+	
+\underline{Elementos del protitipo a papel}:
 
-AÑADIR FOTO MOCKUP PAPEL DE SECCIONES/PROGRAMAS.
+\begin{enumerate}
+ \item Partidos políticos
+ \item Programas políticos
+ \item Índice de programas políticos
+ \item Secciones de proramas políticos
+\end{enumerate}
 
-Después se procedió a definir la interacción con la herramienta POP:
+\underline{Funcionalidades del protitipo interactivo}:
 
-Por último, terminamos desarrollando un prototipo interactivo de alta fidelidad en Android:
+\begin{enumerate}
+ \item Visualizar la lista de partidos políticos.
+ \item Seleccionar un programa político.
+ \item Navegar por el índice de un programa polítco.
+ \item Visualizar secciones de un programa, valorarla y comentarla.
+\end{enumerate}
 
-\textbf{Bocetos de Propuestas Ciudadanas}
+\underline{Implementación en Android}:
 
-\textbf{Bocetos de Propuestas Colaborativas}
+\begin{enumerate}
+ \item Descargar la lista de partidos políticos del servidor.
+ \item Descargar el programa seleccionado.
+ \item Navegar por el índice del programa.
+ \item Descargar el contenido de las secciones.
+ \item Añadir comentarios al servidor.
+ \item Modificar parámetros sociales en el servidor (like, dislike, views, etc).
+\end{enumerate}
+
+\item \textbf{Bocetos de Propuestas Ciudadanas}
+
+A partir de lo desarrollado hasta el momento, se procedió a diseñar las propuestas en la aplicación. Manteniendo la coherencia con el diseño anterior, contuamos desarollando los protitipos que añadían la funcionalidad de las propuestas ciudadanas.
+
+	\begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{Media/Captures/prot2_1.jpg}
+                \caption{Protipo a papel.}
+                \label{fig:quipDesktop}
+        \end{subfigure}
+        ~
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{Media/Captures/prot2_2.png}
+                \caption{Protipo interactivo en POP.}
+                \label{fig:quipText}
+        \end{subfigure}
+        ~
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{Media/Captures/prot2_3.png}
+                \caption{Implementación en Android.}
+                \label{fig:quipComments}
+        \end{subfigure}
+        \caption{Prototipos para el desarrollo de propuestas.}\label{fig:protProposals}
+	\end{figure}
+
+\underline{Elementos del protipo a papel}:
+
+\begin{enumerate}
+ \item Propuestas ciudadanas.
+ \item Listado de propuestas por tops.
+ \item Listado de secciones de programas por tops.
+ \item Desarrollar una propuesta.
+ \item Pantalla principal rediseñada.
+\end{enumerate}
+
+\underline{Funcionalidades del prototipo interactivo con POP}:
+
+\begin{enumerate}
+ \item Visualizar propuesta.
+ \item Listado de propuestas por tops.
+ \item Listado de secciones de programas por tops.
+ \item Desarrollar una propuesta.
+ \item Pantalla principal rediseñada.
+\end{enumerate}
+
+\underline{Implementación en Android}:
+
+\begin{enumerate}
+ \item Visualizar propuesta almacenada en el servidor.
+ \item Listado de propuestas por tops sincronizada con el servidor.
+ \item Agregar una nueva propuesta al sistema.
+ \item Pantalla principal rediseñada.
+\end{enumerate}
+
+\item \textbf{Bocetos de Propuestas Colaborativas}
+
+\end{enumerate}
 
 \textbf{Escenarios \textit{key path}}
 \textbf{Escenarios de validación}
 
-\subsubsection{Metodología} 
+\subsection{Principios de Diseño}
 
-En una primera fase realizamos una serie de prototipos rápidos a papel para visualizar una interacción con las principales características de la aplicación. A continuación llevamos estas ideas en papel a nuestra aplicación desarrollada en Android. Obteniendo un prototipo de media-alta fidelidad sobre la funcionalidad de la aplicación. Este fue el prototipo que enseñamos en las entrevistas durante la fase de investigación.
+Para verificar los principios de diseño que cumple el diseño de la aplicación, utilizaremos los 10 principios de diseño propuestos por Jakob Nielsen \cite{ref:nielsen} para evaluar la calidad del sistema.
 
-Cuando quisimos añadir nuevas características tras sacar conclusiones de las entrevistas, volvimos a desarrollar nuevos prototipos en papel de las pantallas a desarrollar. Por último, se desarrollaron las nuevas pantallas y se refinaron las anteriores para llegar a un prototipo de alta fidelidad o una versión alpha de la aplicación.
+\begin{enumerate}
+  \item \textbf{Visibilidad del estado del sistema}: Siempre que el sistema ejecuta tareas o no puede continuar por algún motivo, se mantiene informado al usuario sobre lo que está pasando. Esto podemos encontrarlo cuando el usuario accede a los programas políticos y el sistema procede a descargar la información. Mientras se descarga la información, se muestra un pequeño diálogo indicando la descarga de los datos para mantener al usuario informado.
+  \item \textbf{Relación entre el sistema y el mundo real (Metáforas y lenguaje familiares)}: El sistema mantiene un lenguaje próximo al usuario, evitando terminos más formales del sistema. Cuando visualizamos una sección de un programa o una propuesta, el sistema emplea el lenguaje común de términos como \textit{like}, \textit{dislike}, etcétera, para valorar las secciones de un programa o una propuesta.
+  \item \textbf{Control y libertad del usuario}: La aplicación permite deshacer acciones facilmente como puede ser cambiar la opinión de un \textit{like} o \textit{dislike}, o cancelar la acción de publicar una nueva propuesta o comentario.
+  \item \textbf{Consistencia y estándares}: La aplicación sigue las pautas de diseño propuestas por el framework de diseño \textit{Material Design} \cite{ref:materialdesign}. Este estilo de diseño fue propuesto por Google en 2014, y en la actualidad la mayor parte de aplicaciones móviles utilizan este framework a la hora de diseñar sus pantallas. Por lo que los usuarios no deberían tener problema navegando y utilizando los controles de la aplicación, ya que con meramente conocidos en un amplio catálogo de aplicaciones. Agregar una propuesta desde un botón inferior situado a la derecha, representar un listado de objetos mediante \textit{tabs} deslizables, son algunas de las características destacables de \textit{Material Design}.
+  \item \textbf{Prevención de errores}: La aplicación muestra mensajes de error cuando algo le impide funcionar con normalidad. De esta forma se avisa al usuario de que algo no está funcionando como debería. Cuando ejecutamos la aplicación y el sistema detecta que no hay conexión, la aplicación notifica al usuario en un sencillo diálogo la necesidad de tener conexión a internet para operar con la aplicacion.
+  \item \textbf{Reconocimiento mejor que recuerdo}: Para agregar una nueva propuesta o comentario, tan sólo se necesita una transición entre dos pantallas. De esta forma facilitamos al usuario la generación de nuevos contenidos sin saturarle la memoria u obligarle a recordar mucha información para llegar a su objetivo. Este principio se encuentra en la mayor parte de las aplicaciones móviles, pues el usuario suele interactuar con el dispositivo en pequeños intervalos de tiempo y además no suele tener una postura cómoda que le facilite la concentración. Por lo que se requieren pocas transiciones entre pantallas, tareas sencillas y elementos sencillos y distinguibles.
+  \item \textbf{Flexibilidad y eficiencia}: Se utilizan atajos a funcionalidades disponible desde la mayor parte de las pantallas del sistema. Haciendo uso del botón \textit{hamburguesa} en \textit{material design} nos da la posibilidad de abrir un menú con accesos directos a las principales partes de la aplicación. De tal forma que no necesitemos volver hacia atrás para seleccionar otra opción. No obstante, ambos caminos pueden ser utiilizados en función de la habilidad o conocimiento del usuario con la aplicación.
+  \item \textbf{Estética y diseño minimalista}: Tanto los diálogos que muestra el sustema como la información visible en la mayoría de las pantallas del sistema. Así evitamos dar información innecesaria al usuario o distraer su atención para evitar su confusión.
+  \item \textbf{Ayudar a los usuarios a reconocer, diagnosticar y recuperarse de los errores}: Cuando el usuario da con un error inesperado, el sistema informa de lo ocurrido mendiante un sencillo mensaje de error. Simplificando el mensaje mostrado al usuario para que pueda resolverlo sin grandes problemas.
+  \item \textbf{Ayuda y documentación}: Cuando el usuario genera contenido, el sistema  va indicando al usuario los pasos que tiene que seguir para completar su tarea de forma satisfactoria. Esto sucede en el caso de que un usuario construye una nueva propuesta, donde el sistema le índica los campos que tiene que rellenar y la información que debe ir en cada campo.
+\end{enumerate}
 
-ELEMENTOS DE DATOS Y FUNCIONALES: DSI tema 3 pag 54
-
-\subsubsection{Prototipos en papel}
-
-Meter las fotos de los prototipos en papel y comentarlos.
-
-\subsubsection{Prototipos intermedios}
-
-La aplicación pretende llevar las principales partes de los programas electorales de los partidos que se presenten a las elecciones. Por tanto, cualquier usuario podrá visualizar el apartado que desee consultar de cualquier partido político. Siendo esta la forma menos amigable de leerlo, se utilizarán distintas formas para compartir o divulgar determinadas secciones más populares.
-
-Al inicio de la aplcación, mostrará una lista de las secciones de los programas más valoradas, más debatidas, peor valoradas e incluso las más incomprendidas. Por tanto creemos que puede ser una forma de acercar aquellas secciones más populares de forma más eficaz, al contrario que tener que consultar una determinada página dentro de un extenso pdf.
-
-\begin{figure}[H]
-\centering
-\includegraphics[keepaspectratio, scale=0.5]{Media/Captures/captTopSections.png}
-\caption{Vista principal de secciones}
-\label{fig:captTopSections}
-\end{figure}
-
-Dentro de cada sección podemos visualizar el contenido de la sección a la que referencia el programa, y tendremos la opción de valorarla de forma positiva o negativa. También añadimos la posibilidad de indicar que no se ha entendido la sección. Pues a la hora de leer una propuesta de gobierno ubicada en una sección del programa, bien nos puede gustar, disgustar o simplemente no haber entendido la idea y por ello no votarla de forma positiva o negativa.
-
-\begin{figure}[H]
-\centering
-\includegraphics[keepaspectratio, scale=0.5]{Media/Captures/section.png}
-\caption{Visualizando una sección}
-\label{fig:captSection}
-\end{figure}
-
-Sin olvidarnos de la parte social, en cada sección podemos hacer comentarios para intentar debatir las ideas fundamentales que propone la sección. O incluso hacer referencia a una determinada frase o párrafo.
-
-
-\subsubsection{Prototipo final}
-
-\subsection{Análisis de Usabilidad}
-
-Hablar de las reglas de oro, principios de diseño,...
-
-HEURISTICA NIELSEN
+	\begin{figure}[!]
+        \centering
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{Media/Captures/principio01.png}
+                \caption{Visibilidad del estado del sistema.}
+                \label{fig:quipDesktop}
+        \end{subfigure}
+        ~
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{Media/Captures/principio03.png}
+                \caption{Control y libertad del usuario.}
+                \label{fig:quipText}
+        \end{subfigure}
+        ~
+        \begin{subfigure}[b]{0.3\textwidth}
+                \includegraphics[width=\textwidth]{Media/Captures/principio07.png}
+                \caption{Flexibilidad y eficiencia.}
+                \label{fig:quipComments}
+        \end{subfigure}
+        \caption{Principios de diseño en la aplicación.}\label{fig:quipCaptures}
+	\end{figure}
 
 \section{Implementación de DemoCritics}
 
@@ -853,6 +957,10 @@ Durante el desarollo del proyecto, hemos dividido las tareas en dos grupos princ
 
 \subsubsection{Revisiones de código}
 
+Cada vez que completábamos una funcionalidad y esta quedaba reflejada en \textit{GitHub}, se realizaba una pequeña revisión de código para verificar cómo se había implementado el objetivo a desarrollar. De esta forma evitábamos malinterpretar algunos aspectos que pueden diferir cuando se concretan a la hora de realizar la implementación del sistema. También recibimos revisiones de código externas por parte de los directores del Trabajo de Fin de Grado, que aportaron una visión más eficiente del código desarrollado.
+
 \subsubsection{Evaluaciones de usabilidad}
+
+Recibimos una evaluación de usabilidad externa por parte de un director del Trabajo de Fin de Grado, que valoraba aspectos a mejorar de la UIX. Esta evaluación nos sirivió para modificar algunos aspectos de representación gráfica que mejorararían la interpretación de los elementos por parte del usuario.
 
 \section{Evaluación con Usuarios}

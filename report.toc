@@ -103,43 +103,39 @@
 \contentsline {subsubsection}{Conclusi\IeC {\'o}n}{74}{section*.45}
 \contentsline {subsection}{\numberline {5.3.2}Modelado de Personas}{74}{subsection.5.3.2}
 \contentsline {subsection}{\numberline {5.3.3}Definici\IeC {\'o}n de personas}{76}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Definici\IeC {\'o}n de Escenarios y Requisitos}{77}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.4}Definici\IeC {\'o}n de Escenarios y Requisitos}{76}{subsection.5.3.4}
 \contentsline {subsection}{\numberline {5.3.5}Framework de dise\IeC {\~n}o}{79}{subsection.5.3.5}
-\contentsline {subsubsection}{Framework de interacci\IeC {\'o}n}{80}{section*.48}
-\contentsline {subsubsection}{Metodolog\IeC {\'\i }a}{82}{Item.18}
-\contentsline {subsubsection}{Prototipos en papel}{83}{Item.18}
-\contentsline {subsubsection}{Prototipos intermedios}{83}{Item.18}
-\contentsline {subsubsection}{Prototipo final}{85}{figure.caption.50}
-\contentsline {subsection}{\numberline {5.3.6}An\IeC {\'a}lisis de Usabilidad}{85}{subsection.5.3.6}
-\contentsline {section}{\numberline {5.4}Implementaci\IeC {\'o}n de DemoCritics}{86}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}Metodolog\IeC {\'\i }a}{86}{subsection.5.4.1}
-\contentsline {subsubsection}{Control de versiones}{86}{section*.51}
-\contentsline {subsubsection}{GitHub}{86}{section*.51}
-\contentsline {subsubsection}{Reparto de tareas}{86}{section*.51}
-\contentsline {subsubsection}{Revisiones de c\IeC {\'o}digo}{86}{section*.51}
-\contentsline {subsubsection}{Evaluaciones de usabilidad}{86}{section*.51}
-\contentsline {section}{\numberline {5.5}Evaluaci\IeC {\'o}n con Usuarios}{86}{section.5.5}
-\contentsline {chapter}{\numberline {6}Arquitectura del Proyecto}{87}{chapter.6}
-\contentsline {section}{\numberline {6.1}Arquitectura de Wave}{87}{section.6.1}
-\contentsline {subsection}{\numberline {6.1.1}Modelo Conversacional Wave}{88}{subsection.6.1.1}
-\contentsline {subsection}{\numberline {6.1.2}Modelo de Contenidos SwellRT}{89}{subsection.6.1.2}
-\contentsline {section}{\numberline {6.2}Arquitectura de la aplicaci\IeC {\'o}n}{90}{section.6.2}
-\contentsline {subsection}{\numberline {6.2.1}Base de datos}{91}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Service REST}{92}{subsection.6.2.2}
-\contentsline {subsubsection}{Arquitectura}{95}{table.caption.59}
-\contentsline {subsubsection}{Rutas}{97}{figure.caption.60}
-\contentsline {subsubsection}{Controladores}{99}{lstnumber.-15.11}
-\contentsline {subsection}{\numberline {6.2.3}Servicio Android de Conexi\IeC {\'o}n con Wave}{101}{subsection.6.2.3}
-\contentsline {subsection}{\numberline {6.2.4}Cliente Android}{101}{subsection.6.2.4}
-\contentsline {subsubsection}{Interfaz Gr\IeC {\'a}fica}{102}{section*.62}
-\contentsline {subsubsection}{Estructuraci\IeC {\'o}n de Programas Pol\IeC {\'\i }ticos}{107}{table.caption.65}
-\contentsline {subsubsection}{Conexi\IeC {\'o}n y Peticiones a Service REST y Base de Datos}{110}{figure.caption.67}
-\contentsline {subsubsection}{Gesti\IeC {\'o}n de Usuarios}{111}{figure.caption.68}
-\contentsline {subsubsection}{Peticiones a Wave}{111}{figure.caption.68}
-\contentsline {chapter}{\numberline {7}Resultados y Conclusiones}{113}{chapter.7}
-\contentsline {section}{\numberline {7.1}Discusion de Resultados}{113}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Evaluaci\IeC {\'o}n con usuarios}{113}{subsection.7.1.1}
-\contentsline {section}{\numberline {7.2}Conclusiones}{113}{section.7.2}
-\contentsline {chapter}{\numberline {8}Trabajo a Futuro}{115}{chapter.8}
-\contentsline {section}{\numberline {8.1}Mejoras}{115}{section.8.1}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliograf\IeC {\'\i }a}{115}{section.8.1}
+\contentsline {subsubsection}{Framework de interacci\IeC {\'o}n}{79}{section*.48}
+\contentsline {subsection}{\numberline {5.3.6}Principios de Dise\IeC {\~n}o}{85}{subsection.5.3.6}
+\contentsline {section}{\numberline {5.4}Implementaci\IeC {\'o}n de DemoCritics}{88}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}Metodolog\IeC {\'\i }a}{88}{subsection.5.4.1}
+\contentsline {subsubsection}{Control de versiones}{88}{section*.53}
+\contentsline {subsubsection}{GitHub}{88}{section*.53}
+\contentsline {subsubsection}{Reparto de tareas}{88}{section*.53}
+\contentsline {subsubsection}{Revisiones de c\IeC {\'o}digo}{88}{section*.53}
+\contentsline {subsubsection}{Evaluaciones de usabilidad}{89}{section*.53}
+\contentsline {section}{\numberline {5.5}Evaluaci\IeC {\'o}n con Usuarios}{89}{section.5.5}
+\contentsline {chapter}{\numberline {6}Arquitectura del Proyecto}{91}{chapter.6}
+\contentsline {section}{\numberline {6.1}Arquitectura de Wave}{91}{section.6.1}
+\contentsline {subsection}{\numberline {6.1.1}Modelo Conversacional Wave}{92}{subsection.6.1.1}
+\contentsline {subsection}{\numberline {6.1.2}Modelo de Contenidos SwellRT}{93}{subsection.6.1.2}
+\contentsline {section}{\numberline {6.2}Arquitectura de la aplicaci\IeC {\'o}n}{94}{section.6.2}
+\contentsline {subsection}{\numberline {6.2.1}Base de datos}{95}{subsection.6.2.1}
+\contentsline {subsection}{\numberline {6.2.2}Service REST}{96}{subsection.6.2.2}
+\contentsline {subsubsection}{Arquitectura}{99}{table.caption.61}
+\contentsline {subsubsection}{Rutas}{101}{figure.caption.62}
+\contentsline {subsubsection}{Controladores}{103}{lstnumber.-15.11}
+\contentsline {subsection}{\numberline {6.2.3}Servicio Android de Conexi\IeC {\'o}n con Wave}{105}{subsection.6.2.3}
+\contentsline {subsection}{\numberline {6.2.4}Cliente Android}{105}{subsection.6.2.4}
+\contentsline {subsubsection}{Interfaz Gr\IeC {\'a}fica}{106}{section*.64}
+\contentsline {subsubsection}{Estructuraci\IeC {\'o}n de Programas Pol\IeC {\'\i }ticos}{111}{table.caption.67}
+\contentsline {subsubsection}{Conexi\IeC {\'o}n y Peticiones a Service REST y Base de Datos}{114}{figure.caption.69}
+\contentsline {subsubsection}{Gesti\IeC {\'o}n de Usuarios}{115}{figure.caption.70}
+\contentsline {subsubsection}{Peticiones a Wave}{115}{figure.caption.70}
+\contentsline {chapter}{\numberline {7}Resultados y Conclusiones}{117}{chapter.7}
+\contentsline {section}{\numberline {7.1}Discusion de Resultados}{117}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Evaluaci\IeC {\'o}n con usuarios}{117}{subsection.7.1.1}
+\contentsline {section}{\numberline {7.2}Conclusiones}{117}{section.7.2}
+\contentsline {chapter}{\numberline {8}Trabajo a Futuro}{119}{chapter.8}
+\contentsline {section}{\numberline {8.1}Mejoras}{119}{section.8.1}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliograf\IeC {\'\i }a}{119}{section.8.1}
