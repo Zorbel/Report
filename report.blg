@@ -12,61 +12,60 @@ A level-1 auxiliary file: results.aux
 A level-1 auxiliary file: futureWork.aux
 The style file: unsrt.bst
 Database file #1: bibliography.bib
+I was expecting a `,' or a `}'---line 207 of file bibliography.bib
+ :     
+ :     author = "Google Inc.",
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
 Unbalanced braces---line 400 of file bibliography.bib
  : 
  : }
 (Error may have been on previous line)
 I'm skipping whatever remains of this entry
-Illegal end of database file---line 748 of file bibliography.bib
- :   howpublished  = "\\\url{http://www.google.com/design/spec/material-design/introduction.html}"
- :                                                                                                
-I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "ref_android_avd_params"
-Warning--I didn't find a database entry for "ref:android:asynctask"
-Warning--I didn't find a database entry for "ref:android_ui"
 Warning--empty journal in ref:xmpp
 Warning--empty journal in ref:http
 Warning--empty journal in ref:webSocket_ref
+Warning--all relevant fields are empty in ref:android_layout
 Warning--empty journal in ref:http_authentication
-You've used 114 entries,
+You've used 116 entries,
             1791 wiz_defined-function locations,
-            871 strings with 16392 characters,
-and the built_in function-call counts, 14125 in all, are:
-= -- 1130
-> -- 434
+            872 strings with 16558 characters,
+and the built_in function-call counts, 14341 in all, are:
+= -- 1144
+> -- 439
 < -- 0
-+ -- 220
-- -- 106
-* -- 28
-:= -- 2117
-add.period$ -- 334
-call.type$ -- 114
-change.case$ -- 111
++ -- 223
+- -- 107
+* -- 29
+:= -- 2142
+add.period$ -- 339
+call.type$ -- 116
+change.case$ -- 112
 chr.to.int$ -- 0
-cite$ -- 118
-duplicate$ -- 594
-empty$ -- 2032
-format.name$ -- 106
-if$ -- 3394
+cite$ -- 121
+duplicate$ -- 604
+empty$ -- 2068
+format.name$ -- 107
+if$ -- 3447
 int.to.chr$ -- 0
-int.to.str$ -- 114
+int.to.str$ -- 116
 missing$ -- 8
-newline$ -- 565
-num.names$ -- 104
-pop$ -- 577
+newline$ -- 574
+num.names$ -- 105
+pop$ -- 587
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 567
+skip$ -- 580
 stack$ -- 0
 substring$ -- 0
-swap$ -- 110
+swap$ -- 112
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 4
-while$ -- 104
-width$ -- 117
-write$ -- 1016
+warning$ -- 5
+while$ -- 105
+width$ -- 119
+write$ -- 1031
 (There were 2 error messages)

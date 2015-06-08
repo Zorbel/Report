@@ -69,7 +69,7 @@ CAMBIAR FOTO PARA VER INTEGRACION CON WAVE
 \begin{figure}[H]
 \centering
 \includegraphics[keepaspectratio, scale=0.4]{Media/Captures/architecture.png}
-\caption{Arquitectura de la aplicacción.}
+\caption{Arquitectura de la aplicación.}
 \label{fig:architecture}
 \end{figure}
 
@@ -85,7 +85,7 @@ La base de datos está formada por un total de 12 tablas donde se almacena toda 
 
 \begin{figure}[H]
 \centering
-\includegraphics[keepaspectratio, scale=0.30]{Media/Captures/database.png}
+\includegraphics[keepaspectratio, scale=0.40]{Media/Captures/database.png}
 \caption{Modelo entidad-relación de la base de datos.}
 \label{fig:ermodel}
 \end{figure}
@@ -98,7 +98,7 @@ Las demás tablas serán utilizadas para guardar datos dinámicos de la aplicaci
 
 \subsection{Service REST} \label{ssec:seviceREST}
 
-Para establecer la conexión de la aplicación desarrollada en Android con la Base de Datos hemos utilizado \textbf{Laravel} como Servicio Web. Laravel \cite{ref:laravel} es un framework de código abierto para desarrollar aplicaciones web con PHP 5. Laravel permite además montar una API REST (Representational State Transfer), un estilo de arquitectura software para sistemas hipermedia distribuidos como la World Wide Web. Este término se originó en una tesis doctoral sobre la web escrita por Roy Fielding \cite{ref:RESTPhd}. La elección de Laravel como framework PHP fue debida a su flexibilidad, la facilidad para programar la aplicación y el gran soporte que tiene de la comunidad. Además Laravel cuenta con una licencia de software libre MIT, lo que nos permite continuar utilizando software open-source en todo el proyecto, y es uno de los frameworks más populares actualmente.
+Para establecer la conexión de la aplicación desarrollada en Android con la Base de Datos hemos utilizado \textbf{Laravel} como Servicio Web. Laravel \cite{ref:laravel} es un framework de código abierto para desarrollar aplicaciones web con PHP 5. Laravel permite además montar una API REST (Representational State Transfer), un estilo de arquitectura software para sistemas hipermedia distribuidos como la World Wide Web. Este término se originó en una tesis doctoral sobre la web escrita por Roy Fielding \cite{ref:RESTPhd}. La elección de Laravel como framework PHP se debió a su flexibilidad, la facilidad para programar la aplicación y el gran soporte que tiene de la comunidad. Además Laravel cuenta con una licencia de software libre MIT, lo que nos permite continuar utilizando software open-source en todo el proyecto. Es uno de los frameworks más populares actualmente.
 
 \begin{figure}[H]
 \centering
@@ -122,7 +122,7 @@ DELETE         & Borrar          & DELETE    & Eliminar un recurso almacenado en
 \label{fig:CRUDtable}
 \end{table}
 
-En función de las peticiones que realicemos al servicio realizadas mediante el protocolo HTTP, el servidor nos devolverá un código de estado para obtener \textit{feedback} de lo sucedido. Por tanto distinguiremos diferentes códigos de estado cuando queramos obtener un recurso, actualizar un recurso, crear uno nuevo o borrarlo. En la siguiente tabla se definen los códigos de estado que puede devolvernos el servidor en función de nuestras peticiones.
+Dependiendo de las peticiones que realicemos al servicio mediante el protocolo HTTP, el servidor nos devolverá un código de estado para obtener \textit{feedback} de lo sucedido. Por tanto distinguiremos diferentes códigos de estado cuando queramos obtener un recurso, actualizar un recurso, crear uno nuevo o borrarlo. En la siguiente tabla se definen los códigos de estado que puede devolvernos el servidor en función de nuestras peticiones.
 
 \begin{table}[H]
 \begin{tabular}{|c|c|m{7.5cm}|}
@@ -143,11 +143,11 @@ DELETE         & 404 (Not Found)   & El recurso solicitado para borrar, no ha si
 \label{fig:codeStateRestTable}
 \end{table}
 
-Usar un servicio RESTful nos proporciona una gran flexibilidad a la hora de independizar la tecnología del servidor de la del cliente. Mediante la arquitectura basada en peticiones HTTP no solo podremos hacer peticiones desde el cliente en Android, sino que más adelante podriamos desarrollar una versión web o incluso un cliente para iOS sin tener que modificar el servicio, ya que las peticiones HTTP serán las mismas.
+Usar un servicio RESTful nos proporciona una gran flexibilidad a la hora de independizar la tecnología del servidor de la del cliente. Mediante la arquitectura basada en peticiones HTTP no solo podremos hacer peticiones desde el cliente en Android, sino que más adelante podríamos desarrollar una versión web o incluso un cliente para iOS sin tener que modificar el servicio, ya que las peticiones HTTP serán las mismas.
 
 \subsubsection{Arquitectura}
 
-Laravel utiliza e implementa un funcionamiento basado en el patrón \textbf{MVC} (Model–view–controller), separando el modelo de la vista, y delegando la gestión al controlador. En nuestro caso tendríamos un modelo almacenado en las tablas de la base datos, donde se guardará toda la información dinámica y estática de la aplicación. El controlador sería en elcargado de gestionar las peticiones del cliente en Android en función del tipo de operación que requiera. Y por último, tendríamos como vista el resultado devuelto por el servidor con los datos solicitados por el cliente, que a su vez los representaría en la aplicación móvil. Esta estructura de comportamiento hace independiente el modelo controlado por el servidor, de la vista que obtiene el usuario final en su cliente móvil. Con esto conseguimos eleborar un código más claro y sencillo, así como también evitar conflictos entre el modelo y la vista.
+Laravel utiliza e implementa un funcionamiento basado en el patrón \textbf{MVC} (Model–View–Controller), separando el modelo de la vista, y delegando la gestión al controlador. En nuestro caso tendríamos un modelo almacenado en las tablas de la Base de Datos, donde se guardará toda la información dinámica y estática de la aplicación. El controlador sería en elcargado de gestionar las peticiones del cliente en Android en función del tipo de operación que requiera. Por último, tendríamos como vista el resultado devuelto por el servidor con los datos solicitados por el cliente, que a su vez los representaría en la aplicación móvil. Esta estructura de comportamiento hace independiente el modelo controlado por el servidor de la vista que obtiene el usuario final en su cliente móvil. Con esto conseguimos eleborar un código más claro y sencillo, así como también evitar conflictos entre el modelo y la vista.
 
 \begin{figure}[H]
 \centering
@@ -156,13 +156,13 @@ Laravel utiliza e implementa un funcionamiento basado en el patrón \textbf{MVC}
 \label{fig:laravelArch}
 \end{figure}
 
-Para comprender la arquitectura de Laravel vamos a destacar tres componentes clave. En primer lugar tenemos una primera capa que gestiona las peticiones del cliente. Esta capa estará compuesta por una serie de \textbf{rutas} a las que el cliente realizará la petición en función de la operación que quiera realizar. Después, en función de la ruta que haya realizado la petición, se adentrará en una nueva capa compuesta por \textbf{controladores} que se encargarán de procesar la petición y devolver al cliente lo que ha solicitado. Éste último componente será la \textbf{vista}, que puede ser representada de muchas formas. En nuestro caso, la vista estará compuesta en una serie de datos en formato JSON, que posteriormente el cliente móvil se encargará de representar la vista. Visto esto, procederemos a detallar un poco más estos tres componentes fundamentales.
+Para comprender la arquitectura de Laravel vamos a destacar tres componentes clave. En primer lugar tenemos una primera capa que gestiona las peticiones del cliente. Esta capa estará compuesta por una serie de \textbf{rutas} a las que el cliente realizará la petición en función de la operación que desee realizar. Después, en función de la ruta a la que haya realizado la petición, se adentrará en una nueva capa compuesta por \textbf{controladores} que se encargarán de procesar la petición y devolver al cliente lo que ha solicitado. El último componente será la \textbf{vista}, que puede ser representada de muchas formas. En nuestro caso, la vista estará compuesta por una serie de datos en formato JSON, que posteriormente el cliente móvil se encargará de representar en su propia vista. Teniendo en cuenta todo esto, procederemos a detallar un poco más estos tres componentes fundamentales.
 
 \subsubsection{Rutas}
 
-Cómo citábamos en anteriormente, la primera capa de Laravel es un \textit{mapa de rutas} que definirá todos los caminos posibles para llegar a la funcionalidad requerida de los controladores. Todas las rutas estarán definidas en el fichero \textbf{routes.php}, alojado en la carpeta \textit{app/Http/routes.php} de nuestra instalación Laravel. El archivo \textit{routes.php} es un fichero muy simple escrito en PHP donde definiremos todas las rutas posibles. La definición de una ruta irá acompañada de tres valores. El primero de ellos será el tipo de petición que realizará el cliente (ver tabla \ref{fig:CRUDtable}), seguido de la definición de la url por la que será accesible, y por último, indicaremos el controlador responsable de procesar la petición. A parte de indicar el controlador, también hay que indicar el método que procesará la petición dentro del controlador como veremos más adelante.
+Cómo citábamos anteriormente, la primera capa de Laravel es un \textit{mapa de rutas} que definirá todos los caminos posibles para llegar a la funcionalidad requerida de los controladores. Todas las rutas estarán definidas en el fichero \textbf{routes.php}, alojado en la carpeta \textit{app/Http/routes.php} de nuestra instalación Laravel. El archivo \textit{routes.php} es un fichero muy simple escrito en PHP donde definiremos todas las rutas posibles. La definición de una ruta irá acompañada de tres valores. El primero de ellos será el tipo de petición que realizará el cliente (ver tabla \ref{fig:CRUDtable}), seguido de la definición de la URL por la que será accesible, y por último indicaremos el controlador responsable de procesar la petición. Aparte de indicar el controlador, también hay que indicar el método que procesará la petición dentro del controlador como veremos más adelante.
 
-Para definir el conjunto de urls que forman el archivo \textit{routes.php}, hemos seguido una serie de buenas prácticas \cite{ref:practicesRESTful_API} habituales a la hora de desarrollar una RESTful API. Normalmente utilizaremos nombres en lugar de verbos para acceder a los resursos. Por ejemplo, si queremos visualizar el listado de propuestas de la aplicación, utilizaremos la url \textit{/proposal}. Que será definida como:	
+Para definir el conjunto de urls que forman el archivo \textit{routes.php}, hemos seguido una serie de buenas prácticas \cite{ref:practicesRESTful_API}, habituales a la hora de desarrollar una RESTful API. Normalmente utilizaremos nombres en lugar de verbos para acceder a los recursos. Por ejemplo, si queremos visualizar el listado de propuestas de la aplicación, utilizaremos la url \textit{/proposal}. Que será definida como:	
 
 \lstset{
    language        = php}
@@ -170,7 +170,7 @@ Para definir el conjunto de urls que forman el archivo \textit{routes.php}, hemo
 Route::get('/proposal', 'ProposalController@index');
 \end{lstlisting}
 
-Así queda definida la ruta que accede a todo el listado de propuestas como una petición GET, que se encargará de procesarla el controlador \textit{ProposalController} en su método \textit{index()}.
+Así queda definida la ruta que accede a todo el listado de propuestas como una petición GET, que se encargará de procesar el controlador \textit{ProposalController} en su método \textit{index()}.
 
 Para acceder a una propuesta en concreto, se pasará un \textit{id} para obtener el recurso adecuado. Este \textit{id} irá a continuación de la url anteriormente definida. Por ejemplo, si quisiéramos acceder a la propuesta cuyo id es igual a 5, definiríamos la siguiente ruta:
 
@@ -180,7 +180,7 @@ Para acceder a una propuesta en concreto, se pasará un \textit{id} para obtener
 Route::get('/proposal/{id}', 'ProposalController@show');
 \end{lstlisting}
 
-Nótese  ruta es la misma que la anterior, a la que hemos añadido un nuevo parámetro que deberá especificar el usuario. Así la petición \textit{GET /proposal/5}, nos devolvería la propuesta con id 5. Si nos fijamos, el controlador también es el mismo, pero esta vez el método encargado de procesar la petición será \textit{show()}. Además este método recibirá el parámetro \textit{{id}} que envíe el usuario en la petición.
+Nótese que la ruta es la misma que la anterior, a la que hemos añadido un nuevo parámetro que deberá especificar el usuario. Así, la petición \textit{GET /proposal/5}, nos devolvería la propuesta con id 5. Si nos fijamos, el controlador también es el mismo, pero esta vez el método encargado de procesar la petición será \textit{show()}. Además, este método recibirá el parámetro \textit{{id}} que envíe el usuario en la petición.
 
 Para crear una nueva propuesta en la aplicación, deberemos realizar una petición POST. Nuestra ruta será exactamente igual que la primera, pero antes deberemos especificar que se trata de una ruta que atenderá a una petición POST:
 
@@ -209,7 +209,7 @@ Route::delete('/proposal/{id}',
   // Borra la propuesta pasada por {id}
 \end{lstlisting}
 
-Para organizar el código y poder visualizarlo de forma clara utilzaremos grupos de rutas. Esto nos resultará especialmente útil cuando tengamos varias operaciones que realizar dentro de una misma dirección, definiendo una nueva ruta cuya función será definida a continuación, incluyendo las rutas que vienen dentro del grupo. Si nos fijamos en el ejemplo anterior, podemos observar como todas las url comienzan con \textit{/proposal}. Por ello no es necesario definir en cada línea la ruta \textit{/proposal}, si no que bastará con definirla en un único grupo que adjuntará todas las rutas que comienzen de la misma forma. Así nuestro ejemplo anterior quedaría más claro y ordenado de la siguiente forma:
+Para organizar el código y poder visualizarlo de forma clara utilzaremos grupos de rutas. Esto nos resultará especialmente útil cuando tengamos varias operaciones que realizar dentro de una misma dirección, definiendo una nueva ruta cuya función será definida a continuación, incluyendo las rutas que vienen dentro del grupo. Si nos fijamos en el ejemplo anterior, podemos observar como todas las url comienzan con \textit{/proposal}. Por ello no es necesario definir en cada línea la ruta \textit{/proposal}, si no que bastará con definirla en un único grupo que agrupará todas las rutas que comienzen de la misma forma. Así nuestro ejemplo anterior quedaría más claro y ordenado de la siguiente forma:
 
 \lstset{
   language        = php}
@@ -224,7 +224,7 @@ Route::group(['prefix' => 'proposal'], function()
 });
 \end{lstlisting}
 
-De esta forma podemos visualizar de un vistazo todas las posibilidades agrupadas dentro de la dirección \textit{proposal}. Lo que nos permitirá utilizar grupos para ordenar funciones comunes dentro de un mismo prefijo, y además crear subgrupos dentro de los anteriores si tenemos algún prefijo repetido varias veces. Esto podría aplicarse a nuestro ejemplo anterior, agrupando las peticiones que requieren como parámetro un \textit{id} de la propuesta:
+De esta forma podemos visualizar todas las posibilidades agrupadas dentro de la dirección \textit{proposal}. Lo que nos permitirá utilizar grupos para ordenar funciones comunes dentro de un mismo prefijo, y además crear subgrupos dentro de los anteriores si tenemos algún prefijo repetido varias veces. Esto podría aplicarse a nuestro ejemplo anterior, agrupando las peticiones que requieren como parámetro un \textit{id} de la propuesta:
 
 \lstset{
   language        = php}
@@ -242,11 +242,9 @@ Route::group(['prefix' => 'proposal'], function()
 });
 \end{lstlisting}
 
-HACE FALTA ALGO MÁS...?
-
 \subsubsection{Controladores}
 
-Los controladores son los encargados de procesar todas las operaciones que intervienen en el modelo, es decir, en la información almacenada en la base de datos. Un controlador es un fichero escrito en PHP que será almacenado en la ruta \textit{/app/Http/Controllers} de la aplicación. Este fichero estará formado por una métodos y atributos que serán llamados desde las rutas definidas en la aplicación. Cada controlador hereda de una clase abstracta llamada \textit{Controller}, que a su vez esta hereda de la clase abstracta \textit{BaseController}. La cual implementa la funcionalidad básica de los controladores.
+Los \textbf{controladores} son los encargados de procesar todas las operaciones que intervienen en el modelo, es decir, en la información almacenada en la base de datos. Un controlador es un fichero escrito en PHP que será almacenado en la ruta \textit{/app/Http/Controllers} de la aplicación. Este fichero estará formado por una métodos y atributos que serán llamados desde las rutas definidas en la aplicación. Cada controlador hereda de una clase abstracta llamada \textit{Controller}, que a su vez hereda de la clase abstracta \textit{BaseController}. La cual implementa la funcionalidad básica de los controladores.
 
 \begin{figure}[H]
 \centering
@@ -279,7 +277,7 @@ class ProposalController extends Controller {
 }
 \end{lstlisting}
 
-La conexión a la base de datos se encuentra configurada en el archivo \textit{/config/database.php}, por lo que la gestión de la conexión y desconexión será controlada por Laravel. Lo que nos proporciona más independencia y versatilidad a la hora de programar. Como respuesta del método, Laravel utiliza por defecto un fichero JSON con los resultados de la variable a la que asigenmos el resultado, o a la sentencia SQL de la consulta que estemos devolviendo. El siguiente ejemplo muestra cuál sería el resultado de realizar una petición GET a la dirección \textit{/proposal}:
+La conexión a la base de datos se encuentra configurada en el archivo \textit{/config/database.php}, por lo que la gestión de la conexión y desconexión será controlada por Laravel, lo que nos proporciona más independencia y versatilidad a la hora de programar. Como respuesta del método, Laravel utiliza por defecto un fichero JSON con los resultados de la variable a la que asignemos el resultado, o a la sentencia SQL de la consulta que estemos devolviendo. El siguiente ejemplo muestra cuál sería el resultado de realizar una petición GET a la dirección \textit{/proposal}:
 
 \lstset{
   language        = c,    inputencoding=utf8}
@@ -289,10 +287,6 @@ La conexión a la base de datos se encuentra configurada en el archivo \textit{/
   {"id":2,"title":"Restaurar el plan de estudios del '98","text":" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lobortis, sapien eget dignissim efficitur, augue eros molestie purus, et gravida erat quam a lacus. Fusce vel eros cursus, venenatis dui ac, aliquet risus. Fusce euismod ex at varius lacinia. Sed at urna condimentum orci volutpat eleifend nec id erat. Sed at vestibulum neque. Maecenas vehicula hendrerit felis, quis condimentum arcu commodo eu. Sed egestas, orci eget ultricies mollis, est leo porttitor sem, at elementum enim arcu ut magna. ","how":"Suprimienndo el plan Bolonia de los grados de 4 a\u00f1os a licenciaturas y diplomaturas.","cost":"Coste 0.","id_image":2,"date":"2015-05-18 00:00:00","id_category":2,"id_user":"d2d115f79ab3a7a4","views":12,"likes":0,"not_understood":1,"dislikes":0}
 ]
 \end{lstlisting}
-
-\subsection{Servicio Android de Conexión con Wave}
-
-	REORDENAR LO DE WAVE
 
 \subsection{Cliente Android}
 
@@ -358,7 +352,7 @@ La conexión a la base de datos se encuentra configurada en el archivo \textit{/
 \begin{table}[H]
 	\footnotesize
 	\begin{center}
-	\begin{tabular}{| c | c | c | m{5cm} |}
+	\begin{tabular}{| c | c | c | m{4cm} |}
 		\hline
 		Adapter & Layout & Clase & Descripción \\ \hline
 		PartyWidgetAdapter & party\_widget.xml & PartyWidgetView & Widget para mostrar un elemento de la lista de Partidos Políticos \\ \hline
@@ -457,12 +451,26 @@ Con el objetivo de no repetir código decidimos estructurar el esquema de petici
 	  \label{fig:classConnectionTree}
 	\end{figure}	
 	
-	Hace falta también actualizar la vista del usuario cuando se reciban los datos. Como un AsyncTask se ejecuta en un hilo aparte diferente del UI Thread (para no bloquear la interacción con el usuario).	
+	Hace falta también actualizar la vista del usuario cuando se reciban los datos. Como un AsyncTask se ejecuta en un hilo aparte diferente del UI Thread (para no bloquear la interacción con el usuario), a priori no tiene acceso a la vista (Layout) que se le está mostrando al usuario. Por esta razón la solución que encontramos fue guardar una referencia a la vista del usuario dentro del AsyncTask (ver clase ''URLConnection''). De esta manera en su método ''onPostExecute()'' que se ejecuta nada más terminar la operacion de conexión del ''doInbackground()'', obtenemos dicha vista y la actualizamos con los datos recién descargados. Este método de actualización de la vista es el que se utiliza en todos los casos. \\
 		
+		\underline{Comprobación de Conexión a Internet}
 		
-	\subsubsection{Gestión de Usuarios}
+		Por otro lado, para llevar a cabo un control de errores en la conexión al Service REST, antes de ejecutar la tarea en el AsyncTask comprobamos el estado de la conexión del dispositivo móvil para asegurarnos de que el usuario dispone de conexión a Internet. En caso contrario se le muestra un mensaje de aviso para que compruebe sus conexiones y no se lleva a cabo la tarea de conexión en el AsyncTask. Aprovechando que todas las actividades extienden de ''MenuActivity'' dicho método de comprobación se encuentra dentro de esa clase. Además, fue necesario definir el siguiente permiso en el ''AndroidManifest.xml'' de la aplicación para acceder a la información de estado de la conexión del dispositivo:
+		
+		  \lstset{language=XML, breaklines=true, autogobble=true, basicstyle=\ttfamily\footnotesize}
+	  \begin{lstlisting}[frame=single]
+	  	 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	  \end{lstlisting}
+		
+	\subsubsection{Gestión de Usuarios: ID de Android}
 	
-		ID de teléfono
+		Como esta versión de la aplicación no maneja información critica y sensible del usuario decidimos utilizar un método de autenticación basado en el ID almacenado en el dispositivo móvil. En Android existen varios identificadores (IMEI, I	D de dispositivo, ID de Android..) teniendo cada uno de ellos características distintas. En nuestro caso \textbf{decidimos utilizar el ID de Android} \cite{ref:android_secure} ya que es único para cada instalación de sistema operativo y acceder a su valor no requiere de permisos especiales en la aplicación. Se trata de un número de 64 bits en formato hexadecimal al cual se accede directamente mediante la variable del sistema ''Secure.ANDROID\_ID''.
+		
+		El acceso a este identificador se produce nada más ejecutar la aplicación en su actividad ''MainActivity'' y se guarda de forma estática en la clase ''User'' para poder acceder a él desde cualquier punto de la aplicación. Con el identificador también se accede a la Base de Datos para descargar el nombre de Usuario que se corresponde con dicho identificador. Este nombre se muestra en el menú izquierdo de la aplicación y se puede cambiar desde ahí. De esta manera, todo el contenido generado por un usuario (Opiniones, comentarios, propuestas,...) se guarda tambien en base de datos asociado a este identificador único.
+		
+	\subsubsection{Servicio Android de Conexión con Wave}
+
+		REORDENAR LO DE WAVE
 		
 	\subsubsection{Peticiones a Wave}
 
