@@ -1,0 +1,195 @@
+\newpage
+\thispagestyle{sectioned}
+
+\appendix
+\chapter{Listados de Código Fuente}
+
+\section{Migración de Wave a Android: SwelllRT}
+
+\subsection{Esquema de conexión HTTP}\label{ssec:codeHTTP}
+
+\lstset{language=Java, breaklines=true, autogobble=true, basicstyle=\ttfamily\footnotesize, commentstyle=\color{OliveGreen}, keywordstyle=\color{MidnightBlue}}
+	  \begin{lstlisting}[frame=single]	  
+import java.net.HttpURLConnection;
+
+private void login(final String user, final String password, final Callback<String, String> callback) {
+  
+    //Construct the URL String urlStr with the server, user and password parameters
+    URL url = new URL(urlStr); //String 
+    HttpURLConnection connection = (HttpURLConnection) url.openConnection(); //Open the connection to the given URL 
+    connection.setDoOutput(true); // allow the POST connection
+    connection.setRequestProperty("Accept-Charset", CHARSET);
+    connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded;charset=" + CHARSET);
+
+    OutputStream out = connection.getOutputStream(); 
+    out.write(queryStr.getBytes(CHARSET)); //Set the POST parameters
+
+    if (connection.getResponseCode() != 200) {
+	//ERROR during the connection
+	connection.disconnect(); //Disconnect from the server.
+    } else {
+	//Continue with the login process (WebSocket)
+	connection.disconnect(); //Disconnect from the server.
+    }		      
+}	    
+	  \end{lstlisting}  
+	  
+\subsection{Esquema de conexión con AsyncTask}\label{ssec:codeAsynctask}	  
+	  
+	  \lstset{language=Java, breaklines=true, autogobble=true, basicstyle=\ttfamily\footnotesize, commentstyle=\color{OliveGreen}, keywordstyle=\color{MidnightBlue}}
+	  \begin{lstlisting}[frame=single]
+	  
+private class LoginTask extends AsyncTask<String, Void, String> {
+    
+    @Override
+    protected String doInBackground(String... params) { //method that executes on the new Thread without blocking the UI Thread
+      login(params[0], params[1], params[2]); //Do the login 
+      return sessionId //String needed for the WebSocket connection and based on the cookie received from the server.     
+    }
+   
+   @Override
+    protected void onPostExecute(String result) { //method that executes on the UI Thread once doInBackground() finishes its execution.    
+      
+      if (result != null) { 
+        callback.onLogin(); //Notify the login success using the proper callback method
+        
+      } else { //The doInBackGround method has had a problem and the result of its execution was null
+        callback.onError("Wave Login Error"); //Notify the login error using the proper callback method      
+      }
+    }
+}    
+	  \end{lstlisting} 
+	  
+\subsection{Esquema de uso de WAsync}\label{ssec:codewAsync}
+	  	  
+\lstset{language=Java, breaklines=true, autogobble=true, basicstyle=\ttfamily\footnotesize, commentstyle=\color{OliveGreen}, keywordstyle=\color{MidnightBlue}}
+	  \begin{lstlisting}[frame=single]	  	  
+	  
+//Create the atmosphere client
+AtmosphereClient client = ClientFactory.getDefault().newClient(AtmosphereClient.class);
+
+//Configure client with URL
+AtmosphereRequestBuilder requestBuilder = client.newRequestBuilder()
+  .method(Request.METHOD.GET).trackMessageLength(true).uri(WaveSocketWAsync.this.urlBase)
+  .transport(Request.TRANSPORT.WEBSOCKET)
+  
+//Create and configure socket
+WaveSocketWAsync.this.socket = client.create(client.newOptionsBuilder().runtime(ahc).build())
+  .on(Event.OPEN.name(), new Function<String>() { //Equivalent to GWT onOpen() method
+    @Override
+    public void on(String arg0) {
+		// set the actions to do and call the proper callback function (callback.onConnect())
+    }
+    
+  }).on(Event.CLOSE.name(), new Function<String>() { //Equivalent to GWT onClose() method
+    @Override
+    public void on(String arg0) {
+    // set the actions to do and call the proper callback function (callback.onDisconnect())
+    }
+    
+  }).on(Event.MESSAGE.name(), new Function<String>() {
+    @Override
+    public void on(String arg) { //Equivalent to GWT onMessage() method
+    // set the actions to do and call the proper callback function (callback.onMessage())
+    }
+    
+  }).on(new Function<Throwable>() {
+    @Override
+    public void on(Throwable t) {
+		// catch possible exceptions
+    }
+  });
+          
+try {
+// connect to the server
+socket.open(requestBuilder.build());
+} catch (IOException e) {
+	// catch possible exceptions
+}
+      
+//send a given message to the server, equivalent to GWT send(msg) method 
+socket.fire(Data);
+	\end{lstlisting}
+	  
+\section{Service REST (Laravel)}
+
+\subsection{Esquema de Rutas Simple}\label{ssec:codeRoutesSimple}
+
+\lstset{
+  language        = php}
+\begin{lstlisting}[frame=single]
+// Posibles operaciones con el objeto "propuesta"
+Route::get('/proposal', 'ProposalController@index');
+  // Obtiene el listado de todas las propuestas
+Route::get('/proposal/{id}', 'ProposalController@show');
+  // Obtiene la prupuesta pasada por el campo {id}
+Route::post('/proposal', 'ProposalController@create');
+  // Crea una nueva propuesta en el servidor
+Route::put('/proposal/{id}', 'ProposalController@update');
+  // Actualiza la propuesta pasada por {id}
+Route::delete('/proposal/{id}', 'ProposalController@destroy');
+  // Borra la propuesta pasada por {id}
+\end{lstlisting}
+
+\subsection{Esquema de Rutas Agrupadas}\label{ssec:codeRoutesGroupe}
+
+\lstset{
+  language        = php}
+\begin{lstlisting}[frame=single]
+Route::group(['prefix' => 'proposal'], function()
+{
+    Route::get('/', 'ProposalController@index');
+    Route::get('/{id}', 'ProposalController@show');
+    Route::post('/', 'ProposalController@create');
+    Route::put('/{id}', 'ProposalController@update');
+    Route::delete('/{id}','ProposalController@destroy');
+});
+\end{lstlisting}
+
+\subsection{Esquema de Rutas de Propuestas Agrupadas}\label{ssec:codeRoutesGroupeProposals}
+
+\lstset{
+  language        = php}
+\begin{lstlisting}[frame=single]
+Route::group(['prefix' => 'proposal'], function()
+{
+  Route::get('/', 'ProposalController@index');
+  Route::post('/', 'ProposalController@create');
+  Route::group(['prefix' => '/{id}'], function()
+  {
+    Route::get('/', 'ProposalController@show');
+    Route::put('/', 'ProposalController@update');
+    Route::delete('/','ProposalController@destroy');
+  });
+});
+\end{lstlisting}
+
+\subsection{Esquema de Controlador de Propuestas}\label{ssec:codeControllerProposals}
+
+\lstset{
+  language        = php}
+\begin{lstlisting}[frame=single]
+<?php namespace App\Http\Controllers;
+
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use DB;
+
+class ProposalController extends Controller {
+  /**
+  * Display a listing of the resource.
+  *
+  * @return Response
+  */
+  public function index()
+  {
+    return DB::select('SELECT * FROM `proposal`');
+  }
+}
+\end{lstlisting}
+	  
+
+\addcontentsline{toc}{chapter}{\numberline{}Bibliografía} %add bibliography to the index
+
+\rhead{}
+\renewcommand{\headrulewidth}{0pt}

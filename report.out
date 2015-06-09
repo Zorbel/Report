@@ -81,8 +81,8 @@
 \BOOKMARK [3][-]{lstnumber.-4.1}{Proceso de Depuraci\363n}{subsection.5.2.2}% 81
 \BOOKMARK [2][-]{subsection.5.2.3}{Migraci\363n: Identificaci\363n y Soluci\363n de Problemas}{section.5.2}% 82
 \BOOKMARK [3][-]{section*.37}{Conexi\363n HTTP}{subsection.5.2.3}% 83
-\BOOKMARK [3][-]{lstnumber.-7.15}{Conexi\363n WebSocket}{subsection.5.2.3}% 84
-\BOOKMARK [3][-]{lstnumber.-9.2}{Conexi\363n final y Logging}{subsection.5.2.3}% 85
+\BOOKMARK [3][-]{figure.caption.38}{Conexi\363n WebSocket}{subsection.5.2.3}% 84
+\BOOKMARK [3][-]{lstnumber.-6.2}{Conexi\363n final y Logging}{subsection.5.2.3}% 85
 \BOOKMARK [3][-]{figure.caption.39}{Organizaci\363n del c\363digo: Servicio Android}{subsection.5.2.3}% 86
 \BOOKMARK [2][-]{subsection.5.2.4}{Dependencias}{section.5.2}% 87
 \BOOKMARK [2][-]{subsection.5.2.5}{Resultado de la Migraci\363n}{section.5.2}% 88
@@ -117,18 +117,29 @@
 \BOOKMARK [2][-]{subsection.6.2.2}{Service REST}{section.6.2}% 117
 \BOOKMARK [3][-]{table.caption.60}{Arquitectura}{subsection.6.2.2}% 118
 \BOOKMARK [3][-]{figure.caption.61}{Rutas}{subsection.6.2.2}% 119
-\BOOKMARK [3][-]{lstnumber.-15.11}{Controladores}{subsection.6.2.2}% 120
+\BOOKMARK [3][-]{lstnumber.-9.1}{Controladores}{subsection.6.2.2}% 120
 \BOOKMARK [2][-]{subsection.6.2.3}{Cliente Android}{section.6.2}% 121
 \BOOKMARK [3][-]{section*.63}{Interfaz Gr\341fica}{subsection.6.2.3}% 122
 \BOOKMARK [3][-]{table.caption.66}{Estructuraci\363n de Programas Pol\355ticos}{subsection.6.2.3}% 123
 \BOOKMARK [3][-]{figure.caption.68}{Conexi\363n y Peticiones a Service REST y Base de Datos}{subsection.6.2.3}% 124
-\BOOKMARK [3][-]{lstnumber.-19.1}{Gesti\363n de Usuarios: ID de Android}{subsection.6.2.3}% 125
-\BOOKMARK [3][-]{lstnumber.-19.1}{Servicio Android de Conexi\363n con Wave}{subsection.6.2.3}% 126
-\BOOKMARK [3][-]{lstnumber.-19.1}{Peticiones a Wave}{subsection.6.2.3}% 127
-\BOOKMARK [0][-]{chapter.7}{Resultados y Conclusiones}{}% 128
+\BOOKMARK [3][-]{lstnumber.-11.1}{Gesti\363n de Usuarios: ID de Android}{subsection.6.2.3}% 125
+\BOOKMARK [3][-]{lstnumber.-11.1}{Servicio Android de Conexi\363n con Wave}{subsection.6.2.3}% 126
+\BOOKMARK [3][-]{lstnumber.-11.1}{Peticiones a Wave}{subsection.6.2.3}% 127
+\BOOKMARK [0][-]{chapter.7}{Resultados, Conclusiones y Trabajo Futuro}{}% 128
 \BOOKMARK [1][-]{section.7.1}{Discusion de Resultados}{chapter.7}% 129
-\BOOKMARK [2][-]{subsection.7.1.1}{Evaluaci\363n con usuarios}{section.7.1}% 130
-\BOOKMARK [1][-]{section.7.2}{Conclusiones}{chapter.7}% 131
-\BOOKMARK [0][-]{chapter.8}{Trabajo a Futuro}{}% 132
-\BOOKMARK [1][-]{section.8.1}{Mejoras}{chapter.8}% 133
-\BOOKMARK [0][-]{section.8.1}{Bibliograf\355a}{}% 134
+\BOOKMARK [1][-]{section.7.2}{Conclusiones}{chapter.7}% 130
+\BOOKMARK [1][-]{section.7.3}{Trabajo Futuro}{chapter.7}% 131
+\BOOKMARK [2][-]{subsection.7.3.1}{Mejoras}{section.7.3}% 132
+\BOOKMARK [0][-]{appendix.Alph1}{Listados de C\363digo Fuente}{}% 133
+\BOOKMARK [1][-]{section.Alph1.1}{Migraci\363n de Wave a Android: SwellRT}{appendix.Alph1}% 134
+\BOOKMARK [2][-]{subsection.Alph1.1.1}{Esquema de conexi\363n HTTP}{section.Alph1.1}% 135
+\BOOKMARK [2][-]{subsection.Alph1.1.2}{Esquema de conexi\363n con AsyncTask}{section.Alph1.1}% 136
+\BOOKMARK [2][-]{subsection.Alph1.1.3}{Esquema de uso de WAsync}{section.Alph1.1}% 137
+\BOOKMARK [1][-]{section.Alph1.2}{Service REST \(Laravel\)}{appendix.Alph1}% 138
+\BOOKMARK [2][-]{subsection.Alph1.2.1}{Esquema de Rutas Simple}{section.Alph1.2}% 139
+\BOOKMARK [2][-]{subsection.Alph1.2.2}{Esquema de Rutas Agrupadas}{section.Alph1.2}% 140
+\BOOKMARK [2][-]{subsection.Alph1.2.3}{Esquema de Rutas de Propuestas Agrupadas}{section.Alph1.2}% 141
+\BOOKMARK [2][-]{subsection.Alph1.2.4}{Esquema de Controlador de Propuestas}{section.Alph1.2}% 142
+\BOOKMARK [1][-]{section.Alph1.3}{Aplicaci\363n Android}{appendix.Alph1}% 143
+\BOOKMARK [2][-]{subsection.Alph1.3.1}{Funci\363n de construcci\363n del \341rbol de Programa Pol\355tico}{section.Alph1.3}% 144
+\BOOKMARK [0][-]{lstnumber.-19.46}{Bibliograf\355a}{}% 145

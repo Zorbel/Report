@@ -190,57 +190,11 @@ Para crear una nueva propuesta en la aplicación, deberemos realizar una petici�
 Route::post('/proposal', 'ProposalController@create');
 \end{lstlisting}
 
-Donde una vez más en controlador \textit{ProposalController} se encargará de procesar la petición en el método \textit{create}. Si nos fijamos en la primera ruta dónde obteníamos las propuestas (\textit{GET /proposal}, es exactamente igual que la que acabamos de definir. Sólo les diferencia el tipo de petición que está realizando el cliente. Para definir otros tipos de peticiones como PUT o DELETE, usaremos la misma metodología. El resultado final de las peticiones que podrían realizarse a una propuesta quedería definida de la siguiente forma:
+Donde una vez más en controlador \textit{ProposalController} se encargará de procesar la petición en el método \textit{create}. Si nos fijamos en la primera ruta dónde obteníamos las propuestas (\textit{GET /proposal}, es exactamente igual que la que acabamos de definir. Sólo les diferencia el tipo de petición que está realizando el cliente. Para definir otros tipos de peticiones como PUT o DELETE, usaremos la misma metodología. Un ejemplo del resultado final de las peticiones que podrían realizarse a una propuesta se puede ver en la Sección \ref{ssec:codeRoutesSimple} del Apéndice.
 
-\lstset{
-  language        = php}
-\begin{lstlisting}[frame=single]
-// Posibles operaciones con el objeto "propuesta"
-Route::get('/proposal', 'ProposalController@index');
-  // Obtiene el listado de todas las propuestas
-Route::get('/proposal/{id}', 'ProposalController@show');
-  // Obtiene la prupuesta pasada por el campo {id}
-Route::post('/proposal', 'ProposalController@create');
-  // Crea una nueva propuesta en el servidor
-Route::put('/proposal/{id}', 'ProposalController@update');
-  // Actualiza la propuesta pasada por {id}
-Route::delete('/proposal/{id}',
-			    'ProposalController@destroy');
-  // Borra la propuesta pasada por {id}
-\end{lstlisting}
+Para organizar el código y poder visualizarlo de forma clara utilzaremos grupos de rutas. Esto nos resultará especialmente útil cuando tengamos varias operaciones que realizar dentro de una misma dirección, definiendo una nueva ruta cuya función será definida a continuación, incluyendo las rutas que vienen dentro del grupo. Si nos fijamos en el ejemplo anterior, podemos observar como todas las url comienzan con \textit{/proposal}. Por ello no es necesario definir en cada línea la ruta \textit{/proposal}, si no que bastará con definirla en un único grupo que agrupará todas las rutas que comienzen de la misma forma. Así nuestro ejemplo anterior quedaría más claro y ordenado (ver Sección \ref{ssec:codeRoutesGroupe} del Apéndice).
 
-Para organizar el código y poder visualizarlo de forma clara utilzaremos grupos de rutas. Esto nos resultará especialmente útil cuando tengamos varias operaciones que realizar dentro de una misma dirección, definiendo una nueva ruta cuya función será definida a continuación, incluyendo las rutas que vienen dentro del grupo. Si nos fijamos en el ejemplo anterior, podemos observar como todas las url comienzan con \textit{/proposal}. Por ello no es necesario definir en cada línea la ruta \textit{/proposal}, si no que bastará con definirla en un único grupo que agrupará todas las rutas que comienzen de la misma forma. Así nuestro ejemplo anterior quedaría más claro y ordenado de la siguiente forma:
-
-\lstset{
-  language        = php}
-\begin{lstlisting}[frame=single]
-Route::group(['prefix' => 'proposal'], function()
-{
-    Route::get('/', 'ProposalController@index');
-    Route::get('/{id}', 'ProposalController@show');
-    Route::post('/', 'ProposalController@create');
-    Route::put('/{id}', 'ProposalController@update');
-    Route::delete('/{id}','ProposalController@destroy');
-});
-\end{lstlisting}
-
-De esta forma podemos visualizar todas las posibilidades agrupadas dentro de la dirección \textit{proposal}. Lo que nos permitirá utilizar grupos para ordenar funciones comunes dentro de un mismo prefijo, y además crear subgrupos dentro de los anteriores si tenemos algún prefijo repetido varias veces. Esto podría aplicarse a nuestro ejemplo anterior, agrupando las peticiones que requieren como parámetro un \textit{id} de la propuesta:
-
-\lstset{
-  language        = php}
-\begin{lstlisting}[frame=single]
-Route::group(['prefix' => 'proposal'], function()
-{
-  Route::get('/', 'ProposalController@index');
-  Route::post('/', 'ProposalController@create');
-  Route::group(['prefix' => '/{id}'], function()
-  {
-    Route::get('/', 'ProposalController@show');
-    Route::put('/', 'ProposalController@update');
-    Route::delete('/','ProposalController@destroy');
-  });
-});
-\end{lstlisting}
+De esta forma podemos visualizar todas las posibilidades agrupadas dentro de la dirección \textit{proposal}. Lo que nos permitirá utilizar grupos para ordenar funciones comunes dentro de un mismo prefijo, y además crear subgrupos dentro de los anteriores si tenemos algún prefijo repetido varias veces. Esto podría aplicarse a nuestro ejemplo anterior, agrupando las peticiones que requieren como parámetro un \textit{id} de la propuesta (ver Sección \ref{ssec:codeRoutesGroupeProposals} del Apéndice).
 
 \subsubsection{Controladores}
 
@@ -253,29 +207,7 @@ Los \textbf{controladores} son los encargados de procesar todas las operaciones 
 \label{fig:laravelArch}
 \end{figure}
 
-Dentro de un controlador definiremos aquellos métodos que correspondan con las rutas de la aplicación. Estos métodos procesarán la información del cliente, operando con los parámetros que haya obtenido, accediendo a la base de datos, y devolviendo una respuesta en función del éxito de la operación. El siguiente ejemplo muestra una implementación básica del método \textit{index()} del \textit{ProposalController}:
-
-\lstset{
-  language        = php}
-\begin{lstlisting}[frame=single]
-<?php namespace App\Http\Controllers;
-
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
-use DB;
-
-class ProposalController extends Controller {
-  /**
-  * Display a listing of the resource.
-  *
-  * @return Response
-  */
-  public function index()
-  {
-    return DB::select('SELECT * FROM `proposal`');
-  }
-}
-\end{lstlisting}
+Dentro de un controlador definiremos aquellos métodos que correspondan con las rutas de la aplicación. Estos métodos procesarán la información del cliente, operando con los parámetros que haya obtenido, accediendo a la base de datos, y devolviendo una respuesta en función del éxito de la operación. Un ejemplo que muestra una implementación básica del método \textit{index()} del \textit{ProposalController}:se puede ver en la Sección \ref{ssec:codeControllerProposals} del Apéndice).
 
 La conexión a la base de datos se encuentra configurada en el archivo \textit{/config/database.php}, por lo que la gestión de la conexión y desconexión será controlada por Laravel, lo que nos proporciona más independencia y versatilidad a la hora de programar. Como respuesta del método, Laravel utiliza por defecto un fichero JSON con los resultados de la variable a la que asignemos el resultado, o a la sentencia SQL de la consulta que estemos devolviendo. El siguiente ejemplo muestra cuál sería el resultado de realizar una petición GET a la dirección \textit{/proposal}:
 
@@ -391,43 +323,9 @@ La conexión a la base de datos se encuentra configurada en el archivo \textit{/
 	
 	Pero, ¿cómo construir esta estructura a partir de la lista ordenada que nos devuelve el Service REST? La solución encontrada fue utilizar una función que construyera dicho árbol de forma recursiva (Ver clase ''GetProgramsData.java'') sobre una Seccion ''root'' vacía que pertenecería a cada Partido Político. Dicha función recorrería la lista de secciones sin estructurar y para cada sección comprobraría su nivel de anidamiento para saber si colocarlo en el nivel actual, en el siguiente o en el anterior.
 	
-	 \lstset{language=Java, breaklines=true, autogobble=true, basicstyle=\ttfamily\footnotesize, commentstyle=\color{OliveGreen}, keywordstyle=\color{MidnightBlue}}
-	  \begin{lstlisting}[frame=single]	
-	      protected int createIndex(Section parent, List<Section> JSONResult, int index) {
-        // X = currentSection
-        Section currentSection = JSONResult.get(index);
-        if (parent.getlSections() == null) {
-            parent.setlSections(new ArrayList<Section>());
-        }
-        parent.addSubSection(currentSection);
-        // c = nextIndex
-        int nextIndex = index + 1;
-        while ((nextIndex < JSONResult.size()) && (getLevel(JSONResult.get(nextIndex)) >= getLevel(currentSection))) {
-            if (getLevel(JSONResult.get(nextIndex)) == getLevel(currentSection)) {
-                currentSection = JSONResult.get(nextIndex);
-                nextIndex++;
-                parent.addSubSection(currentSection);
-            } else if (getLevel(JSONResult.get(nextIndex)) > getLevel(currentSection))
-                nextIndex = createIndex(currentSection, JSONResult, nextIndex);
-        }
-        return nextIndex;
-    }
-
-    protected int getLevel(Section sec) {
-        int id_sec = sec.getmSection(), level;
-        if (id_sec % 100 != 0) {
-            level = 4;
-        } else if (id_sec % 10000 != 0) {
-            level = 3;
-        } else if (id_sec % 1000000 != 0) {
-            level = 2;
-        } else
-            level = 1;
-        return level;
-    }	   
-	  \end{lstlisting}
+	Se puede ver el código de esta función de construcción del árbol en la Sección \ref{ssec:codeProgramTree} del Apéndice.
 	  
-	  Además, como no queriamos tener que descargarnos el programa continuamente, esta estructura en forma de arbol se guardaría en una clase llamada ''PoliticalGroups'' que alamacenaría el listado de Partidos Politicos y para cada unode ellos almacenaría la estructura en árbol de su programa (su nodo ''root''). Esta clase implementa el \textbf{patrón de diseño Singleton} para asegurar que solo exista una instancia de ella, accesible desde cualquier punto de la aplicación. 
+	Además, como no queriamos tener que descargarnos el programa continuamente, esta estructura en forma de arbol se guardaría en una clase llamada ''PoliticalGroups'' que alamacenaría el listado de Partidos Politicos y para cada unode ellos almacenaría la estructura en árbol de su programa (su nodo ''root''). Esta clase implementa el \textbf{patrón de diseño Singleton} para asegurar que solo exista una instancia de ella, accesible desde cualquier punto de la aplicación. 
 	  
 	\begin{figure}[H]
 	  \centering
@@ -459,7 +357,7 @@ Con el objetivo de no repetir código decidimos estructurar el esquema de petici
 		
 		  \lstset{language=XML, breaklines=true, autogobble=true, basicstyle=\ttfamily\footnotesize}
 	  \begin{lstlisting}[frame=single]
-	  	 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	  \end{lstlisting}
 		
 	\subsubsection{Gestión de Usuarios: ID de Android}

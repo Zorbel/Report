@@ -6,7 +6,7 @@ A continuación se exponen las diferentes metodologías que hemos utilizado dura
 
 \section{Uso de Software Libre}
 
-Para el desarrollo de todo el software que compone el proyecto, siempre hemos utilizado software libre. Tanto con las herramientas necesarias para el desarrollo como el resultado final de nuestra aplicación están desarrolladas con software libre. Dando libertad para que otros usuarios puedan visualizar el código desarrollado o utilizar las herramientas libremente. Y realizando aportaciones a toda la comunidad subiendo el código del proyecto a \textbf{GitHub} bajo una licencia \textbf{GNU GPLv3} \cite{ref:GPLv3}.
+Para el desarrollo de todo el software que compone el proyecto siempre hemos utilizado una aproximación de software libre. Esto permite contribuir al común y que cualquier persona pueda hacer uso de nuestro código si lo necesita. Hemos usado software libre tanto con las herramientas necesarias para el desarrollo de código y documentación como para el resultado final de nuestra aplicación. Con esto damos la posibilidad a que otros usuarios puedan visualizar el código desarrollado o utilizarlo libremente. Para ello realizamos aportaciones a toda la comunidad subiendo el código del proyecto a \textbf{GitHub} bajo una licencia \textbf{GNU GPLv3} \cite{ref:GPLv3}.
 
 A continuación se expone un breve resumen del software libre utilizado y las licencias que poseen:
 
@@ -31,7 +31,7 @@ OpenShift      & Apache License 2.0             \\ \hline
 
 \section{Metodología de Migración de Wave a Android}
 
-	\subsection{Objetivo}
+  \subsection{Objetivo}
   
     El framework de SwellRT utiliza un servidor WIAB y el protocolo Wave, ambos desarrollados en Java. El \textbf{SDK de Android} \cite{ref:android_sdk} es compatible con Java, así que a priori la implantación del servidor no supone problemas en los dispositivos móviles. Sin embargo, existe un problema con el API de SwellRT, ya que el lado del cliente fue desarrollado en Javascript usando el framework GWT. Android no soporta de forma nativa estas tecnologías, así que es necesario estudiar el código de SwellRT para sustituir todo el código que haga uso de Javascript/GWT por código compatible con Android. El objetivo de esta parte del proyecto es conseguir que un cliente desplegado en Android sea capaz de conectarse e interactuar con un servidor Wave sin problemas.  
   
@@ -90,7 +90,7 @@ Existen dos formas de realizar la construcción en modo debug de una app: \\[.2c
 		$ android avd
 	 \end{lstlisting}
  	 
- 	 Lo que nos despliega la herramienta Android Virtual Device Manager (Ver Seccion \ref{sssec:eclipse}) para que elijamos/creemos el emulador que queremos ejecutar. Podemos elegir multitud de parámetros \cite{ref_android_avd_params} para el dispositivo que emula (resolución y tamaño de pantalla, de memoria Ram, elementos hardware emulados, etcétera.) siendo lo más importante elegir un API (versión de Android) que se corresponda con el API que hemos elegido para nuestra aplicación (en nuestro caso API 19). Es recomendable también elegir una imagen del sistema que use un procesador con arquitectura Intel x86, ya que si elegimos la opción por defecto de ARM (los dispositivos móviles actuales usan procesadores ARM) la ejecución del emulador se ralentiza mucho al tener que emular una arquitectura de procesador distinta a la suya (los ordenadores actuales usan arquitectura Intel x86 en su mayoría). Esto únicamente afecta al rendimiento del emulador, la aplicación es independiente de la arquitectura que haya por debajo. \\[.2cm]
+ 	 Lo que nos despliega la herramienta Android Virtual Device Manager (Ver Seccion \ref{sssec:eclipse}) para que elijamos/creemos el emulador que queremos ejecutar. Podemos elegir multitud de parámetros \cite{ref:android_avd_params} para el dispositivo que emula (resolución y tamaño de pantalla, de memoria Ram, elementos hardware emulados, etcétera.) siendo lo más importante elegir un API (versión de Android) que se corresponda con el API que hemos elegido para nuestra aplicación (en nuestro caso API 19). Es recomendable también elegir una imagen del sistema que use un procesador con arquitectura Intel x86, ya que si elegimos la opción por defecto de ARM (los dispositivos móviles actuales usan procesadores ARM) la ejecución del emulador se ralentiza mucho al tener que emular una arquitectura de procesador distinta a la suya (los ordenadores actuales usan arquitectura Intel x86 en su mayoría). Esto únicamente afecta al rendimiento del emulador, la aplicación es independiente de la arquitectura que haya por debajo. \\[.2cm]
  
      Una vez lanzado el emulador/dispositivo móvil, procedemos a instalar la aplicación en él ejecutando el siguiente comando en la primera consola (en la que construimos la aplicacion):
 		      	 
@@ -160,71 +160,23 @@ Una vez hecho esto, cada vez que ejecutemos la aplicacion saldrá un mensaje de 
       \label{fig:android_logcat}
     \end{figure} 
 	 
-	 Hay por tanto que encontrar una librería similar compatible con Android que construya una petición \textbf{HTTP POST} y la envíe al servidor. La primera opción que valoramos fue utilizar la \textbf{librería HTTP Apache} \cite{ref:apache_http}, incluida en el SDK de Android desde sus primeras versiones. Sin embargo, Google recomienda \cite{ref:http_recommmendations} a partir del API 10 (Android 2.3 "Gingerbread") utilizar la \textbf{librería HttpURLConnection}\cite{ref:android_httpUrlConnection}, también incluida en el API. Por tanto esta última es la que elegimos para la migración. \\[.2cm] 
+	 Hay por tanto que encontrar una librería similar compatible con Android que construya una petición \textbf{HTTP POST} y la envíe al servidor. La primera opción que valoramos fue utilizar la \textbf{librería HTTP Apache} \cite{ref:apache_http}, incluida en el SDK de Android desde sus primeras versiones. Sin embargo, Google recomienda \cite{ref:http_recommmendations} a partir del API 10 (Android 2.3 "Gingerbread") utilizar la \textbf{librería HttpURLConnection}\cite{ref:android_httpUrlConnection}, también incluida en el API. Por tanto esta última es la que elegimos para la migración. 
 	 
-	 De forma simplificada, éste seria un esquema de la nueva estructura del login HTTP:
-	 
-	  \lstset{language=Java, breaklines=true, autogobble=true, basicstyle=\ttfamily\footnotesize, commentstyle=\color{OliveGreen}, keywordstyle=\color{MidnightBlue}}
-	  \begin{lstlisting}[frame=single]	  
-import java.net.HttpURLConnection;
-
-private void login(final String user, final String password, final Callback<String, String> callback) {
-  
-		//Construct the URL String urlStr with the server, user and password parameters
-  
-	    URL url = new URL(urlStr); //String 
-	    HttpURLConnection connection = (HttpURLConnection) url.openConnection(); //Open the connection to the given URL
-
-	    connection.setDoOutput(true); // allow the POST connection
-	    connection.setRequestProperty("Accept-Charset", CHARSET);
-	    connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded;charset="
-		+ CHARSET);
-
-	    OutputStream out = connection.getOutputStream(); 
-	    out.write(queryStr.getBytes(CHARSET)); //Set the POST parameters
-
-	    if (connection.getResponseCode() != 200) {
-		      //ERROR during the connection
-		      connection.disconnect(); //Disconnect from the server.
-	    } else {
-		      //Continue with the login process (WebSocket)
-		      connection.disconnect(); //Disconnect from the server.
-	    }		      
-}	    
-	  \end{lstlisting}  
+	 Se puede ver un esquema simplificado de la nueva estructura del login HTTP en la Sección \ref{sssec:codeHTTP} del Apéndíce.
 	  
-	  Sin embargo, aquí no acaba el problema. Por cuestiones de usabilidad y de respuesta a la interacción del usuario, Android establece dos reglas para trabajar con el proceso de la actividad que se le esta mostrando al usuario (llamado \textbf{UI Thread}) \cite{ref:android_processes}:
+	 Sin embargo, aquí no acaba el problema. Por cuestiones de usabilidad y de respuesta a la interacción del usuario, Android establece dos reglas para trabajar con el proceso de la actividad que se le esta mostrando al usuario (llamado \textbf{UI Thread}) \cite{ref:android_processes}:
 	  
 	  \begin{itemize}
 	  	\item \textbf{1. No bloquear el UI Thread}
 	  	\item \textbf{2. No acceder al UI Thread directamente desde otro Thread}
 	  \end{itemize}
 	  
-	  La conexión a un servidor es un proceso susceptible de durar un tiempo variable según las condiciones de la red, lo cual deja la aplicación en espera hasta que se realiza dicha conexión,  bloqueando el UI Thread. Por tanto, decidimos usar un hilo (Thread) por separado en forma de \textbf{AsyncTask} \cite{ref:android:asynctask} para llevar a cabo la tarea de Login, tal y como recomienda Google hacer para trabajar con conexiones a la red \cite{ref:android_networking}. La ventaja por tanto de usar otro hilo para esto es que la actividad principal no se bloquea. \\[.2cm]
+	  La conexión a un servidor es un proceso susceptible de durar un tiempo variable según las condiciones de la red, lo cual deja la aplicación en espera hasta que se realiza dicha conexión,  bloqueando el UI Thread. Por tanto, decidimos usar un hilo (Thread) por separado en forma de \textbf{AsyncTask} \cite{ref:android_asynctask} para llevar a cabo la tarea de Login, tal y como recomienda Google hacer para trabajar con conexiones a la red \cite{ref:android_networking}. La ventaja por tanto de usar otro hilo para esto es que la actividad principal no se bloquea.
 	  	 
-	 Es importante también destacar que la arquitectura de SwellRT y de Wave está planteada de manera que utiliza llamadas asíncronas (callbacks) para notificar al resto de la aplicacion del resultado de los procesos de conexión al servidor, por lo que nuestro AsyncTask tendrá que usar el callback apropiado para notificar del éxito o fracaso de la conexión Http.
+	  Es importante también destacar que la arquitectura de SwellRT y de Wave está planteada de manera que utiliza llamadas asíncronas (callbacks) para notificar al resto de la aplicacion del resultado de los procesos de conexión al servidor, por lo que nuestro AsyncTask tendrá que usar el callback apropiado para notificar del éxito o fracaso de la conexión Http.
 	 
-	  El siguiente es un esquema del AsyncTask encargado del Login: \\[.2cm]
-	  
-	  \lstset{language=Java, breaklines=true, autogobble=true, basicstyle=\ttfamily\footnotesize, commentstyle=\color{OliveGreen}, keywordstyle=\color{MidnightBlue}}
-	  \begin{lstlisting}[frame=single]	  
-private class LoginTask extends AsyncTask<String, Void, String> {
-    @Override
-    protected String doInBackground(String... params) { //method that executes on the new Thread without blocking the UI Thread
-      login(params[0], params[1], params[2]); //Do the login 
-      return sessionId //String needed for the WebSocket connection and based on the cookie received from the server.     
-    }
-    @Override
-    protected void onPostExecute(String result) { //method that executes on the UI Thread once doInBackground() finishes its execution.    
-      if (result != null) { 
-        callback.onLogin(); //Notify the login success using the proper callback method
-      } else { //The doInBackGround method has had a problem and the result of its execution was null
-        callback.onError("Wave Login Error"); //Notify the login error using the proper callback method
-      }
-    }
-}    
-	  \end{lstlisting} 
-	  
+	  Se puede ver un esquema del AsyncTask encargado del Login en la Sección \ref{sssec:codeAsynctask} del Apéndíce.
+	    
 	  Este proceso de conexión Http nos deberá devolver una Cookie que trataremos con el onjetivo de generar un SessionId que será necesario para seguir con la conexión al servidor. \textbf{Llegados a este punto, tenemos un proceso de login Http que hace uso de la librería HttpUrlConnection y de un AsyncTask para realizar esa primera conexión al servidor.} Depuramos la aplicación y comprobamos que efectivamente el login Http se realiza correctamente (la respuesta del servidor tiene código 200). \textbf{Sin embargo la aplicación aún no funciona correctamente, pues se cierra al intentar ejecutar el código que se encarga del siguiente paso de la conexión: conectarse por WebSocket.}    
     
     		\subsubsection{Conexión WebSocket}\label{sssec:conWave}
@@ -239,46 +191,7 @@ private class LoginTask extends AsyncTask<String, Void, String> {
 	
 	La solución encontrada fue utilizar wAsync\cite{ref:wAsync_github}, librería proporcionada por Atmosphere para trabajar con Websockets en Node.js, Java y Android. wAsync trabaja creando un socket que responde a eventos diversos, estando entre ellos eventos similares a los utilizados por la versión GWT de SwellRT: \textbf{on(EVENT.name())}, siendo EVENT el nombre del evento al que debe responder. Un ejemplo sencillo de utilización de wAsync sería el siguiente:
 	
-	\lstset{language=Java, breaklines=true, autogobble=true, basicstyle=\ttfamily\footnotesize, commentstyle=\color{OliveGreen}, keywordstyle=\color{MidnightBlue}}
-	  \begin{lstlisting}[frame=single]	  	  
-	  //Create the atmosphere client
-	  AtmosphereClient client = ClientFactory.getDefault().newClient(AtmosphereClient.class);
-	  //Configure client with URL
-      AtmosphereRequestBuilder requestBuilder = client.newRequestBuilder()
-          .method(Request.METHOD.GET).trackMessageLength(true).uri(WaveSocketWAsync.this.urlBase)
-          .transport(Request.TRANSPORT.WEBSOCKET)
-	 //Create and configure socket
-      WaveSocketWAsync.this.socket = client.create(client.newOptionsBuilder().runtime(ahc).build())
-          .on(Event.OPEN.name(), new Function<String>() { //Equivalent to GWT onOpen() method
-            @Override
-            public void on(String arg0) {
-			// set the actions to do and call the proper callback function (callback.onConnect())
-            }
-          }).on(Event.CLOSE.name(), new Function<String>() { //Equivalent to GWT onClose() method
-            @Override
-            public void on(String arg0) {
-            // set the actions to do and call the proper callback function (callback.onDisconnect())
-            }
-          }).on(Event.MESSAGE.name(), new Function<String>() {
-            @Override
-            public void on(String arg) { //Equivalent to GWT onMessage() method
-            // set the actions to do and call the proper callback function (callback.onMessage())
-            }
-          }).on(new Function<Throwable>() {
-            @Override
-            public void on(Throwable t) {
-   			// catch possible exceptions
-            }
-          });
-      try {
-      	// connect to the server
-        socket.open(requestBuilder.build());
-      } catch (IOException e) {
-		// catch possible exceptions
-      } 
-      //send a given message to the server, equivalent to GWT send(msg) method 
-      socket.fire(Data);
-	\end{lstlisting}
+	
 	
 	Como la arquitectura Wave utilizaba el patrón factoria, fue necesario sustituir la clase de WebSocket GWT por una de nueva creación llamada \textbf{WaveSocketWAsync.java}\cite{ref:wave_migration_github} que implementa los métodos de creación y configuración de un Websocket y de callback antes descritos. Asimismo se modificó la clase WaveSocketFactory.java para hacer uso ahora de esta nueva implementación del WebSocket compatible con Android. 
 	
@@ -296,7 +209,7 @@ private class LoginTask extends AsyncTask<String, Void, String> {
     
     Para probar que la aplicación migrada es funcional y es capaz de utilizar las características nativas de Android haremos una pequeña y sencilla pantalla de Login que pedirá al usuario la dirección del servidor Wave, un usuario y una contraseña.
     
-    En el diseño de aplicaciones Android el componente principal de una app es la Actividad, que se corresponde con la pantalla con la que interactúa el usuario. La interfaz gráfica se usuario (UI) de las pantallas se encuentra separada del código de la aplicación en ficheros xml de Layout\cite{ref:android_ui}. A una Actividad se le especifica cuál es su archivo de layout en su método onCreate(), responsable de la creación de la actividad y sus recursos. 
+    En el diseño de aplicaciones Android el componente principal de una app es la Actividad, que se corresponde con la pantalla con la que interactúa el usuario. La interfaz gráfica se usuario (UI) de las pantallas se encuentra separada del código de la aplicación en ficheros xml de Layout\cite{ref:android_layout}. A una Actividad se le especifica cuál es su archivo de layout en su método onCreate(), responsable de la creación de la actividad y sus recursos. 
     
     Creamos una Actividad llamada WaveAndroid.java que haga uso del layout Main.xml, en el cual incluimos tres cajas de texto (llamadas EditText en Android) para que el usuario introduzca los datos. Además guardamos una referencia a estas cajas de texto en la Actividad para poder acceder al texto introducido y pasárselo al método login de Wave que hemos migrado anteriormente.
     
@@ -377,7 +290,7 @@ private class LoginTask extends AsyncTask<String, Void, String> {
       \label{fig:dependencies_swellRT}
     \end{table}       
        
-    \subsection{Resultado de la Migración}
+    \subsection{Resultado de la Migración} \label{ref:migrationResult}
     
     Después de todos estos pasos disponíamos de una versión funcional de SwellRT capaz de conectarse al servidor WIAB de forma nativa desde Android. \textbf{El resultado de esto se puede ver en el GitHub de esta parte del proyecto}\cite{ref:wave_migration_github}. El siguiente es un esquema en forma de Diagrama de Clases del resultado final:
     
