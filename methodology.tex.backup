@@ -162,7 +162,7 @@ Una vez hecho esto, cada vez que ejecutemos la aplicacion saldrá un mensaje de 
 	 
 	 Hay por tanto que encontrar una librería similar compatible con Android que construya una petición \textbf{HTTP POST} y la envíe al servidor. La primera opción que valoramos fue utilizar la \textbf{librería HTTP Apache} \cite{ref:apache_http}, incluida en el SDK de Android desde sus primeras versiones. Sin embargo, Google recomienda \cite{ref:http_recommmendations} a partir del API 10 (Android 2.3 "Gingerbread") utilizar la \textbf{librería HttpURLConnection}\cite{ref:android_httpUrlConnection}, también incluida en el API. Por tanto esta última es la que elegimos para la migración. 
 	 
-	 Se puede ver un esquema simplificado de la nueva estructura del login HTTP en la Sección \ref{sssec:codeHTTP} del Apéndíce.
+	 Se puede ver un esquema simplificado de la nueva estructura del login HTTP en la Sección \ref{ssec:codeHTTP} del Apéndíce.
 	  
 	 Sin embargo, aquí no acaba el problema. Por cuestiones de usabilidad y de respuesta a la interacción del usuario, Android establece dos reglas para trabajar con el proceso de la actividad que se le esta mostrando al usuario (llamado \textbf{UI Thread}) \cite{ref:android_processes}:
 	  
@@ -175,7 +175,7 @@ Una vez hecho esto, cada vez que ejecutemos la aplicacion saldrá un mensaje de 
 	  	 
 	  Es importante también destacar que la arquitectura de SwellRT y de Wave está planteada de manera que utiliza llamadas asíncronas (callbacks) para notificar al resto de la aplicacion del resultado de los procesos de conexión al servidor, por lo que nuestro AsyncTask tendrá que usar el callback apropiado para notificar del éxito o fracaso de la conexión Http.
 	 
-	  Se puede ver un esquema del AsyncTask encargado del Login en la Sección \ref{sssec:codeAsynctask} del Apéndíce.
+	  Se puede ver un esquema del AsyncTask encargado del Login en la Sección \ref{ssec:codeAsynctask} del Apéndíce.
 	    
 	  Este proceso de conexión Http nos deberá devolver una Cookie que trataremos con el onjetivo de generar un SessionId que será necesario para seguir con la conexión al servidor. \textbf{Llegados a este punto, tenemos un proceso de login Http que hace uso de la librería HttpUrlConnection y de un AsyncTask para realizar esa primera conexión al servidor.} Depuramos la aplicación y comprobamos que efectivamente el login Http se realiza correctamente (la respuesta del servidor tiene código 200). \textbf{Sin embargo la aplicación aún no funciona correctamente, pues se cierra al intentar ejecutar el código que se encarga del siguiente paso de la conexión: conectarse por WebSocket.}    
     
@@ -189,9 +189,9 @@ Una vez hecho esto, cada vez que ejecutemos la aplicacion saldrá un mensaje de 
 	
 	Este WebSocket se crea utilizando un \textbf{patrón de diseño Factory}, que abstrae la creación de un objeto de su implementación, de manera que el desarrollador tenga acceso al objeto sin tener que preocuparse de cómo este implementado el WebSocket por debajo (ver WaveSocketFactory.java en SwellRT). En este caso, como ya se ha dicho, con Atmosphere y WebSocket GWT. No obstante, la aplicación no funciona tal y como está hecho en SwellRT ya que android no soporta GWT de forma nativa. Hay que sustituir este código buscando una librería open-source que implemente un WebSocket en Android sobre Atmosphere y que porporcione las mismas funciones básicas descritas en el párrafo anterior.
 	
-	La solución encontrada fue utilizar wAsync\cite{ref:wAsync_github}, librería proporcionada por Atmosphere para trabajar con Websockets en Node.js, Java y Android. wAsync trabaja creando un socket que responde a eventos diversos, estando entre ellos eventos similares a los utilizados por la versión GWT de SwellRT: \textbf{on(EVENT.name())}, siendo EVENT el nombre del evento al que debe responder. Un ejemplo sencillo de utilización de wAsync sería el siguiente:
+	La solución encontrada fue utilizar wAsync\cite{ref:wAsync_github}, librería proporcionada por Atmosphere para trabajar con Websockets en Node.js, Java y Android. wAsync trabaja creando un socket que responde a eventos diversos, estando entre ellos eventos similares a los utilizados por la versión GWT de SwellRT: \textbf{on(EVENT.name())}, siendo EVENT el nombre del evento al que debe responder. 
 	
-	
+	Se puede ver un ejemplo sencillo de utilización de wAsync en la Sección \ref{ssec:codewAsync} del Apéndíce.
 	
 	Como la arquitectura Wave utilizaba el patrón factoria, fue necesario sustituir la clase de WebSocket GWT por una de nueva creación llamada \textbf{WaveSocketWAsync.java}\cite{ref:wave_migration_github} que implementa los métodos de creación y configuración de un Websocket y de callback antes descritos. Asimismo se modificó la clase WaveSocketFactory.java para hacer uso ahora de esta nueva implementación del WebSocket compatible con Android. 
 	
@@ -200,8 +200,8 @@ Una vez hecho esto, cada vez que ejecutemos la aplicacion saldrá un mensaje de 
 	\lstset{language=Java, breaklines=true, autogobble=true, basicstyle=\ttfamily\footnotesize, commentstyle=\color{OliveGreen}, keywordstyle=\color{MidnightBlue}}
 	  \begin{lstlisting}[frame=single]	
 	  AsyncHttpClientConfig ahcConfig = new AsyncHttpClientConfig.Builder().build();
-      AsyncHttpClient ahc = new AsyncHttpClient(new GrizzlyAsyncHttpProvider(ahcConfig));
-      \end{lstlisting}
+	  AsyncHttpClient ahc = new AsyncHttpClient(new GrizzlyAsyncHttpProvider(ahcConfig));
+	  \end{lstlisting}
       
       Ahora, al ejecutar la aplicación comprobamos que la conexión al servidor se produce correctamente. Para completar esta parte del proyecto solo falta pedir al usuario su user y password, ya que hasta ahora las habiamos especificado a mano en el propio código para realizar pruebas.
 	    
@@ -584,9 +584,9 @@ Para definir el Framework de interacción realizaremos un proceso de seis etapas
 
 La aplicación será visualizada en un smartphone bajo el sistema operativo Android (con API 15 como mínimo), con tamaños de pantalla entre 3,5 y 6 pulgadas. Que pueda visualizarse en interiores y exteriores.
 
-La \textbf{postura} será \textbf{temporal}. El usuario puede utilizarlo en periodos de tiempo muy breves como puede ser la consulta de alguna sección, propuesta o dar su valoración. Elaborando una propuesta o participando en el desarrollo de una, el usuario necesitará algo más de tiempo, pero seguirá utilizando funciones básicas. Propias de una postura temporal.
+La \textbf{postura} será \textbf{temporal}. El usuario puede utilizarlo en periodos de tiempo muy breves como puede ser la consulta de alguna sección, propuesta o dar su valoración. Elaborando una propuesta o participando en el desarrollo de una, el usuario necesitará algo más de tiempo, pero seguirá utilizando funciones básicas. Propias de una postura temporal. \\[2cm.]
 
-\textbf{Elementos y datos funcionales}
+\textbf{Elementos y datos funcionales} 
 
 \underline{Elementos de datos}:
 
@@ -702,7 +702,7 @@ De esta forma tuvimos que dar un total de tres vueltas a nuestro modelo en espir
         \centering
         \begin{subfigure}[b]{0.3\textwidth}
                 \includegraphics[width=\textwidth]{Media/Captures/prot1_1.png}
-                \caption{Protipo a papel.}
+                \caption{Protipo en papel.}
                 \label{fig:quipDesktop}
         \end{subfigure}
         ~
@@ -809,7 +809,66 @@ A partir de lo desarrollado hasta el momento, se procedió a diseñar las propue
 \end{enumerate}
 
 \textbf{Escenarios \textit{key path}}
+
+En esta sección describiremos los escenarios \textit{key path}, que descrien cómo interactúa una persona con la interfaz diseñada en el framework de interacción. Son la evolución de los escenarios de contexto, pero describiendo cómo interactúa la persona con los elemenos de datos funcionales en la interfaz.
+
+\begin{enumerate}[label=\textbf{\Roman*}]
+
+\item \textbf{Escenario de cómo visualizar un programa político de un partido que se presenta a las elecciones.}
+
+Faltan quince días para las elecciones generales y Carlos aún no ha decidido su voto. Un amigo le recomienda que instale \textit{DemoCritics} para poder leer algún programa político y ver las propuestas de las diferentes opciones políticas. Dentro de la aplicación, Carlos visualiza la lista de todos los partidos que se presentan a las próximas elecciones generales, y dentro de cada uno, puede visualiar el programa. Obteniendo un \textit{top} de las secciones más populares, Carlos visualiza las partes del programa que más llaman su atención.
+
+\item \textbf{Escenario de cómo agregar una nueva propuesta en el sistema.}
+
+Laura trabaja en la administración de la EMT y lleva varios días discutiendo con sus compañeros de trabajo una forma de reestructurar las líneas de autobuses. De forma que no confluyan todas en el centro, si no que alguna línea recorra los barrios exteriores del centro. Laura decide instalar \textit{DemoCritics} para poner en conocimiento de toda la ciudadanía la propuesta que lleva semanas trabajando. Para ello Larua se sitúa en la parte de \textit{propuestas} de la aplicación y agrega una nueva. Introduciendo la descripción de la propuesta, cómo piensa llevarla a cabo y el coste que supondría, Laura consigue publicar su propuesta en la aplicación para que los usuarios puedan valorarla y debatirla.
+
+\item \textbf{Escenario sobre cómo solicitar ayuda para elaborar una propuesta.}
+
+Manuel es un gran aficionado a la música, y en la localidad donde vive no hay escuelas de música municipales. Él quiere llevar a cabo una propuesta que se base en el desarrollo de nuevas escuelas de música municipales en puntos estratégicos y así fomentar la educación musical. Manuel toma su móvil en la pantalal principal de \textit{DemoCritics} y solicita la colaboración de una propuesta que facilite la creación de escuelas musicales. Ya que a pesar de ser un gran aficionado musical, Manuel no sabe cómo llevar a cabo esa propuesta o qué presupuesto necesitataría. Así pidiendo ayuda a los usuarios, Manuel tendrá desarrollada su propuesta por aquellos interesados y expertos del tema en la comunidad.
+
+\item \textbf{Escenario para colaborar en el desarrollo de una propuesta.}
+
+Sofía lleva varios años trabajando en la adminsitración pública del estado, y siempre ha querido ayudar utilizando la experiencia que le ha dado su trabajo estos años. Pero nunca ha sabido ni dónde ni cómo colaborar. Un conocido le recomienda instalar \textit{DemoCritics} en su móvil personal, así podría ayudar a personas que necesitaran ayuda de sus conocimientos. Con la aplicación instalada, Sofía se dirige a las propuestas colaborativas para explorar aquellas propuestas que están en desarrollo y pueden necesitar su ayuda. Seleccionada la propuesta, accede a su contenido y procede a editar el documento que explica cómo se llevaría a cabo la propuesta.
+
+\end{enumerate}
+
 \textbf{Escenarios de validación}
+
+En esta fase se pondrán a prueba los escenarios, validando a ciertas situaciones que nos ayudarán a encontrar fallos o posibles mejoras en el diseño. Utilizaremos preguntas para definir la respuesta del sistema para problemas o dudas que puedan surgir.
+
+\begin{enumerate}[label=\textbf{\Alph*}]
+
+ \item \textbf{Qué pasaría si un usuario accede a la aplicación por primera vez y quisera consultar el programa político de un partido en concreto?}
+ 
+ El usuario accedería a la pantalal principal de la aplicación (ver figura \ref{fig:mainFrameApp}), donde podría diferenciar cuatro grupos principales: \textit{Programas Políticos}, \textit{Categorías}, \textit{Propuestas Ciudadanas} y \textit{Colabora}. Accediendo sobre el icono de programas políticos, la aplición mostraría al usuario el listado de partidos políticos para explorar los programas. Al usuario le bastaría con seleccionar el partido polítco del que quisiera consultar su programa electoral. Finalmente, la aplicación mostaría al usuario el índice del programa electoral del partido seleccionado. 
+ 
+  	\begin{figure}[!]
+      \centering
+	\includegraphics[keepaspectratio, scale=0.3]{Media/Captures/mainFrame.png}
+      \caption{Pantalla principal de la aplicación.}
+      \label{fig:mainFrameApp}
+    \end{figure} 
+ 
+ \item \textbf{¿Cómo podría acceder un usuario a las secciones de todos los programas donde tratan un tema en concreto}
+ 
+ Desde el menú principal, el usuario accedería al menú de \textit{categorías} para filtrar las secciones o propuestas por temas. Una vez allí, el usuario seleccionaría la categoría (ver figura \ref{fig:categoriesFrame}) que deseara para obtener todas las secciones de los programas de los partidos políticos que estuvieran relacionadas con esa categoría en concreto.
+ 
+      	\begin{figure}[!]
+      \centering
+	\includegraphics[keepaspectratio, scale=0.3]{Media/Captures/categoriesFrame.png}
+      \caption{Vista de categorías.}
+      \label{fig:categoriesFrame}
+    \end{figure} 
+ 
+ \item \textbf{¿Qué tendría que hacer un usuario que queire publicar una nueva propuesta relacionada con la educación}
+ 
+ Debería ir al menú de \textit{propuestas} de la aplicación y seleccionar el botón de \textit{agregar} situado abajo a la derecha para acceder al formulario para publicar una nueva propuesta. Dentro del formulario, el usuario deberá de seleccionar la categioría de \textit{sanidad}
+ 
+ \item \textbf{¿Cómo podría colaborar un experto en cultura en la aplicación?}
+ 
+ Para ver si alguna propuesta requiere la ayuda de alguien en el mundo de la cultura, deberá acceder al menú \textit{Colabora} y seleccionar la categoría \textit{Cultura} entre las listadas de la aplicación. Allí seleccionará aquellas propuestas que le resulten de interés para ayudar a su elaboración. Dentro de la proyesta podrá redactar en un \textit{pad} colaborativo cómo llevar a cabo la propuesta o cómmo financiarla.
+ 
+\end{enumerate}
 
 \subsection{Principios de Diseño}
 
@@ -877,3 +936,128 @@ Cada vez que completábamos una funcionalidad la subíamos a \textit{GitHub} y s
 Recibimos una evaluación de usabilidad externa por parte de un director del Trabajo de Fin de Grado, que valoraba aspectos a mejorar de la Intefaz de Usuario (UI). Esta evaluación nos sivió para modificar algunos aspectos de representación gráfica que mejorararían la interpretación de los elementos por parte del usuario.
 
 \section{Evaluación con Usuarios}
+
+En esta última fase del diseño, realizaremos evaluaciones de usuarios con el prototipo final desarrollado en Android. Con esto comprobaremos la experiencia de los usuarios evaluados con el resultado final del proyecto y ver los objetivos que han sido logrados.
+
+\subsection{Propósitos y objetivos de la evaluación}
+
+El objetivo principal de la evaluación pretende poner a prueba la funcionalidad con los usuarios. Queremos analizar cómo se desenvuelven los usuarios con la aplicación y cómo utilizan las funcionalidades que ofrece. Para ello determinamos si se cumplen los siguientes objetivos:
+
+\begin{itemize}
+ \item El usuario siente el poder total sobre la aplicación.
+ \item El usuario es capáz de comprender las actividades que realiza.
+ \item Se cumple el objetivo inicial del proyecto. 
+\end{itemize}
+
+\subsection{Presguntas de investigación}
+
+A continuación se expone un listado de preguntas de las que obtendremos sus respuestas con los resultados de la evaluación.
+
+\begin{itemize}
+ \item ¿Es fácil distinquir los elementos de la aplicación?
+ \begin{itemize}
+  \item ¿Se distinguen bien los iconos y símbolos?
+  \item ¿Es fácil acordarse de la ubicación de cada elemento?
+ \end{itemize}
+ \item ¿Se entienden las transiciones entre pantallas?
+ \begin{itemize}
+  \item ¿Puede saberse lo que realiza la aplicación por detrás?
+ \end{itemize}
+  \item ¿Se pueden hacer las acciones con pocas pulsaciones?
+  \begin{itemize}
+   \item ¿Cuánto se tarde en realizar una acción?
+   \item ¿Hay alguna tarea que requiera muchas pulsaciones?
+  \end{itemize}
+  \item ¿Se puede visualizar todos los elementos de un solo vistazo?
+  \begin{itemize}
+   \item ¿Es complicado localizar algún elemento o información a simple vista?
+  \end{itemize}
+ \end{itemize}
+
+\subsection{Requisitos para los participantes de la evaluación}
+
+la evaluación será realizada por dos tipos de participantes definidos en la fase de modelado:
+
+\begin{itemize}
+ \item \textbf{Ciudadano}
+ \begin{itemize}
+  \item Ciudadano de a apie inscrito en el censo con capacidad para votar en las próximas elecciones.
+  \item Edad: a partir de 18 años.
+  \item Familiarizados con el uso de herramientas móviles preferiblemente en dispositivos Android.
+ \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+ \item \textbf{Activista social}
+ \begin{itemize}
+  \item Activista social que participa en mareas o movimientos sociales afines a una causa.
+  \item Edad: a partir de 18 años.
+  \item Familiarizados con el uso de herramientas de participación ciudadana.
+ \end{itemize}
+\end{itemize}
+
+\subsection{Diseño experimental}
+
+Las evaluaciones tendrán una duración estimada entre 4 y 7 minutos. Realizando un total de 4 evaluaciones, formadas por ciudadanos y activistas sociales mayores de 18 años. En cada una se deberán cumplir las siguientes normas y pasos:
+
+\begin{enumerate}
+ \item Se dará una breve introducción a los participantes, explicándoles sobre la temática de la aplicación y el objetivo que se persigue.
+ \item El usuario recibirá una lista con las tareas a realizar durante la evaluación. Para llevarlas a cabo, el usuario evaluado podrça tomarse todo el tiempo que estime oportuno.
+ \item Durante la evaluación se mantendrá una videollamada con el evaluado para observar todas las reacciones a la hora de realizar las tareas en la aplicación. El moderador también apuntará los tiempos que tarda en finalizar las tareas.
+ \item Si el usuario evaluado no pudiera resolver una tarea en menos de 3-4 minutos, o quedase atascado en la misma un tiempo superior a 45 segundos, el moderador le ordenará que para a la siguiente tarea. Se anotarán con especial atención las tareas que no pudieran ser completadas con éxito durante la evaluación.
+ \item Tras finalizar con las tareas de la evaluación, el usuario rellenará un pequeño formulario online para expresar su opinión y experiencia de uso con la aplicación.
+ \item Al final de la sesión el moderador apuntará todas las objeciones de la evaluación, así como las conclusiones del mismo, para posteriormente ponerlas en común y analizarlas.
+ \end{enumerate}
+
+\subsection{Lista de tareas a realizar}
+
+Este es el listado de tareas que deberá realizar el usuario en la aplicación en función del tipo:
+
+\begin{itemize}
+ \item \textbf{Ciudadano}
+ \begin{itemize}
+  \item Visualizar los diferentes programas políticos que se prensentan a las elecciones.
+  \item Acceder a las secciones más debatidas, valoradas, comentadas, etc.
+  \item Visualizar una sección de la catgoría \textit{cultura} de un partido político en concreto.
+  \item Valorar una sección después de haberla leído y realizar un comentario valorando la sección.
+ \end{itemize}
+\end{itemize}
+
+\begin{itemize}
+ \item \textbf{Activista Social}
+ \begin{itemize}
+  \item Visualizar el listado de propuestas publicadas en el sistema.
+  \item Mostrar las propuestas de la catgoría \textit{educación} publicadas hasta el momento.
+  \item Leer el contenido de una propuesta, valorarlo y realizar un comentario.
+  \item Publicar una nueva propuesta en la categoría \textit{vivienda} en el sistema.
+ \end{itemize}
+\end{itemize}
+
+\subsection{Entorno y herramientas que vamos a emplear}
+
+HERRAMIENTAS QUE SE UTILIZARON EN LA EVALUACION: SKYPE, CAMTASIA STUDIO,...
+
+\subsection{Tareas del moderador}
+
+El moderador será el responsable de guíar el proceso de la evaluación con el usuario. Al comienzo de la evaluación el moderador realizará una videollamada por \textit{Skype} para ponerse en contacto con el usuario evaluado. Al comienzo de la misma soclicitará al usuario la instalación de \textit{DemoCritics} en su dispositivo. Durante la evaluación el moderador deberá realizar las siguientes acciones:
+
+\begin{enumerate}
+ \item
+ \item
+ \item
+ \item
+\end{enumerate}
+
+\subsection{Datos que se van a recolectar}
+
+\subsection{Metodología de análisis de datos}
+
+\subsection{Resultados de la evaluación con los usuarios}
+
+\subsubsection{Comentarios sobre la interfaz}
+
+\subsubsection{Resultados de las tareas}
+
+\subsubsection{Resultados de los cuestionarios}
+
+\subsubsection{Informe de hallazgos y recomendaciones}

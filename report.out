@@ -102,44 +102,58 @@
 \BOOKMARK [2][-]{subsection.5.3.6}{Principios de Dise\361o}{section.5.3}% 102
 \BOOKMARK [1][-]{section.5.4}{Implementaci\363n de DemoCritics}{chapter.5}% 103
 \BOOKMARK [2][-]{subsection.5.4.1}{Metodolog\355a}{section.5.4}% 104
-\BOOKMARK [3][-]{section*.52}{Control de versiones}{subsection.5.4.1}% 105
-\BOOKMARK [3][-]{section*.52}{GitHub}{subsection.5.4.1}% 106
-\BOOKMARK [3][-]{section*.52}{Reparto de tareas}{subsection.5.4.1}% 107
-\BOOKMARK [3][-]{section*.52}{Revisiones de c\363digo}{subsection.5.4.1}% 108
-\BOOKMARK [3][-]{section*.52}{Evaluaciones de usabilidad}{subsection.5.4.1}% 109
+\BOOKMARK [3][-]{section*.54}{Control de versiones}{subsection.5.4.1}% 105
+\BOOKMARK [3][-]{section*.54}{GitHub}{subsection.5.4.1}% 106
+\BOOKMARK [3][-]{section*.54}{Reparto de tareas}{subsection.5.4.1}% 107
+\BOOKMARK [3][-]{section*.54}{Revisiones de c\363digo}{subsection.5.4.1}% 108
+\BOOKMARK [3][-]{section*.54}{Evaluaciones de usabilidad}{subsection.5.4.1}% 109
 \BOOKMARK [1][-]{section.5.5}{Evaluaci\363n con Usuarios}{chapter.5}% 110
-\BOOKMARK [0][-]{chapter.6}{Arquitectura del Proyecto}{}% 111
-\BOOKMARK [1][-]{section.6.1}{Arquitectura de Wave}{chapter.6}% 112
-\BOOKMARK [2][-]{subsection.6.1.1}{Modelo Conversacional Wave}{section.6.1}% 113
-\BOOKMARK [2][-]{subsection.6.1.2}{Modelo de Contenidos SwellRT}{section.6.1}% 114
-\BOOKMARK [1][-]{section.6.2}{Arquitectura de la aplicaci\363n}{chapter.6}% 115
-\BOOKMARK [2][-]{subsection.6.2.1}{Base de datos}{section.6.2}% 116
-\BOOKMARK [2][-]{subsection.6.2.2}{Service REST}{section.6.2}% 117
-\BOOKMARK [3][-]{table.caption.60}{Arquitectura}{subsection.6.2.2}% 118
-\BOOKMARK [3][-]{figure.caption.61}{Rutas}{subsection.6.2.2}% 119
-\BOOKMARK [3][-]{lstnumber.-9.1}{Controladores}{subsection.6.2.2}% 120
-\BOOKMARK [2][-]{subsection.6.2.3}{Cliente Android}{section.6.2}% 121
-\BOOKMARK [3][-]{section*.63}{Interfaz Gr\341fica}{subsection.6.2.3}% 122
-\BOOKMARK [3][-]{table.caption.66}{Estructuraci\363n de Programas Pol\355ticos}{subsection.6.2.3}% 123
-\BOOKMARK [3][-]{figure.caption.68}{Conexi\363n y Peticiones a Service REST y Base de Datos}{subsection.6.2.3}% 124
-\BOOKMARK [3][-]{lstnumber.-11.1}{Gesti\363n de Usuarios: ID de Android}{subsection.6.2.3}% 125
-\BOOKMARK [3][-]{lstnumber.-11.1}{Servicio Android de Conexi\363n con Wave}{subsection.6.2.3}% 126
-\BOOKMARK [3][-]{lstnumber.-11.1}{Peticiones a Wave}{subsection.6.2.3}% 127
-\BOOKMARK [0][-]{chapter.7}{Resultados, Conclusiones y Trabajo Futuro}{}% 128
-\BOOKMARK [1][-]{section.7.1}{Discusion de Resultados}{chapter.7}% 129
-\BOOKMARK [1][-]{section.7.2}{Conclusiones}{chapter.7}% 130
-\BOOKMARK [1][-]{section.7.3}{Trabajo Futuro}{chapter.7}% 131
-\BOOKMARK [2][-]{subsection.7.3.1}{Mejoras}{section.7.3}% 132
-\BOOKMARK [0][-]{appendix.Alph1}{Listados de C\363digo Fuente}{}% 133
-\BOOKMARK [1][-]{section.Alph1.1}{Migraci\363n de Wave a Android: SwellRT}{appendix.Alph1}% 134
-\BOOKMARK [2][-]{subsection.Alph1.1.1}{Esquema de conexi\363n HTTP}{section.Alph1.1}% 135
-\BOOKMARK [2][-]{subsection.Alph1.1.2}{Esquema de conexi\363n con AsyncTask}{section.Alph1.1}% 136
-\BOOKMARK [2][-]{subsection.Alph1.1.3}{Esquema de uso de WAsync}{section.Alph1.1}% 137
-\BOOKMARK [1][-]{section.Alph1.2}{Service REST \(Laravel\)}{appendix.Alph1}% 138
-\BOOKMARK [2][-]{subsection.Alph1.2.1}{Esquema de Rutas Simple}{section.Alph1.2}% 139
-\BOOKMARK [2][-]{subsection.Alph1.2.2}{Esquema de Rutas Agrupadas}{section.Alph1.2}% 140
-\BOOKMARK [2][-]{subsection.Alph1.2.3}{Esquema de Rutas de Propuestas Agrupadas}{section.Alph1.2}% 141
-\BOOKMARK [2][-]{subsection.Alph1.2.4}{Esquema de Controlador de Propuestas}{section.Alph1.2}% 142
-\BOOKMARK [1][-]{section.Alph1.3}{Aplicaci\363n Android}{appendix.Alph1}% 143
-\BOOKMARK [2][-]{subsection.Alph1.3.1}{Funci\363n de construcci\363n del \341rbol de Programa Pol\355tico}{section.Alph1.3}% 144
-\BOOKMARK [0][-]{lstnumber.-19.46}{Bibliograf\355a}{}% 145
+\BOOKMARK [2][-]{subsection.5.5.1}{Prop\363sitos y objetivos de la evaluaci\363n}{section.5.5}% 111
+\BOOKMARK [2][-]{subsection.5.5.2}{Presguntas de investigaci\363n}{section.5.5}% 112
+\BOOKMARK [2][-]{subsection.5.5.3}{Requisitos para los participantes de la evaluaci\363n}{section.5.5}% 113
+\BOOKMARK [2][-]{subsection.5.5.4}{Dise\361o experimental}{section.5.5}% 114
+\BOOKMARK [2][-]{subsection.5.5.5}{Lista de tareas a realizar}{section.5.5}% 115
+\BOOKMARK [2][-]{subsection.5.5.6}{Entorno y herramientas que vamos a emplear}{section.5.5}% 116
+\BOOKMARK [2][-]{subsection.5.5.7}{Tareas del moderador}{section.5.5}% 117
+\BOOKMARK [2][-]{subsection.5.5.8}{Datos que se van a recolectar}{section.5.5}% 118
+\BOOKMARK [2][-]{subsection.5.5.9}{Metodolog\355a de an\341lisis de datos}{section.5.5}% 119
+\BOOKMARK [2][-]{subsection.5.5.10}{Resultados de la evaluaci\363n con los usuarios}{section.5.5}% 120
+\BOOKMARK [3][-]{section*.55}{Comentarios sobre la interfaz}{subsection.5.5.10}% 121
+\BOOKMARK [3][-]{section*.55}{Resultados de las tareas}{subsection.5.5.10}% 122
+\BOOKMARK [3][-]{section*.55}{Resultados de los cuestionarios}{subsection.5.5.10}% 123
+\BOOKMARK [3][-]{section*.55}{Informe de hallazgos y recomendaciones}{subsection.5.5.10}% 124
+\BOOKMARK [0][-]{chapter.6}{Arquitectura del Proyecto}{}% 125
+\BOOKMARK [1][-]{section.6.1}{Arquitectura de Wave}{chapter.6}% 126
+\BOOKMARK [2][-]{subsection.6.1.1}{Modelo Conversacional Wave}{section.6.1}% 127
+\BOOKMARK [2][-]{subsection.6.1.2}{Modelo de Contenidos SwellRT}{section.6.1}% 128
+\BOOKMARK [1][-]{section.6.2}{Arquitectura de la aplicaci\363n}{chapter.6}% 129
+\BOOKMARK [2][-]{subsection.6.2.1}{Base de datos}{section.6.2}% 130
+\BOOKMARK [2][-]{subsection.6.2.2}{Service REST}{section.6.2}% 131
+\BOOKMARK [3][-]{table.caption.63}{Arquitectura}{subsection.6.2.2}% 132
+\BOOKMARK [3][-]{figure.caption.64}{Rutas}{subsection.6.2.2}% 133
+\BOOKMARK [3][-]{lstnumber.-9.1}{Controladores}{subsection.6.2.2}% 134
+\BOOKMARK [2][-]{subsection.6.2.3}{Cliente Android}{section.6.2}% 135
+\BOOKMARK [3][-]{section*.66}{Interfaz Gr\341fica}{subsection.6.2.3}% 136
+\BOOKMARK [3][-]{table.caption.69}{Estructuraci\363n de Programas Pol\355ticos}{subsection.6.2.3}% 137
+\BOOKMARK [3][-]{figure.caption.71}{Conexi\363n y Peticiones a Service REST y Base de Datos}{subsection.6.2.3}% 138
+\BOOKMARK [3][-]{lstnumber.-11.1}{Gesti\363n de Usuarios: ID de Android}{subsection.6.2.3}% 139
+\BOOKMARK [3][-]{lstnumber.-11.1}{Servicio Android de Conexi\363n con Wave}{subsection.6.2.3}% 140
+\BOOKMARK [3][-]{lstnumber.-11.1}{Peticiones a Wave}{subsection.6.2.3}% 141
+\BOOKMARK [0][-]{chapter.7}{Resultados, Conclusiones y Trabajo Futuro}{}% 142
+\BOOKMARK [1][-]{section.7.1}{Discusion de Resultados}{chapter.7}% 143
+\BOOKMARK [1][-]{section.7.2}{Conclusiones}{chapter.7}% 144
+\BOOKMARK [1][-]{section.7.3}{Trabajo Futuro}{chapter.7}% 145
+\BOOKMARK [2][-]{subsection.7.3.1}{Mejoras}{section.7.3}% 146
+\BOOKMARK [0][-]{appendix.Alph1}{Listados de C\363digo Fuente}{}% 147
+\BOOKMARK [1][-]{section.Alph1.1}{Migraci\363n de Wave a Android: SwellRT}{appendix.Alph1}% 148
+\BOOKMARK [2][-]{subsection.Alph1.1.1}{Esquema de conexi\363n HTTP}{section.Alph1.1}% 149
+\BOOKMARK [2][-]{subsection.Alph1.1.2}{Esquema de conexi\363n con AsyncTask}{section.Alph1.1}% 150
+\BOOKMARK [2][-]{subsection.Alph1.1.3}{Esquema de uso de WAsync}{section.Alph1.1}% 151
+\BOOKMARK [1][-]{section.Alph1.2}{Service REST \(Laravel\)}{appendix.Alph1}% 152
+\BOOKMARK [2][-]{subsection.Alph1.2.1}{Esquema de Rutas Simple}{section.Alph1.2}% 153
+\BOOKMARK [2][-]{subsection.Alph1.2.2}{Esquema de Rutas Agrupadas}{section.Alph1.2}% 154
+\BOOKMARK [2][-]{subsection.Alph1.2.3}{Esquema de Rutas de Propuestas Agrupadas}{section.Alph1.2}% 155
+\BOOKMARK [2][-]{subsection.Alph1.2.4}{Esquema de Controlador de Propuestas}{section.Alph1.2}% 156
+\BOOKMARK [1][-]{section.Alph1.3}{Aplicaci\363n Android}{appendix.Alph1}% 157
+\BOOKMARK [2][-]{subsection.Alph1.3.1}{Funci\363n de construcci\363n del \341rbol de Programa Pol\355tico}{section.Alph1.3}% 158
+\BOOKMARK [0][-]{lstnumber.-19.46}{Bibliograf\355a}{}% 159
