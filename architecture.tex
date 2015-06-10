@@ -81,20 +81,40 @@ Por último, la \textbf{Base de Datos MySQL} alojada en el servidor de OpenShift
 
 En la implementación de la Base de Datos se ha utilizado un Modelo Relacional para la definición de las tablas. Utilizando MySQL \cite{ref:mysql} como sistema de gestión de base de datos (SGBD) y phpMyAdmin \cite{ref:phpMyAdmin} como herramienta de gestión gráfica de la base de datos.
 
-La base de datos está formada por un total de 12 tablas donde se almacena toda la información relacionada con los programas de los partidos políticos, las propuestas ciudadanas, encuestas, comparativas... y otros datos más técnicos como la gestión de los usuarios, la relación de los comentarios o la relación entre las secciones y comparativas entre otras.
+La base de datos está formada por un total de nueve tablas donde se almacena toda la información relacionada con los programas de los partidos políticos, las propuestas ciudadanas,...y otros datos más técnicos como la gestión de los usuarios, la relación de los comentarios o la relación entre las secciones y comparativas entre otras.
 
-\begin{figure}[H]
+\begin{figure}[!]
 \centering
 \includegraphics[keepaspectratio, scale=0.40]{Media/Captures/database.png}
 \caption{Modelo entidad-relación de la base de datos.}
 \label{fig:ermodel}
 \end{figure}
 
-Las tablas \textit{section} y \textit{political-party} son utilizadas para guardar información estática en la aplicación. Es decir, en la tabla \textit{political-party} se almacenan los partidos políticos que se presentan a unas elecciones, y en la tabla \textit{section}, las diferentes secciones de un programa electoral. Tan sólo modificaremos las columnas de \textit{likes}, \textit{dislikes}, \textit{not-understood} y \textit{views} para obtener estadísticas de uso de cada sección. El resto de las columnas permanecerán intactas.
+Las tablas \textit{section} y \textit{political\_party} son utilizadas para guardar información estática en la aplicación. Es decir, en la tabla \textit{political\_party} se almacenan los partidos políticos que se presentan a unas elecciones, y en la tabla \textit{section}, las diferentes secciones de un programa electoral. Tan sólo modificaremos las columnas de \textit{likes}, \textit{dislikes}, \textit{not\_understood} y \textit{views} para obtener estadísticas de uso de cada sección. El resto de las columnas permanecerán intactas.
 
-EXPLICAR RESTO DE TABLAS. DATOS ESTATICOS VS DINAMICOS
+Definimos como datos \textit{estáticos} como aquellos datos que permancen intactos en la aplicación desde el inicio. Son datos que no requieren modificarse y siempre permanecerán intactos, al no ser que surgiera algún fallo o imprevisto en la aplicación. Estos datos principalmente estará formado los partidos políticos y sus programas. Pues entendemos que de cara a unas elecciones los partidos políticos no suelen cambiar su nombre, logo o lo que es el programa electoral. Por lo tanto esos datos permanecerán intactos durante el uso de la aplicación. Sin embargo, la aplicación contará con fatos \textit{dinámicos} como aquellos datos que se ven generando y con el tiempo pueden cambiar o eliminarse. Este tipo de dato hará relación a la mayor parte de la actividad del usuario con la aplicación. Por ejemplo, cuando un usuario agrega una nueva propuesta, esta propuesta será añadida como una fila más de la tabla \textit{proposals}. Además esta nueva fila estará sujeta a cambios que definirán su valoración, el número de comentarios, el número de visualizaciones, etcétera.
 
-Las demás tablas serán utilizadas para guardar datos dinámicos de la aplicación. Datos que normalmente genera un usuario visitando una sección de un programa, creando una propuesta, haciendo un comentario, etc.
+A continuación se procederá a explicar las tablas más relevantes de la base de datos:
+
+\subsubsection{\textit{political\_party}}
+
+Esta tabla contiene la información relacionada con los partidos políticos que se presentarán a las elecciones. Por tanto nos interesará guardar el nombre del partido, un logo que los identifique en formato \textit{blob} y un identificador único para relacionarlos con sus programas políticos.
+
+\subsubsection{\textit{section}}
+
+Esta es una de las tablas más complejas de la aplicación, pues contiene toda la información de los programas políticos. Encontraremos dos claves primarias definidas como \textit{id\_political\_party} y \textit{section}, que harán referencia a una sección concreta de un partido político. De esta forma nunca encontraremos una fila que contenga la misma sección de un programa del mismo partido político dos veces, ya que a cada sección le correspondería un solo partido político (para más información sobre la estructura del campo \textit{secion} consultar el capítulo \ref{sssec:politicalProgramArch}). Por otro lado tenemos el contenido de la propia sección como del programa político, es decir, el título de la sección, el contenido en texto,...como datos \textit{estáticos} de la tabla. Y por último, los indicadores sociales de \textit{likes}, \textit{not\_understood}, \textit{dislikes} y \textit{views} como datos \textit{dinámicos} que se irán actualizando con la actividad de los usuarios.
+
+\subsubsection{\textit{proposal}}
+
+La tabla encargada de almacenar las propuestas que se van agregando a la aplicación, será definida por campos como un identificador único para la propuesta, el identificador del usuario que ha publicado la propuesta y el contenido de dicha propuesta. Estos datos serán \textit{estáticos} una vez que se inserten en la base de datos Al igual que la tabla \textit{section}, también tendrá columnas de caracter social y estadísticos que irán modificándose con la actividad de los usuarios en el sistema. Por último, para diferenciar una propuesta publicada de una propuesta colaborativa, siendo esta última la que hace uso de \textit{SwellRT} para edición colaborativa, definiremos dos identificadores que harán referencia a dos documentos colaborativos alojados en el servidor. De esta forma podemos saber cuando una propuesta se está desarrollando o está definitivamente publicada. Ya que para las propuestas publicadas en la aplicación, estas dos columnas tendrán el valor \textit{null}, ya que no harán referencia a ningún documento colaborativo.
+
+\subsubsection{\textit{comment}}
+
+Para almacenar los comentarios generados por los usuarios en la aplicación, se utilizará la tabla \textit{comment} que guardará el identificador del usuario y el texto del comentario. Esta tabla guardará los comentarios realizados en las secciones como también los comentarios en las propuestas. De tal forma que un comentario para una sección de un programa político, irá acompañado de las columnas \textit{id\_political\_party} y \textit{section} de la misma manera que se relacionan las secciones de programas con partidos políticos. De lo contrario, si un comentario pertenece a una propuesta, deberá contener el identificador único de la misma mientras que los anteriores campos estarán a \textit{null}. El resto de las columnas estarán formadadas por datos de valoración y carácter social.
+
+\subsubsection{\textit{opinion}}
+
+Esta tabla será la referencia que almacenará las opiniones o valoraciones de un usuario en las propuestas y secciones de programas de la aplicación. De tal forma que se guardará el identificador del usuario que ha añadido esa opinión, acompañado del identficador de la propuesta si es el caso o el identificador de la sección del programa y el partido político en el caso de que se encuentre valorando una sección. Para indicar el valor de la opinión del usuario, es decir si ha valorado la sección o propuesta como \textit{like}, \textit{dislike}, etc, se utilizarán columnas que contendrán un entero que indicará el tipo de valoración que ha pulsado el usuario. De tal forma que el usuario siempre pueda cambiar su opinión o borrarla.
 
 \subsection{Service REST} \label{ssec:seviceREST}
 
@@ -215,8 +235,7 @@ La conexión a la base de datos se encuentra configurada en el archivo \textit{/
   language        = c,    inputencoding=utf8}
 \begin{lstlisting}[frame=single]
 [
-  {"id":1,"title":"Reducir la contaminaci\u00f3n en Madrid","text":"Actualmente la contaminaci\u00f3n en Madrid est\u00e1 llegando a unos l\u00edmites por encima de la media de las principales ciudades de la Uni\u00f3n Europea. Por ello deber\u00edamos reducir esa contaminaci\u00f3n ambiental acerc\u00e1ndonos a la media europea.","how":"Cerrando el tr\u00e1fico en determinadas zonas de Madrid. Distrito: Zona Centro.","cost":"Hacer 7 km de calles peatonales: 750.000 \u20ac","id_image":4,"date":"2015-05-06 00:00:00","id_category":4,"id_user":"6d823fa54c6d1a12","views":4,"likes":3,"not_understood":0,"dislikes":0},
-  {"id":2,"title":"Restaurar el plan de estudios del '98","text":" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lobortis, sapien eget dignissim efficitur, augue eros molestie purus, et gravida erat quam a lacus. Fusce vel eros cursus, venenatis dui ac, aliquet risus. Fusce euismod ex at varius lacinia. Sed at urna condimentum orci volutpat eleifend nec id erat. Sed at vestibulum neque. Maecenas vehicula hendrerit felis, quis condimentum arcu commodo eu. Sed egestas, orci eget ultricies mollis, est leo porttitor sem, at elementum enim arcu ut magna. ","how":"Suprimienndo el plan Bolonia de los grados de 4 a\u00f1os a licenciaturas y diplomaturas.","cost":"Coste 0.","id_image":2,"date":"2015-05-18 00:00:00","id_category":2,"id_user":"d2d115f79ab3a7a4","views":12,"likes":0,"not_understood":1,"dislikes":0}
+  {"id":1,"title":"Reducir la contaminaci\u00f3n en Madrid","text":"Actualmente la contaminaci\u00f3n en Madrid est\u00e1 llegando a unos l\u00edmites por encima de la media de las principales ciudades de la Uni\u00f3n Europea. Por ello deber\u00edamos reducir esa contaminaci\u00f3n ambiental acerc\u00e1ndonos a la media europea.","how":"Cerrando el tr\u00e1fico en determinadas zonas de Madrid. Distrito: Zona Centro.","cost":"Hacer 7 km de calles peatonales: 750.000 \u20ac","id_image":4,"date":"2015-05-06 00:00:00","id_category":4,"id_user":"6d823fa54c6d1a12","views":4,"likes":3,"not_understood":0,"dislikes":0}
 ]
 \end{lstlisting}
 
@@ -300,7 +319,7 @@ La conexión a la base de datos se encuentra configurada en el archivo \textit{/
 	\label{fig:tableAdapters}
 \end{table}
 		
-	\subsubsection{Estructuración de Programas Políticos}
+	\subsubsection{Estructuración de Programas Políticos}\label{sssec:politicalProgramArch}
 
 		A la hora de almacenar los Programas Políticos en la Base de Datos tuvimos que estudiar la forma más adecuada de hacerlo para poder estructurar dichos programas en distintos niveles de secciones y subsecciones. En definitiva, el problema radicaba en cómo codificar la información de a qué nivel de anidamiento pertenecía cada Sección. Además, teniamos dos opciones: o bien el service REST devolvía un programa ya estructurado o la propia aplicación se encargaba de estructurarlos. \\
 		

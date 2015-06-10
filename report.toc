@@ -117,7 +117,7 @@
 \contentsline {subsection}{\numberline {5.5.5}Lista de tareas a realizar}{94}{subsection.5.5.5}
 \contentsline {subsection}{\numberline {5.5.6}Entorno y herramientas que vamos a emplear}{94}{subsection.5.5.6}
 \contentsline {subsection}{\numberline {5.5.7}Tareas del moderador}{95}{subsection.5.5.7}
-\contentsline {subsection}{\numberline {5.5.8}Datos que se van a recolectar}{96}{subsection.5.5.8}
+\contentsline {subsection}{\numberline {5.5.8}Datos que se van a recolectar}{95}{subsection.5.5.8}
 \contentsline {subsection}{\numberline {5.5.9}Metodolog\IeC {\'\i }a de an\IeC {\'a}lisis de datos}{96}{subsection.5.5.9}
 \contentsline {subsection}{\numberline {5.5.10}Resultados de la evaluaci\IeC {\'o}n con los usuarios}{96}{subsection.5.5.10}
 \contentsline {subsubsection}{Comentarios sobre la interfaz}{96}{section*.55}
@@ -130,17 +130,22 @@
 \contentsline {subsection}{\numberline {6.1.2}Modelo de Contenidos SwellRT}{99}{subsection.6.1.2}
 \contentsline {section}{\numberline {6.2}Arquitectura de la aplicaci\IeC {\'o}n}{100}{section.6.2}
 \contentsline {subsection}{\numberline {6.2.1}Base de datos}{101}{subsection.6.2.1}
-\contentsline {subsection}{\numberline {6.2.2}Service REST}{102}{subsection.6.2.2}
-\contentsline {subsubsection}{Arquitectura}{105}{table.caption.63}
-\contentsline {subsubsection}{Rutas}{107}{figure.caption.64}
-\contentsline {subsubsection}{Controladores}{108}{lstnumber.-9.1}
-\contentsline {subsection}{\numberline {6.2.3}Cliente Android}{110}{subsection.6.2.3}
-\contentsline {subsubsection}{Interfaz Gr\IeC {\'a}fica}{110}{section*.66}
-\contentsline {subsubsection}{Estructuraci\IeC {\'o}n de Programas Pol\IeC {\'\i }ticos}{115}{table.caption.69}
-\contentsline {subsubsection}{Conexi\IeC {\'o}n y Peticiones a Service REST y Base de Datos}{117}{figure.caption.71}
-\contentsline {subsubsection}{Gesti\IeC {\'o}n de Usuarios: ID de Android}{120}{lstnumber.-11.1}
-\contentsline {subsubsection}{Servicio Android de Conexi\IeC {\'o}n con Wave}{120}{lstnumber.-11.1}
-\contentsline {subsubsection}{Peticiones a Wave}{121}{lstnumber.-11.1}
+\contentsline {subsubsection}{\textit {political\_party}}{103}{figure.caption.60}
+\contentsline {subsubsection}{\textit {section}}{103}{figure.caption.60}
+\contentsline {subsubsection}{\textit {proposal}}{103}{figure.caption.60}
+\contentsline {subsubsection}{\textit {comment}}{104}{figure.caption.60}
+\contentsline {subsubsection}{\textit {opinion}}{104}{figure.caption.60}
+\contentsline {subsection}{\numberline {6.2.2}Service REST}{104}{subsection.6.2.2}
+\contentsline {subsubsection}{Arquitectura}{107}{table.caption.63}
+\contentsline {subsubsection}{Rutas}{109}{figure.caption.64}
+\contentsline {subsubsection}{Controladores}{110}{lstnumber.-9.1}
+\contentsline {subsection}{\numberline {6.2.3}Cliente Android}{112}{subsection.6.2.3}
+\contentsline {subsubsection}{Interfaz Gr\IeC {\'a}fica}{112}{section*.66}
+\contentsline {subsubsection}{Estructuraci\IeC {\'o}n de Programas Pol\IeC {\'\i }ticos}{117}{table.caption.69}
+\contentsline {subsubsection}{Conexi\IeC {\'o}n y Peticiones a Service REST y Base de Datos}{119}{figure.caption.71}
+\contentsline {subsubsection}{Gesti\IeC {\'o}n de Usuarios: ID de Android}{121}{lstnumber.-11.1}
+\contentsline {subsubsection}{Servicio Android de Conexi\IeC {\'o}n con Wave}{122}{lstnumber.-11.1}
+\contentsline {subsubsection}{Peticiones a Wave}{122}{lstnumber.-11.1}
 \contentsline {chapter}{\numberline {7}Resultados, Conclusiones y Trabajo Futuro}{123}{chapter.7}
 \contentsline {section}{\numberline {7.1}Discusion de Resultados}{124}{section.7.1}
 \contentsline {section}{\numberline {7.2}Conclusiones}{124}{section.7.2}
