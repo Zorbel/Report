@@ -949,7 +949,7 @@ El objetivo principal de la evaluación pretende poner a prueba la funcionalidad
  \item Se cumple el objetivo inicial del proyecto. 
 \end{itemize}
 
-\subsection{Presguntas de investigación}
+\subsection{Preguntas de investigación}
 
 A continuación se expone un listado de preguntas de las que obtendremos sus respuestas con los resultados de la evaluación.
 
@@ -1002,10 +1002,9 @@ Las evaluaciones tendrán una duración estimada entre 4 y 7 minutos. Realizando
 
 \begin{enumerate}
  \item Se dará una breve introducción a los participantes, explicándoles sobre la temática de la aplicación y el objetivo que se persigue.
- \item El usuario recibirá una lista con las tareas a realizar durante la evaluación. Para llevarlas a cabo, el usuario evaluado podrça tomarse todo el tiempo que estime oportuno.
- \item Durante la evaluación se mantendrá una videollamada con el evaluado para observar todas las reacciones a la hora de realizar las tareas en la aplicación. El moderador también apuntará los tiempos que tarda en finalizar las tareas.
+ \item El usuario recibirá una lista con las tareas a realizar durante la evaluación. Para llevarlas a cabo, el usuario evaluado podrá tomarse todo el tiempo que estime oportuno.
+ \item Durante la evaluación se mantendrá una videollamada con la persona evaluada para observar todas las reacciones a la hora de realizar las tareas en la aplicación. El moderador también apuntará los tiempos que tarda en finalizar las tareas.
  \item Si el usuario evaluado no pudiera resolver una tarea en menos de 3-4 minutos, o quedase atascado en la misma un tiempo superior a 45 segundos, el moderador le ordenará que para a la siguiente tarea. Se anotarán con especial atención las tareas que no pudieran ser completadas con éxito durante la evaluación.
- \item Tras finalizar con las tareas de la evaluación, el usuario rellenará un pequeño formulario online para expresar su opinión y experiencia de uso con la aplicación.
  \item Al final de la sesión el moderador apuntará todas las objeciones de la evaluación, así como las conclusiones del mismo, para posteriormente ponerlas en común y analizarlas.
  \end{enumerate}
 
@@ -1042,13 +1041,12 @@ HERRAMIENTAS QUE SE UTILIZARON EN LA EVALUACION: SKYPE, CAMTASIA STUDIO,...
 El moderador será el responsable de guíar el proceso de la evaluación con el usuario. Al comienzo de la evaluación el moderador realizará una videollamada por \textit{Skype} para ponerse en contacto con el usuario evaluado. Al comienzo de la misma soclicitará al usuario la instalación de \textit{DemoCritics} en su dispositivo. Durante la evaluación el moderador deberá realizar las siguientes acciones:
 
 \begin{enumerate}
- \item
- \item
- \item
- \item
+ \item Mostrar al usuario la lista de tareas a realizar con la aplicación. Esta lista será mandada previamente por correo electrónico. Se informará al usuario de que deberá realizar las tareas sin ayuda, ni interrupciones hasta el final.
+ \item El moderador interrumpirá al usuario por un motivo de fuerza mayor, es decir, si sucede algún acontecimiento que impida continuar con la evaluación (fallo en la aplicación, servidor caído, etcétera).
+ \item Si el usuario evaluado estuviera más de 2.5 minutos para resolver una tarea, o quedara atascado más de 45 segundos en la misma, el moderador comunicará al usuario que procesa con la siguiente tarea.
+ \item El moderador tomará nota de los tiempos que el usuario tarda en realizar cada tarea. Así como también el tiempo total que dura la evaluación con todas las tareas realizadas.
+ \item Iniciar una breve sesión de \textit{debriefing} con el usuario tras finalizar las tareas.
 \end{enumerate}
-
-\subsection{Datos que se van a recolectar}
 
 \subsection{Metodología de análisis de datos}
 
