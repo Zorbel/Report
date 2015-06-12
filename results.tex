@@ -8,16 +8,6 @@ Todo el código open-source desarrollado por nosotros está disponible en el Git
 
 \url{https://github.com/Zorbel}
 
-PROPUESTAS, PARTICIPACION CIUDADANA, POLITICA, ELECCIONES, PROGRAMAS POLITICOS, 
-
-DIFERENCIAS DE LEER EN MOVILES O PDF, COMENTAR PROGRAMAS, DESARROLLO COLABORATIVO (ECHAR UNA MANO O NECESIDAD DE AYUDA), PRUEBA DE CONCEPTO EXTENSIBLE A OTROS TEXTOS, APLICACION REAL, DESARROLLO DESDE CERO. 
-
-APORTACION DE SOFTWARE LIBRE A LA COMUNIDAD PARA PROMOVER UNA PLATAFORMA QUE CUALQUIERA PUEDE USAR Y EN ANDROID EN LA QUE SOLO HABIA SOLUCIONES PRIVATIVAS.
-
-PERDIDA DE INTERES POR INCOMPRENSION DE TEMAS TECNICOS, NO DAR POR HECHO QEUE TODO EL MUNDO ENTIENDE DE TODO.
-
-MOVIL DISPOSITIVO ADECUADO PARA LEER PROGRAMAS, ESCRIBIR PROPUESTAS -> RAPIDAS, BAJO PLATAFORMA MAS COMODA, TECLADO. POSTURA NO ADECUADA PARA TRABAJAR (POCO TIEMPO, MAS ADECUADO TABLET). LIMITACION A UN SOLO DISPOSITIVO.
-
 \section{Discusión de Resultados}
 
 Inicialmente este proyecto nació para migrar la tecnología de colaboración en tiempo real de Apache Wave, presente en el proyecto SwellRT para plataformas web, a dispositivos móviles Android para posteriormente desarrollar una app que hiciera uso de esta tecnología. No habíamos trabajado nunca con tecnologías en tiempo real, así que tuvimos que realizar una pequeña investigación previa de los protocolos implicados (XMPP y WebSockets) y del funcionanmiento de Wave para ponernos al día. Además trabajamos junto a uno de los desarrolladores de SwellRT, que nos orientó a la hora de ''navegar'' por el código de la versión web para identificar las incompatibilidades con Android y subsanarlas. En poco tiempo tuvimos lista una versión simple del cliente capaz de conectarse al servidor Wave desde Android. Se trata de un desarrollo en código libre, por lo que realizamos una aportación a a un proyecto que cualquiera podría utilizar en su propio desarrollo Android. El resultado está deisponible en el GitHub de SwellRT:
@@ -82,13 +72,82 @@ En el estado actual de la arquitectura del sistema detrás de DemoCritics, se ha
 
 \section{Reparto de Trabajo entre los componentes del grupo} 
 
+DemoCritics es un proyecto desarrollado por dos personas. Para su desarrollo hemos elegido una metodología de control de versiones que nos permite repartir las tareas de forma eficaz (cualquiera de los dos puede ver en pocos pasos lo hecho por el otro) y eficiente (lleva poco tiempo subir o descargarse los cambios). Para ello creamos una organización en GitHub llamada ''Zorbel'' y gestionamos con git los cambios en el código de cualquiera de las partes que conforman DemoCritics. Además, esto nos permitió también facilitar la revisión del código por parte de los profesores del proyecto. 
+
+En general, todas las tareas se han llevado a cabo en forma paralela y con una carga de trabajo equitativa entre ambos miembros. A continuación se detallan un poco más estas tareas:
+
+- \textbf{Migración de SwellRT a Android}: Tanto la investigación del funcionamiento de la tecnología como la metodología de migración se llevaron a cabo por ambos miembros. Estos cambios se contrastaron en reuniones con el director Pablo Ojanguren (desarrollador de SwellRT) a medida que se producían. De poner el API de trabajo con waves de SwellRT sobre el servicio migrado se encargó Pablo.
+
+- \textbf{Desarrollo de la idea de la app}: los dos miembros del proyecto nos reunimos con los directores Samer y Pablo para hacer una sesión de brainstorming y dar con una idea de aplicación que a ambos nos gustaría realizar y que hiciera uso de SwellRT.
+
+- \textbf{Diseño e Investigación}: ambos hicimos reuniones periódicas para discutir ideas iniciales, planificar la investigación y diseñar prototipos. Durante las entrevistas de investigación procuramos estar ambos presentes para exponer las idea, discutirlas y enseñarles los prototipos básicos a los entrevistados. Posteriormente nos reunimos para sacar conclusiones y modificar los prototipos. En definitiva, toda la fase basada en el Diseño Guiado por Objetivos la realizamos en conjunto.
+
+- \textbf{Implementación de la aplicación}: En este caso sí que hubo un reparto de tareas más marcado por la poca experiencia previa que teníamos con distintas tecnologías. El diseño general de la aplicación, el Service REST y la Base de Datos lo discutimos entre ambos. A la hora de implementarlo uno de nosotros (Javier) conocía mejor la arquitectura de Android y se dedicó a elaborar el funcionamiento del cliente mientras que el otro (Jaime) había trabajado previamente con Laravel y se dedicó a investigar y desarrollar el Service REST y la conexión con la Base de Datos. No obstante, ambos pusimos en común los cambios realizados, de manera que los dos tuvimos un conocimiento de cómo funcionaba la aplicación en su conjunto. Durante la última fase del proyecto de prefeccionamiento de detalles de la aplicación ambos trabajamos para mejorar el cliente Android.
+
+- \textbf{Evaluación con Usuarios}: planificamos juntos la dinámica de las evaluaciones y realizamos dos evaluaciones con usuarios cada uno de un total de 4 evaluaciones, procurando poner luego en común los resultados para discutirlos y sacar conclusiones.
+
+- \textbf{Elaboración de la memoria}: para la redacción de esta memoria procedimos a realizar varios posibles índices para su estructuración hasta que obtuvimos un primer esqueleto de su estructura. Posteriormente nos repartimos su redacción, procurando verificar con el compañero el contenido de todo lo escrito. Esto se vió facilitado por el uso también para la memoris de git  GitHub como sistema de control de versiones (ver organización del proyecto en GitHub). En general, habremos escrito ambos aproximadamente la mitad del contenido de este documento cada uno (siendo siempre verificado por el otro).
+
+Para el seguimiento del proyecto procuramos realizar mínimo una reunión al mes, ya fuera con Samer, con Pablo o con ambos. Cabe destacar que, si bien a veces no pudimos reunirnos en persona, el uso de herramientas de mensajería instantánea (con especial mención a Telegram) y de videollamada como Skype y Hangouts fue constante entre los involucrados en el proyecto.
+
 \section{Conclusiones}
+
+Desarrollar un proyecto como DemoCritics no es una tarea baladí. Al tratarse de una aplicación que parte de cero desde nuestra propia idea e iniciativa, exige bastante dedicación en forma de tiempo y motivación. Más aún si hablamos de una temática como es la política, que desgraciadamente parece no atraer toda la atención e interés de las personas que relamente debería tener como actividad de la que formamos parte como sociedad. En este sentido el tiempo dedicado a las labores previas de planificación, investigación, diseño y evaluación de prototipos era necesario para establecer unas bases sólidas sobre las que asentar la futura implementación de características que resultaran a la vez útiles y atractivas para el usuario.
+
+Este proceso fue bastante productivo y nos sirvió para depurar y pulir aspectos previos de nuestra idea inicial. Fue también enriquecedor para nosotros como experiencia, pues no hizo sino demostrarnos la importancia de que el desarrollador, acostumbrado normalmente a tener una visión   bastante reducida a aspectos técnicos, sea consciente de la necesidad de implicar en el desarrollo otras voces. Dichas voces quizás no posean los conocimientos técnicos necesarios para ''implementar'' la idea, pero sí que aportan una visión de conjunto más amplia que ayuda a entender mejor las necesidades reales del usuario, que a fin de cuentas es el destinatario de la aplicación. Realizar por tanto entrevistas y posteriores evaluaciones para tener en cuenta la opinión del futurible ''cliente'' nos ha enfrentado a una realidad necesaria para cualquier desarrollador que quiera conseguir un producto serio. Más aun cuando nos planteamos DemoCritics como una aplicación que trascendiera el alcance del Trabajo de Fin de Grado y se convertiera en una herramienta útil en el futuro.
+
+DemoCritics ha supuesto también investigar el uso de tecnologías que no conocíamos, con el consiguiente proceso de aprendizaje que ello conlleva. Hemos tenido que enfrentarnos al estudio del funcionamiento de una plataforma ya establecida como Wave/SwellRT para llevar a cabo una migración a Android. Hemos trabajado el uso de tecnologías del lado del cliente como las conexiones desde Android y del servidor como la implementación del Service REST. Pero sobre todo, hemos aprendido a llevar una metodología de trabajo basada en el control de versiones mediante Git y GitHub.
+
+Los resultados obtenidos se plasman en el estado actual de DemoCritics: una aplicación capaz de juntar en un solo sitio la navegación por las secciones de programas políticos y crear propuestas, con la destacada opción de hacer esto úlitmo entre varias personas de forma colaborativa y en tiempo real utilizando la tecnología de SwellRT en Android. Explotamos también el potencial social de la aplicación mediante la posibilidad de opinar, realizar comentarios y marcar como favorito, en todo el contenido de la aplicación.
+
+\textbf{Se trata de un proyecto en el que aportamos una solución de software libre  que no existía previamente, pues las opciones de colaboración en tiempo real en Android pasaban únicamente por soluciones privativas como el Real Time API de Google}. Su código está disponible en GitHub y que cualquiera puede estudiar, contribuir, copiar y utilizar libremente. Tanto en el caso de la migración de SwellRT a Android como en el de la plataforma DemoCritics (la App, la base de datos y el Service REST). 
+
+Queda aún trabajo por hacer, pues la presente plataforma es una primera versión de un proyecto en el que pretendemos seguir investigando y desarrollando más funcionalidades, tal y como se discutirá a continuación en el Trabajo Futuro. 
 
 \section{Trabajo Futuro}
 
+Como ya se ha comentado con anterioridad la presente es una primera versión de DemoCritics que nos sirve para tener una primera prueba de concepto de algunas de sus funcionalidades y que haga uso de la migración de SwellRT a Android. En esta versión hemos podido evaluar el funcionamiento general de la idea y ponerla a prueba con algunos usuarios para mejorar su utilidad de cara a continuar su desarrollo. Nuestro objetivo en este momento es aprovechar la oportunidad que se nos presenta en este año electoral para poner realmente a prueba esta plataforma en las próximas elecciones generales. De esta forma también podriamos analizar su uso antes, durante y después de unas elecciones.
 
-REALIZAR PARA OTRAS PLATAFORMAS -> WEB, NUEVAS FUNCIONALIDADES -> RECOMENDADORES SOCIALES, INTEGRACION CON REDES SOCIALES y MENSAJERIA INSTANTANEA (COMPARTIR), GRUPOS, DAR MAS FLEXIBILIDAD A LA HORA DE CREAR Y CLASIFICAR CONTENIDOS, COMPARATIVAS HECHAS POR USUARIOS
+Para ello nos proponemos seguir poniéndonos en contacto con actores relacionados con el mundo de la política (activistas, políticos, periodistas, académicos, etc.) para realizar más entrevistas y someter la plataforma a nuevas iteraciones del proceso de diseño, implementación y evaluación con los que ir poco a poco mejorando sus características. De paso también iremos generando interés entre los entrevistados y publicitando su uso.
 
-CONSEGUIR Participacion DE comunidades, analizar sus uso antes, durante y despues de elecciones.
+En cualquier caso, el proyecto está disponible en forma de software libre bajo licencia GNU GPLv3 que cualquiera puede estudiar, copiar y modificar para desarrollar sus propias ideas inspirado por las nuestras. 
+
+\subsection{Mejoras a la versión actual}
+
+Teniendo en cuenta los resultados de la evaluación con usuarios creemos que las líneas de trabajo futuro deberían ir orientadas a mejorar la experiencia de usuario, modificando aspectos de la interfaz gráfica que pudieron resultar más incomprensibles a las personas evaluadas, como los iconos de la aplicación y su significado. También habría que mejorar la visualización de las distintas secciones del programa, que resultó confusa para algunos de ellos. 
+
+Desde el punto de vista del desarrollo colaborativo en tiempo real de propuestas, se debería estudiar la posibilidad de poder distinguir a los usuarios participantes en la Wave y lo que escriben mediante el uso de indicadores de color o etiquetas al estilo de otras plataformas web como Google Docs. 
+
+\subsection{Nuevas características}
+
+Durante el desarrollo del proyecto han ido surgiendo diversas ideas interesantes que se podrían aplicar en un futuro próximo dentro de la plataforma de DemoCritics. Algunas de las posibilidades son:
+
+- Desarrollo de Encuestas: de intención de voto, de afinidad, etc. con posibilidad de obtener los resultados en tiempo real mediante SwellRT.
+
+- Abrir la creación de categorías nuevas a los usuarios, de manera que demos más flexibilidad a la hora de crear y clasificar contenidos.
+
+- Permitir que los usuarios hagan comparativas por temas entre las secciones de los distintos programas de partidos políticos. Buscar para ello la participación de colectivos sociales interesados.  
+
+- Creación de una hemeroteca de programas políticos que permita navegar por programas políticos de anteriores elecciones. Útil por ejemplo para comprobar la evolución de las propuestas de los partidos.
+
+- Integración con redes sociales y mensajería instantánea para compartir contenidos de la aplicación.
+
+- Oraganizar jerárquicamente los usuarios, pudiendo existir grupos de usuarios que comparten las mismas inquietudes e intereses.
+
+- Uso de inteligencia artificial para integrar sistemas recomendadores de contenido por afinidad o de puesta en contacto entre usuarios por intereses similares.
+ 
+Asimismo, y gracias a la flexibilidad que nos permite el uso de un Service REST, se estudiará la posibilidad de \textbf{desarrollar un cliente web} para la aplicación, especialmente pensado para usuarios que están más familiarizados con la elaboración de textos largos, como los de las propuestas, usando un teclado. De esta manera enfocaríamos la aplicación móvil a la lectura de contenidos y generación de opiniones y comentarios, mientras que las propuestas se podrían redactar en el ordenador. Entendemos que la postura de uso de un móvil es para usarlo durante un espacio corto de tiempo, por lo que la existencia de un cliente web para ordenadores haría la generación de contenidos más serios y extensos, como las propuestas, mucho más cómoda.
+
+Por otro lado, en el desarrollo de este proyecto hemos centrado la plataforma en los programas políticos, pero se podría utilizar para mostrar otros tipos de documentos estructurados susceptibles de ser sometidos a debate y opinión. Como por ejemplo normativas, leyes, manuales, etc.
+
+\subsection{SwellRT Android}
+
+El trabajo realizado para hacer compatible la tecnología de colaboración en tiempo real de Wave presente en SwellRT con dispositivos Android, aporta por primera vez la posibilidad de utilizar estas características de forma nativa en Android en un API de software libre. Hasta este momento las soluciones disponibles pasaban por utilizar librerías privativas como la de Google (Real Time API). Esta nueva aportación se encuentra ahora disponible para los desarrolladores de Android en el GitHub del proyecto de SwellRT: \url{https://github.com/P2Pvalue/swellrt/tree/master/android}
+
+Es además plenamente compatible con el cliente web, por lo que las posibilidades de desarrollo de aplicaciones multi-plataforma son claras. Además, en este proyecto se ha optado por realizar una pequeña prueba de concepto con edición de texto en tiempo real, pero el desarrollo de plataformas colaborativas en tiempo real va más allá e incluye aplicaciones tan diversas como herramientas de dibujo, visualizado de contenidos (como vídeo y música) de forma sincronizada, mapas con información en tiempo real, generación de estadísticas en tiempo real, ...
+
+En definitiva, \textbf{se ha puesto la colaboración en tiempo real a disposición de la comunidad de desarrolladores open-source Android para que hagan uso de estas funcionalidades en sus futuras aplicaciones}.
+
+
 
 

@@ -840,11 +840,11 @@ En esta fase se pondrán a prueba los escenarios, validando a ciertas situacione
 
  \item \textbf{Qué pasaría si un usuario accede a la aplicación por primera vez y quisera consultar el programa político de un partido en concreto?}
  
- El usuario accedería a la pantalal principal de la aplicación (ver figura \ref{fig:mainFrameApp}), donde podría diferenciar cuatro grupos principales: \textit{Programas Políticos}, \textit{Categorías}, \textit{Propuestas Ciudadanas} y \textit{Colabora}. Accediendo sobre el icono de programas políticos, la aplición mostraría al usuario el listado de partidos políticos para explorar los programas. Al usuario le bastaría con seleccionar el partido polítco del que quisiera consultar su programa electoral. Finalmente, la aplicación mostaría al usuario el índice del programa electoral del partido seleccionado. 
+ El usuario accedería a la pantalla principal de la aplicación (ver figura \ref{fig:mainFrameApp}), donde podría diferenciar cuatro grupos principales: \textit{Programas Políticos}, \textit{Categorías}, \textit{Propuestas Ciudadanas} y \textit{Propuestas Colaborativas}. Accediendo sobre el icono de programas políticos, la aplición mostraría al usuario el listado de partidos políticos para explorar los programas. Al usuario le bastaría con seleccionar el partido polítco del que quisiera consultar su programa electoral. Finalmente, la aplicación mostraría al usuario el índice del programa electoral del partido seleccionado. 
  
   	\begin{figure}[!]
       \centering
-	\includegraphics[keepaspectratio, scale=0.3]{Media/Captures/mainFrame.png}
+	\includegraphics[keepaspectratio, scale=0.2]{Media/Captures/mainFrame.jpg}
       \caption{Pantalla principal de la aplicación.}
       \label{fig:mainFrameApp}
     \end{figure} 
@@ -866,7 +866,7 @@ En esta fase se pondrán a prueba los escenarios, validando a ciertas situacione
  
  \item \textbf{¿Cómo podría colaborar un experto en cultura en la aplicación?}
  
- Para ver si alguna propuesta requiere la ayuda de alguien en el mundo de la cultura, deberá acceder al menú \textit{Colabora} y seleccionar la categoría \textit{Cultura} entre las listadas de la aplicación. Allí seleccionará aquellas propuestas que le resulten de interés para ayudar a su elaboración. Dentro de la proyesta podrá redactar en un \textit{pad} colaborativo cómo llevar a cabo la propuesta o cómmo financiarla.
+ Para ver si alguna propuesta requiere la ayuda de alguien en el mundo de la cultura, deberá acceder al menú \textit{Propuestas Colaborativas} y seleccionar la categoría \textit{Cultura} entre las listadas de la aplicación. Allí seleccionará aquellas propuestas que le resulten de interés para ayudar a su elaboración. Dentro de la propuesta podrá ayudar a redactar en un \textit{pad} colaborativo cómo llevar a cabo la propuesta o cómo financiarla.
  
 \end{enumerate}
 
@@ -911,9 +911,11 @@ Con el objetivo de verificar los principios de diseño que cumple la aplicación
 
 \section{Implementación de DemoCritics}
 
+En esta fase llevamos a cabo la implementación de un prototipo final de la aplicación basado en el estudio de los resultados de la fase de diseño previa. Además se diseñó e implementó también el servidor que alojaría la base de datos y se comunicaría con la aplicación.
+
 \subsection{Metodología}
 
-Durante el desarrollo del código de la aplicación hemos utilizado las metodologías que se detallan a continuación.
+Durante el desarrollo del código del sistema hemos utilizado las metodologías que se describen a continuación.
 
 \subsubsection{Control de versiones}
 
@@ -921,15 +923,15 @@ Para mantener una copia de las versiones locales, hemos utilizado GIT como herra
 
 \subsubsection{GitHub}
 
-Para compartir el código de la aplicación y visualizar los cambios de cada commit, utilizamos una organización pública donde se almacenan todos los repositorios de la aplicación. La organización está disponible en el siguiente enlace: \url{https://github.com/Zorbel}.
+Para compartir el código del sistema y visualizar los cambios de cada commit, utilizamos una organización pública donde se almacenan todos los repositorios de sus distintas partes. La organización está disponible en el siguiente enlace: \url{https://github.com/Zorbel}.
 
 \subsubsection{Reparto de tareas}
 
-Durante el desarollo del proyecto hemos dividido las tareas en dos grupos principales. Por un lado teníamos la parte de \textit{back-end}, formada por la API Rest desarollada en Laravel y la base de datos. Mientras que por otro lado se encontraba la parte de \textit{front-end} formada por la aplicación en Android. Estas fueron las dos ramas principales en las que dividimos el trabajo en un primer momento. El desarrollo inicial y final en Wave se produjo en paralelo.
+Durante la implementación del proyecto dividimos las tareas en dos grupos principales. Por un lado teníamos la parte de \textit{back-end}, formada por la API Rest desarollada en Laravel y la base de datos. Mientras que por otro lado se encontraba la parte de \textit{front-end} formada por la aplicación en Android. De cada una de estas partes y debido a la experiencia previa con las tecnologías involucradas se encargó uno de nosotros. De esta manera Jaime trabajó más en el desarrollo del back-end y Javier en el del front-end. No obstante ambos revisabamos el código del otro para verificar su correcto funcionamiento. El desarrollo inicial en Wave/SwellRT y su implementación final en la aplicación se produjo en paralelo por ambos componentes del grupo.
 
 \subsubsection{Revisiones de código}
 
-Cada vez que completábamos una funcionalidad la subíamos a \textit{GitHub} y se realizaba una pequeña revisión de código para verificar cómo se había implementado el objetivo a desarrollar. De esta forma evitábamos malinterpretar algunos aspectos que pueden diferir cuando se concretan a la hora de realizar la implementación del sistema. También recibimos revisiones de código externas por parte de los directores del Trabajo de Fin de Grado, que aportaron una visión más eficiente y organizada del código desarrollado.
+Cada vez que completábamos una funcionalidad la subíamos a \textit{GitHub} y se realizaba una pequeña revisión de código para verificar cómo se había implementado el objetivo a desarrollar. De esta forma evitábamos malinterpretar algunos aspectos que durante la implementación pueden diferir de su planteamiento inicial. También recibimos revisiones de código externas por parte de los directores del Trabajo de Fin de Grado, que aportaron una visión más eficiente y organizada del código desarrollado.
 
 \subsubsection{Evaluaciones de usabilidad}
 
@@ -937,21 +939,21 @@ Recibimos una evaluación de usabilidad externa por parte de un director del Tra
 
 \section{Evaluación con Usuarios}
 
-En esta última fase del diseño, realizaremos evaluaciones de usuarios con el prototipo final desarrollado en Android. Con esto comprobaremos la experiencia de los usuarios evaluados con el resultado final del proyecto y ver los objetivos que han sido logrados.
+En esta última fase del diseño, realizaremos evaluaciones de usuarios con el prototipo final desarrollado en Android. Con esto comprobaremos la experiencia de los usuarios evaluados con el resultado final del proyecto y podremos ver los objetivos que han sido logrados y posibles mejoras y modificaciones futuras.
 
 \subsection{Propósitos y objetivos de la evaluación}
 
-El objetivo principal de la evaluación pretende poner a prueba la funcionalidad con los usuarios. Queremos analizar cómo se desenvuelven los usuarios con la aplicación y cómo utilizan las funcionalidades que ofrece. Para ello determinamos si se cumplen los siguientes objetivos:
+El objetivo principal de la evaluación pretende poner a prueba la funcionalidad de la aplicación con los usuarios. Queremos analizar cómo se desenvuelven los usuarios con la aplicación y cómo utilizan las funcionalidades que ofrece. Para ello determinamos si se cumplen los siguientes objetivos:
 
 \begin{itemize}
  \item El usuario siente el poder total sobre la aplicación.
- \item El usuario es capáz de comprender las actividades que realiza.
+ \item El usuario es capaz de comprender las actividades que realiza.
  \item Se cumple el objetivo inicial del proyecto. 
 \end{itemize}
 
 \subsection{Preguntas de investigación}
 
-A continuación se expone un listado de preguntas de las que obtendremos sus respuestas con los resultados de la evaluación.
+A continuación se expone un listado de preguntas a las que queremos responder con los resultados de la evaluación.
 
 \begin{itemize}
  \item ¿Es fácil distinquir los elementos de la aplicación?
@@ -961,14 +963,14 @@ A continuación se expone un listado de preguntas de las que obtendremos sus res
  \end{itemize}
  \item ¿Se entienden las transiciones entre pantallas?
  \begin{itemize}
-  \item ¿Puede saberse lo que realiza la aplicación por detrás?
+  \item ¿Puede saberse lo que esta realizando la aplicación por detrás?
  \end{itemize}
   \item ¿Se pueden hacer las acciones con pocas pulsaciones?
   \begin{itemize}
    \item ¿Cuánto se tarde en realizar una acción?
    \item ¿Hay alguna tarea que requiera muchas pulsaciones?
   \end{itemize}
-  \item ¿Se puede visualizar todos los elementos de un solo vistazo?
+  \item ¿Se pueden visualizar todas las opciones disponibles de un solo vistazo?
   \begin{itemize}
    \item ¿Es complicado localizar algún elemento o información a simple vista?
   \end{itemize}
@@ -976,21 +978,21 @@ A continuación se expone un listado de preguntas de las que obtendremos sus res
 
 \subsection{Requisitos para los participantes de la evaluación}
 
-la evaluación será realizada por dos tipos de participantes definidos en la fase de modelado:
+La evaluación será realizada por dos tipos objetivo de participantes que se corresponden con los definidos en la fase de modelado:
 
 \begin{itemize}
  \item \textbf{Ciudadano}
  \begin{itemize}
-  \item Ciudadano de a apie inscrito en el censo con capacidad para votar en las próximas elecciones.
+  \item Ciudadano de a a pie inscrito en el censo con capacidad para votar en las próximas elecciones.
   \item Edad: a partir de 18 años.
-  \item Familiarizados con el uso de herramientas móviles preferiblemente en dispositivos Android.
+  \item Familiarizados con el uso de herramientas móviles, preferiblemente en dispositivos Android.
  \end{itemize}
 \end{itemize}
 
 \begin{itemize}
  \item \textbf{Activista social}
  \begin{itemize}
-  \item Activista social que participa en mareas o movimientos sociales afines a una causa.
+  \item Activista social que participa activamente en movimientos sociales afines a una causa.
   \item Edad: a partir de 18 años.
   \item Familiarizados con el uso de herramientas de participación ciudadana.
  \end{itemize}
@@ -998,13 +1000,13 @@ la evaluación será realizada por dos tipos de participantes definidos en la fa
 
 \subsection{Diseño experimental}
 
-Las evaluaciones tendrán una duración estimada entre 4 y 7 minutos. Realizando un total de 4 evaluaciones, formadas por ciudadanos y activistas sociales mayores de 18 años. En cada una se deberán cumplir las siguientes normas y pasos:
+Las evaluaciones tendrán una duración estimada entre 4 y 7 minutos. Realizando un total de 5 evaluaciones, formadas por ciudadanos y activistas sociales mayores de 18 años. En cada una se deberán cumplir las siguientes normas y pasos:
 
 \begin{enumerate}
- \item Se dará una breve introducción a los participantes, explicándoles sobre la temática de la aplicación y el objetivo que se persigue.
+ \item Se dará una breve introducción a los participantes, explicándoles  la temática de la aplicación y el objetivo que se persigue con ella.
  \item El usuario recibirá una lista con las tareas a realizar durante la evaluación. Para llevarlas a cabo, el usuario evaluado podrá tomarse todo el tiempo que estime oportuno.
- \item Durante la evaluación se mantendrá una videollamada con la persona evaluada para observar todas las reacciones a la hora de realizar las tareas en la aplicación. El moderador también apuntará los tiempos que tarda en finalizar las tareas.
- \item Si el usuario evaluado no pudiera resolver una tarea en menos de 3-4 minutos, o quedase atascado en la misma un tiempo superior a 45 segundos, el moderador le ordenará que para a la siguiente tarea. Se anotarán con especial atención las tareas que no pudieran ser completadas con éxito durante la evaluación.
+ \item Durante la evaluación se mantendrá una reunión en un entorno cerrado libre de distracciones con la persona evaluada para observar todas las reacciones a la hora de realizar las tareas en la aplicación. El moderador también apuntará los tiempos que tarda en finalizar las tareas.
+ \item Si el usuario evaluado no pudiera resolver una tarea en menos de 3-4 minutos, o quedase atascado en la misma por un tiempo superior a 45 segundos, el moderador le indicará que pase a la siguiente tarea. Se anotarán con especial atención las tareas que no pudieran ser completadas con éxito durante la evaluación.
  \item Al final de la sesión el moderador apuntará todas las objeciones de la evaluación, así como las conclusiones del mismo, para posteriormente ponerlas en común y analizarlas.
  \end{enumerate}
 
@@ -1017,9 +1019,10 @@ Este es el listado de tareas que deberá realizar el usuario en la aplicación e
  \begin{itemize}
   \item Visualizar los diferentes programas políticos que se prensentan a las elecciones.
   \item Acceder a las secciones más debatidas, valoradas, comentadas, etc.
-  \item Visualizar una sección de la catgoría \textit{cultura} de un partido político en concreto.
+  \item Visualizar una sección de la categoría \textit{cultura} y realizar un comentario en ella.
+  \item Cambiar su nombre de usuario de ''Anónimo'' por otro.
   \item Añadir una sección a mis favoritos.
-  \item Visualizar tus secciones favoritas.
+  \item Visualizar sus secciones favoritas.
   \item Valorar una sección después de haberla leído y realizar un comentario valorando la sección.
  \end{itemize}
 \end{itemize}
@@ -1028,11 +1031,11 @@ Este es el listado de tareas que deberá realizar el usuario en la aplicación e
  \item \textbf{Activista Social}
  \begin{itemize}
   \item Visualizar el listado de propuestas publicadas en el sistema.
-  \item Mostrar las propuestas de la catgoría \textit{educación} publicadas hasta el momento.
+  \item Mostrar las propuestas de la categoría \textit{educación} publicadas hasta el momento.
   \item Leer el contenido de una propuesta, valorarlo y realizar un comentario.
   \item Añadir una propuesta a mis favoritos.
-  \item Visualizar tus propuestas favoritas.
-  \item Publicar una nueva propuesta en la categoría \textit{vivienda} en el sistema.
+  \item Visualizar sus propuestas favoritas.
+  \item Publicar una nueva propuesta en la categoría \textit{vivienda}.
   \item Colaborar en el desarrollo de una propuesta colaborativa.
   \item Publicar una propuesta colaborativa para que pueda desarrollarla la comunidad.
  \end{itemize}
@@ -1040,35 +1043,40 @@ Este es el listado de tareas que deberá realizar el usuario en la aplicación e
 
 \subsection{Entorno y herramientas que vamos a emplear}
 
-Para realizar las evaluaciones utilizamos como herramienta principal \textit{Skype}, con la que pudimos realizar las evaluaciones sin necesidad de desplazarnos y ahorrando tiempo. De tal forma que mediante una videollamada podíamos darle la instrucciones y monitorizar la evaluación con el usuario. En cada llamada se habilitaban el micro y una cámara frontal para ver las impresiones del usuario evaluado en todo momento con la aplicación.
+Para realizar las evaluaciones nos reunimos con los usuarios a evaluar en un entorno cerrado y libre de distracciones que le permitiera realizar las tareas de evaluación explicando en voz alta sus impresiones y problemas. Toda esta información era anotada para después ser debatida y contrastada con el usuario.
 
-En cuanto a la aplicación, se utilizó un archivo \textit{.apk} en modo \textit{debug} que se le pasaba al usuario evaluado para que la pudiera instalar en su dispositivo. Como requisito fundamental, el dispositivo de la persona evaluada debía contar con una versión de android igual o superior al API 15 (\textit{Ice Cream Sandwich}), y poseer una conexión a internet estable para interactuar con la aplicación sin problemas.
+En cuanto a la aplicación, se utilizó un archivo \textit{.apk} en modo \textit{debug} que se le proporcionó al usuario evaluado para que la pudiera instalar en su dispositivo. Como requisito fundamental, el dispositivo de la persona evaluada debía contar con una versión de android igual o superior al API 15 (\textit{Ice Cream Sandwich}), y poseer una conexión a internet estable para interactuar con la aplicación sin problemas.
 
 \subsection{Tareas del moderador}
 
-El moderador será el responsable de guíar el proceso de la evaluación con el usuario. Al comienzo de la evaluación el moderador realizará una videollamada por \textit{Skype} para ponerse en contacto con el usuario evaluado. Al comienzo de la misma soclicitará al usuario la instalación de \textit{DemoCritics} en su dispositivo. Durante la evaluación el moderador deberá realizar las siguientes acciones:
+El moderador será el responsable de guíar el proceso de la evaluación con el usuario. Al comienzo de la evaluación el moderador solicitará al usuario la instalación de \textit{DemoCritics} en su dispositivo. Durante la evaluación el moderador deberá realizar las siguientes acciones:
 
 \begin{enumerate}
- \item Mostrar al usuario la lista de tareas a realizar con la aplicación. Esta lista será mandada previamente por correo electrónico. Se informará al usuario de que deberá realizar las tareas sin ayuda, ni interrupciones hasta el final.
+ \item Mostrar al usuario la lista de tareas a realizar con la aplicación.. Se informará al usuario de que deberá realizar las tareas sin ayuda, ni interrupciones hasta el final.
+ \item Indicar al usuario que debe expresar en voz alta sus impresiones y problemas que encuentre durante la interacción con la aplicación.
  \item El moderador interrumpirá al usuario por un motivo de fuerza mayor, es decir, si sucede algún acontecimiento que impida continuar con la evaluación (fallo en la aplicación, servidor caído, etcétera).
  \item Si el usuario evaluado estuviera más de 2.5 minutos para resolver una tarea, o quedara atascado más de 45 segundos en la misma, el moderador comunicará al usuario que procesa con la siguiente tarea.
  \item El moderador tomará nota de los tiempos que el usuario tarda en realizar cada tarea. Así como también el tiempo total que dura la evaluación con todas las tareas realizadas.
- \item Iniciar una breve sesión de \textit{debriefing} con el usuario tras finalizar las tareas.
+ \item Tras completar todas las tareas asignadas, iniciará una breve sesión de \textit{debriefing} con el usuario para contrastar sus anotaciones.
 \end{enumerate}
 
 \subsection{Resultados de la evaluación con los usuarios}
 
-La mayor parte de los usuarios respondieron de forma fluída con la aplicación. Bien porque al estar acostumbrados al utilizar aplicaciones en Android que utilizaran interfaces basadas en \textit{Material Design}, los elementos visuales de la aplicaicón les resultaron familiares. Sin embargo, algunos conceptos internos en la aplicación resultaron algo confusos para algunos usuarios.
+Se realizaron un total de 5 evaluaciones: 3 con usuarios ''ciudadanos'' y 2 con usuarios con un perfil de ''activista social''. En la mayoría de los casos se completaron las tareas asignadas con mayor o menor soltura en función de su experiencia previa con herramientas similares.
 
-Comenzando por los usuarios que representaban el papel de \textit{ciudanno}, mostraban cierta confusión con la representación de los programas políticos. Una de las movivaciones principales del proyecto es fomentar la lectura de los programas políticos por los electores, pues actualmente pocos conocen cómo se estructura un programa político en líneas generales. Siendo un factor determinante la incomprensión de los usuairos al ver secciones que incluían texto, otras no y otras incluían enlaces a otras subsecciones. Aunque es un factor que viene condicionado de la estructura que ha establecido el partido político para su programa electoral. Por lo que podemos encontrar programas que se adapten mejor o peor a esta forma de representarlos.
+La mayor parte de los usuarios respondieron de forma fluída al uso de la aplicación. Bien porque al estar acostumbrados al utilizar aplicaciones en Android que utilizaran interfaces basadas en \textit{Material Design}, los elementos visuales de la aplicación les resultaron familiares. Sin embargo, algunos conceptos internos en la aplicación resultaron algo confusos para algunos usuarios.
 
-Para los usuarios que juagaban el rol de \textit{activista social} la interacción con la aplicacion fue más fluída que el perfil anterior, pues normlamente estaban acostumbrados a herramientas relacionadas con el mundo de la política y participación ciudadana. Para las propuestas normales los usuarios reaccionaron de forma normal, visualizando, creando, valorando o comentando las propuestas publicadas. Sin embargo, una vez más el concepto de \textit{propuesta colaborativa} no fue del todo comprendido en un primer momento. Pero una vez que el usuario vió ćómo su propuesta podía ser editada en tiempo real por otros usuarios, el concepto quedó más claro.
+Comenzando por los usuarios que representaban el papel de \textit{ciudadano}, estos mostraban cierta confusión respecto a la representación de los programas políticos. Una de las movivaciones principales del proyecto es fomentar la lectura de los programas políticos por los electores, pues actualmente pocos conocen cómo se estructura un programa político en líneas generales. Ha sido un factor determinante la incomprensión de los usuarios al ver secciones que incluían texto, otras que no y otras que incluían enlaces a otras subsecciones. No obstante es un factor que viene condicionado de la estructura que ha establecido el partido político para su programa electoral. Por lo que podemos encontrar programas que se adapten mejor o peor a esta forma de representarlos.
+
+Para los usuarios que juagaban el rol de \textit{activista social} la interacción con la aplicacion fue más fluída que el perfil anterior, pues normalmente estaban acostumbrados a herramientas relacionadas con el mundo de la política y la participación ciudadana. Para las propuestas normales los usuarios reaccionaron de forma normal, visualizando, creando, valorando o comentando las propuestas publicadas. Sin embargo, una vez más el concepto de \textit{propuesta colaborativa} no fue del todo comprendido en un primer momento. Pero una vez que el usuario vió cómo su propuesta podía ser editada en tiempo real por otros usuarios, el concepto quedó más claro y les pareció bastante útil y llamativo.
 
 \subsubsection{Comentarios sobre la interfaz}
 
-Respecto a la interfaz de la aplcación no representó muchos problemas. La selección de los iconos quizá no fue la mejor para representar los elementos de la aplicación. Pues algunos usuarios tuvieron que leer la descripción de cada elemento para saber qué acción les llevaría a pulsar ese elemento. En cuento a la navegación y representación de los menús dentro de la aplicación, los usuarios no tuvieron demasiados problemas por estar familarizados con \textit{Material Design}.
+Respecto a la interfaz de la aplicación, su actual diseño no representó muchos problemas graves. La selección de los iconos quizá no fue la mejor para representar los elementos de la aplicación. Algunos usuarios tuvieron que leer la descripción de cada elemento para saber a qué acción les llevaría pulsar ese elemento. En cuanto a la navegación y representación de los menús dentro de la aplicación, los usuarios no tuvieron demasiados problemas por estar familarizados con \textit{Material Design} y el botón ''hamburguesa'' de menú. Por otro lado hubo usuarios que no entendieron a primera vista el uso de los botones de like, dislike, etc. pues no les quedó claro que pudieran pulsarlos para opinar. Además, el índice desplegable accesible en la parte superior derecha de las secciones solo fue utilizado por uno de los usuarios, pues los otros no se dieron cuenta de su existencia. 
 
-Para la edición de propuestas colaborativas, el no poder diferenciar a los usuarios que estaban escribiendo en un mismo \textit{pad} al mismo tiempo, es un error de diseño que deberemos de incluir en la siguiente versión. Diferenciar a los usuarios que están escribiendo al mismo tiempo por colores o marcadores, ayuda a poder concentrarse en la escritura y poder distinguir el contenido de todo el documento.
+Por otro lado los usuarios entendieron bien la navegación por tabs, y todos valoraron positivamente la opción de explorar el contenido por categorías y de guardar secciones o propuestas en favoritos. También destacaron la elección de distintos colores para distinguir las distintas partes de la aplicación.
+
+Sin embargo, en el caso de la edición de propuestas colaborativas, el no poder diferenciar a los usuarios que estaban escribiendo en un mismo \textit{pad} al mismo tiempo es un problema del que se quejaron varios usuarios, pues algunos estaban acostumbrados a utilizar herramientas como Google Docs que si que los distinguen. Diferenciar a los usuarios que están escribiendo al mismo tiempo por colores o marcadores  ayuda a poder concentrarse en la escritura y a poder distinguir el contenido de todo el documento. No obstante, les gustó el uso de edición en tiempo real para colaborar unos con otros.
 
 \subsubsection{Resultados de las tareas}
 
@@ -1090,7 +1098,7 @@ Valorar una sección después de haberla leído y realizar un comentario valoran
 \end{tabular}
 \end{table}
 
-En cada tabla se muestra el tiempo promedio en \textbf{segundos} que los usuarios consumieron en llevar a cabo la tarea, y la la dificultad media sobre un total de \textbf{cinco puntos} (siendo 0 una tarea fácil de realizar y 5 una tarea compleja de realizar),que costó a los usuarios realizar las tareas.
+En cada tabla se muestra el tiempo promedio en \textbf{segundos} que los usuarios consumieron en llevar a cabo la tarea, y la dificultad media sobre un total de \textbf{cinco puntos} (siendo 0 una tarea fácil de realizar y 5 una tarea compleja de realizar) que costó a los usuarios realizar las tareas.
 
 \begin{table}[!]
 \centering
@@ -1112,18 +1120,20 @@ Publicar una propuesta colaborativa para que pueda desarrollarla la comunidad.  
 
 \subsubsection{Informe de hallazgos y recomendaciones}
 
-Podemos decir que la aplicación ha sido recibida de forma positiva por la mayor parte de los usuarios, siendo la innovación en torno a la idea como el factor potencial de la aplicación. Los usuarios han visto algunas técnicas familares en otros entornos, cómo se pueden ser trasladadas a la política bajo previas modificaciones de concepto. 
+En líneas generales podemos decir que la aplicación ha sido recibida de forma positiva por la mayor parte de los usuarios, siendo la innovación en torno a la idea el factor potencial de la aplicación. Algunos de los usuarios estaban familiarizados con herramientas similares en otros entornos (web), y valoraron positivamente su traslado a una plataforma móvil.
 
-Los usuarios han valorado la posibilidad de poder leer los programas en el móvil, como si de un programa de bolsillo se tratase y pudiera valorar y opinar sobre ellos. Pero la apariencia o representación de los programas, es algo que no ha atraído demasiado la atención del usuario. Por lo que deberemos de trabajar más en otra posible representación que atraiga más al usuario.
+Los usuarios valoraron la posibilidad de poder leer los programas en el móvil, como si de un programa de bolsillo se tratase, y poder valorarlos y opinar sobre ellos. No obstante, la apariencia o representación de los programas es algo que no ha atraído demasiado su atención. Por ello, deberemos trabajar más en otra posible representación gráfica que capte más la atención del usuario.
 
-La interacción entre las tareas y la transición de las pantallas, no ha supuesto un problema para los usuarios. A excepción de las propuestas colaborativas, pues habría que rediseñar el concepto para hacerlo más \textit{amigable}.
+La interacción entre las tareas y la transición de las pantallas, no ha supuesto un problema para los usuarios. A excepción de las propuestas colaborativas, pues habría que rediseñar el concepto para hacer la edición en tiempo real más \textit{amigable} en consonancia con otras herramientas similares.
 
-Para la siguiente interacción del proceso de desarrollo, se proponen los siguientes puntos por orden de prioridad teniendo en cuenta las recomendaciones y evaluaciones con los usuarios:
+Para la siguiente interacción del proceso de desarrollo, se proponen los siguientes puntos por orden de prioridad, teniendo en cuenta las recomendaciones y evaluaciones de los usuarios:
 
 \begin{enumerate}
  \item Cambiar el aspecto de los iconos de la pantalla inicial por otros más representativos a la actividad que respresentan.
- \item Resiseñas la visualización de las secciones para una lectura más cómoda y diferenciar bien los elementos con los que puede interactuar el usuario de los que no.
- \item Cambiar el concepto de propuestas colaborativas para mejorar la comprensión del usuario.
+ \item Dar más visibilidad a los botones de opinión en secciones y propuestas.
+ \item Rediseñar la visualización de las secciones para una lectura más cómoda y diferenciar bien los elementos con los que puede interactuar el usuario de los que no.
+ \item Estudiar la visibilidad del índice de programa expansible en cada sección.
+ \item Mejorar el concepto de propuestas colaborativas con diferenciación de usuarios por colores o etiquetas para mejorar su comprensión durante su edición.
  \item Estudiar la creación de nuevas categorías que representen mejor las prouestas y secciones de la aplicación.
  \item Ofrecer más funcionalidades de personalización al usuario.
 \end{enumerate}
