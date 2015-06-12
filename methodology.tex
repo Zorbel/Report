@@ -1040,7 +1040,9 @@ Este es el listado de tareas que deberá realizar el usuario en la aplicación e
 
 \subsection{Entorno y herramientas que vamos a emplear}
 
-HERRAMIENTAS QUE SE UTILIZARON EN LA EVALUACION: SKYPE, CAMTASIA STUDIO,...
+Para realizar las evaluaciones utilizamos como herramienta principal \textit{Skype}, con la que pudimos realizar las evaluaciones sin necesidad de desplazarnos y ahorrando tiempo. De tal forma que mediante una videollamada podíamos darle la instrucciones y monitorizar la evaluación con el usuario. En cada llamada se habilitaban el micro y una cámara frontal para ver las impresiones del usuario evaluado en todo momento con la aplicación.
+
+En cuanto a la aplicación, se utilizó un archivo \textit{.apk} en modo \textit{debug} que se le pasaba al usuario evaluado para que la pudiera instalar en su dispositivo. Como requisito fundamental, el dispositivo de la persona evaluada debía contar con una versión de android igual o superior al API 15 (\textit{Ice Cream Sandwich}), y poseer una conexión a internet estable para interactuar con la aplicación sin problemas.
 
 \subsection{Tareas del moderador}
 
@@ -1056,8 +1058,72 @@ El moderador será el responsable de guíar el proceso de la evaluación con el 
 
 \subsection{Resultados de la evaluación con los usuarios}
 
+La mayor parte de los usuarios respondieron de forma fluída con la aplicación. Bien porque al estar acostumbrados al utilizar aplicaciones en Android que utilizaran interfaces basadas en \textit{Material Design}, los elementos visuales de la aplicaicón les resultaron familiares. Sin embargo, algunos conceptos internos en la aplicación resultaron algo confusos para algunos usuarios.
+
+Comenzando por los usuarios que representaban el papel de \textit{ciudanno}, mostraban cierta confusión con la representación de los programas políticos. Una de las movivaciones principales del proyecto es fomentar la lectura de los programas políticos por los electores, pues actualmente pocos conocen cómo se estructura un programa político en líneas generales. Siendo un factor determinante la incomprensión de los usuairos al ver secciones que incluían texto, otras no y otras incluían enlaces a otras subsecciones. Aunque es un factor que viene condicionado de la estructura que ha establecido el partido político para su programa electoral. Por lo que podemos encontrar programas que se adapten mejor o peor a esta forma de representarlos.
+
+Para los usuarios que juagaban el rol de \textit{activista social} la interacción con la aplicacion fue más fluída que el perfil anterior, pues normlamente estaban acostumbrados a herramientas relacionadas con el mundo de la política y participación ciudadana. Para las propuestas normales los usuarios reaccionaron de forma normal, visualizando, creando, valorando o comentando las propuestas publicadas. Sin embargo, una vez más el concepto de \textit{propuesta colaborativa} no fue del todo comprendido en un primer momento. Pero una vez que el usuario vió ćómo su propuesta podía ser editada en tiempo real por otros usuarios, el concepto quedó más claro.
+
 \subsubsection{Comentarios sobre la interfaz}
+
+Respecto a la interfaz de la aplcación no representó muchos problemas. La selección de los iconos quizá no fue la mejor para representar los elementos de la aplicación. Pues algunos usuarios tuvieron que leer la descripción de cada elemento para saber qué acción les llevaría a pulsar ese elemento. En cuento a la navegación y representación de los menús dentro de la aplicación, los usuarios no tuvieron demasiados problemas por estar familarizados con \textit{Material Design}.
+
+Para la edición de propuestas colaborativas, el no poder diferenciar a los usuarios que estaban escribiendo en un mismo \textit{pad} al mismo tiempo, es un error de diseño que deberemos de incluir en la siguiente versión. Diferenciar a los usuarios que están escribiendo al mismo tiempo por colores o marcadores, ayuda a poder concentrarse en la escritura y poder distinguir el contenido de todo el documento.
 
 \subsubsection{Resultados de las tareas}
 
+La mayor parte de las tareas fueron completadas con éxito. En la tablas \ref{tableUserEvC} y \ref{tableUserEvS}, podemos ver el tiempo promedio que tardaron los usuarios en realizar las tareas propuestas.
+
+\begin{table}[!]
+\centering
+\caption{Dificultad y tiempos de las tareas para el usuario del tipo \textit{ciudadano}.}
+\label{tableUserEvC}
+\begin{tabular}{|m{9cm}|c|c|}
+\hline
+\multicolumn{1}{|c|}{{\bf Tarea}}                                                          	& {\bf Dificultad} & {\bf Tiempo}   \\ \hline
+Visualizar los diferentes programas políticos que se prensentan a las elecciones.          	& 1/5              & \textless 30 s \\ \hline
+Acceder a las secciones más debatidas, valoradas, comentadas, etc.                         	& 2/5              & \textless 30 s \\ \hline
+Visualizar una sección de la catgoría \textit{cultura} de un partido político en concreto.	& 3/5              & \textless 45 s \\ \hline
+Añadir una sección a mis favoritos.                                                         	& 2/5              & \textless 15 s \\ \hline
+Visualizar tus secciones favoritas.                                                         	& 4/5              & \textless 45 s \\ \hline
+Valorar una sección después de haberla leído y realizar un comentario valorando la sección. 	& 1/5              & \textless 45 s \\ \hline
+\end{tabular}
+\end{table}
+
+En cada tabla se muestra el tiempo promedio en \textbf{segundos} que los usuarios consumieron en llevar a cabo la tarea, y la la dificultad media sobre un total de \textbf{cinco puntos} (siendo 0 una tarea fácil de realizar y 5 una tarea compleja de realizar),que costó a los usuarios realizar las tareas.
+
+\begin{table}[!]
+\centering
+\caption{Dificultad y tiempos de las tareas para el usuario del tipo \textit{activista social}.}
+\label{tableUserEvS}
+\begin{tabular}{|m{9cm}|c|c|}
+\hline
+\multicolumn{1}{|c|}{{\bf Tarea}}                                                       & {\bf Dificultad} & {\bf Tiempo}   \\ \hline
+Visualizar el listado de propuestas publicadas en el sistema.                           & 1/5              & \textless 15 s \\ \hline
+Mostrar las propuestas de la catgoría \textit\{educación\} publicadas hasta el momento. & 3/5              & \textless 30 s \\ \hline
+Leer el contenido de una propuesta, valorarlo y realizar un comentario.                 & 2/5              & \textless 45 s \\ \hline
+Añadir una propuesta a mis favoritos.                                                   & 2/5              & \textless 15 s \\ \hline
+Visualizar tus propuestas favoritas.                                                    & 2/5              & \textless 15 s \\ \hline
+Publicar una nueva propuesta en la categoría \textit\{vivienda\} en el sistema.         & 3/5              & \textless 45 s \\ \hline
+Colaborar en el desarrollo de una propuesta colaborativa.                               & 4/5              & \textless 60 s \\ \hline
+Publicar una propuesta colaborativa para que pueda desarrollarla la comunidad.          & 3/5              & \textless 30 s \\ \hline
+\end{tabular}
+\end{table}
+
 \subsubsection{Informe de hallazgos y recomendaciones}
+
+Podemos decir que la aplicación ha sido recibida de forma positiva por la mayor parte de los usuarios, siendo la innovación en torno a la idea como el factor potencial de la aplicación. Los usuarios han visto algunas técnicas familares en otros entornos, cómo se pueden ser trasladadas a la política bajo previas modificaciones de concepto. 
+
+Los usuarios han valorado la posibilidad de poder leer los programas en el móvil, como si de un programa de bolsillo se tratase y pudiera valorar y opinar sobre ellos. Pero la apariencia o representación de los programas, es algo que no ha atraído demasiado la atención del usuario. Por lo que deberemos de trabajar más en otra posible representación que atraiga más al usuario.
+
+La interacción entre las tareas y la transición de las pantallas, no ha supuesto un problema para los usuarios. A excepción de las propuestas colaborativas, pues habría que rediseñar el concepto para hacerlo más \textit{amigable}.
+
+Para la siguiente interacción del proceso de desarrollo, se proponen los siguientes puntos por orden de prioridad teniendo en cuenta las recomendaciones y evaluaciones con los usuarios:
+
+\begin{enumerate}
+ \item Cambiar el aspecto de los iconos de la pantalla inicial por otros más representativos a la actividad que respresentan.
+ \item Resiseñas la visualización de las secciones para una lectura más cómoda y diferenciar bien los elementos con los que puede interactuar el usuario de los que no.
+ \item Cambiar el concepto de propuestas colaborativas para mejorar la comprensión del usuario.
+ \item Estudiar la creación de nuevas categorías que representen mejor las prouestas y secciones de la aplicación.
+ \item Ofrecer más funcionalidades de personalización al usuario.
+\end{enumerate}
