@@ -4,11 +4,11 @@
 
 \section{Wave}
 
-	Wave es a la vez un protocolo de comunicaciones basado en XMPP\cite{ref:wave_over_xmpp} y una plataforma web de código libre, que permiten a sus usuarios comunicarse y colaborar entre sí en tiempo real y de forma federada (Ver sección \ref{sssec:federation}) a través de Internet. Fue anunciado originalmente por Google en 2009 \cite{ref:wave_announcement} con la intención de aunar en na sola plataforma servicios como el correo electrónico, las redes sociales y la mensajería instantánea. Sin embargo, debido a su poca aceptación, en 2010 Google abandona el proyecto \cite{ref:google_wave_end} y reorienta la tecnología a su plataforma Google Docs \cite{ref:google_docs}. Desde ese momento el proyecto original pasa a manos de la Apache Software Foundation bajo el nombre de Apache Wave.
+	Wave es a la vez un protocolo de comunicaciones basado en XMPP\cite{ref:wave_over_xmpp} y una plataforma web de código libre, que permiten a sus usuarios comunicarse y colaborar entre sí en tiempo real y de forma federada (Ver sección \ref{sssec:federation}) a través de Internet. Fue anunciado originalmente por Google en 2009 \cite{ref:wave_announcement} con la intención de aunar en una sola plataforma servicios como el correo electrónico, las redes sociales y la mensajería instantánea. Sin embargo, debido a su poca aceptación, en 2010 Google abandona el proyecto \cite{ref:google_wave_end} y reorienta la tecnología a su plataforma Google Docs \cite{ref:google_docs}. Desde ese momento el proyecto original pasa a manos de la Apache Software Foundation bajo el nombre de Apache Wave.
 
 	\subsection{Apache Wave: Wave In A Box (WIAB)}
 	
-	Al pasar el proyecto a las manos de Apache como software de código libre bajo licencia Apache \cite{ref:apache_license}, el desarrollo se centra en conseguir implementar una plataforma que integre un servidor Wave y un cliente web sencillo donde crear y manipular el contenido de las waves. A esta plataforma se le denomina Wave In A Box (WIAB) y actualmente sigue en desarrollo por parte de la comunidad y se distribuye en forma de código fuente, accesible entre otras formas desde su repositorio de \textit{GitHub} \cite{ref:wave_in_a_box_github}. Cualquiera puede descargar y ''jugar'' con WIAB en su ordenador siguiendo los pasos que nos proporcionan en su wiki \cite{ref:wave_in_a_box_wiki}. Existen también servidores de prueba ya desplegados en Internet sobre los que se puede observar el funcionamiento de WIAB \cite {ref:wave_in_a_box_server}.
+	Al pasar el proyecto a las manos de Apache como software de código libre bajo licencia Apache \cite{ref:apache_license}, el desarrollo se centra en conseguir implementar una plataforma que integre un servidor Wave y un cliente Web sencillo donde crear y manipular el contenido de las waves: algo parecido a ''documentos'' editables de forma colaborativa en tiempo real (Ver Sección \ref{ssec:waveModel}). A esta plataforma se le denomina Wave In A Box (WIAB) y actualmente sigue en desarrollo por parte de la comunidad y se distribuye en forma de código fuente, accesible entre otras formas desde su repositorio de \textit{GitHub} \cite{ref:wave_in_a_box_github}. Cualquiera puede descargar y ''jugar'' con WIAB en su ordenador siguiendo los pasos que nos proporcionan en su wiki \cite{ref:wave_in_a_box_wiki}. Existen también servidores de prueba ya desplegados en Internet sobre los que se puede observar el funcionamiento de WIAB \cite {ref:wave_in_a_box_server}.
 	
 	\begin{figure}[H]
       \centering
@@ -19,7 +19,7 @@
 
 \section{Edición Colaborativa en Tiempo Real}
 
-En esta sección veremos algunas de las soluciones disponibles actualmente que, al igual que Wave, permiten editar contenido de forma colaborativa y en tiempo real. Sin embargo, todas estas plataformas utilizan una arquitectura de servidor centralizado para ofrecer estas funcionalidades, mientras que Wave utiliza una arquitectura federada en la que no existe un servidor central (Ver Sección \ref{sssec:federation}).
+En esta sección veremos algunas de las soluciones disponibles actualmente que, al igual que Wave, permiten editar contenido de forma colaborativa y en tiempo real. Este contenido puede ser muy variado, aunque lo más usual suele ser proporcionar edición de texto en tiempo real mediante el uso de Transformaciones Operacionales (OT) \cite{ref:how_ot_works}. Sin embargo, todas estas plataformas utilizan una arquitectura de servidor centralizado para ofrecer estas funcionalidades, mientras que Wave utiliza una arquitectura federada en la que no existe un servidor central (Ver Sección \ref{sssec:federation}).
 
 De esta manera, primero veremos las principales herramientas de desarrollo (APIs) más utilizadas actualmente, para después pasar a ver algunas de las plataformas que hacen uso de esta tecnología. En su mayoría son para web, aunque existen unas pocas para Android. 
 	
@@ -29,7 +29,7 @@ De esta manera, primero veremos las principales herramientas de desarrollo (APIs
 	
 	\subsubsection{Google Realtime API}\label{sssec:googleAPI}
 	
-	Google Realtime API \cite{ref:google_api} permite construir aplicaciones de colaboración en tiempo real utilizando la tecnología de Transformaciones Operacionales (OT) presente en Google Docs. Utiliza JavaScript para poder construir construir en nuestro cliente web un modelo de datos (\textit{Realtime Data Model}) que se guarda en sus servidores y gestiona automaticamente los cambios realizados por cualquiera de los usuarios que colaboran en tiempo real. Estos cambios en el modelo son notificados al servidor y al resto de usuarios mediante eventos que se lanzan al modificar los datos sobre los que se está colaborando. Para utilizarlo es necesario tener cuenta en la Consola de Desarrolladores de Google y activar el uso de esta API con nuestras credenciales de usuario.
+	Google Realtime API \cite{ref:google_api} permite construir aplicaciones de colaboración en tiempo real utilizando la tecnología de Transformaciones Operacionales (OT) presente en Google Docs. Utiliza JavaScript para poder construir construir en nuestro cliente web un modelo de datos (\textit{Realtime Data Model}) que se guarda en sus servidores y gestiona automaticamente los cambios realizados por cualquiera de los usuarios que colaboran en tiempo real. Estos cambios en el modelo son notificados al servidor y al resto de usuarios mediante eventos que se lanzan al modificar los datos sobre los que se está colaborando. Para utilizarlo es necesario tener cuenta en la Consola de Desarrolladores de Google y activar el uso de esta API con nuestras credenciales de usuario. Existe asimismo una versión (privativa) de esta API compatible con Android.
 	
 	\subsubsection{Microsoft RTC Client API}
 	
@@ -197,7 +197,6 @@ La aplicación presenta al candidato de UpyD Carlos Alt Bustelo para la alcaldí
  - \underline{Aspectos positivos}:
 
 \begin{itemize}
-	\item 
 	\item Presentación de Programa Electoral estructurado con Indice inicial.
 	\item El Programa se lee dentro de la app, no nos lleva a leer el programa en PDF de la web. 
 	\item Presentación de una Sección del Programa Electoral de forma resumida, teniendo la opción de leer la sección entera al pulsar un botón.
@@ -342,7 +341,7 @@ Centrándonos en la participación ciudadana ya sea mediante la generación de P
 
 \subsubsection{Reddit}
 
-Reddit \cite{ref:reddit} es una plataforma web de código libre donde los usuarios pueden crear temas, propuestas o compartir enlaces web a otros sitios. A primera vista puede parecer un foro, aunque la principal diferencia respecto a éste último radica en que otros usuarios pueden votar a favor o en contra de los enlaces, haciendo que el sistema los haga aparecer como más o menos destacados. De esta forma los temas de conversación, enlaces, o propuestas aparecerán en el orden que haya escogido la comunidad según la puntuación positiva o negativa que le hayan dado.
+Reddit \cite{ref:reddit} es una plataforma web de código libre donde los usuarios pueden crear temas, propuestas o compartir enlaces web a otros sitios. A primera vista puede parecer un foro, aunque la principal diferencia respecto a éste último radica en que otros usuarios pueden votar a favor o en contra de los enlaces, haciendo que el sistema los haga aparecer como más o menos destacados. A esto lo denominan ''filtrado colaborativo'' pues de esta forma los temas de conversación, enlaces, o propuestas aparecerán en el orden que haya escogido la comunidad según la puntuación positiva o negativa que le hayan dado. 
 En principio el uso de reddit está destinado a todo tipo de temas, entre los que podemos encontrar algunos ejemplos fuertemente relacionados con la participación ciudadana. Es el caso de Plaza Podemos \cite{ref:plazaPodemos}: un espacio utilizado para que la ciudadanía pueda expresar sus propuestas, compartir noticias relacionadas con la actualidad política o debatir aquellos temas que más les preocupan. Así, aunque no seamos participantes de reddit, de un simple vistazo podemos saber qué es lo más debatido por la ciudadanía, las propuestas que quieren llevar a cabo en en el gobierno o cuáles son los temas que más les preocupan.
 
 \begin{figure}[H]

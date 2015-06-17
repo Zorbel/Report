@@ -401,13 +401,13 @@ Con el objetivo de no repetir código decidimos estructurar el esquema de petici
 			
 		En el caso de DemoCritics lo primero que tendremos que hacer será registrar al usuario usando su ID (Ver Sección \ref{sssec:idUser}). Esto se hace en el ''MainActivity'' al ejecutar la aplicación.  Una vez registrado solo será necesario utilizar el ServiceSwellRT para llevar a cabo dos actividades: crear una nueva propuesta colaborativa y editar una propuesta ya creada. 
 		
-		Un ejemplo de cómo registrarse con SwellRT se puede encontrar en el Apéndice \ref{ssec:waveRegister}.
+		Un ejemplo de cómo registrarse con SwellRT se puede encontrar en el Apéndice \ref{ssec:waveRegister}. \\
 
 		\underline{Crear Propuesta Colaborativa}
 		
 		Esta es una opción que se le ofrece al usuario en el caso de que, al hacer una propuesta nueva, deje alguno de los campos de ''¿Cómo lo haría?'' o de ''¿Cómo lo financiaría?'' en blanco. En tal caso, lo primero que se hace es hacer un login en el servidor Wave llamando al método ''startSession'' del Service. Una vez que se ha iniciado sesión, se abre un nuevo modelo (wave) en el servidor para esta propuesta y se obtiene el Id (''WaveId'') de dicho modelo creado para guardarlo en la base de datos junto al resto de datos de la propuesta. Además, se le asocian al elemento ''root'' del modelo uno o dos documetnos colaborativos del tipo TextType llamados ''padHow'' y ''padCost'' en función de si ha dejado los dos campos vacíos o solo uno. Por último se añade como participante del modelo creado al usuario que lo ha creado (su ID\_USER). Cabe destacar que la mayor parte de la programación con el serviceSwellRT se lleva a cabo mediante callbacks que responden a eventos como iniciar sesión, crear modelos, etc.
 		
-		Un ejemplo simplificado del código encargado de crear el modelo se puede ver en el Apéndice \ref{ssec:waveCreateModel}.
+		Un ejemplo simplificado del código encargado de crear el modelo se puede ver en el Apéndice \ref{ssec:waveCreateModel}.\\
 		
 		\underline{Editar Propuesta Colaborativa}
 

@@ -2,9 +2,9 @@
 \thispagestyle{sectioned}
 \chapter{Tecnologías del Proyecto}
 
-En las siguientes secciones explicaremos brevemente las tecnologías y herramientas que hemos utilizado para llevar a cabo este proyecto. Concretamente hablaremos de las tecnologías utilizadas durante la Migración del cliente web de SwellRT (Wave) a Android y durante el desarrollo de la aplicación Android que hará uso del resultado de dicha Migración. 
+En las siguientes secciones se explicarán brevemente las tecnologías y herramientas que se han utilizado para llevar a cabo este proyecto. Concretamente se hablará de las tecnologías utilizadas durante la Migración del cliente web de SwellRT (Wave) a Android (Ver Sección \ref{sec:migration}) y durante el desarrollo de la aplicación Android que hará uso del resultado de dicha Migración. 
 
-En el caso de Wave, al tratarse de una tecnología bastante reciente, se explicacrá más detalladamente en qué consite esta tecnología, pero para el resto de casos se hará una pequeña reseña sobre en qué consiste la tecnología y sus usos. En todos los casos se intentará tambíen explicar de qué manera y para qué se ha utilizado dentro de este proyecto.
+En el caso de Wave, al tratarse de una tecnología bastante reciente, se explicará más detalladamente en qué consite esta tecnología, pero para el resto de casos se hará una pequeña reseña sobre en qué consiste la tecnología y sus usos. En todos los casos se intentará tambíen explicar de qué manera y para qué se ha utilizado dentro de este proyecto.
 
 Para hacerse una idea general de las tecnologías utilizadas se recomienda ver el resumen que se muestra en la Tabla \ref{fig:technologiesTable}. 
 
@@ -68,7 +68,7 @@ Para hacerse una idea general de las tecnologías utilizadas se recomienda ver e
 
     \subsubsection{Federación}\label{sssec:federation}
     
-    El Protocolo Wave \cite{ref:wave_over_xmpp} fue desarrollado para utilizar un modelo federado \cite{ref:wave_federation} \cite{ref:wave_white_paper} de comunicación basado en la tecnología XMPP \cite{ref:xmpp} \cite{ref:wave_over_xmpp}. Se trata por tanto de un modelo descentralizado en el que cualquiera de los participantes en la conversación es libre de actuar tanto como servidor como cliente sin que ello afecte a su participación en la conversación. 
+    El Protocolo Wave \cite{ref:wave_over_xmpp} fue desarrollado para utilizar un modelo federado \cite{ref:wave_federation} \cite{ref:wave_white_paper} de comunicación basado en la tecnología XMPP \cite{ref:xmpp} \cite{ref:wave_over_xmpp}. Se trata por tanto de un modelo descentralizado en el que cualquiera de los participantes en la edición del documento (o ''conversación'') es libre de actuar tanto como servidor como cliente sin que ello afecte a su participación en la conversación. 
     Además, a diferencia de otras tecnologías (como el correo electronico) en las que cada participante almacena su propia copia de la conversación y cada vez que hay cambios se debe transmitir la conversación entera a todos los participantes, Wave tiene la ventaja de que actúa de forma que es el servidor de la conversación el único que almacena la copia entera y se encarga de calcular los cambios que se han producido para transmitir solamente dichos cambios por la red a los participantes, con las consiguientes ventajas en términos de latencia que ello conlleva. 
 
     \subsubsection{Consistencia en tiempo real}\label{sssec:realTime}
