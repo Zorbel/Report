@@ -7,7 +7,7 @@
 	La arquitectura que soporta Wave tal y como la diseñó originalmente Google está estructurada en forma de capas que interactuan entre sí. De forma general y de abajo hacia arriba disponemos de las siguientes capas:
 	
 	\begin{itemize}
-		\item Capa de Conexión Cliente/Servidor: Se encarga de gestionar la conexión entre cliente y servidor mediante el protocolo XMPP.
+		\item Capa de Conexión Cliente/Servidor: Se encarga de gestionar la conexión entre servidor y servidor mediante el protocolo XMPP y la conexión entre cliente y servidor mediante el protocolo Wave y WebSockets.
 		\item Capa de Control de OT: Se encarga de gestionar la consistencia en tiempo real de los datos mediante la utilización de Transformaciones Operacionales (OT).
 		\item Capa de Modelo de Datos Wave: Se encarga de gestionar los datos a nivel de las Waves que forman parte de una Conversación.
 		\item Capa de Modelo Conversacional: Se encarga de gestionar los datos a nivel de las Conversaciones, junto a los documentos que las componen y los usuarios participantes (Ver Sección \ref{sec:waveModel}). En el caso de SwellRT se extendió este modelo a otro más generalizado llamado Modelo de Contenidos (Ver Sección \ref{sec:swellRTModel}).
@@ -56,22 +56,22 @@
 	\begin{figure}[H]
 	  \centering
 	    \includegraphics[keepaspectratio, scale=0.6]{Media/Captures/waveDataModel.png}
-	  \caption{Cambio de Modelo de Wave}
+	  \caption{Modelo de Contenidos de SwellRT}
 	  \label{fig:wave_swellRT}
 	\end{figure}
 
 \section{Arquitectura de la aplicación}
 
-La arquitectura de DemoCritics está compuesta por cuatro módulos principales de los que hablaremos en profundidad en las siguientes subsecciones. Como \textbf{Cliente móvil} tendremos la aplicación desarrollada en Android, que realizará peticiones HTTP al servicio web alojado en OpenShift \cite{ref:OpenShift}, una plataforma que permite alojar servicios web de forma gratuita. Dentro del servicio contaremos con un \textbf{Service RESTful} que será quien gestione las peticiones de la aplicación móvil mediante el protocolo HTTP. La \textbf{Base de Datos MySQL} alojada también en el servidor de OpenShift almacenará toda la información relacionada con la aplicación. La API del Service RESTful será quien actúe de intermediario entre las peticiones de la aplicación y las operaciones en Base de Datos.
+La arquitectura de DemoCritics está compuesta por cuatro módulos principales de los que hablaremos en profundidad en las siguientes subsecciones. Como \textbf{Cliente móvil} tendremos la aplicación desarrollada en Android, que realizará peticiones HTTP al servicio Web RESTful (PHP+Laravel+MySQL). Dicho \textbf{Service RESTful} será quien gestione las peticiones de la aplicación móvil mediante el protocolo HTTP. La \textbf{Base de Datos MySQL} almacenará toda la información relacionada con la aplicación. El API del Service RESTful será quien actúe de intermediario entre las peticiones de la aplicación y las operaciones en Base de Datos. En este caso alojaremos la Base de Datos y el SErvice RESTful en caso en OpenShift \cite{ref:OpenShift}, una plataforma que permite alojar servicios web de forma gratuita.
 
 \begin{figure}[H]
 \centering
-\includegraphics[keepaspectratio, scale=0.45]{Media/Diagrams/generalArchitectureDiagram.png}
+\includegraphics[keepaspectratio, scale=0.55]{Media/Diagrams/generalArchitectureDiagram.png}
 \caption{Arquitectura general de la aplicación.}
 \label{fig:architecture}
 \end{figure}
 
-Por otro lado, la aplicación hará uso del \textbf{Servicio Android} desarrollado en SwellRT-Android \cite{ref:swellRT_android_github} para conectarse con el servidor Wave alojado en \url{https://wave.p2pvalue.eu/} e intercambiar los datos que sea necesario mantener en tiempo real, es decir, la edición de una Propuesta de forma colaborativa entre varias personas.
+Por otro lado, la aplicación hará uso del \textbf{Servicio Android} desarrollado en SwellRT-Android \cite{ref:swellRT_android_github} para conectarse con el servidor de colaboración en tiempo real SwellRT (Java/Jetty+MongoDB) e intercambiar los datos que sea necesario mantener en tiempo real, es decir, la edición de una Propuesta de forma colaborativa entre varias personas.
 
 
 \subsection{Base de datos}
@@ -242,7 +242,7 @@ La conexión a la base de datos se encuentra configurada en el archivo \textit{/
 
 	\subsubsection{Interfaz Gráfica}
 	
-		En el desarrollo de esta aplicación quisimos utilizar un diseño plano basado en las últimas guias de diseño de Android disponibles en su última versión 5.0. Google denominó a este diseño plano ''Material Design''. 
+		En el desarrollo de esta aplicación quisimos utilizar un diseño plano basado en las últimas guias de diseño de Android disponibles en su última versión 5.0. Google denominó a este diseño plano ''Material Design''. Por tanto usamos esta versión de Android (API 21) para desarrollar la aplicación. A pesar de que aun no mucha gente utiliza Android 5.0 ''Lollipop'' (Ver figura \ref{fig:android_Usage}) muchas de sus características son retrocompatibles con versiones anteriores, por lo que aunque la gente no posea la última versión en sus dispositivos podrá hacer uso de las características de ''Material Design''.
 	
 		En Android, cuando creamos una Actividad (en su método ''onCreate()'') asignamos una Vista (''View'') a la actividad que representa la interfaz del usuario. Esta vista está definida en un archivo de Layout XML que deberemos modificar para crear la interfaz gráfica añadiendo componentes gráficos \cite{ref:android_widget} (''widgets'') y modificando sus atributos mediante etiquetas XML para adaptarlos a nuestras necesidades. Además podemos asignarles un identificador único para poder movernos por dichos widgets luego desde el código de la aplicación mediante una navegación en árbol utilizando el método ''findViewById()'' proporcionado por Android. 
 		
@@ -335,13 +335,13 @@ La conexión a la base de datos se encuentra configurada en el archivo \textit{/
 	
 	\underline{Estructuración y Almacenamiento de Secciones}
 	
-	Con dicha codificación conseguiamos ordenar las secciones en el orden e el que aprecen en el programa, pero ahora debiamos guardarlas en la aplicación en unsa estructura que nos permitiera navegar por el programa de forma estructurada pudiendo en cada momento ver las subsecciones o volver a la seccion anterior. Decidimos por tanto \textbf{guardar el programa en una estructura en árbol formada por listas de listas}. De esta forma cada elemento de la lista sería un objeto del tipo Section que contendria la información de dicha seccion (titulo, texto, etc.) y otra lista con las subsecciones.
+	Con dicha codificación se consiguió ordenar las secciones en el orden en el que aparecen en el programa, pero ahora se debían guardar en la aplicación en una estructura que permitiera navegar por el programa de forma estructurada pudiendo en cada momento ver las subsecciones o volver a la sección anterior. Se decidió por tanto \textbf{guardar el programa en una estructura en árbol formada por listas de listas}. De esta forma cada elemento de la lista sería un objeto del tipo Section que contendría la información de dicha sección (título, texto, etc.) y otra lista con las subsecciones.
 	
-	Pero, ¿cómo construir esta estructura a partir de la lista ordenada que nos devuelve el Service REST? La solución encontrada fue utilizar una función que construyera dicho árbol de forma recursiva (Ver clase ''GetProgramsData.java'') sobre una Seccion ''root'' vacía que pertenecería a cada Partido Político. Dicha función recorrería la lista de secciones sin estructurar y para cada sección comprobraría su nivel de anidamiento para saber si colocarlo en el nivel actual, en el siguiente o en el anterior.
+	Pero, ¿cómo construir esta estructura a partir de la lista ordenada que devuelve el Service REST? La solución encontrada fue utilizar una función que construyera dicho árbol de forma recursiva (Ver clase ''GetProgramsData.java'') sobre una sección ''root'' vacía que pertenecería a cada Partido Político. Dicha función recorrería la lista de secciones sin estructurar y para cada sección comprobraría su nivel de anidamiento son el fin de saber si colocarlo en el nivel actual, en el siguiente o en el anterior.
 	
 	Se puede ver el código de esta función de construcción del árbol en la Sección \ref{ssec:codeProgramTree} del Apéndice.
 	  
-	Además, como no queriamos tener que descargarnos el programa continuamente, esta estructura en forma de arbol se guardaría en una clase llamada ''PoliticalGroups'' que alamacenaría el listado de Partidos Politicos y para cada unode ellos almacenaría la estructura en árbol de su programa (su nodo ''root''). Esta clase implementa el \textbf{patrón de diseño Singleton} para asegurar que solo exista una instancia de ella, accesible desde cualquier punto de la aplicación. 
+	Además, como no se pretendía tener que descargarse el programa continuamente, esta estructura en forma de arbol se guardaría en una clase llamada ''PoliticalGroups'' que alamacenaría el listado de Partidos Politicos y para cada uno de ellos almacenaría la estructura en árbol de su programa (su nodo ''root''). Esta clase implementa el \textbf{patrón de diseño Singleton} para asegurar que solo exista una instancia de ella, accesible desde cualquier punto de la aplicación. 
 	  
 	\begin{figure}[H]
 	  \centering
@@ -352,11 +352,11 @@ La conexión a la base de datos se encuentra configurada en el archivo \textit{/
 	
 	\subsubsection{Conexión y Peticiones a Service REST y Base de Datos}
 
-		Las peticiones de información a Base de Datos (ya sea para crear datos, descargarlos o modificarlos) se realizan mediante el protocolo HTTP enviando dichas peticiones al Service REST (Ver Sección \ref{ssec:seviceREST}). Para enviar dichas peticiones es necesario por tanto realizar una conexión HTTP al Service REST desde la aplicación Android. Aprovechando la experiencia previa adquirida durante la migración de Wave (Ver Sección \ref{sssec:conHttp}), decidimos utilizar la librería ''HttpURLConnection'' de Android y un esquema basado en AsyncTask que ejecutan el proceso de conexión y descarga de datos en un thread separado del UI Thread tal y como recomienda Google hacer para trabajar con conexiones de red\cite{ref:android_networking}.
+		Las peticiones de información a Base de Datos (ya sea para crear datos, descargarlos o modificarlos) se realizan mediante el protocolo HTTP enviando dichas peticiones al Service REST (Ver Sección \ref{ssec:seviceREST}). Para enviar dichas peticiones es necesario por tanto realizar una conexión HTTP al Service REST desde la aplicación Android. Aprovechando la experiencia previa adquirida durante la migración de Wave (Ver Sección \ref{sssec:conHttp}), se decidió utilizar la librería ''HttpURLConnection'' de Android y un esquema basado en AsyncTask que ejecutan el proceso de conexión y descarga de datos en un thread separado del UI Thread tal y como recomienda Google hacer para trabajar con conexiones de red\cite{ref:android_networking}.
 		
-		Así, en función de la operación que se quiera hacer en Base de Datos, para cada tipo de consulta existirá un AsyncTask encargado de conectarse al servidor con la URL apropiada y tratar los datos en JSON que este le pueda devolver, ya sea para mostrarlos o guardarlos en algún objeto de la aplicación. De forma general podemos identificar cuatro tipos de peticiones al servidor (Ver tabla \ref{fig:CRUDtable}).
+		Así, en función de la operación que se quiera hacer en Base de Datos, para cada tipo de consulta existirá un AsyncTask encargado de conectarse al servidor con la URL apropiada y tratar los datos en JSON que éste le pueda devolver, ya sea para mostrarlos o guardarlos en algún objeto de la aplicación. De forma general se pueden identificar cuatro tipos de peticiones al servidor (Ver tabla \ref{fig:CRUDtable}).
 
-Con el objetivo de no repetir código decidimos estructurar el esquema de peticiones HTTP mediante herencia de AsyncTasks. El siguiente diagrama esquematiza la estructura: 
+Con el objetivo de no repetir código se decidió estructurar el esquema de peticiones HTTP mediante herencia de AsyncTasks. El siguiente diagrama esquematiza la estructura: 
 
 	\begin{figure}[H]
 	  \centering
@@ -365,11 +365,11 @@ Con el objetivo de no repetir código decidimos estructurar el esquema de petici
 	  \label{fig:classConnectionTree}
 	\end{figure}	
 	
-	Hace falta también actualizar la vista del usuario cuando se reciban los datos. Como un AsyncTask se ejecuta en un hilo aparte diferente del UI Thread (para no bloquear la interacción con el usuario), a priori no tiene acceso a la vista (Layout) que se le está mostrando al usuario. Por esta razón la solución que encontramos fue guardar una referencia a la vista del usuario dentro del AsyncTask (ver clase ''URLConnection''). De esta manera en su método ''onPostExecute()'' que se ejecuta nada más terminar la operacion de conexión del ''doInbackground()'', obtenemos dicha vista y la actualizamos con los datos recién descargados. Este método de actualización de la vista es el que se utiliza en todos los casos. \\
+	Hace falta también actualizar la vista del usuario cuando se reciban los datos. Como un AsyncTask se ejecuta en un hilo aparte diferente del UI Thread (para no bloquear la interacción con el usuario), a priori no tiene acceso a la vista (Layout) que se le está mostrando al usuario. Por esta razón la solución que se encontró fue guardar una referencia a la vista del usuario dentro del AsyncTask (ver clase ''URLConnection''). De esta manera en su método ''onPostExecute()'' que se ejecuta nada más terminar la operacion de conexión del ''doInbackground()'', se obtiene dicha vista y se actualiza con los datos recién descargados. Este método de actualización de la vista es el que se utiliza en todos los casos. \\
 		
 		\underline{Comprobación de Conexión a Internet}
 		
-		Por otro lado, para llevar a cabo un control de errores en la conexión al Service REST, antes de ejecutar la tarea en el AsyncTask comprobamos el estado de la conexión del dispositivo móvil para asegurarnos de que el usuario dispone de conexión a Internet. En caso contrario se le muestra un mensaje de aviso para que compruebe sus conexiones y no se lleva a cabo la tarea de conexión en el AsyncTask. Aprovechando que todas las actividades extienden de ''MenuActivity'' dicho método de comprobación se encuentra dentro de esa clase. Además, fue necesario definir el siguiente permiso en el ''AndroidManifest.xml'' de la aplicación para acceder a la información de estado de la conexión del dispositivo:
+		Por otro lado, para llevar a cabo un control de errores en la conexión al Service REST, antes de ejecutar la tarea en el AsyncTask se comprueba el estado de la conexión del dispositivo móvil para asegurarse de que el usuario dispone de conexión a Internet. En caso contrario se le muestra un mensaje de aviso para que compruebe sus conexiones y no se lleva a cabo la tarea de conexión en el AsyncTask. Aprovechando que todas las actividades extienden de ''MenuActivity'' dicho método de comprobación se encuentra dentro de esa clase. Además, fue necesario definir el siguiente permiso en el ''AndroidManifest.xml'' de la aplicación para acceder a la información de estado de la conexión del dispositivo:
 		
 		  \lstset{language=XML, breaklines=true, autogobble=true, basicstyle=\ttfamily\footnotesize}
 	  \begin{lstlisting}[frame=single]
@@ -378,7 +378,7 @@ Con el objetivo de no repetir código decidimos estructurar el esquema de petici
 		
 	\subsubsection{Gestión de Usuarios: ID de Android} \label{sssec:idUser}
 	
-		Como esta versión de la aplicación no maneja información critica y sensible del usuario decidimos utilizar un método de autenticación basado en el ID almacenado en el dispositivo móvil. En Android existen varios identificadores (IMEI, ID de dispositivo, ID de Android..) teniendo cada uno de ellos características distintas. En nuestro caso \textbf{decidimos utilizar el ID de Android} \cite{ref:android_secure} ya que es único para cada instalación de sistema operativo y acceder a su valor no requiere de permisos especiales en la aplicación. Se trata de un número de 64 bits en formato hexadecimal al cual se accede directamente mediante la variable del sistema ''Secure.ANDROID\_ID''.
+		Como esta versión de la aplicación no maneja información crítica y sensible del usuario se decidió utilizar un método de autenticación basado en el ID almacenado en el dispositivo móvil. En Android existen varios identificadores (IMEI, ID de dispositivo, ID de Android..) teniendo cada uno de ellos características distintas. En este caso \textbf{se decidió utilizar el ID de Android} \cite{ref:android_secure} ya que es único para cada instalación de sistema operativo y acceder a su valor no requiere de permisos especiales en la aplicación. Se trata de un número de 64 bits en formato hexadecimal al cual se accede directamente mediante la variable del sistema ''Secure.ANDROID\_ID''.
 		
 		El acceso a este identificador se produce nada más ejecutar la aplicación en su actividad ''MainActivity'' y se guarda de forma estática en la clase ''User'' para poder acceder a él desde cualquier punto de la aplicación. Con el identificador también se accede a la Base de Datos para descargar el nombre de Usuario que se corresponde con dicho identificador. Este nombre se muestra en el menú izquierdo de la aplicación y se puede cambiar desde ahí. De esta manera, todo el contenido generado por un usuario (Opiniones, comentarios, propuestas,...) se guarda tambien en base de datos asociado a este identificador único.
 		
@@ -386,11 +386,11 @@ Con el objetivo de no repetir código decidimos estructurar el esquema de petici
 
 		Al servicio (ServiceSwellRT) desarrollado durante la migración de SwellRT a Android (Ver Sección \ref{ssec:migrationResult}) se le añadió encima el API del Modelo de Contenidos de SwellRT (Ver Sección \ref{ssec:swellRTModel}). Este API trabaja con Waves (o "modelos") con identificadores únicos, y dentro de cada modelo habrá un objeto "root" del tipo Mapa del que colgarán los distintos objetos con los que podremos jugar de cada uno de los cuatro tipos básicos de datos: Mapas, Listas, Strings y Documentos de Texto.
 		
-		En este proyecto utilizamos SwellRT para soportar la edición de propuestas colaborativas. Este tipo de propuestas puede tener asociadas dos textos colaborativos que se corresponden con la manera de llevar a cabo la propuesta y cómo financiarla. Para implementar esto con wave será necesario por tanto crear una wave por cada propuesta colaborativa, que tendrá asociados a su mapa 'root' dos objetos del tipo Documento de Texto (TextType). Este tipo permite crear documentos colaborativos que pueden ser editados en tiempo real por todo aquel usuario de wave que esté registrado como participante. 
+		En este proyecto se utiliza SwellRT para soportar la edición de propuestas colaborativas. Este tipo de propuestas puede tener asociadas dos textos colaborativos que se corresponden con la manera de llevar a cabo la propuesta y cómo financiarla. Para implementar esto con wave será necesario por tanto crear una wave por cada propuesta colaborativa, que tendrá asociados a su mapa 'root' dos objetos del tipo Documento de Texto (TextType). Este tipo permite crear documentos colaborativos que pueden ser editados en tiempo real por todo aquel usuario de wave que esté registrado como participante. 
 		
 		El funcionamiento del Servicio Android de conexión con SwellRT exige primero enlazar (''bind'') la Actividad actual con el Service para poder hacer uso del API. Después de enlazar, podremos registrarnos en el servidor SwellRT y crear, abrir, cerrar o borrar waves, a las que tambien podremos añadir participantes y nuevos objetos de los cuatro tipos antes mencionados. 
 		
-		En SwellRT se accede a estos objetos a partir del identificador que les otorguemos al crearlos, en este caso se creará dentro de cada wave dos TextTypes con identificadores "howProp" y "costProp" para cada uno de los textos colaborativoas antes mencionados. Asimismo, cada propuesta tendrá asociada una wave con un identificador único generado por el servidor al crearse la wave. Este identificador será el que guardemos en la base de datos para que cualquier usuario pueda acceder a la edición colaborativa de la propuesta. El siguiente es un esquema del uso de SwellRT en el proyecto.
+		En SwellRT se accede a estos objetos a partir del identificador que se les otorgue al crearlos, en este caso se creará dentro de cada wave dos TextTypes con identificadores "howProp" y "costProp" para cada uno de los textos colaborativos antes mencionados. Asímismo, cada propuesta tendrá asociada una wave con un identificador único generado por el servidor al crearse la wave. Este identificador será el que se guarde en la base de datos para que cualquier usuario pueda acceder a la edición colaborativa de la propuesta. El siguiente es un esquema del uso de SwellRT en el proyecto.
 		
 	\begin{figure}[H]
 	  \centering
@@ -399,7 +399,7 @@ Con el objetivo de no repetir código decidimos estructurar el esquema de petici
 	  \label{fig:diagramUseSwellRT}
 	\end{figure}	
 			
-		En el caso de DemoCritics lo primero que tendremos que hacer será registrar al usuario usando su ID (Ver Sección \ref{sssec:idUser}). Esto se hace en el ''MainActivity'' al ejecutar la aplicación.  Una vez registrado solo será necesario utilizar el ServiceSwellRT para llevar a cabo dos actividades: crear una nueva propuesta colaborativa y editar una propuesta ya creada. 
+		En el caso de DemoCritics lo primero que se tendrá que hacer será registrar al usuario usando su ID (Ver Sección \ref{sssec:idUser}). Esto se hace en el ''MainActivity'' al ejecutar la aplicación.  Una vez registrado solo será necesario utilizar el ServiceSwellRT para llevar a cabo dos actividades: crear una nueva propuesta colaborativa y editar una propuesta ya creada. 
 		
 		Un ejemplo de cómo registrarse con SwellRT se puede encontrar en el Apéndice \ref{ssec:waveRegister}. \\
 

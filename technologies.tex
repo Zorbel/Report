@@ -22,29 +22,29 @@ Para hacerse una idea general de las tecnologías utilizadas se recomienda ver e
 	  \hline
 	  \textbf{Tipo} & \textbf{Nombre} & \textbf{Uso} & \textbf{Sección} \\
 	  \hline
-	  \multirow{2}{*}{API} & SwellRT & Base de la que se parte para la Migración de Wave a Android & \ref{sssec:swellRT} \\ \cline{2-4} 
-	  & Android & Plataforma para la Migración y el Desarrollo de la app. & \ref{ssec:android} \\ \hline
+	  \multirow{4}{*}{Framework} & SwellRT &  Framework que permite desarrollar aplicaciones con la tecnología y la infraestructura federada de Wave a través de un API JavaScript y Android. & \ref{sssec:swellRT} \\ \cline{2-4} 
+	  & Android & Plataforma para la Migración y el Desarrollo de la app. & \ref{ssec:android} \\ \cline{2-4}
+	  & GWT & Framework JavaScript utilizado por el antiguo Cliente web de Wave presente en SwellRT. & \ref{ssec:gwt} \\ \cline{2-4}
+	  & Laravel 5 & Framework de desarrollo del Service REST de la App en PHP. & \ref{ssec:laravel} \\ \hline
 	  \multirow{2}{*}{Servidor} & \begin{tabular}[c]{@{}c@{}}Wave In A Box\\ (WIAB)\end{tabular} & Servidor que aloja las Waves. Migración y Desarrollo de la App. & \ref{sssec:wiab} \\ \cline{2-4} 
 	  & OpenShift & Servidor que aloja el Service REST y la Base de Datos de la App. & \ref{ssec:openshift} \\ \hline
 	  \multirow{5}{*}{Lenguaje} & Java & Lenguaje base para trabajar con Android, tanto en la Migración como en la App. & \ref{ssec:java} \\ \cline{2-4} 
 	  & JavaScript & Lenguaje del antiguo cliente web de Wave presente en SwellRT. & \ref{ssec:javascript} \\ \cline{2-4} 
 	  & PHP & Lenguaje para definición del Service REST de la App. & \ref{ssec:php} \\ \cline{2-4} 
-	  & SQL & Lenguaje para definir e interactuar con la Base de Datos de la App. & \ref{ssec:sql} \\ \cline{2-4} 
-	  & XML & Lenguaje para definición de interfaces en Android. & \ref{ssec:xml} \\ \hline
-	  \begin{tabular}[c]{@{}c@{}}Formato\\  de Datos\end{tabular} & JSON & Formato para intercambio de información con Servidor Wave y REST. & \ref{ssec:json} \\ \hline
-	  \multirow{2}{*}{Framework} & GWT & \begin{tabular}[c]{@{}c@{}}Framework JavaScript utilizado por el antiguo Cliente web \\ de Wave presente en SwellRT.\end{tabular} & \ref{ssec:gwt} \\ \cline{2-4} 
-	  & Laravel 5 & Framework de desarrollo del Service REST de la App en PHP. & \ref{ssec:laravel} \\ \hline
-	  \multirow{3}{*}{Protocolo} & Google Wave & Protocolo de intercambio de Waves usado para la migración y la App. & \ref{ssec:wave} \\ \cline{2-4} 
-	  & HTTP & \begin{tabular}[c]{@{}c@{}}Protocolo de transferencia de datos por Internet \\ usado por la Migración y por la app.\end{tabular} & \ref{ssec:HTTP} \\ \cline{2-4} 
-	  & WebSocket & \begin{tabular}[c]{@{}c@{}}Protocolo de transferencia de datos bidireccionales por \\ Internet, usado por la Migración y por la App.\end{tabular} & \ref{ssec:websocket} \\ \hline
+	  & SQL & Lenguaje para definir e interactuar con la Base de Datos de la App. & \ref{ssec:sql} \\ \hline
+	  \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Formato\\  de Datos\end{tabular}} & JSON & Formato para intercambio de información con Servidor Wave y REST. & \ref{ssec:json} \\ \cline{2-4} 
+	  & XML & Formato para definición de datos estructurados (y de interfaces en Android). & \ref{ssec:xml} \\ \hline
+	  \multirow{3}{*}{Protocolo} & Wave & Protocolo de intercambio de Waves basado en XMPP y usado para la migración y la App. & \ref{ssec:wave} \\ \cline{2-4} 
+	  & HTTP & Protocolo de transferencia de datos por Internet usado por la Migración y por la app. & \ref{ssec:HTTP} \\ \cline{2-4} 
+	  & WebSocket & Protocolo de transferencia de datos bidireccionales por Internet, usado por la Migración y por la App. & \ref{ssec:websocket} \\ \hline
 	  \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Base de \\ Datos\end{tabular}} & MySQL & Sistema Gestor de la Base de Datos de la App & \ref{ssec:mysql} \\ \cline{2-4} 
 	  & PhpMyAdmin & Herramienta de Administración de la Base de Datos de la App. & \ref{ssec:phpmyadmin} \\ \hline
 	  \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Control de\\ Versiones\end{tabular}} & Git & Software de control de versiones usado para la Migración y la App. & \ref{ssec:git} \\ \cline{2-4} 
-	  & GitHub & \begin{tabular}[c]{@{}c@{}}Plataforma web de control de versiones que aloja\\ los desarrollos de la Migración y de la App.\end{tabular} & \ref{ssec:github} \\ \hline
-	  Prototipado & POP & \begin{tabular}[c]{@{}c@{}}Aplicación para elaborar los Prototipos Interactivos \\ basados en los Prototipos en Papel de la App.\end{tabular} & \ref{ssec:pop} \\ \hline
+	  & GitHub & Plataforma web de control de versiones que aloja los desarrollos de la Migración y de la App. & \ref{ssec:github} \\ \hline
+	  Prototipado & POP & Aplicación para elaborar los Prototipos Interactivos basados en los Prototipos en Papel de la App. & \ref{ssec:pop} \\ \hline
 	  \multirow{3}{*}{IDE} & Eclipse Luna & Entorno de Desarrollo utilizado para la Migración de Wave. & \ref{ssec:eclipse} \\ \cline{2-4} 
 	  & Android Studio & Entorno de Desarrollo utilizado para el desarrollo de la App. & \ref{ssec:androidStudio} \\ \cline{2-4} 
-	  & Sublime Text & \begin{tabular}[c]{@{}c@{}}Editor de texto y de código fuente,utilizado para\\ desarrollar el Service REST.\end{tabular} & \ref{ssec:sublime} \\ \hline
+	  & Sublime Text & Editor de texto y de código fuente,utilizado para desarrollar el Service REST. & \ref{ssec:sublime} \\ \hline
 	\end{tabular}
 	\end{center}
 	\caption{Tecnologías usadas en el Proyecto}
@@ -68,12 +68,12 @@ Para hacerse una idea general de las tecnologías utilizadas se recomienda ver e
 
     \subsubsection{Federación}\label{sssec:federation}
     
-    El Protocolo Wave \cite{ref:wave_over_xmpp} fue desarrollado para utilizar un modelo federado \cite{ref:wave_federation} \cite{ref:wave_white_paper} de comunicación basado en la tecnología XMPP \cite{ref:xmpp} \cite{ref:wave_over_xmpp}. Se trata por tanto de un modelo descentralizado en el que cualquiera de los participantes en la edición del documento (o ''conversación'') es libre de actuar tanto como servidor como cliente sin que ello afecte a su participación en la conversación. 
+    El Protocolo Wave \cite{ref:wave_over_xmpp} fue desarrollado para utilizar un modelo federado \cite{ref:wave_federation} \cite{ref:wave_white_paper} de comunicación basado en la tecnología XMPP \cite{ref:xmpp} \cite{ref:wave_over_xmpp}. Se trata por tanto de un modelo descentralizado en el que cualquiera de los participantes en la edición del documento (o ''conversación'') es libre de actuar tanto como servidor como cliente sin que ello afecte a su participación en el documento. 
     Además, a diferencia de otras tecnologías (como el correo electronico) en las que cada participante almacena su propia copia de la conversación y cada vez que hay cambios se debe transmitir la conversación entera a todos los participantes, Wave tiene la ventaja de que actúa de forma que es el servidor de la conversación el único que almacena la copia entera y se encarga de calcular los cambios que se han producido para transmitir solamente dichos cambios por la red a los participantes, con las consiguientes ventajas en términos de latencia que ello conlleva. 
 
     \subsubsection{Consistencia en tiempo real}\label{sssec:realTime}
     
-    El Protocolo Wave \cite{ref:wave_over_xmpp} utiliza la tecnología de Transformaciones Operacionales (OT) \cite{ref:how_ot_works} para garantizar la consistencia en la comunicación en tiempo real entre los participantes. Es decir, cualquier cambio producido por cualquiera de los participantes en la conversación se transmite automáticamente y en tiempo real al resto de los participantes sin pérdida de información y garantizando que los cambios se muestran en el estricto orden en el que se produjeron sin errores \cite{ref:wave_ot}.
+    El Protocolo Wave \cite{ref:wave_over_xmpp} utiliza la tecnología de Transformaciones Operacionales (OT) \cite{ref:how_ot_works} para garantizar la consistencia en la comunicación en tiempo real entre los participantes. Es decir, cualquier cambio producido por cualquiera de los participantes en la conversación se transmite automáticamente y en tiempo real al resto de los participantes. Esto se hace sin pérdida de información y garantizando que, independientemente del orden en el que se produjeron los cambios, el estado estado final del documento será el mismo para todos y por ende verán lo mismo. \cite{ref:wave_ot}.
     
     \subsubsection{Escalabilidad}
     
