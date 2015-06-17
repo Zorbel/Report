@@ -22,7 +22,7 @@
 	\end{figure}
 	
 
-    \subsection{Modelo Conversacional Wave}\label{sec:waveModel}
+    \subsection{Modelo Conversacional Wave}\label{ssec:waveModel}
     
     Además de definir el protocolo del que hace uso Wave, Google definió un Modelo de Datos Conversacional \cite{ref:wave_conversation_model} que refleja la arquitectura de los datos que componen las conversaciones en Wave. Así, a grandes rasgos, podemos ver dichas conversaciones como documentos XML sobre los que los usuarios participantes (cualquiera es libre de unirse a una conversación en cualquier momento) actúan creando nuevos elementos o modificando los ya existentes. Este modelo de datos define una nomenclatura propia para los elementos que componen esta tecnología \cite{ref:wave_api_overview} \cite{ref:wave_white_paper}:
     
@@ -46,11 +46,11 @@
 	  \label{fig:wave_model}
 	\end{figure}
 	
-	\subsection{Modelo de Contenidos SwellRT}\label{sec:swellRTModel}
+	\subsection{Modelo de Contenidos SwellRT}\label{ssec:swellRTModel}
 	
-	SwellRT \cite{ref:swellRT_github} (Swell Real Time) es un framework de desarrollo para Wave que forma parte del proyecto europeo P2P Value \cite{ref:p2pvalue}. Está basado en el servidor Wave In A Box \cite{ref:wave_in_a_box} (WIAB) y extiende sus funcionalidades cambiando el Modelo Conversacional original creado por Google por uno nuevo de propósito más general llamado Modelo de Contenidos. En este modelo nuevo podemos intercambiar estructuras de datos de forma colaborativa, federada y en tiempo real que combinen los siguientes 3 tipos: \textbf{Mapas, Listas y Strings.}
+	SwellRT \cite{ref:swellRT_github} (Swell Real Time) es un framework de desarrollo para Wave que forma parte del proyecto europeo P2P Value \cite{ref:p2pvalue}. Está basado en el servidor Wave In A Box \cite{ref:wave_in_a_box} (WIAB) y extiende sus funcionalidades cambiando el Modelo Conversacional original creado por Google por uno nuevo de propósito más general llamado Modelo de Contenidos. En este modelo nuevo podemos intercambiar estructuras de datos de forma colaborativa, federada y en tiempo real que combinen los siguientes 4 tipos: \textbf{Mapas, Listas, Strings y Documentos de Texto.}
 	
-	De esta manera la estructura de datos intercambiada constará siempre de un Mapa inicial (llamado ''root'') del cual colgarán a modo de árbol el resto de estructuras (de cualquiera de los tres tipos que maneja SwellRT) cuyos datos se gestionarán en tiempo real. Para ello existe también una API nueva que se encarga de la gestión de dicho arbol mediante la utilización de eventos que notifican de cambios en las estructuras de datos. Este modelo será el que utilicemos para la aplicación Android. El siguiente es un esquema de los cambios en el modelo original introducidos por SwellRT:
+	De esta manera la estructura de datos intercambiada constará siempre de un Mapa inicial (llamado ''root'') del cual colgarán a modo de árbol el resto de estructuras (de cualquiera de los cuatro tipos que maneja SwellRT) cuyos datos se gestionarán en tiempo real. Para ello existe también una API nueva que se encarga de la gestión de dicho arbol mediante la utilización de eventos que notifican de cambios en las estructuras de datos. Este modelo será el que utilicemos para la aplicación Android. El siguiente es un esquema de los cambios en el modelo original introducidos por SwellRT:
 	
 	
 	\begin{figure}[H]
@@ -376,18 +376,44 @@ Con el objetivo de no repetir código decidimos estructurar el esquema de petici
 	  <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 	  \end{lstlisting}
 		
-	\subsubsection{Gestión de Usuarios: ID de Android}
+	\subsubsection{Gestión de Usuarios: ID de Android} \label{sssec:idUser}
 	
-		Como esta versión de la aplicación no maneja información critica y sensible del usuario decidimos utilizar un método de autenticación basado en el ID almacenado en el dispositivo móvil. En Android existen varios identificadores (IMEI, I	D de dispositivo, ID de Android..) teniendo cada uno de ellos características distintas. En nuestro caso \textbf{decidimos utilizar el ID de Android} \cite{ref:android_secure} ya que es único para cada instalación de sistema operativo y acceder a su valor no requiere de permisos especiales en la aplicación. Se trata de un número de 64 bits en formato hexadecimal al cual se accede directamente mediante la variable del sistema ''Secure.ANDROID\_ID''.
+		Como esta versión de la aplicación no maneja información critica y sensible del usuario decidimos utilizar un método de autenticación basado en el ID almacenado en el dispositivo móvil. En Android existen varios identificadores (IMEI, ID de dispositivo, ID de Android..) teniendo cada uno de ellos características distintas. En nuestro caso \textbf{decidimos utilizar el ID de Android} \cite{ref:android_secure} ya que es único para cada instalación de sistema operativo y acceder a su valor no requiere de permisos especiales en la aplicación. Se trata de un número de 64 bits en formato hexadecimal al cual se accede directamente mediante la variable del sistema ''Secure.ANDROID\_ID''.
 		
 		El acceso a este identificador se produce nada más ejecutar la aplicación en su actividad ''MainActivity'' y se guarda de forma estática en la clase ''User'' para poder acceder a él desde cualquier punto de la aplicación. Con el identificador también se accede a la Base de Datos para descargar el nombre de Usuario que se corresponde con dicho identificador. Este nombre se muestra en el menú izquierdo de la aplicación y se puede cambiar desde ahí. De esta manera, todo el contenido generado por un usuario (Opiniones, comentarios, propuestas,...) se guarda tambien en base de datos asociado a este identificador único.
 		
-	\subsubsection{Servicio Android de Conexión con Wave}
+	\subsubsection{Servicio Android, Conexión con Wave/SwellRT y Gestión de Propuestas Colaborativas}
 
-		REORDENAR LO DE WAVE
+		Al servicio (ServiceSwellRT) desarrollado durante la migración de SwellRT a Android (Ver Sección \ref{ssec:migrationResult}) se le añadió encima el API del Modelo de Contenidos de SwellRT (Ver Sección \ref{ssec:swellRTModel}). Este API trabaja con Waves (o "modelos") con identificadores únicos, y dentro de cada modelo habrá un objeto "root" del tipo Mapa del que colgarán los distintos objetos con los que podremos jugar de cada uno de los cuatro tipos básicos de datos: Mapas, Listas, Strings y Documentos de Texto.
 		
-	\subsubsection{Peticiones a Wave}
+		En este proyecto utilizamos SwellRT para soportar la edición de propuestas colaborativas. Este tipo de propuestas puede tener asociadas dos textos colaborativos que se corresponden con la manera de llevar a cabo la propuesta y cómo financiarla. Para implementar esto con wave será necesario por tanto crear una wave por cada propuesta colaborativa, que tendrá asociados a su mapa 'root' dos objetos del tipo Documento de Texto (TextType). Este tipo permite crear documentos colaborativos que pueden ser editados en tiempo real por todo aquel usuario de wave que esté registrado como participante. 
+		
+		El funcionamiento del Servicio Android de conexión con SwellRT exige primero enlazar (''bind'') la Actividad actual con el Service para poder hacer uso del API. Después de enlazar, podremos registrarnos en el servidor SwellRT y crear, abrir, cerrar o borrar waves, a las que tambien podremos añadir participantes y nuevos objetos de los cuatro tipos antes mencionados. 
+		
+		En SwellRT se accede a estos objetos a partir del identificador que les otorguemos al crearlos, en este caso se creará dentro de cada wave dos TextTypes con identificadores "howProp" y "costProp" para cada uno de los textos colaborativoas antes mencionados. Asimismo, cada propuesta tendrá asociada una wave con un identificador único generado por el servidor al crearse la wave. Este identificador será el que guardemos en la base de datos para que cualquier usuario pueda acceder a la edición colaborativa de la propuesta. El siguiente es un esquema del uso de SwellRT en el proyecto.
+		
+	\begin{figure}[H]
+	  \centering
+	    \includegraphics[keepaspectratio, scale=0.5]{Media/Diagrams/collaborativeProposalDiagram.png}
+	  \caption{Esquema de Uso de Wave/SwellRT}
+	  \label{fig:diagramUseSwellRT}
+	\end{figure}	
+			
+		En el caso de DemoCritics lo primero que tendremos que hacer será registrar al usuario usando su ID (Ver Sección \ref{sssec:idUser}). Esto se hace en el ''MainActivity'' al ejecutar la aplicación.  Una vez registrado solo será necesario utilizar el ServiceSwellRT para llevar a cabo dos actividades: crear una nueva propuesta colaborativa y editar una propuesta ya creada. 
+		
+		Un ejemplo de cómo registrarse con SwellRT se puede encontrar en el Apéndice \ref{ssec:waveRegister}.
 
-		ARQUITECTURA DE PETICIONES A WAVE
+		\underline{Crear Propuesta Colaborativa}
+		
+		Esta es una opción que se le ofrece al usuario en el caso de que, al hacer una propuesta nueva, deje alguno de los campos de ''¿Cómo lo haría?'' o de ''¿Cómo lo financiaría?'' en blanco. En tal caso, lo primero que se hace es hacer un login en el servidor Wave llamando al método ''startSession'' del Service. Una vez que se ha iniciado sesión, se abre un nuevo modelo (wave) en el servidor para esta propuesta y se obtiene el Id (''WaveId'') de dicho modelo creado para guardarlo en la base de datos junto al resto de datos de la propuesta. Además, se le asocian al elemento ''root'' del modelo uno o dos documetnos colaborativos del tipo TextType llamados ''padHow'' y ''padCost'' en función de si ha dejado los dos campos vacíos o solo uno. Por último se añade como participante del modelo creado al usuario que lo ha creado (su ID\_USER). Cabe destacar que la mayor parte de la programación con el serviceSwellRT se lleva a cabo mediante callbacks que responden a eventos como iniciar sesión, crear modelos, etc.
+		
+		Un ejemplo simplificado del código encargado de crear el modelo se puede ver en el Apéndice \ref{ssec:waveCreateModel}.
+		
+		\underline{Editar Propuesta Colaborativa}
+
+		Cuando un usuario quiere echar una mano a otro en la redacción de su propuesta, puede acceder a la propuesta colaborativa y editar los campos de ''¿Cómo lo haría?'' o de ''¿Cómo lo financiaría?'' en función de en qué necesite ayuda el usuario. Para cada uno de estos campos existe un ''pad'' en el servidor wave asociado a una wave cuyo identificador ''WaveId'' está guardado en la base de datos. Cuando el usuario pulsa en uno de los dos campos, se abre una nueva actividad ''EditWaveActivity'' que le ofrece un campo ''EditText'' de Android en el que puede escribir y ver lo que otros escriben en tiempo real. Para esto hace falta abrir una sesión en Wave, abrir el modelo con su WaveId, obtener el modelo y el pad, y asociar (''bind'') el pad a el EditText del usuario para que el servicio sea capaz de obtener los eventos de escritura del usuario.
+		
+		Un ejemplo simplificado del código encargado de abrir el modelo y asociar el pad colaborativo se puede ver en el Apéndice \ref{ssec:waveOpenPad}.
+		
 		
 
