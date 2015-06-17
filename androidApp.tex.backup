@@ -1,162 +1,71 @@
 \newpage
 \thispagestyle{sectioned}
-\chapter{Construyendo la idea: DemoCritics}
+\chapter{Construyendo la idea de la aplicación: DemoCritics}
 
 \section{Introducción}
-Una vez que habíamos elegido la tecnología que soportaría el núcleo de nuestra aplicación, teníamos que decir que implementación le íbamos a dar a nuestra aplicación móvil. Para ello teníamos que tener en cuenta las características que nos ofrecía Wave:
 
-Edición colaborativa.
+Una vez que habíamos migrado la tecnología de Wave que soportaría el núcleo de nuestra aplicación, era hora de decidir qué aplicación le íbamos a dar de cara a desarrollar una app Android que hiciera uso de ello. Era importante tener en cuenta las características que nos ofrecía Wave:
 
-Tiempo real.
+ - Edición colaborativa.
 
-Consistencia.
+ - Consistencia en Tiempo Real.
+ 
+\subsubsection{Brainstorming de ideas}
 
-Después de darle unas cuantas vueltas de las posibles implementaciones que podríamos realizar sobre estas características potenciales, decidimos realizar una sesión de brain storming. En esta sesión aparecieron temas tan dispersos como wikis colaborativas, aplicaciones con inteligencia artificial, aportaciones colaborativas en política, edición de vídeos y música, cursos de formación colaborativos, etcétera.
+Un brainstorming (o lluvia de ideas en español) es una técnica de trabajo en grupo que persigue que todos sus integrantes se junten para generar ideas originales en un ambiente distendido. El objetivo es primar la cantidad por encima de la calidad de éstas para después de la sesión realizar un proceso de selección de las más interesantes. De esta manera pueden salir ideas que a priori podrian resultar absurdas pero que otros integrantes del grupo pueden aprovechar para que surjan otras nuevas.  
 
-\begin{figure}[H]
-\centering
-\includegraphics[keepaspectratio, scale=0.15]{Media/Captures/brainstorming.jpg}
-\caption{Brainstorming sobre la idea a desarrollar}
-\label{fig:brainstorming}
-\end{figure}
+Después de considerar posibles ideas de implementaciones que podrían hacer uso de estas características, decidimos realizar una sesión de \textit{brainstorming} junto a nuestros directores de proyecto para identificar ideas potenciales. En esta sesión aparecieron temas tan variados como wikis colaborativas, aplicaciones de inteligencia artificial, aportaciones colaborativas en política, edición de vídeos y música, cursos de formación colaborativos, visualizacion de mapas, etc.
 
-Con un gran repertorio de ideas expuestas sobre la sesión, descartamos aquellas que no nos motivaban llevarlas a cabo. Por lo que nos quedamos con tres ideas fundamentales a desarrollar en nuestra aplicación: Política, Música, Inteligencia Artificial y Mapas. Surgieron varias ideas colaborativas como desarrollar documentos políticos, programas electorales, comunicación entre colectivos en tiempo real, aprendizaje de música, edición de partituras y obras, aplicaciones colaborativas con inteligencia artificial, edición de mapas en tiempo real, lexicalización, etcétera.
+	\begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.45\textwidth}
+                \includegraphics[width=\textwidth]{Media/Captures/brainstorming.jpg}
+                \caption{Idea de Aplicación}
+                \label{fig:brainstormingApp}
+        \end{subfigure}
+        ~
+        \begin{subfigure}[b]{0.45\textwidth}
+                \includegraphics[width=\textwidth]{Media/Captures/appname.jpg}
+                \caption{Posibles Nombres}
+                \label{fig:brainstormingName}
+        \end{subfigure}
+        \caption{Capturas del brainstorming}\label{fig:brainstormingCaptures}
+	\end{figure}
+	
 
-Finalmente debido a intereses comunes, decimos realizar una aplicación colaborativa relacionado con el mundo de la política. Con el objetivo de que pudiera tener cierta repercusión y utilidad en las próximas citas electorales durante el año 2015. En esta aplicación podríamos recurrir a la edición de contenidos en tiempo real, ya fueran propuestas políticas, programas electorales y otro tipo de documentos. Como también hacer uso de alguna herramienta de Inteligencia Artificial para automatizar algunas tareas o realizar recomendaciones sociales.
+
+Con un gran repertorio de ideas expuestas en la sesión, decidimos centrarnos primero en descartar aquellas que a nosotros no nos motivaba llevar a cabo. De esta manera nos quedamos con cuatro ideas fundamentales a desarrollar en nuestra aplicación: Política, Música, Inteligencia Artificial y Mapas. Centrándonos ahora solo en estos temas, surgieron varias ideas colaborativas como: desarrollar documentos políticos, programas electorales, comunicación entre colectivos en tiempo real, aprendizaje de música, edición de partituras y obras, aplicaciones colaborativas con inteligencia artificial, edición de mapas en tiempo real, lexicalización, etc.
+
+Finalmente, ya que ambos teniamos interes por la política, decidimos realizar una aplicación colaborativa relacionada con dicho mundo. En esta aplicación podríamos recurrir a la edición de contenidos en tiempo real, ya fueran propuestas políticas, programas electorales u otro tipo de documentos. Más adelante también podriamos hacer uso incluso de alguna herramienta de Inteligencia Artificial para automatizar algunas tareas o realizar recomendaciones sociales.
+
+Lo que sí que tuvimos claro desde el principio es la idoneidad del momento actual para desarrollar una app de temática política, dado que nos encontramos en año electoral. Nos propusimos el objetivo de desarrollar algo que pudiera tener cierta repercusión y utilidad en las próximas citas electorales de este año 2015. Intentariamos pensar en la aplicación no solo como un Trabajo de Fin de Grado sino como algo que pudiéramos llevar más allá y que resultara útil a la sociedad.
+
+Por otro lado, queriamos elegir un nombre para la aplicación que fuera a la vez atractivo y significativo de la participación ciudadana que representa. Para esto hicimos tambien una sesión de brainstorming con varias personas, de la cual sacamos varias posibilidades por el nombre. Tras someter a votación estos nombres nos quedamos con el que más gustó a todos: \textbf{DemoCritics}.
+
+\section{Marco teórico de la idea}
+
+En los siguientes puntos se discutirá acerca de una serie de consideraciones sobre el estado actual de la política y la democracia. Nos centraremos sobre todo en su relación con las nuevas tecnologías como herramientas capaces de cambiar la manera en la que se conciben ambas disciplinas.
 
 \subsection{Política en el mundo de la Informática}
 
-A primera vista podemos pensar que la informática no parece entusiasmar a os informáticos. Pues podemos ubicar la política como una parte de las ciencias sociales, situando la informática en ciencias formales. Pero si factores como la gestión de los privilegios de una aplicación entre los que definiremos de alguna forma una jerarquía, estaremos haciendo política de alguna manera. También encontraremos características políticas en el diseño relacional de una base de datos. Definiendo los campos de una base de datos podemos encontraremos con algunos valores como el sexo, la nacionalidad, la edad o incluso las relaciones o restricciones que existen entre las tablas. Estaremos definiendo unas reglas básicas funcionamiento de la base de datos establecidas por unos principios políticos.
+A primera vista podemos pensar que la informática no parece entusiasmar a los informáticos. Podemos ubicar la política como una parte de las ciencias sociales, situando la informática en ciencias formales. Pero si pensamos en factores como la gestión de los privilegios de una aplicaciónm entre los que definiremos de alguna forma una jerarquía, estaremos en cierta manera haciendo política. También encontraremos características políticas en el diseño relacional de una base de datos. Definiendo los campos de una base de datos podemos encontrarnos con algunos valores como el sexo, la nacionalidad, la edad o incluso las relaciones o restricciones que existen entre las tablas. Estaremos definiendo unas reglas básicas de funcionamiento de la base de datos establecidas por unos principios políticos.
 
-Además sumergiéndonos en el mundo de las licencias de uso en el desarrollo de software encontraremos más política aún. Licencias que determinan el uso de un tipo de software, ya sea para compartir, vender, distribuir copias, entre otros. Multitud de reglas políticas definidas en una licencia de uso. Así como las restricciones que establecemos en la metodología orientada a objetos, estableciendo las relaciones de herencia, restricción de métodos, variables, etcétera.
+Además si nos sumergimos en el mundo de las Licencias de Uso en el desarrollo de software encontraremos más política aún. Licencias que determinan el uso de un tipo de software, ya sea para compartir, vender o distribuir copias. Multitud de "reglas políticas" definidas en un documento de licencia de uso. Así como las restricciones que establecemos en la metodología orientada a objetos, estableciendo las relaciones de herencia, restricción de métodos, variables, etcétera.
 
 Regresando a la actualidad y basándonos en no muy lejanos acontecimientos pasados, habremos oído cómo algunos gobiernos recopilan datos de la actividad de los usuarios en las redes sociales, analizando todo el contenido que generan. Incluso vemos cómo algunas aplicaciones móviles piden aprobar permisos con los que operar libremente en tu dispositivo.
 
-Como podemos observar la política está más integrada en la informática de lo que parece, dejando a un lado la informática más científica, más formal, pasando a la informática social, la de los gobiernos, la de los negocios o la de las relaciones sociales.
-
-\subsection{Democracia}
-
-\subsubsection{Democracia representativa}
-
-\subsubsection{Democracia participativa}
-
-\subsubsection{Democracia directa}
-
-\subsubsection{Democracia deliberativa}
+Observamos por tanto que la política está más integrada en la informática de lo que parece, sobre todo si dejamos a un lado la informática más científica y formal y pasamos a la informática social, la de los gobiernos, la de los negocios o la de las relaciones sociales.
 
 
-\subsection{Adentrándonos en la idea}
-La idea a desarrollar generada en una época dónde la política parecía haber despertado el interés de una parte considerable de la ciudadanía, podría ser una herramienta útil para participar en temas políticos que forma sencilla y atractiva. Dejando atrás los tópicos yo no entiendo de política, la política es aburrida, no sé a quién votar o no he leído nunca un programa electoral entre otros.
+\section{Adentrándonos en la idea}
 
-La herramienta ofrecería una nueva forma de participar en la política y de llevar a los ciudadanos los programas electorales ofertados por las diferentes formaciones políticas. De tal forma que los ciudadanos pudieran leer aquellos puntos de los programas más leídos, debatidos, comentados, etcétera. Así cualquier usuario tendría todos programas electorales en su bolsillo, por lo que no tendría que ir a la página web de cada formación política y descargarse un documento de 200 páginas. Pensamos que esta forma de presentar un programa político en un mundo donde las posibilidades de  comunicarnos se han desarrollado exponencialmente, no era la mejor manera de llegar a la mayor parte de la ciudadanía.
+La idea a desarrollar está generada en una época en la que la política parece haber despertado el interés de una parte considerable de la ciudadanía. Podría ser por tanto una herramienta útil para participar en temas políticos de forma sencilla y atractiva. Dejando así atrás los tópicos a menudo escuchados de \textit{"yo no entiendo de política"}, \textit{"la política es aburrida"}, \textit{"no sé a quién votar"} o \textit{"no he leído nunca un programa electoral"} entre otros.
 
-Por otra parte, la aplicación también debería ofrecer alguna herramienta donde realizar propuestas y debatirlas entre todos. De tal forma que tanto la ciudadanía como las formaciones políticas pudieran saber en cualquier momento cuáles son las principales preocupaciones de los ciudadanos y qué medidas o soluciones proponen para resolverlas.
+La herramienta ofrecería una nueva forma de participar en la política y de llevar a los ciudadanos los programas electorales expuestos por las diferentes formaciones políticas. De forma que, para potenciar el uso social de la aplicación, los ciudadanos podrían leer aquellos puntos de los programas más vistos, debatidos, comentados, etc. Así, cualquier usuario tendría a su disposición todos los programas electorales en su bolsillo, por lo que no tendría que ir a la página web de cada formación política y descargarse un documento de 200 páginas. Pensamos que esta forma tradicional de presentar un programa político en un solo documento en un mundo donde las posibilidades de comunicarnos se han desarrollado exponencialmente mediante las nuevas tecnologías no es la mejor manera de generar interés por su lectura y la implicación en política de las personas.
 
-Desde un primer punto de vista subjetivo, la aplicación quedó dividida en dos partes. Por un lado tendríamos los programas políticos que presentaran las formaciones políticas. Y por otro, todas las propuestas que elaboraran los ciudadanos individualmente o en colectivos sociales.
+Por otra parte, y teniendo en cuenta la tendencia actual de los nuevos movimientos ciudadanos de elaborar programas políticos en base a propuestas de los ciudadanos, \textbf{la aplicación también debía ofrecer alguna manera de realizar Propuestas y debatirlas entre todos}. De esta forma tanto la ciudadanía como las formaciones políticas podrían saber en cualquier momento cuáles son las principales preocupaciones de los ciudadanos y qué medidas o soluciones proponen para resolverlas. \textbf{Además pensamos que podríamos aprovechar las características de Wave para realizar estas Propuestas de forma colaborativa y en tiempo real}, aportando un valor diferenciador respecto a las actuales soluciones desarrolladas para web (Ver sección \ref{ssec:artProposals}).
 
-\section{Estado del Arte}
+Por tanto, desde un primer punto de vista subjetivo, la aplicación quedó dividida en dos partes. Por un lado tendríamos la presentación estructurada de los programas políticos que presentan las formaciones políticas. Y por otro todas las propuestas que elaboran de forma colaborativa los ciudadanos, ya sea individualmente o en colectivos sociales.
 
-En esta sección exploraremos las principales aplicaciones informáticas destinadas a la participación ciudadana en propuestas, lectura de programas electorales o divulgación de candidaturas.
-
-\subsection{Programas Políticos}
-
-En la actualidad no existe ningún tipo de aplicación orientada a debatir los programas electorales de los partidos políticos. Concretamente no hay ningún tipo de plataforma que agrupe los programas electorales de las diferentes candidaturas.
-Lo más parecido que hemos podido encontrar han sido aplicaciones elaboradas por un partido político, orientada a dar a conocer su candidatura. En ella podremos ver la candidatura, vídeos y el programa electoral entre otros. Por ello pasamos a analizar las aplicaciones encontradas:
-
-\subsubsection{UPyD Parla}
-La aplicación que presenta el candidato de UpyD Carlos Alt Bustelo para la alcaldía de Parla. Se trata de una alicación divulgativa donde podemos conocer todo lo esencial de la candidatura de UpyD para las elecciones del municiono de Parla en Mayo de 2015. Los candidatos, el programa, vídeos, etcétera.
-
-\begin{figure}[H]
-\centering
-\includegraphics[keepaspectratio, scale=0.35]{Media/Captures/UPyDParla.png}
-\caption{UPyD Parla}
-\label{fig:upydparla}
-\end{figure}
-
-\subsubsection{$\sharp$RecuperaCórdoba}
-De forma similar a la anterior, la candidatura de Pedro García a la provincia de Córdoba de Izquierda Unida, presenta su propuesta de gobierno de forma compacta. En la aplicación podremos encontrar la lista de los candidatos propuestos a la comunidad cordobesa, el programa electoral de la formación, las propuestas del partido, noticias de última hora y vídeos.
-
-\begin{figure}[H]
-\centering
-\includegraphics[keepaspectratio, scale=0.35]{Media/Captures/IURecuperaCordoba.png}
-\caption{$\sharp$RecuperaCórdoba}
-\label{fig:recuperacordoba}
-\end{figure}
-
-\subsubsection{PP Canarias}
-
-La delegación del Partido Popular en Canarias, presenta su aplicación móvil para promocionar a sus candidatos para las elecciones autonómicas y municipales de Mayo de 2015. La aplicación nos avisará de los eventos electorales, podremos consultar los candidatos, novedades, galería de imágenes y por su puesto el programa electoral.
-
-\begin{figure}[H]
-\centering
-\includegraphics[keepaspectratio, scale=0.35]{Media/Captures/ppcanarias.png}
-\caption{PP Canarias}
-\label{fig:ppcanarias}
-\end{figure}
-
-\subsection{Participación Ciudadana}
-
-Centrándonos en la participación ciudadana ya sea generación de propuestas, desarrollo colaborativo de programas o recogida de firmas, existen numerosos portales en internet y aplicaciones móviles destinadas a ello. Realizaremos un breve repaso a las aplicaciones más destacadas.
-
-\subsection{Intención}
-
-La intención fundamental de la aplicación es llevar los programas electorales a los bolsillos de los ciudadanos. Vivimos en una sociedad digital, donde cada vez son más las personas que utilizan los teléfonos inteligentes para realizar todo tipo de tareas en su vida cotidiana.
-
-En los últimos años las diferentes formaciones políticas han subido sus programas electorales a un documento en formato pdf que estaba disponible en su página web. Este documento generalmente extenso, no es un medio fácil de divulgar y mostrar a la ciudadanía. Por ello pensamos que una aplicación que pudiera visualizar las principales secciones de los programas políticos, podría ser especialmente útil para acercar los programas a los electores.
-
-Llegando a crear un espacio donde poder informase sobre las distintas ofertas electorales, debatir las propuestas que propone cada formación política reducido en una aplicación que podremos consultar en cualquier momento.
-
-\subsection{Objetivos}
-
-La aplicación pretende llevar las principales partes de los programas electorales de los partidos que se presenten a las elecciones. Por tanto, cualquier usuario podrá visualizar el apartado que desee consultar de cualquier partido político. Siendo esta la forma menos amigable de leerlo, se utilizarán distintas formas para compartir o divulgar determinadas secciones más populares.
-
-Al inicio de la aplcación, mostrará una lista de las secciones de los programas más valoradas, más debatidas, peor valoradas e incluso las más incomprendidas. Por tanto creemos que puede ser una forma de acercar aquellas secciones más populares de forma más eficaz, al contrario que tener que consultar una determinada página dentro de un extenso pdf.
-
-\begin{figure}[H]
-\centering
-\includegraphics[keepaspectratio, scale=0.5]{Media/Captures/captTopSections.png}
-\caption{Vista principal de secciones}
-\label{fig:captTopSections}
-\end{figure}
-
-Dentro de cada sección podemos visualizar el contenido de la sección a la que referencia el programa, y tendremos la opción de valorarla de forma positiva o negativa. También añadimos la posibilidad de indicar que no se ha entendido la sección. Pues a la hora de leer una propuesta de gobierno ubicada en una sección del programa, bien nos puede gustar, disgustar o simplemente no haber entendido la idea y por ello no votarla de forma positiva o negativa.
-
-\begin{figure}[H]
-\centering
-\includegraphics[keepaspectratio, scale=0.5]{Media/Captures/section.png}
-\caption{Visualizando una sección}
-\label{fig:captSection}
-\end{figure}
-
-Sin olvidarnos de la parte social, en cada sección podemos hacer comentarios para intentar debatir las ideas fundamentales que propone la sección. O incluso hacer referencia a una determinada frase o párrafo.
-\subsection{Usabilidad}
-
-\subsection{Revisión de la aplicación}
-Una vez que habíamos implementado todos los objetivos fundamentales de la aplicación, decidimos hacer una revisión para poner a prueba la aplicación. Para ello nos reunimos con un grupo de Labodemo \cite{ref:labodemo}, responsables del desarrollo de los portales de participación ciudadana del partido político Podemos \cite{ref:podemos} y la candidatura ciudadana de unidad popular Ahora Madrid \cite{ref:ahoramadrid}.
-
-\subsubsection{Reunión con Labodemo}
-Tuvimos la oportunidad de establecer una conversación con dos miembros de Labodemo, en la que aprovechamos la oportunidad de mostrarles la aplicación que estábamos desarrollando. Ambos tenían experiencia en el desarrollo de plataformas de participación ciudadana en internet y nuevas tecnologías. Además fueron los responsables del desarrollo de los portales de participación del partido político Podemos y la candidatura ciudadana de unidad popular Ahora Madrid.
-
-Limitarnos a mostrar las diferentes secciones de cada programa les resultó útil. Aunque no suficiente como para atraer a una cantidad considerable de usuarios. Antes de hablar con ellos, habíamos planteado desarrollar propuestas colaborativas en tiempo real aprovechando Wave. Pero no comprendieron la libertad de dar al usuarios la creación de propuestas colaborativas en tiempo real.
-
-Dándole una vuelta al desarrollo de las propuestas de la aplicación, nos sugirieron que para atraer a usuarios a utilizar nuestra aplicación, deberíamos dejar cierta libertad a colectivos sociales. Por ejemplo, un grupo de animalistas debería tener un “espacio” en la aplicación donde poder crear sus propias propuestas, e incluso hacer comparativas personalizadas de lo que proponen los diferentes programas sobre los animales. Así surgirían propuestas y comparativas divididas por colectivos que abarcarían diferentes temáticas. Un usuario poco activo podría buscar un colectivo de profesores porque resulta ser su profesión, y ver las propuestas que se llevan a cabo o visualizar una comparativa respecto las medidas de educación de los diferentes programas políticos.
-
-Organizar estas propuestas no sería tarea sencilla. En un principio se propuso como diferentes temas que puede tener un foro, en forma de post. Más tarde llegamos a la conclusión de que sería más cómodo para los colectivos dar la libertad de crear sus propios hilos, y en cada uno de ellos publicar las propuestas relacionadas con su colectivo.
-
-Por último insistieron mucho en el tema de las comparativas. Sería de gran utilidad que la aplicación tuviera una parte de comparativas en la que los usuarios pudieran comparar los programas políticos en vez de leerlos sección por sección. Resultaría de gran interés a un autónomo visualizar las medidas que proponen los diferentes partidos políticos para los autónomos. Pero estas comparativas no podría realizarlas cualquiera, por lo que deberían realizarlas periodistas o expertos que hubieran realizado algún tipo de comparativa similar anteriormente. Nos sugirieron contactar con periodistas o colectivos que hubieran publicado algún tipo de comparativa en cuando a programas o medidas, para obtener algún tipo de ayuda o consejo a seguir.
-
-\subsubsection{Conclusión}
-
-La reunión con dos de los miembros de Labodemo resultó de gran interés. Pues desde que decidimos la idea que íbamos a implementar, nunca habíamos puesto en práctica la aplicación o al menos no la habíamos verificado con el “mundo real”.
-
-Los integrantes de Labodemo eran expertos en desarrollo de portales de participación ciudadana. Y sobre todo estaban muy familiarizados con el uso común que les suele dar la gente a este tipo de aplicación. Por lo que sabían determinar las claves para que una aplicación tuviera un movimiento considerable de usuarios desde el comienzo.
-
-El tema de visualizar los programas políticos no les gustó demasiado. Expusieron que un ciudadano de a pie, no iba a molestarse en leer los programas políticos. Bien porque no los entienda o porque les resulte aburridos. Ellos argumentaban que los colectivos sociales serían los usuarios más activos en nuestra aplicación, por lo que debíamos enfocar más el desarrollo hacia la partición ciudadana y el uso de propuestas o comparativas por colectivo.
-
-Tras esta reunión decidimos replantear la aplicación en base a los consejos que obtuvimos con la reunión de Labodemo. Incluimos las propuestas como parte de nuestra aplicación y empezamos a pensar la forma de colaborar de grupos y colectivos. También intentamos contactar con colectivos y personas interesadas en el desarrollo de la aplicación. Finalmente, conseguimos concretar una entrevista con Javier de la Cueva \cite{ref:jdelacueva}.
-
-\subsubsection{Reunión con Javier de la Cueva}
-
-\subsubsection{Conclusión}
 
 

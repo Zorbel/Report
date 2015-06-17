@@ -8,7 +8,7 @@
 
 	\subsection{Apache Wave: Wave In A Box (WIAB)}
 	
-	Al pasar el proyecto a sus manos, como software de código libre bajo licencia Apache \cite{ref:apache_license}, el desarrollo se centra en conseguir implementar una plataforma que integre un servidor Wave y un cliente web sencillo donde crear y manipular el contenido de las waves. A esta plataforma se le denomina Wave In A Box (WIAB) y actualmente sigue en desarrollo por parte de la comunidad y se distribuye en forma de código fuente, accesible entre otras formas desde su repositorio de GitHub \cite{ref:wave_in_a_box_github}. Cualquiera puede descargar y ''jugar'' con WIAB en su ordenador siguiendo los pasos que nos proporcionan en su wiki \cite{ref:wave_in_a_box_wiki}. Existen también servidores de prueba ya desplegados en Internet sobre los que se puede observar el funcionamiento de WIAB \cite {ref:wave_in_a_box_server}.
+	Al pasar el proyecto a las manos de Apache como software de código libre bajo licencia Apache \cite{ref:apache_license}, el desarrollo se centra en conseguir implementar una plataforma que integre un servidor Wave y un cliente web sencillo donde crear y manipular el contenido de las waves. A esta plataforma se le denomina Wave In A Box (WIAB) y actualmente sigue en desarrollo por parte de la comunidad y se distribuye en forma de código fuente, accesible entre otras formas desde su repositorio de \textit{GitHub} \cite{ref:wave_in_a_box_github}. Cualquiera puede descargar y ''jugar'' con WIAB en su ordenador siguiendo los pasos que nos proporcionan en su wiki \cite{ref:wave_in_a_box_wiki}. Existen también servidores de prueba ya desplegados en Internet sobre los que se puede observar el funcionamiento de WIAB \cite {ref:wave_in_a_box_server}.
 	
 	\begin{figure}[H]
       \centering
@@ -29,7 +29,7 @@ De esta manera, primero veremos las principales herramientas de desarrollo (APIs
 	
 	\subsubsection{Google Realtime API}\label{sssec:googleAPI}
 	
-	Google Realtime API \cite{ref:google_api} permite construir aplicaciones de colaboración en tiempo real utilizando la tecnología de Transformaciones Operacionales (OT) presente en Google Docs. Utiliza JavaScript para poder construir construir en nuestro cliente web un modelo de datos (Realtime Data Model) que se guarda en sus servidores y gestiona automaticamente los cambios realizados por cualquiera de los usuarios que colaboran en tiempo real. Estos cambios en el modelo son notificados al servidor y al resto de usuarios mediante eventos que se lanzan al modificar los datos sobre los que se está colaborando. Para utilizarlo es necesario tener cuenta en la Consola de Desarrolladores de Google y activar el uso de esta API con nuestras credenciales de usuario.
+	Google Realtime API \cite{ref:google_api} permite construir aplicaciones de colaboración en tiempo real utilizando la tecnología de Transformaciones Operacionales (OT) presente en Google Docs. Utiliza JavaScript para poder construir construir en nuestro cliente web un modelo de datos (\textit{Realtime Data Model}) que se guarda en sus servidores y gestiona automaticamente los cambios realizados por cualquiera de los usuarios que colaboran en tiempo real. Estos cambios en el modelo son notificados al servidor y al resto de usuarios mediante eventos que se lanzan al modificar los datos sobre los que se está colaborando. Para utilizarlo es necesario tener cuenta en la Consola de Desarrolladores de Google y activar el uso de esta API con nuestras credenciales de usuario.
 	
 	\subsubsection{Microsoft RTC Client API}
 	
@@ -42,15 +42,15 @@ De esta manera, primero veremos las principales herramientas de desarrollo (APIs
 	
 	\subsubsection{Mozilla TogetherJS}
 
-	Mozilla TogetherJS \cite{ref:togetherjs_api} es una librería gratuita y de código libre (bajo licencia pública Mozilla v2) que permite añadir capacidades de colaboración en tiempo real a una página web. Utiliza WebRTC y webSockets para establecer comunicaciones peer-to-peer (P2P) entre dos o más navegadores Web. No proporciona alamcenamiento persistente de los datos y es necesario tener un Servidor que establezca la conexión. Con esta herramienta se puede editar texto en tiempo real (usando Transformaciones Operacionales), establecer chats de audio/video y sincronizar el contenido de los navegadores. Dispone de GitHub para contribuir a su desarrollo. 	
+	Mozilla TogetherJS \cite{ref:togetherjs_api} es una librería gratuita y de código libre (bajo licencia pública Mozilla v2) que permite añadir capacidades de colaboración en tiempo real a una página web. Utiliza WebRTC y webSockets para establecer comunicaciones peer-to-peer (P2P) entre dos o más navegadores Web. No proporciona alamcenamiento persistente de los datos y es necesario tener un Servidor que establezca la conexión. Con esta herramienta se puede editar texto en tiempo real (usando Transformaciones Operacionales), establecer chats de audio/video y sincronizar el contenido de los navegadores. Está disponible en \textit{GitHub} \cite{ref:github} para contribuir a su desarrollo. 	
 	
 	\subsubsection{ShareJS}
 
-	ShareJS \cite{ref:shareJS} es una plataforma open-source (bajo licencia MIT) que dispone de un pequeño servidor basado en Node.js y una librería de cliente JavaScript que permiten la edición colaborativa de contenido mediante Transformaciones Operacionales. Permite actuar sobre objetos JSON o sobre texto plano. Dispone de GitHub para scontribuir a su desarrollo.
+	ShareJS \cite{ref:shareJS} es una plataforma open-source (bajo licencia MIT) que dispone de un pequeño servidor basado en Node.js y una librería de cliente JavaScript que permiten la edición colaborativa de contenido mediante Transformaciones Operacionales. Permite actuar sobre objetos JSON o sobre texto plano. Está disponible en \textit{GitHub} para scontribuir a su desarrollo.
 	
 	\subsubsection{Goodow}
 	
-	Goodow \cite{ref:goodow} es un framework open-source de reciente desarrollo que proporciona un API muy similar a la de Google (Ver Sección \ref{sssec:googleAPI}) para colaboración en tiempo real mediante el uso de Transformaciones Operacionales. Dispone asimismo de dos clientes básicos para Android e iOS, utilizando una implementación del Servidor propia.	
+	Goodow \cite{ref:goodow} es un framework open-source de reciente desarrollo que proporciona un API muy similar a \textit{Google Real-Time API} (Ver Sección \ref{sssec:googleAPI}) para colaboración en tiempo real mediante el uso de Transformaciones Operacionales. Dispone asimismo de dos clientes básicos para Android e iOS, utilizando una implementación del Servidor propia.	
 	
 	\subsection{Plataformas Web y Android}
 
@@ -100,7 +100,7 @@ De esta manera, primero veremos las principales herramientas de desarrollo (APIs
 	
 	\subsubsection{ShareLaTeX}
 	
-	ShareLaTeX \cite{ref:shareLatex} es un editor web colaborativo de documentos escritos en LaTeX en tiempo real. Permite elaborar documentos LaTeX esntre varias personas, ofreciendo una interfaz que incluye una previsualización del resultado en PDF. Desde 2014 es open-source (bajo licencia AGPL v3) y cualquiera puede descargarselo de GitHub e instalar su propio servidor (escrito en Node.js) de ShareLaTeX. En su web ofrecen también opciones de pago con extras como un control de versiones o sincronización con Dropbox.
+	ShareLaTeX \cite{ref:shareLatex} es un editor web colaborativo de documentos escritos en LaTeX en tiempo real. Permite elaborar documentos LaTeX entre varias personas, ofreciendo una interfaz que incluye una previsualización del resultado en PDF. Desde 2014 es open-source (bajo licencia AGPL v3) y cualquiera puede descargarselo de \textit{GitHub} e instalar su propio servidor (escrito en Node.js) de ShareLaTeX. En su web ofrecen también opciones de pago con extras como un control de versiones o sincronización con Dropbox.
 	
 	\begin{figure}[H]
 		\centering
@@ -111,7 +111,7 @@ De esta manera, primero veremos las principales herramientas de desarrollo (APIs
 		
 	\subsubsection{Samepage}
 	
-	Samepage \cite{ref:samepage} es una aplicación, tanto para web como para plataformas móviles (Android e iOS), que permite crear páginas que pueden ser editadas de forma colaborativa y en tiempo real por múltiples usuarios. Para ello es necesario solo es tener una cuenta de samepage. Tanto el cliente web como el móvil permiten interactuar entre ellos para crear nuevas páginas, editar texto y hacer comentarios, aunque la versión web permite también añadir tablas, imágenes y archivos.
+	Samepage \cite{ref:samepage} es una aplicación, tanto para web como para plataformas móviles (Android e iOS), que permite crear documentos que pueden ser editados de forma colaborativa y en tiempo real por múltiples usuarios. Para ello es necesario solo es tener una cuenta de samepage. Tanto el cliente web como el móvil permiten interactuar entre ellos para crear nuevas páginas, editar texto y hacer comentarios, aunque la versión web permite también añadir tablas, imágenes y archivos.
 	
 	\begin{figure}[H]
         \centering
@@ -132,7 +132,7 @@ De esta manera, primero veremos las principales herramientas de desarrollo (APIs
 	
 	\subsubsection{Quip}
 	
-	Quip \cite{ref:quip} es una aplicación para dispositivos móviles (Android e iOS) desarrollada con el objetivo de aumentar la productividad en los trabajos en grupo. Permite elaborar documentos, hojas de cálculo y listas de tareas compartidas y editables de forma colaborativa en tiempo real, pudiendo realizar tambien comentarios sobre ellas. Dispone también de una versión web, pero es necesario tener cuenta para usarla.
+	Quip \cite{ref:quip} es una aplicación para dispositivos móviles (Android e iOS) desarrollada con el objetivo de aumentar la productividad en los trabajos en grupo. Permite elaborar documentos, hojas de cálculo y listas de tareas compartidas y editables de forma colaborativa en tiempo real, pudiendo realizar también comentarios sobre ellas. Dispone también de una versión web, pero es necesario tener cuenta para usarla.
 	
 	\begin{figure}[H]
         \centering
@@ -165,7 +165,7 @@ En esta sección exploraremos algunas de las principales aplicaciones informáti
 \subsection{Programas Políticos}
 
 En la actualidad no existe ningún tipo de aplicación móvil orientada a debatir los programas electorales de los partidos políticos en su conjunto. Concretamente no existe ningún tipo de plataforma que agrupe en un solo sitio los programas electorales de las diferentes candidaturas.
-Lo más parecido que hemos podido encontrar han sido aplicaciones elaboradas por un partido político, orientadas a dar a conocer su candidatura. En ellas podemos ver normalmente, entre otros, a presentación de candidatura, vídeos propagandísticos y el programa electoral. 
+Lo más parecido que hemos podido encontrar han sido aplicaciones elaboradas por un partido político, orientadas a dar a conocer su candidatura. En ellas podemos ver normalmente, entre otros, la presentación de la candidatura, vídeos propagandísticos y el programa electoral. 
 
 Pasamos ahora a analizar algunas de las aplicaciones móviles encontradas, identificando en cada caso aspectos e ideas que nos han resultado positivos y negativos.
 
@@ -338,7 +338,7 @@ La delegación del Partido Popular en Canarias presenta su aplicación móvil pa
 
 \subsection{Participación Ciudadana} \label{ssec:artProposals}
 
-Centrándonos en la participación ciudadana ya sea mediante la generación de Propuestas, el desarrollo colaborativo de programas o la recogida de firmas, existen numerosos portales en internet y aplicaciones móviles destinadas a ello. Realizaremos un breve repaso a las aplicaciones más destacadas.
+Centrándonos en la participación ciudadana ya sea mediante la generación de Propuestas, el desarrollo colaborativo de programas o la recogida de firmas, existen numerosos portales en Internet y aplicaciones móviles destinadas a ello. Realizaremos un breve repaso a las aplicaciones más destacadas.
 
 \subsubsection{Reddit}
 
@@ -390,7 +390,7 @@ Desde su creación en 2007, Change.org ha logrado muchas de sus peticiones deman
  - \underline{Aspectos negativos}:
 
 \begin{itemize}
-	\item Aunque existen filtros para peticiones (Destacadas, Populares y Recientes) ¿de qué depende esta clasificación? No queda claro cómo se elige la opsición en dicha lista de peticiones,
+	\item Aunque existen filtros para peticiones (Destacadas, Populares y Recientes) ¿de qué depende esta clasificación? No queda claro cómo se elige la opción en dicha lista de peticiones,
 \end{itemize}
 
 \subsubsection{Programas Colaborativos de Ahora Madrid y Zaragoza en Común}
@@ -433,7 +433,7 @@ También utilizaron una plataforma similar en la candidatura zaragozana de unida
 
 Appgree\cite{ref:appgree} es una plataforma desarrollada con el objetivo de poner a grandes grupos de personas de acuerdo en poco tiempo. Está disponible tanto para web como para móviles y permite que sus usuarios lancen propuestas y debatan sobre cualquier tema pudiendo votar y alcanzar un consenso, obteniendo los resultados de dicha votación casi en tiempo real gracias a un algoritmo estadístico desarrollado por ellos llamado DemoRank\cite{ref:appgree_demoRank}.
 
-En la aplicación podemos acceder a una lista de canales: que aglutinan encuestas, propuestas y preguntas (ya sea de respuesta abierta o de votación entre dos o mas opciones), pudiendo votar y ver los resultados actuales de votación y respuestas. Para fomentar la participación potencian mucho el uso tops de preguntas más candentes y recientes. Además se pueden compartir preguntas por redes sociales para aumentar su difusión.
+En la aplicación podemos acceder a una lista de canales: que aglutinan encuestas, propuestas y preguntas (ya sea de respuesta abierta o de votación entre dos o mas opciones), pudiendo votar y ver los resultados actuales de votación y respuestas. Para fomentar la participación potencian mucho el uso de listas de preguntas más candentes y recientes. Además se pueden compartir preguntas por redes sociales para aumentar su difusión.
 
 \begin{figure}[H]
         \centering

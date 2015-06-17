@@ -35,7 +35,7 @@ Para hacerse una idea general de las tecnologías utilizadas se recomienda ver e
 	  \multirow{2}{*}{Framework} & GWT & \begin{tabular}[c]{@{}c@{}}Framework JavaScript utilizado por el antiguo Cliente web \\ de Wave presente en SwellRT.\end{tabular} & \ref{ssec:gwt} \\ \cline{2-4} 
 	  & Laravel 5 & Framework de desarrollo del Service REST de la App en PHP. & \ref{ssec:laravel} \\ \hline
 	  \multirow{3}{*}{Protocolo} & Google Wave & Protocolo de intercambio de Waves usado para la migración y la App. & \ref{ssec:wave} \\ \cline{2-4} 
-	  & HTTP & \begin{tabular}[c]{@{}c@{}}Protocolo de transferencia de datos por Internet \\ usado por la Migración y por la app.\end{tabular} & \ref{ssec:http} \\ \cline{2-4} 
+	  & HTTP & \begin{tabular}[c]{@{}c@{}}Protocolo de transferencia de datos por Internet \\ usado por la Migración y por la app.\end{tabular} & \ref{ssec:HTTP} \\ \cline{2-4} 
 	  & WebSocket & \begin{tabular}[c]{@{}c@{}}Protocolo de transferencia de datos bidireccionales por \\ Internet, usado por la Migración y por la App.\end{tabular} & \ref{ssec:websocket} \\ \hline
 	  \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Base de \\ Datos\end{tabular}} & MySQL & Sistema Gestor de la Base de Datos de la App & \ref{ssec:mysql} \\ \cline{2-4} 
 	  & PhpMyAdmin & Herramienta de Administración de la Base de Datos de la App. & \ref{ssec:phpmyadmin} \\ \hline
@@ -94,7 +94,7 @@ Para hacerse una idea general de las tecnologías utilizadas se recomienda ver e
     
     \subsection{Eclipse}\label{ssec:eclipse} 
     
-	Eclipse \cite{ref:eclipse} es un Entorno de Desarrollo Integrado (IDE) open-source (bajo licencia Eclipse Public License) desarrollado por la Eclipse Foundation. Lanzado en 2007 alcanza actualmente su versión 4.4, también denominada Eclipse ''Luna''. Se trata de uno de los IDEs más utilizados que proporciona herramintas que permiten el desarrollo de código para múltiples lenguajes y tecnologías. Posee además la capacidad de extender sus capacidades gracias al uso de plug-ins que se pueden descargar desde su marketplace. Es el caso por ejemplo del plugin ADT (Android Developer Tools), que permite utilizar el SDK de Android para desarrollar para esta plataforma utilizando Eclipse como IDE. Hasta finales del año 2014 Eclipse + ADT era el IDE recomendado por Google para el desarrollo en su plataforma móvil, aunque recientemente ha pasado a utilizar su propio IDE llamado Android Studio (Ver Sección \ref{ssec:androidStudio})
+	Eclipse \cite{ref:eclipse} es un Entorno de Desarrollo Integrado (IDE) open-source (bajo licencia Eclipse Public License) desarrollado por la Eclipse Foundation. Lanzado en 2003 alcanza actualmente su versión 4.4, también denominada Eclipse ''Luna''. Se trata de uno de los IDEs más utilizados que proporciona herramintas que permiten el desarrollo de código para múltiples lenguajes y tecnologías. Posee además la capacidad de extender sus capacidades gracias al uso de plug-ins que se pueden descargar desde su marketplace. Es el caso por ejemplo del plugin ADT (Android Developer Tools), que permite utilizar el SDK de Android para desarrollar para esta plataforma utilizando Eclipse como IDE. Hasta finales del año 2014 Eclipse + ADT era el IDE recomendado por Google para el desarrollo en su plataforma móvil, aunque recientemente ha pasado a utilizar su propio IDE llamado Android Studio (Ver Sección \ref{ssec:androidStudio})
 	
 	En este proyecto usaremos Eclipse con el plugin ADT como IDE para estudiar el código del cliente web de SwellRT y llevar a cabo una migración a Android que permita hacer uso de las características nativas de esta plataforma.
     
@@ -116,9 +116,9 @@ Para hacerse una idea general de las tecnologías utilizadas se recomienda ver e
 	
 	En este proyecto se utilizará JavaScript para estudiar la implementación del cliente web de SwellRT hecha con GWT y JavaScript que deberemos migrar a código nativo de Android, pues la plataforma móvil de Google no es compatible de forma nativa con JavaScript.
     
-    \subsection{HTTP}\label{ssec:http}
+    \subsection{HTTP}\label{ssec:HTTP}
     
-	HTTP \cite{ref:http} (HyperText Transfer Protocol) es el protocolo de capa de aplicación más utilizado para establecer comunicaciones en la World Wide Web. Fue desarrollado en 1996 conjuntamente por la World Wide Web Consortium (W3C) y el Internet Engineering Taskforce (IETF), aunque la definición de su versión más actual (1.1) se encuentra especificada en la serie de RFCs (Request For Comments) 7230 \cite{ref:http}. Se trata de un protocolo orientado a transacciones que siguen un esquema de petición-respuesta entre cliente y servidor. 
+	HTTP \cite{ref:HTTP} (HyperText Transfer Protocol) es el protocolo de capa de aplicación más utilizado para establecer comunicaciones en la World Wide Web. Fue desarrollado en 1996 conjuntamente por la World Wide Web Consortium (W3C) y el Internet Engineering Taskforce (IETF), aunque la definición de su versión más actual (1.1) se encuentra especificada en la serie de RFCs (Request For Comments) 7230 \cite{ref:HTTP}. Se trata de un protocolo orientado a transacciones que siguen un esquema de petición-respuesta entre cliente y servidor. 
 	
 	En este proyecto utilizaremos el protocolo HTTP para establecer las conexiones con ambos servidores: el servidor SwellRT que aloja las Waves y el servidor Openshift que aloja el Service REST y la Base de Datos de la aplicación. Concretamente con este protocolo realizaremos el proceso de login en Wave y las peticiones al Service REST en la aplicación Android.
     
@@ -140,7 +140,7 @@ Para hacerse una idea general de las tecnologías utilizadas se recomienda ver e
     
     Para este proyecto utilizaremos GitHub como plataforma para alojar todo el código open-source desarrollado durante el proyecto: la Migración de SwellRT a Android (cuyo cliente web antiguo también está disponible en GitHub \cite{ref:swellRT_github}), el desarrollo de la aplicación Android, el Service REST y la Memoria. Todo esto esta disponible en forma de repositorios bajo la organización llamada ''Zorbel'' en la siguiente URL:
     
-    \url{https://github.com/Zorbel}    
+    \url{HTTPs://github.com/Zorbel}    
 
 \section{Tecnologías de la Aplicación Android}
     
@@ -204,7 +204,7 @@ Para hacerse una idea general de las tecnologías utilizadas se recomienda ver e
 	
 	En este proyecto usaremos OpenShift como servidor web para alojar los servicios de los que hace uso nuestra aplicación Android: el Service REST y la Base de Datos. Concretamente nuestro servidor esta accesible desde la siguiente URL:
 	
-	\url{https://apptfg-servicerest.rhcloud.com/}    
+	\url{HTTPs://apptfg-servicerest.rhcloud.com/}    
     
     \subsection{Sublime Text}\label{ssec:sublime}
     
@@ -216,5 +216,5 @@ Para hacerse una idea general de las tecnologías utilizadas se recomienda ver e
     
     POP \cite{ref:pop} (Prototyping On Paper) es una aplicación con versiones web y para dispositivos móviles que permite elaborar en pocos pasos prototipos (mockups) interactivos basados en fotos de prototipos realizados en papel. De esta forma se puede elaborar un prototipo de interfaz gráfica de bajo coste con la que el usuario pueda interactuar.
     
-    Ene este proyecto se utilizará POP durante la fase de diseño de la aplicación Android para elaborar mockups sencillos e interactivos que podamos enseñar a la gente y que nos ayuden a refinar el diseño de la interfaz gráfica de la aplicación. Tiene además la ventaja de que se puede enseñar en la aplicación móvil de POP para "imitar" el aspecto final que tendría la aplicación y que el usuario se haga una mejor idea de lo que pretendemos diseñar.
+    Ene este proyecto se utilizará POP durante la fase de diseño de la aplicación Android para elaborar mockups sencillos e interactivos que podamos enseñar a la gente y que nos ayuden a refinar el diseño de la interfaz gráfica de la aplicación. Tiene además la ventaja de que se puede enseñar en la aplicación móvil de POP para simular el aspecto final que tendría la aplicación y que el usuario se haga una mejor idea de lo que pretendemos diseñar.
     

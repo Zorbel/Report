@@ -41,7 +41,7 @@
 }
 
 @misc{ref:google_docs,
-    author = "",
+    author = "Google Inc.",
     title = "{Google Docs}",
     howpublished = "\\\url{https://drive.google.com/}"
 }
@@ -125,16 +125,52 @@
     howpublished = "\\\url{http://waveinabox.net/}"
 }
 
+@misc{ref:java,
+    author = "Oracle Corporation",
+    title = "{Java}",
+    howpublished = "\\\url{https://www.java.com/es/}"
+}
+
 @misc{ref:openjdk,
-    author = "Oracle",
+    author = "Oracle Corporation",
     title = "{OpenJDK}",
     howpublished = "\\\url{http://openjdk.java.net/}"
 }
 
 @misc{ref:gwt,
-    author = "Google, Inc.",
+    author = "Google Inc.",
     title = "{Google Web Toolkit}",
     howpublished = "\\\url{http://www.gwtproject.org/}"
+}
+
+@misc{ref:javascript,
+    author = "Mozilla Foundation",
+    title = "{JavaScript}",
+    howpublished = "\\\url{https://developer.mozilla.org/es/docs/Web/JavaScript}"
+}
+
+@misc{ref:xml,
+    author = "World Wide Web Consortium",
+    title = "{Extensible Markup Language (XML)}",
+    howpublished = "\\\url{http://www.w3.org/XML/}"
+}
+
+@misc{ref:json,
+    author = "",
+    title = "{Introducing JSON}",
+    howpublished = "\\\url{http://json.org/}"
+}
+
+@misc{ref:git,
+    author = "Linus Torvalds",
+    title = "{Git}",
+    howpublished = "\\\url{https://git-scm.com/}"
+}
+
+@misc{ref:github,
+    author = "GitHub Inc.",
+    title = "{GitHub · Build software better, together.}",
+    howpublished = "\\\url{https://github.com/}"
 }
 
 @misc{ref:p2pvalue,
@@ -150,19 +186,31 @@
 }
 
 @misc{ref:android_platform,
-    author = "Google, Inc.",
+    author = "Google Inc.",
     title = "{Android Developers Site}",
     howpublished = "\\\url{http://developer.android.com/index.html}"
 }
 
 @misc{ref:android_sdk,
-    author = "Google, Inc.",
+    author = "Google Inc.",
     title = "{Android SDK}",
     howpublished = "\\\url{https://developer.android.com/sdk/index.html}"
 }
 
+@misc{ref:android_api21,
+    author = "Google Inc.",
+    title = "{Android 5.0 APIs}",
+    howpublished = "\\\url{https://developer.android.com/about/versions/android-5.0.html}"
+}
+
+@misc{ref:android_layout
+    author = "Google Inc.",
+    title = "{Android Layouts}",
+    howpublished = "\\\url{https://developer.android.com/guide/topics/ui/declaring-layout.html}"
+}
+
 @misc{ref:android_studio,
-    author = "Google, Inc.",
+    author = "Google Inc.",
     title = "{Android Studio IDE}",
     howpublished = "\\\url{https://developer.android.com/tools/studio/index.html}"
 }
@@ -269,6 +317,12 @@
     howpublished = "\\\url{https://developer.android.com/guide/components/activities.html}"
 }
 
+@article{ref:http,
+  title={Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing},
+  author={Fielding, Roy},
+  year={2014},
+  note = "\\RFC 7230 Available at \url{https://tools.ietf.org/html/rfc7230}"
+}
 
 @article{ref:http_authentication,
   title={Hypertext Transfer Protocol (HTTP/1.1): Authentication},
@@ -307,6 +361,42 @@
     author = "Google Inc.",
     title = "{Android LogCat}",
     howpublished = "\\\url{https://developer.android.com/tools/help/logcat.html}"
+}
+
+@misc{ref:android_widget,
+    author = "Google Inc.",
+    title = "{Android Widget}",
+    howpublished = "\\\url{https://developer.android.com/reference/android/widget/package-summary.html}"
+}
+
+@misc{ref:android_adapter,
+    author = "Google Inc.",
+    title = "{Android Adapter}",
+    howpublished = "\\\url{https://developer.android.com/reference/android/widget/Adapter.html}"
+}
+
+@misc{ref:android_menu,
+    author = "Google Inc.",
+    title = "{Android Menus}",
+    howpublished = "\\\url{https://developer.android.com/guide/topics/ui/menus.html}"
+}
+
+@misc{ref:android_actionBar,
+    author = "Google Inc.",
+    title = "{Android Action Bar}",
+    howpublished = "\\\url{https://developer.android.com/guide/topics/ui/actionbar.html}"
+}
+
+@misc{ref:android_tabGoogle,
+    author = "Google Inc.",
+    title = "{IOsched app Sliding Tabs}",
+    howpublished = "\\\url{https://github.com/google/iosched/blob/master/android/src/main/java/com/google/samples/apps/iosched/ui/widget/SlidingTabLayout.java}"
+}
+
+@misc{ref:android_fragment,
+    author = "Google Inc.",
+    title = "{Android Fragments}",
+    howpublished = "\\\url{https://developer.android.com/guide/components/fragments.html}
 }
 
 @misc{ref:apache_http,
@@ -349,6 +439,12 @@
     author = "Google Inc.",
     title = "{Emulator Networking: Network Address Space}",
     howpublished = "\\\url{https://developer.android.com/tools/devices/emulator.html#emulatornetworking}"
+}
+
+@misc{ref:android_secure,
+    author = "Google Inc.",
+    title = "{Android Secure Settings}",
+    howpublished = "\\\url{https://developer.android.com/reference/android/provider/Settings.Secure.html}"
 }
 
 @misc{ref:atmosphere,
@@ -418,20 +514,6 @@
   year={2000}
 }
 
-@book{ref:gwt_book,
-  title={Google web toolkit for ajax},
-  author={Perry, Bruce W},
-  year={2007},
-  publisher={" O'Reilly Media, Inc."}
-}
-
-
-@misc{ref:eclipse,
-    author = "",
-    title = "{Eclipse}",
-    howpublished = "\\\url{http://www.eclipse.org/}"
-}
-
 @misc{ref:jetty,
     author = "",
     title = "{Jetty}",
@@ -439,21 +521,9 @@
 }
 
 @misc{ref:tomcat,
-    author = "Apache",
+    author = "Apache Foundation",
     title = "{Tomcat}",
     howpublished = "\\\url{http://tomcat.apache.org/}"
-}
-
-@misc{ref:kune,
-    author = "",
-    title = "{Kune}",
-    howpublished = "\\\url{http://kune.ourproject.org/}"
-}
-
-@misc{ref:comunes,
-    author = "",
-    title = "{Comunes}",
-    howpublished = "\\\url{http://comunes.org/}"
 }
 
 @misc{ref:labodemo,
@@ -474,66 +544,122 @@
     howpublished = "\\\url{https://ahoramadrid.org/}"
 }
 
-@misc{ref:mysql,
-    author = "",
-    title = "{MySQL}",
-    howpublished = "\\\url{https://www.mysql.com/}"
+@misc{ref:ahoraMadrid_programa,
+     author = "Ahora Madrid",
+    title = "{Palataforma para elaboración de Programa colaborativo de Ahora Madrid}",
+    howpublished = "\\\url{http://programa.ahoramadrid.org/}"
 }
 
-@misc{ref:phpMyAdmin,
-    author = "",
-    title = "{MySQL :: The world's most popular open source database}",
-    howpublished = "\\\url{http://www.phpmyadmin.net/}"
-}
-
-@misc{ref:laravel,
-    author = "",
-    title = "{Laravel - The PHP Framework For Web Artisans}",
-    howpublished = "\\\url{http://laravel.com/}"
-}
-
-@phdthesis{ref:RESTPhd,
-	author		= "Roy Thomas Fielding",
-	title		= "Architectural Styles and the Design of Network-based Software Architectures",
-	school		= "University of California, Irvine",
-	year		= "2000"
-}
-
-@misc{ref:practicesRESTful_API,
-	author		= "Stefan Jauker",
-	title 		= "{10 Best Practices for Better RESTful API | Thinking Mobile}",
-	howpublished 	="\\\url{http://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/}"
-}
-
-@misc{ref:OpenShift,
-	author		= "",
-	title 		= "{OpenShift by Red Hat}",
-	howpublished 	="\\\url{https://www.openshift.com/}"
-}
-
-@misc{ref:jdelacueva,
-  title     = "{Javier de la Cueva, abogado, doctor en Filosofía y estudioso de las relaciones entre el Derecho y la Tecnología}",
-  howpublished  ="\\\url{http://javierdelacueva.es/bio/}"
-}  
-  
 @misc{ref:reddit,
-  title     	= "{reddit: the front page of the internet}",
+  title         = "{Plaza Podemos: ¡Sí se puede!}",
   howpublished  = "\\\url{https://www.reddit.com/}"
 }
 
 @misc{ref:plazaPodemos,
-  title     	= "{Plaza Podemos: ¡Sí se puede!}",
+  title         = "{Reddit: the front page of the internet}",
   howpublished  = "\\\url{https://www.reddit.com/r/podemos/}"
 }
 
-@misc{ref:change.org,
-  title		= "{Change.org · La mayor plataforma de peticiones del mundo}",
-  howpublished	= "\\\url{https://www.change.org/}"
+@misc{ref:changeOrg,
+  title        = "{Change.org · La mayor plataforma de peticiones del mundo}",
+  howpublished    = "\\\url{https://www.change.org/}"
 }
 
-@misc{ref:zaragonzaEnComun,
-  title		= "{Programa colaborativo de Zaragoza en Común}",
-  howpublished	= "\\\url{http://programa.ganemoszaragoza.com/}"
+@misc{ref:ganemosZaragoza,
+  title        = "{Programa colaborativo de Zaragoza en Común}",
+  howpublished    = "\\\url{http://programa.ganemoszaragoza.com/}"
+}
+
+@misc{ref:appgree,
+  author    = "APPGREE, S.A.",
+  title        = "{Appgree}",
+  howpublished    = "\\\url{http://www.appgree.com/que-es-appgree/}"
+}
+
+@misc{ref:appgree_demoRank,
+  author    = "APPGREE, S.A.",
+  title        = "{DemoRank: El Algoritmo}",
+  howpublished    = "\\\url{http://www.appgree.com/el-proceso-paso-a-paso/}"
+}
+
+@misc{ref:sql,
+    author = "ISO",
+    title = "{ISO/IEC 9075-1:2011 - Information technology -- Database languages -- SQL}",
+    howpublished = "\\\url{http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=53681}"
+}
+
+@misc{ref:mysql,
+    author = "Oracle Corporation",
+    title = "{MySQL :: The world's most popular open source database}",
+    howpublished = "\\\url{https://www.mysql.com/}"
+}
+
+@misc{ref:phpMyAdmin,
+    author = "The PhpMyAdmin Project",
+    title = "{PhpMyAdmin: Bringing MySQL to the web}",
+    howpublished = "\\\url{http://www.phpmyadmin.net/}"
+}
+
+@misc{ref:php,
+    author = "The PHP Group",
+    title = "{PHP: Hypertext Preprocessor}",
+    howpublished = "\\\url{https://php.net/}"
+}
+
+@misc{ref:laravel,
+    author = "Taylor Otwell",
+    title = "{Laravel - The PHP Framework For Web Artisans}",
+    howpublished = "\\\url{http://laravel.com/}"
+}
+
+@misc{ref:laravel_github,
+    author = "Taylor Otwell",
+    title = "{The Laravel PHP Framework}",
+    howpublished = "\\\url{https://github.com/laravel}"
+}
+
+@phdthesis{ref:RESTPhd,
+    author        = "Roy Thomas Fielding",
+    title        = "Architectural Styles and the Design of Network-based Software Architectures",
+    school        = "University of California, Irvine",
+    year        = "2000"
+}
+
+@misc{ref:practicesRESTful_API,
+    author        = "Stefan Jauker",
+    title         = "{10 Best Practices for Better RESTful API | Thinking Mobile}",
+    howpublished     ="\\\url{http://blog.mwaysolutions.com/2014/06/05/10-best-practices-for-better-restful-api/}"
+}
+
+@misc{ref:OpenShift,
+    author        = "Red Hat, Inc.",
+    title         = "{OpenShift by Red Hat}",
+    howpublished     ="\\\url{https://www.openshift.com/}"
+}
+
+@misc{ref:sublime,
+    author        = "Jon Skinner",
+    title         = "{Sublime Text: The text editor you'll fall in love with}",
+    howpublished     ="\\\url{https://www.sublimetext.com/}"
+}
+
+@misc{ref:pop,
+    author        = "WooMoo Inc.",
+    title         = "{POP - Prototyping on Paper | Mobile App Prototyping Made Easy}",
+    howpublished     ="\\\url{https://popapp.in/}"
+}
+  
+@misc{ref:jdelacueva,
+  author        = "Javier de la Cueva",
+  title         = "{Javier de la Cueva: abogado, doctor en Filosofía y estudioso de las relaciones entre el Derecho y la Tecnología}",
+  howpublished  = "\\\url{http://www.javierdelacueva.es/bio/}"
+}
+
+@book{ref:manualCiberactivista,
+ author = "Javier de la Cueva",
+ title = "Manual del ciberactivista. Teoría y práctica de las acciones micropolíticas",
+ year = "2015",
+ publisher = "Bandaàparte Editores"
 }
 
 @book{ref:bookAlanCooper,
@@ -543,9 +669,107 @@
     publisher = "Sams Publishing"
 }
 
-@book{ref:manualCiberactivista
-    author    = "Javier de la Cueva",
-    title     = "Manual del ciberactivista. Teoría y práctica de las acciones micropolíticas",
-    year      = "2015",
-    publisher = "Bandaàparte Editores"
+@misc{ref:CRUD,
+  author        = "Martin Heller",
+  title         = "{REST and CRUD: the Impedance Mismatch | InfoWorld}",
+  howpublished  = "\\\url{http://www.infoworld.com/article/2640739/application-development/rest-and-crud--the-impedance-mismatch.html}"
 }
+
+@misc{ref:GPLv3,
+  author        = "Free Software Foundation",
+  title         = "{The GNU General Public License v3.0 - GNU Project - Free Software Foundation}",
+  howpublished  = "\\\url{https://www.gnu.org/licenses/gpl.html}"
+}
+
+@misc{ref:google_api,
+  author        = "Google Inc.",
+  title         = "{Realtime API: Add Realtime collaboration to your app}",
+  howpublished  = "\\\url{https://developers.google.com/google-apps/realtime/}"
+}
+
+@misc{ref:microsoft_api,
+  author        = "Microsoft",
+  title         = "{RTC Client API}",
+  howpublished  = "\\\url{https://msdn.microsoft.com/en-us/library/ms775893%28v=vs.85%29.aspx}"
+}
+
+@misc{ref:togetherjs_api,
+  author        = "Mozilla Foundation",
+  title         = "{TogetherJS: Collaboration made easy}",
+  howpublished  = "\\\url{https://togetherjs.com/}"
+}
+
+@misc{ref:webRTC,
+  author        = "Google Inc.",
+  title         = "{WebRTC}",
+  howpublished  = "\\\url{http://www.webrtc.org/}"
+}
+
+@misc{ref:shareJS,
+  author        = "Joseph Gentle",
+  title         = "{ShareJS}",
+  howpublished  = "\\\url{http://sharejs.org/}"
+}
+
+@misc{ref:goodow,
+  author        = "Chianwu Tian",
+  title         = "{Goodow: Google Docs–style collaboration via the use of operational transforms}",
+  howpublished  = "\\\url{https://github.com/goodow/realtime}"
+}
+
+@misc{ref:etherpad,
+  author        = "The Etherpad Foundation",
+  title         = "{Etherpad}",
+  howpublished  = "\\\url{http://etherpad.org/}"
+}
+
+@misc{ref:titanpad,
+  author        = "TitanPad Authors",
+  title         = "{TitanPad: lets people work on one document simultaneously}",
+  howpublished  = "\\\url{https://titanpad.com}"
+}
+
+@misc{ref:colorillo,
+  author        = "Alexander Kirk",
+  title         = "{Colorillo}",
+  howpublished  = "\\\url{http://colorillo.com/}"
+}
+
+@misc{ref:shareLatex,
+  author        = "Henry Oswald and James Allen",
+  title         = "{ShareLaTex: LaTeX, Evolved}",
+  howpublished  = "\\\url{https://www.sharelatex.com/}"
+}
+
+@misc{ref:samepage,
+  author        = "Samepage Labs Inc.",
+  title         = "{Samepage | The num. 1 Online Collaboration Tool}",
+  howpublished  = "\\\url{https://www.samepage.io/}"
+}
+
+@misc{ref:quip,
+  author        = "Quip",
+  title         = "{Quip: Trabaja con personas, no con archivos.}",
+  howpublished  = "\\\url{https://quip.com/}"
+}
+
+@misc{ref:nielsen,
+  author        = "Jakob Nielsen",
+  title         = "{10 Heuristics for User Interface Design: Article by Jakob Nielsen}",
+  howpublished  = "\\\url{http://www.nngroup.com/articles/ten-usability-heuristics/}"
+}
+
+
+@misc{ref:materialdesign,
+  author        = "Google Inc.",
+  title         = "{Material design - Google design guidelines}",
+  howpublished  = "\\\url{http://www.google.com/design/spec/material-design/introduction.html}"
+}
+
+@book{ref:bookBrainStorming,
+    author    = "The Bill &. Melinda Gates Foundation",
+    title     = "Human-Centered Design Toolkit: An Open-Source Toolkit to Inspire New Solutions in the Developing World",
+    publisher = "Ideo",
+    year      = "2011"
+}
+
