@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.5)  18 JUN 2015 00:32
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.3.5)  18 JUN 2015 00:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -7567,15 +7567,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 5.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 5.
-
-LaTeX Warning: Reference `sec:waveModel' on page 101 undefined on input line 13
-.
-
-
-LaTeX Warning: Reference `sec:swellRTModel' on page 101 undefined on input line
- 13.
-
-<Media/Captures/waveArch.png, id=1692, 696.6025pt x 258.9675pt>
+<Media/Captures/waveArch.png, id=1694, 696.6025pt x 258.9675pt>
 File: Media/Captures/waveArch.png Graphic file (type png)
 
 <use Media/Captures/waveArch.png>
@@ -7680,7 +7672,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 37.
 [102 <./Media/Captures/waveArch.png>]
-<Media/Captures/waveEntities.png, id=1702, 457.71pt x 290.08376pt>
+<Media/Captures/waveEntities.png, id=1704, 457.71pt x 290.08376pt>
 File: Media/Captures/waveEntities.png Graphic file (type png)
 
 <use Media/Captures/waveEntities.png>
@@ -7744,7 +7736,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 54.
 [103 <./Media/Captures/waveEntities.png>]
-<Media/Captures/waveDataModel.png, id=1707, 584.1825pt x 299.1175pt>
+<Media/Captures/waveDataModel.png, id=1709, 584.1825pt x 299.1175pt>
 File: Media/Captures/waveDataModel.png Graphic file (type png)
 
 <use Media/Captures/waveDataModel.png>
@@ -7769,7 +7761,7 @@ LaTeX Warning: Citation `ref:OpenShift' on page 104 undefined on input line 65.
 
 
 
-<Media/Diagrams/generalArchitectureDiagram.png, id=1708, 617.30624pt x 417.8109
+<Media/Diagrams/generalArchitectureDiagram.png, id=1710, 617.30624pt x 417.8109
 4pt>
 File: Media/Diagrams/generalArchitectureDiagram.png Graphic file (type png)
  <use Media/Diagrams/generalArchitectureDiagram.png>
@@ -7840,7 +7832,7 @@ LaTeX Warning: Citation `ref:phpMyAdmin' on page 105 undefined on input line 79
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `!tbp') on input line 83.
 
-<Media/Captures/database.png, id=1714, 1062.97125pt x 664.4825pt>
+<Media/Captures/database.png, id=1716, 1062.97125pt x 664.4825pt>
 File: Media/Captures/database.png Graphic file (type png)
 
 <use Media/Captures/database.png>
@@ -8064,7 +8056,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 119.
 [108]
-<Media/Captures/frameworkPopularity.png, id=1735, 1027.84pt x 856.19875pt>
+<Media/Captures/frameworkPopularity.png, id=1737, 1027.84pt x 856.19875pt>
 File: Media/Captures/frameworkPopularity.png Graphic file (type png)
 
 <use Media/Captures/frameworkPopularity.png>
@@ -8193,7 +8185,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 168.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 168.
-[111] <Media/Captures/laravelArch.jpg, id=1748, 469.755pt x 376.7676pt>
+[111] <Media/Captures/laravelArch.jpg, id=1750, 469.755pt x 376.7676pt>
 File: Media/Captures/laravelArch.jpg Graphic file (type jpg)
 
 <use Media/Captures/laravelArch.jpg>
@@ -8336,7 +8328,7 @@ Package babel Info: Redefining spanish shorthand "!
 (babel)             in language  on input line 219.
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 219.
-[114] <Media/Captures/getDiagramMethod.png, id=1771, 361.35pt x 174.6525pt>
+[114] <Media/Captures/getDiagramMethod.png, id=1773, 361.35pt x 174.6525pt>
 File: Media/Captures/getDiagramMethod.png Graphic file (type png)
 
 <use Media/Captures/getDiagramMethod.png>
@@ -8520,7 +8512,7 @@ LaTeX Warning: Citation `ref:android_fragment' on page 118 undefined on input l
 ine 270.
 
 
-<Media/Diagrams/classDiagramTopItemAdapter.png, id=1791, 577.40718pt x 322.2037
+<Media/Diagrams/classDiagramTopItemAdapter.png, id=1793, 577.40718pt x 322.2037
 5pt>
 File: Media/Diagrams/classDiagramTopItemAdapter.png Graphic file (type png)
  <use Media/Diagrams/classDiagramTopItemAdapter.png>
@@ -8605,7 +8597,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 288.
 [119 <./Media/Diagrams/classDiagramTopItemAdapter.png>]
-<Media/Diagrams/classMenuLeft.png, id=1802, 570.63188pt x 225.09094pt>
+<Media/Diagrams/classMenuLeft.png, id=1804, 570.63188pt x 225.09094pt>
 File: Media/Diagrams/classMenuLeft.png Graphic file (type png)
 
 <use Media/Diagrams/classMenuLeft.png>
@@ -8725,7 +8717,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 322.
 [121]
-<Media/Captures/sectionsCodification.png, id=1812, 365.11406pt x 107.65219pt>
+<Media/Captures/sectionsCodification.png, id=1814, 365.11406pt x 107.65219pt>
 File: Media/Captures/sectionsCodification.png Graphic file (type png)
 
 <use Media/Captures/sectionsCodification.png>
@@ -8770,7 +8762,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 341.
 [122 <./Media/Captures/sectionsCodification.png>]
-<Media/Diagrams/classSectionTree.png, id=1819, 700.6175pt x 416.55624pt>
+<Media/Diagrams/classSectionTree.png, id=1821, 700.6175pt x 416.55624pt>
 File: Media/Diagrams/classSectionTree.png Graphic file (type png)
 
 <use Media/Diagrams/classSectionTree.png>
@@ -8831,7 +8823,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 356.
 [123 <./Media/Diagrams/classSectionTree.png>]
-<Media/Diagrams/classDiagramAsyncTask.png, id=1828, 778.91pt x 550.055pt>
+<Media/Diagrams/classDiagramAsyncTask.png, id=1830, 778.91pt x 550.055pt>
 File: Media/Diagrams/classDiagramAsyncTask.png Graphic file (type png)
 
 <use Media/Diagrams/classDiagramAsyncTask.png>
@@ -8982,7 +8974,7 @@ Package babel Info: Redefining spanish shorthand "!
 Package babel Info: Redefining spanish shorthand "?
 (babel)             in language  on input line 388.
 [126]
-<Media/Diagrams/collaborativeProposalDiagram.png, id=1846, 889.3225pt x 467.747
+<Media/Diagrams/collaborativeProposalDiagram.png, id=1848, 889.3225pt x 467.747
 5pt>
 File: Media/Diagrams/collaborativeProposalDiagram.png Graphic file (type png)
  <use Media/Diagrams/collaborativeProposalDiagram.png>
@@ -10380,10 +10372,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 105.
  ) 
 Here is how much of TeX's memory you used:
- 14847 strings out of 493304
- 228783 string characters out of 6139872
+ 14845 strings out of 493304
+ 228750 string characters out of 6139872
  698787 words of memory out of 5000000
- 17202 multiletter control sequences out of 15000+600000
+ 17200 multiletter control sequences out of 15000+600000
  11462 words of font info for 40 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,16n,51p,1488b,2945s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -10400,10 +10392,10 @@ s/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on report.pdf (172 pages, 31286726 bytes).
+Output written on report.pdf (172 pages, 31286605 bytes).
 PDF statistics:
- 2502 PDF objects out of 2984 (max. 8388607)
- 2193 compressed objects within 22 object streams
+ 2504 PDF objects out of 2984 (max. 8388607)
+ 2195 compressed objects within 22 object streams
  775 named destinations out of 1000 (max. 500000)
  1719 words of extra memory for PDF output out of 10000 (max. 10000000)
 
