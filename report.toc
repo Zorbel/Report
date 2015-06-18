@@ -5,7 +5,7 @@
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }Abstract}{IX}{chapter*.6}
 \contentsline {chapter}{\hbox to\@tempdima {\hfil }Resumen}{XI}{chapter*.7}
 \contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{1}{chapter.1}
-\contentsline {section}{\numberline {1.1}Marco te\IeC {\'o}rico de la idea: Pol\IeC {\'\i }tica en el mundo de la Inform\IeC {\'a}tica}{1}{section.1.1}
+\contentsline {section}{\numberline {1.1}Marco te\IeC {\'o}rico: Pol\IeC {\'\i }tica en el mundo de la Inform\IeC {\'a}tica}{1}{section.1.1}
 \contentsline {section}{\numberline {1.2}Adentr\IeC {\'a}ndonos en la idea}{2}{section.1.2}
 \contentsline {section}{\numberline {1.3}Objetivos del Proyecto}{3}{section.1.3}
 \contentsline {section}{\numberline {1.4}Estructura del Documento}{4}{section.1.4}
@@ -39,132 +39,132 @@
 \contentsline {subsubsection}{\numberline {2.2.2.4}Appgree}{24}{subsubsection.2.2.2.4}
 \contentsline {chapter}{\numberline {3}Metodolog\IeC {\'\i }a del Proyecto}{27}{chapter.3}
 \contentsline {section}{\numberline {3.1}Uso de Software Libre}{27}{section.3.1}
-\contentsline {section}{\numberline {3.2}Metodolog\IeC {\'\i }a de Migraci\IeC {\'o}n de Wave a Android}{28}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Objetivo}{28}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Plataforma: Entorno de Desarrollo, Construcci\IeC {\'o}n y Depuraci\IeC {\'o}n}{28}{subsection.3.2.2}
-\contentsline {subsubsection}{\numberline {3.2.2.1}Eclipse}{28}{subsubsection.3.2.2.1}
-\contentsline {subsubsection}{\numberline {3.2.2.2}Proceso de Construcci\IeC {\'o}n por Consola}{31}{subsubsection.3.2.2.2}
-\contentsline {subsubsection}{\numberline {3.2.2.3}Proceso de Depuraci\IeC {\'o}n}{33}{subsubsection.3.2.2.3}
-\contentsline {subsection}{\numberline {3.2.3}Migraci\IeC {\'o}n: Identificaci\IeC {\'o}n y Soluci\IeC {\'o}n de Problemas}{34}{subsection.3.2.3}
-\contentsline {subsubsection}{\numberline {3.2.3.1}Conexi\IeC {\'o}n HTTP}{35}{subsubsection.3.2.3.1}
-\contentsline {subsubsection}{\numberline {3.2.3.2}Conexi\IeC {\'o}n WebSocket}{37}{subsubsection.3.2.3.2}
-\contentsline {subsubsection}{\numberline {3.2.3.3}Conexi\IeC {\'o}n final y Logging}{39}{subsubsection.3.2.3.3}
-\contentsline {subsubsection}{\numberline {3.2.3.4}Organizaci\IeC {\'o}n del c\IeC {\'o}digo: Servicio Android}{40}{subsubsection.3.2.3.4}
-\contentsline {subsection}{\numberline {3.2.4}Dependencias}{44}{subsection.3.2.4}
-\contentsline {subsection}{\numberline {3.2.5}Resultado de la Migraci\IeC {\'o}n}{44}{subsection.3.2.5}
-\contentsline {section}{\numberline {3.3}Implementaci\IeC {\'o}n de DemoCritics}{46}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Metodolog\IeC {\'\i }a}{46}{subsection.3.3.1}
-\contentsline {subsubsection}{\numberline {3.3.1.1}Control de versiones}{46}{subsubsection.3.3.1.1}
-\contentsline {subsubsection}{\numberline {3.3.1.2}GitHub}{47}{subsubsection.3.3.1.2}
-\contentsline {subsubsection}{\numberline {3.3.1.3}Reparto de tareas}{47}{subsubsection.3.3.1.3}
-\contentsline {subsubsection}{\numberline {3.3.1.4}Revisiones de c\IeC {\'o}digo}{47}{subsubsection.3.3.1.4}
-\contentsline {subsubsection}{\numberline {3.3.1.5}Evaluaciones de usabilidad}{47}{subsubsection.3.3.1.5}
-\contentsline {chapter}{\numberline {4}Tecnolog\IeC {\'\i }as del Proyecto}{49}{chapter.4}
-\contentsline {section}{\numberline {4.1}Tecnolog\IeC {\'\i }as de Wave}{51}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Google Wave}{51}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Apache Wave}{51}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Caracter\IeC {\'\i }sticas de Wave}{51}{subsection.4.1.3}
-\contentsline {subsubsection}{\numberline {4.1.3.1}Federaci\IeC {\'o}n}{51}{subsubsection.4.1.3.1}
-\contentsline {subsubsection}{\numberline {4.1.3.2}Consistencia en tiempo real}{52}{subsubsection.4.1.3.2}
-\contentsline {subsubsection}{\numberline {4.1.3.3}Escalabilidad}{52}{subsubsection.4.1.3.3}
-\contentsline {subsection}{\numberline {4.1.4}Servidores Wave: SwellRT}{52}{subsection.4.1.4}
-\contentsline {subsection}{\numberline {4.1.5}Eclipse}{53}{subsection.4.1.5}
-\contentsline {subsection}{\numberline {4.1.6}Java}{53}{subsection.4.1.6}
-\contentsline {subsection}{\numberline {4.1.7}GWT}{54}{subsection.4.1.7}
-\contentsline {subsection}{\numberline {4.1.8}JavaScript}{54}{subsection.4.1.8}
-\contentsline {subsection}{\numberline {4.1.9}HTTP}{55}{subsection.4.1.9}
-\contentsline {subsection}{\numberline {4.1.10}WebSocket}{55}{subsection.4.1.10}
-\contentsline {subsection}{\numberline {4.1.11}Git}{55}{subsection.4.1.11}
-\contentsline {subsection}{\numberline {4.1.12}GitHub}{56}{subsection.4.1.12}
-\contentsline {section}{\numberline {4.2}Tecnolog\IeC {\'\i }as de la Aplicaci\IeC {\'o}n Android}{56}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Android Studio}{56}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Android}{57}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}XML}{57}{subsection.4.2.3}
-\contentsline {subsection}{\numberline {4.2.4}JSON}{58}{subsection.4.2.4}
-\contentsline {subsection}{\numberline {4.2.5}SQL}{58}{subsection.4.2.5}
-\contentsline {subsection}{\numberline {4.2.6}MySQL}{58}{subsection.4.2.6}
-\contentsline {subsection}{\numberline {4.2.7}PhpMyAdmin}{59}{subsection.4.2.7}
-\contentsline {subsection}{\numberline {4.2.8}PHP}{59}{subsection.4.2.8}
-\contentsline {subsection}{\numberline {4.2.9}Laravel 5}{59}{subsection.4.2.9}
-\contentsline {subsection}{\numberline {4.2.10}OpenShift}{60}{subsection.4.2.10}
-\contentsline {subsection}{\numberline {4.2.11}Sublime Text}{60}{subsection.4.2.11}
-\contentsline {subsection}{\numberline {4.2.12}POP: Prototyping On Paper}{61}{subsection.4.2.12}
-\contentsline {chapter}{\numberline {5}Migraci\IeC {\'o}n de SwellRT a Android}{63}{chapter.5}
-\contentsline {chapter}{\numberline {6}Dise\IeC {\~n}o de la Aplicaci\IeC {\'o}n}{65}{chapter.6}
-\contentsline {section}{\numberline {6.1}Introducci\IeC {\'o}n}{65}{section.6.1}
-\contentsline {section}{\numberline {6.2}Brainstorming de ideas}{65}{section.6.2}
-\contentsline {section}{\numberline {6.3}Dise\IeC {\~n}o Guiado Por Objetivos (DGO)}{67}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Investigaci\IeC {\'o}n}{68}{subsection.6.3.1}
-\contentsline {subsubsection}{\numberline {6.3.1.1}Intenci\IeC {\'o}n Inicial: Prototipo b\IeC {\'a}sico}{68}{subsubsection.6.3.1.1}
-\contentsline {subsubsection}{\numberline {6.3.1.2}Hip\IeC {\'o}tesis de personas}{70}{subsubsection.6.3.1.2}
-\contentsline {subsubsection}{\numberline {6.3.1.3}Entrevista con Labodemo}{71}{subsubsection.6.3.1.3}
-\contentsline {subsubsection}{\numberline {6.3.1.4}Conclusi\IeC {\'o}n}{72}{subsubsection.6.3.1.4}
-\contentsline {subsubsection}{\numberline {6.3.1.5}Entrevista con Javier de la Cueva}{73}{subsubsection.6.3.1.5}
-\contentsline {subsubsection}{\numberline {6.3.1.6}Conclusi\IeC {\'o}n}{74}{subsubsection.6.3.1.6}
-\contentsline {subsection}{\numberline {6.3.2}Modelado de Personas}{75}{subsection.6.3.2}
-\contentsline {subsection}{\numberline {6.3.3}Definici\IeC {\'o}n de personas}{76}{subsection.6.3.3}
-\contentsline {subsection}{\numberline {6.3.4}Definici\IeC {\'o}n de Escenarios y Requisitos}{76}{subsection.6.3.4}
-\contentsline {subsection}{\numberline {6.3.5}Framework de dise\IeC {\~n}o}{80}{subsection.6.3.5}
-\contentsline {subsubsection}{\numberline {6.3.5.1}Framework de interacci\IeC {\'o}n}{80}{subsubsection.6.3.5.1}
-\contentsline {subsection}{\numberline {6.3.6}Principios de Dise\IeC {\~n}o}{89}{subsection.6.3.6}
-\contentsline {chapter}{\numberline {7}Arquitectura del Proyecto}{93}{chapter.7}
-\contentsline {section}{\numberline {7.1}Arquitectura de Wave}{93}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Modelo Conversacional Wave}{94}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Modelo de Contenidos SwellRT}{95}{subsection.7.1.2}
-\contentsline {section}{\numberline {7.2}Arquitectura de la aplicaci\IeC {\'o}n}{96}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}Base de datos}{97}{subsection.7.2.1}
-\contentsline {subsubsection}{\numberline {7.2.1.1}\textit {political\_party}}{99}{subsubsection.7.2.1.1}
-\contentsline {subsubsection}{\numberline {7.2.1.2}\textit {section}}{99}{subsubsection.7.2.1.2}
-\contentsline {subsubsection}{\numberline {7.2.1.3}\textit {proposal}}{99}{subsubsection.7.2.1.3}
-\contentsline {subsubsection}{\numberline {7.2.1.4}\textit {comment}}{100}{subsubsection.7.2.1.4}
-\contentsline {subsubsection}{\numberline {7.2.1.5}\textit {opinion}}{100}{subsubsection.7.2.1.5}
-\contentsline {subsection}{\numberline {7.2.2}Service REST}{100}{subsection.7.2.2}
-\contentsline {subsubsection}{\numberline {7.2.2.1}Arquitectura}{101}{subsubsection.7.2.2.1}
-\contentsline {subsubsection}{\numberline {7.2.2.2}Rutas}{104}{subsubsection.7.2.2.2}
-\contentsline {subsubsection}{\numberline {7.2.2.3}Controladores}{105}{subsubsection.7.2.2.3}
-\contentsline {subsection}{\numberline {7.2.3}Cliente Android}{107}{subsection.7.2.3}
-\contentsline {subsubsection}{\numberline {7.2.3.1}Interfaz Gr\IeC {\'a}fica}{107}{subsubsection.7.2.3.1}
-\contentsline {subsubsection}{\numberline {7.2.3.2}Estructuraci\IeC {\'o}n de Programas Pol\IeC {\'\i }ticos}{112}{subsubsection.7.2.3.2}
-\contentsline {subsubsection}{\numberline {7.2.3.3}Conexi\IeC {\'o}n y Peticiones a Service REST y Base de Datos}{115}{subsubsection.7.2.3.3}
-\contentsline {subsubsection}{\numberline {7.2.3.4}Gesti\IeC {\'o}n de Usuarios: ID de Android}{117}{subsubsection.7.2.3.4}
-\contentsline {subsubsection}{\numberline {7.2.3.5}Servicio Android, Conexi\IeC {\'o}n con Wave/SwellRT y Gesti\IeC {\'o}n de Propuestas Colaborativas}{117}{subsubsection.7.2.3.5}
-\contentsline {chapter}{\numberline {8}Evaluaci\IeC {\'o}n con Usuarios}{121}{chapter.8}
-\contentsline {section}{\numberline {8.1}Prop\IeC {\'o}sitos y objetivos de la evaluaci\IeC {\'o}n}{121}{section.8.1}
-\contentsline {section}{\numberline {8.2}Preguntas de investigaci\IeC {\'o}n}{121}{section.8.2}
-\contentsline {section}{\numberline {8.3}Requisitos para los participantes de la evaluaci\IeC {\'o}n}{122}{section.8.3}
-\contentsline {section}{\numberline {8.4}Dise\IeC {\~n}o experimental}{123}{section.8.4}
-\contentsline {section}{\numberline {8.5}Lista de tareas a realizar}{123}{section.8.5}
-\contentsline {section}{\numberline {8.6}Entorno y herramientas que vamos a emplear}{124}{section.8.6}
-\contentsline {section}{\numberline {8.7}Tareas del moderador}{125}{section.8.7}
-\contentsline {section}{\numberline {8.8}Resultados de la evaluaci\IeC {\'o}n con los usuarios}{125}{section.8.8}
-\contentsline {subsection}{\numberline {8.8.1}Comentarios sobre la interfaz}{126}{subsection.8.8.1}
-\contentsline {subsection}{\numberline {8.8.2}Resultados de las tareas}{127}{subsection.8.8.2}
-\contentsline {subsection}{\numberline {8.8.3}Informe de hallazgos y recomendaciones}{128}{subsection.8.8.3}
-\contentsline {chapter}{\numberline {9}Resultados y Trabajo Futuro}{131}{chapter.9}
-\contentsline {section}{\numberline {9.1}Discusi\IeC {\'o}n de Resultados}{131}{section.9.1}
-\contentsline {subsection}{\numberline {9.1.1}El porqu\IeC {\'e} de DemoCritics}{132}{subsection.9.1.1}
-\contentsline {subsection}{\numberline {9.1.2}Usando Wave/SwellRT en DemoCritics}{133}{subsection.9.1.2}
-\contentsline {subsection}{\numberline {9.1.3}Incentivando el uso social de DemoCritics}{134}{subsection.9.1.3}
-\contentsline {subsection}{\numberline {9.1.4}Aspectos t\IeC {\'e}cnicos de DemoCritics}{135}{subsection.9.1.4}
-\contentsline {section}{\numberline {9.2}Reparto de Trabajo entre los componentes del grupo}{136}{section.9.2}
-\contentsline {section}{\numberline {9.3}Trabajo Futuro}{138}{section.9.3}
-\contentsline {subsection}{\numberline {9.3.1}Mejoras a la versi\IeC {\'o}n actual}{138}{subsection.9.3.1}
-\contentsline {subsection}{\numberline {9.3.2}Nuevas caracter\IeC {\'\i }sticas}{139}{subsection.9.3.2}
-\contentsline {subsection}{\numberline {9.3.3}SwellRT Android}{140}{subsection.9.3.3}
-\contentsline {chapter}{\numberline {10}Conclusiones}{141}{chapter.10}
-\contentsline {chapter}{\numberline {A}Listados de C\IeC {\'o}digo Fuente}{143}{appendix.Alph1}
-\contentsline {section}{\numberline {A.1}Migraci\IeC {\'o}n de Wave a Android: SwellRT}{143}{section.Alph1.1}
-\contentsline {subsection}{\numberline {A.1.1}Esquema de conexi\IeC {\'o}n HTTP}{143}{subsection.Alph1.1.1}
-\contentsline {subsection}{\numberline {A.1.2}Esquema de conexi\IeC {\'o}n con AsyncTask}{144}{subsection.Alph1.1.2}
-\contentsline {subsection}{\numberline {A.1.3}Esquema de uso de WAsync}{144}{subsection.Alph1.1.3}
-\contentsline {section}{\numberline {A.2}Service REST (Laravel)}{146}{section.Alph1.2}
-\contentsline {subsection}{\numberline {A.2.1}Esquema de Rutas Simple}{146}{subsection.Alph1.2.1}
-\contentsline {subsection}{\numberline {A.2.2}Esquema de Rutas Agrupadas}{146}{subsection.Alph1.2.2}
-\contentsline {subsection}{\numberline {A.2.3}Esquema de Rutas de Propuestas Agrupadas}{146}{subsection.Alph1.2.3}
-\contentsline {subsection}{\numberline {A.2.4}Esquema de Controlador de Propuestas}{147}{subsection.Alph1.2.4}
-\contentsline {section}{\numberline {A.3}Aplicaci\IeC {\'o}n Android}{147}{section.Alph1.3}
-\contentsline {subsection}{\numberline {A.3.1}Funci\IeC {\'o}n de construcci\IeC {\'o}n del \IeC {\'a}rbol de Programa Pol\IeC {\'\i }tico}{147}{subsection.Alph1.3.1}
-\contentsline {subsection}{\numberline {A.3.2}Registrar Usuario en SwellRT}{148}{subsection.Alph1.3.2}
-\contentsline {subsection}{\numberline {A.3.3}Crear nueva Wave (Model) en SwellRT}{150}{subsection.Alph1.3.3}
-\contentsline {subsection}{\numberline {A.3.4}Abrir Pad colaborativo en SwellRT}{152}{subsection.Alph1.3.4}
-\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliograf\IeC {\'\i }a}{152}{subsection.Alph1.3.4}
+\contentsline {section}{\numberline {3.2}Patrones de Dise\IeC {\~n}o}{28}{section.3.2}
+\contentsline {section}{\numberline {3.3}Migraci\IeC {\'o}n de Wave/SwellRT a Android}{28}{section.3.3}
+\contentsline {section}{\numberline {3.4}Dise\IeC {\~n}o de la Aplicaci\IeC {\'o}n}{28}{section.3.4}
+\contentsline {section}{\numberline {3.5}Implementaci\IeC {\'o}n de la Aplicaci\IeC {\'o}n}{28}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Control de versiones}{28}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}GitHub}{28}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Reparto de tareas}{29}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.4}Revisiones de c\IeC {\'o}digo}{29}{subsection.3.5.4}
+\contentsline {subsection}{\numberline {3.5.5}Evaluaciones de usabilidad}{29}{subsection.3.5.5}
+\contentsline {chapter}{\numberline {4}Tecnolog\IeC {\'\i }as del Proyecto}{31}{chapter.4}
+\contentsline {section}{\numberline {4.1}Tecnolog\IeC {\'\i }as de Wave}{33}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Google Wave}{33}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Apache Wave}{33}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Caracter\IeC {\'\i }sticas de Wave}{33}{subsection.4.1.3}
+\contentsline {subsubsection}{\numberline {4.1.3.1}Federaci\IeC {\'o}n}{33}{subsubsection.4.1.3.1}
+\contentsline {subsubsection}{\numberline {4.1.3.2}Consistencia en tiempo real}{34}{subsubsection.4.1.3.2}
+\contentsline {subsubsection}{\numberline {4.1.3.3}Escalabilidad}{34}{subsubsection.4.1.3.3}
+\contentsline {subsection}{\numberline {4.1.4}Servidores Wave: SwellRT}{34}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.5}Eclipse}{35}{subsection.4.1.5}
+\contentsline {subsection}{\numberline {4.1.6}Java}{35}{subsection.4.1.6}
+\contentsline {subsection}{\numberline {4.1.7}GWT}{36}{subsection.4.1.7}
+\contentsline {subsection}{\numberline {4.1.8}JavaScript}{36}{subsection.4.1.8}
+\contentsline {subsection}{\numberline {4.1.9}HTTP}{37}{subsection.4.1.9}
+\contentsline {subsection}{\numberline {4.1.10}WebSocket}{37}{subsection.4.1.10}
+\contentsline {subsection}{\numberline {4.1.11}Git}{37}{subsection.4.1.11}
+\contentsline {subsection}{\numberline {4.1.12}GitHub}{38}{subsection.4.1.12}
+\contentsline {section}{\numberline {4.2}Tecnolog\IeC {\'\i }as de la Aplicaci\IeC {\'o}n Android}{38}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Android Studio}{38}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Android}{39}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}XML}{40}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.4}JSON}{41}{subsection.4.2.4}
+\contentsline {subsection}{\numberline {4.2.5}SQL}{41}{subsection.4.2.5}
+\contentsline {subsection}{\numberline {4.2.6}MySQL}{41}{subsection.4.2.6}
+\contentsline {subsection}{\numberline {4.2.7}PhpMyAdmin}{42}{subsection.4.2.7}
+\contentsline {subsection}{\numberline {4.2.8}PHP}{42}{subsection.4.2.8}
+\contentsline {subsection}{\numberline {4.2.9}Laravel 5}{42}{subsection.4.2.9}
+\contentsline {subsection}{\numberline {4.2.10}OpenShift}{43}{subsection.4.2.10}
+\contentsline {subsection}{\numberline {4.2.11}Sublime Text}{44}{subsection.4.2.11}
+\contentsline {subsection}{\numberline {4.2.12}POP: Prototyping On Paper}{44}{subsection.4.2.12}
+\contentsline {chapter}{\numberline {5}Migraci\IeC {\'o}n de SwellRT a Android}{45}{chapter.5}
+\contentsline {section}{\numberline {5.1}Objetivo}{45}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}Migraci\IeC {\'o}n: Identificaci\IeC {\'o}n y Soluci\IeC {\'o}n de Problemas}{45}{subsection.5.1.1}
+\contentsline {subsubsection}{\numberline {5.1.1.1}Conexi\IeC {\'o}n HTTP}{46}{subsubsection.5.1.1.1}
+\contentsline {subsubsection}{\numberline {5.1.1.2}Conexi\IeC {\'o}n WebSocket}{49}{subsubsection.5.1.1.2}
+\contentsline {subsubsection}{\numberline {5.1.1.3}Conexi\IeC {\'o}n final y Logging}{51}{subsubsection.5.1.1.3}
+\contentsline {subsubsection}{\numberline {5.1.1.4}Organizaci\IeC {\'o}n del c\IeC {\'o}digo: Servicio Android}{52}{subsubsection.5.1.1.4}
+\contentsline {subsection}{\numberline {5.1.2}Dependencias}{55}{subsection.5.1.2}
+\contentsline {subsection}{\numberline {5.1.3}Resultado de la Migraci\IeC {\'o}n}{55}{subsection.5.1.3}
+\contentsline {chapter}{\numberline {6}Dise\IeC {\~n}o de la Aplicaci\IeC {\'o}n}{59}{chapter.6}
+\contentsline {section}{\numberline {6.1}Introducci\IeC {\'o}n}{59}{section.6.1}
+\contentsline {section}{\numberline {6.2}Brainstorming de ideas}{59}{section.6.2}
+\contentsline {section}{\numberline {6.3}Dise\IeC {\~n}o Guiado Por Objetivos (DGO)}{61}{section.6.3}
+\contentsline {subsection}{\numberline {6.3.1}Investigaci\IeC {\'o}n}{62}{subsection.6.3.1}
+\contentsline {subsubsection}{\numberline {6.3.1.1}Intenci\IeC {\'o}n Inicial: Prototipo b\IeC {\'a}sico}{62}{subsubsection.6.3.1.1}
+\contentsline {subsubsection}{\numberline {6.3.1.2}Hip\IeC {\'o}tesis de personas}{64}{subsubsection.6.3.1.2}
+\contentsline {subsubsection}{\numberline {6.3.1.3}Entrevista con Labodemo}{65}{subsubsection.6.3.1.3}
+\contentsline {subsubsection}{\numberline {6.3.1.4}Conclusi\IeC {\'o}n}{66}{subsubsection.6.3.1.4}
+\contentsline {subsubsection}{\numberline {6.3.1.5}Entrevista con Javier de la Cueva}{67}{subsubsection.6.3.1.5}
+\contentsline {subsubsection}{\numberline {6.3.1.6}Conclusi\IeC {\'o}n}{68}{subsubsection.6.3.1.6}
+\contentsline {subsection}{\numberline {6.3.2}Modelado de Personas}{69}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.3}Definici\IeC {\'o}n de personas}{70}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.4}Definici\IeC {\'o}n de Escenarios y Requisitos}{70}{subsection.6.3.4}
+\contentsline {subsection}{\numberline {6.3.5}Framework de dise\IeC {\~n}o}{74}{subsection.6.3.5}
+\contentsline {subsubsection}{\numberline {6.3.5.1}Framework de interacci\IeC {\'o}n}{74}{subsubsection.6.3.5.1}
+\contentsline {subsection}{\numberline {6.3.6}Principios de Dise\IeC {\~n}o}{83}{subsection.6.3.6}
+\contentsline {chapter}{\numberline {7}Arquitectura del Proyecto}{87}{chapter.7}
+\contentsline {section}{\numberline {7.1}Arquitectura de Wave}{87}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Modelo Conversacional Wave}{88}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Modelo de Contenidos SwellRT}{89}{subsection.7.1.2}
+\contentsline {section}{\numberline {7.2}Arquitectura de la aplicaci\IeC {\'o}n}{90}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Base de datos}{91}{subsection.7.2.1}
+\contentsline {subsubsection}{\numberline {7.2.1.1}\textit {political\_party}}{93}{subsubsection.7.2.1.1}
+\contentsline {subsubsection}{\numberline {7.2.1.2}\textit {section}}{93}{subsubsection.7.2.1.2}
+\contentsline {subsubsection}{\numberline {7.2.1.3}\textit {proposal}}{93}{subsubsection.7.2.1.3}
+\contentsline {subsubsection}{\numberline {7.2.1.4}\textit {comment}}{94}{subsubsection.7.2.1.4}
+\contentsline {subsubsection}{\numberline {7.2.1.5}\textit {opinion}}{94}{subsubsection.7.2.1.5}
+\contentsline {subsection}{\numberline {7.2.2}Service REST}{94}{subsection.7.2.2}
+\contentsline {subsubsection}{\numberline {7.2.2.1}Arquitectura}{95}{subsubsection.7.2.2.1}
+\contentsline {subsubsection}{\numberline {7.2.2.2}Rutas}{98}{subsubsection.7.2.2.2}
+\contentsline {subsubsection}{\numberline {7.2.2.3}Controladores}{99}{subsubsection.7.2.2.3}
+\contentsline {subsection}{\numberline {7.2.3}Cliente Android}{101}{subsection.7.2.3}
+\contentsline {subsubsection}{\numberline {7.2.3.1}Interfaz Gr\IeC {\'a}fica}{101}{subsubsection.7.2.3.1}
+\contentsline {subsubsection}{\numberline {7.2.3.2}Estructuraci\IeC {\'o}n de Programas Pol\IeC {\'\i }ticos}{106}{subsubsection.7.2.3.2}
+\contentsline {subsubsection}{\numberline {7.2.3.3}Conexi\IeC {\'o}n y Peticiones a Service REST y Base de Datos}{109}{subsubsection.7.2.3.3}
+\contentsline {subsubsection}{\numberline {7.2.3.4}Gesti\IeC {\'o}n de Usuarios: ID de Android}{111}{subsubsection.7.2.3.4}
+\contentsline {subsubsection}{\numberline {7.2.3.5}Servicio Android, Conexi\IeC {\'o}n con Wave/SwellRT y Gesti\IeC {\'o}n de Propuestas Colaborativas}{111}{subsubsection.7.2.3.5}
+\contentsline {chapter}{\numberline {8}Evaluaci\IeC {\'o}n con Usuarios}{115}{chapter.8}
+\contentsline {section}{\numberline {8.1}Prop\IeC {\'o}sitos y objetivos de la evaluaci\IeC {\'o}n}{115}{section.8.1}
+\contentsline {section}{\numberline {8.2}Preguntas de investigaci\IeC {\'o}n}{115}{section.8.2}
+\contentsline {section}{\numberline {8.3}Requisitos para los participantes de la evaluaci\IeC {\'o}n}{116}{section.8.3}
+\contentsline {section}{\numberline {8.4}Dise\IeC {\~n}o experimental}{117}{section.8.4}
+\contentsline {section}{\numberline {8.5}Lista de tareas a realizar}{117}{section.8.5}
+\contentsline {section}{\numberline {8.6}Entorno y herramientas que vamos a emplear}{118}{section.8.6}
+\contentsline {section}{\numberline {8.7}Tareas del moderador}{119}{section.8.7}
+\contentsline {section}{\numberline {8.8}Resultados de la evaluaci\IeC {\'o}n con los usuarios}{119}{section.8.8}
+\contentsline {subsection}{\numberline {8.8.1}Comentarios sobre la interfaz}{120}{subsection.8.8.1}
+\contentsline {subsection}{\numberline {8.8.2}Resultados de las tareas}{121}{subsection.8.8.2}
+\contentsline {subsection}{\numberline {8.8.3}Informe de hallazgos y recomendaciones}{122}{subsection.8.8.3}
+\contentsline {chapter}{\numberline {9}Resultados y Trabajo Futuro}{125}{chapter.9}
+\contentsline {section}{\numberline {9.1}Discusi\IeC {\'o}n de Resultados}{125}{section.9.1}
+\contentsline {subsection}{\numberline {9.1.1}El porqu\IeC {\'e} de DemoCritics}{126}{subsection.9.1.1}
+\contentsline {subsection}{\numberline {9.1.2}Usando Wave/SwellRT en DemoCritics}{127}{subsection.9.1.2}
+\contentsline {subsection}{\numberline {9.1.3}Incentivando el uso social de DemoCritics}{128}{subsection.9.1.3}
+\contentsline {subsection}{\numberline {9.1.4}Aspectos t\IeC {\'e}cnicos de DemoCritics}{129}{subsection.9.1.4}
+\contentsline {section}{\numberline {9.2}Reparto de Trabajo entre los componentes del grupo}{130}{section.9.2}
+\contentsline {section}{\numberline {9.3}Trabajo Futuro}{132}{section.9.3}
+\contentsline {subsection}{\numberline {9.3.1}Mejoras a la versi\IeC {\'o}n actual}{132}{subsection.9.3.1}
+\contentsline {subsection}{\numberline {9.3.2}Nuevas caracter\IeC {\'\i }sticas}{133}{subsection.9.3.2}
+\contentsline {subsection}{\numberline {9.3.3}SwellRT Android}{134}{subsection.9.3.3}
+\contentsline {chapter}{\numberline {10}Conclusiones}{135}{chapter.10}
+\contentsline {chapter}{\numberline {A}Migraci\IeC {\'o}n de SwellRT a Android: Aspectos T\IeC {\'e}cnicos}{137}{appendix.Alph1}
+\contentsline {section}{\numberline {A.1}Proceso de Construcci\IeC {\'o}n por Consola}{137}{section.Alph1.1}
+\contentsline {section}{\numberline {A.2}Proceso de Depuraci\IeC {\'o}n}{140}{section.Alph1.2}
+\contentsline {chapter}{\numberline {B}Listados de C\IeC {\'o}digo Fuente}{141}{appendix.Alph2}
+\contentsline {section}{\numberline {B.1}Migraci\IeC {\'o}n de Wave a Android: SwellRT}{141}{section.Alph2.1}
+\contentsline {subsection}{\numberline {B.1.1}Esquema de conexi\IeC {\'o}n HTTP}{141}{subsection.Alph2.1.1}
+\contentsline {subsection}{\numberline {B.1.2}Esquema de conexi\IeC {\'o}n con AsyncTask}{142}{subsection.Alph2.1.2}
+\contentsline {subsection}{\numberline {B.1.3}Esquema de uso de WAsync}{142}{subsection.Alph2.1.3}
+\contentsline {section}{\numberline {B.2}Servicio Web REST (Laravel)}{144}{section.Alph2.2}
+\contentsline {subsection}{\numberline {B.2.1}Esquema de Rutas Simple}{144}{subsection.Alph2.2.1}
+\contentsline {subsection}{\numberline {B.2.2}Esquema de Rutas Agrupadas}{144}{subsection.Alph2.2.2}
+\contentsline {subsection}{\numberline {B.2.3}Esquema de Rutas de Propuestas Agrupadas}{144}{subsection.Alph2.2.3}
+\contentsline {subsection}{\numberline {B.2.4}Esquema de Controlador de Propuestas}{145}{subsection.Alph2.2.4}
+\contentsline {section}{\numberline {B.3}Aplicaci\IeC {\'o}n Android}{145}{section.Alph2.3}
+\contentsline {subsection}{\numberline {B.3.1}Funci\IeC {\'o}n de construcci\IeC {\'o}n del \IeC {\'a}rbol de Programa Pol\IeC {\'\i }tico}{145}{subsection.Alph2.3.1}
+\contentsline {subsection}{\numberline {B.3.2}Registrar Usuario en SwellRT}{147}{subsection.Alph2.3.2}
+\contentsline {subsection}{\numberline {B.3.3}Crear nueva Wave (Model) en SwellRT}{148}{subsection.Alph2.3.3}
+\contentsline {subsection}{\numberline {B.3.4}Abrir Pad colaborativo en SwellRT}{150}{subsection.Alph2.3.4}
+\contentsline {chapter}{\hbox to\@tempdima {\hfil }Bibliograf\IeC {\'\i }a}{150}{subsection.Alph2.3.4}

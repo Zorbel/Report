@@ -147,7 +147,31 @@ Para hacerse una idea general de las tecnologías utilizadas se recomienda ver e
     
 	Android \cite{ref:android_platform} es el Sistema Operativo de código libre (bajo licencia Apache 2.0) para dispositivos móviles de Google basado en el kernel de Linux. Lanzado en 2007, actualmente su API alcanza ya la versión 21 \cite{ref:android_api21}, también denominada Android 5.0 ''Lollipop''. Para desarrollar en esta plataforma basta con descargarse su SDK \cite{ref:android_sdk}, accesible entonces desde desde consola de comandos, aunque siempre resulta más cómodo utilizar un Entorno de Desarrollo como Eclipse o Android Studio (Ver Secciones \ref{ssec:eclipse} y \ref{ssec:androidStudio}).
 	
-	En este proyecto utilizaremos Android como plataforma móvil sobre la que llevar a cabo el desarrollo de la migración del cliente de Wave/SwellRT y para el desarrollo de una aplicación que haga uso de las funcionalidades y características de Wave. Concretamente utilizaremos el API 21 (Android 5.0 Lollipop) para tener acceso a la interfaz gráfica de diseño plano ''Material Design'' que incluye.
+	\textbf{Android SDK} \cite{ref:android_sdk}: paquete que integra el conjunto de herramientas necesarias para desarrollar en Android.  Entre estas herramientas destacan las siguientes:
+    
+    \begin{itemize}
+    \item \textbf{Librerías con el API} de Android y \textbf{Documentación} asociada \cite{ref:android_api_reference}
+    
+    \item \textbf{Android Virtual Device Manager (AVDM)} \cite{ref:android_vdm} herramienta para gestionar la creación, modificación, ejecución y eliminación de emuladores en Android. Un \textbf{emulador} \cite{ref:android_emulator} es una máquina virtual que ejecuta una determinada versión de Android. Permite desplegar un dispositivo movil en el ordenador que imita las características software y hardware de uno real para poder hacer pruebas de desarrollo sin necesidad de poseer un dispositivo con Android. 
+    
+    \item \textbf{Android SDK Manager} \cite{ref:android_sdk_manager} herramienta para gestionar las versiones de SDK y herramientas asociadas instaladas. Android se encuentra actualmente en la versión 5.1 (API 22), pero un desarrollador puede elegir desarrollar para una versión anterior si lo estima necesario, por lo que puede descargarse por separado dicha versión y mantener varias API si lo necesita.
+    
+    \item \textbf{Dalvik Debug Monitor Server (DDMS)} \cite{ref:android_ddms} herramienta que provee las características de entorno de depuración para las aplicaciones en desarrollo.
+
+    \end{itemize}
+	
+	Teniendo en cuenta la distribucion actual de versiones instaladas en dispositivos Android \cite{ref:android_dist} (Ver figura \ref{fig:android_Usage}) se ha decidido realizar la migración de SwellRT con el API 19 de Android (Version 4.4 "KitKat") para no tener problemas de compatibilidad. El emulador desplegado para las pruebas de desarrollo en la Migración utilizará por tanto Android 4.4 .
+	
+	Por otro lado en este proyecto utilizaremos Android como plataforma móvil sobre la que llevar a cabo el desarrollo de una aplicación que haga uso de las funcionalidades y características de Wave. En esta aplicación utilizaremos el API 21 (Android 5.0 Lollipop) para tener acceso a la interfaz gráfica de diseño plano ''Material Design'' que incluye. Esto no supone un problema, ya que dicha interfaz gráfica sí que es compatible con versiones previas de Android.
+
+	\begin{figure}[H]
+      \centering
+	\includegraphics[keepaspectratio, scale=0.8]{Media/Captures/androidUsage.png}
+      \caption{Distribución Actual de Versiones Android (Fuente: Google)}
+      \label{fig:android_Usage}
+    \end{figure}
+	
+	
     
     \subsection{XML}\label{ssec:xml}
     
