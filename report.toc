@@ -14,8 +14,7 @@
 \contentsline {subsection}{\numberline {2.2.1}Pol\IeC {\'\i }tica en el mundo de la Inform\IeC {\'a}tica}{7}{subsection.2.2.1}
 \contentsline {section}{\numberline {2.3}Adentr\IeC {\'a}ndonos en la idea}{8}{section.2.3}
 \contentsline {chapter}{\numberline {3}Estado del Arte}{11}{chapter.3}
-\contentsline {section}{\numberline {3.1}Wave}{11}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Apache Wave: Wave In A Box (WIAB)}{11}{subsection.3.1.1}
+\contentsline {section}{\numberline {3.1}Wave: Wave In A Box (WIAB)}{11}{section.3.1}
 \contentsline {section}{\numberline {3.2}Edici\IeC {\'o}n Colaborativa en Tiempo Real}{12}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}APIs Centralizadas}{12}{subsection.3.2.1}
 \contentsline {subsubsection}{\numberline {3.2.1.1}Google Realtime API}{13}{subsubsection.3.2.1.1}
