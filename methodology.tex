@@ -8,7 +8,7 @@ A continuación se exponen las diferentes metodologías que hemos utilizado dura
 
 Para el desarrollo de todo el software que compone el proyecto siempre se ha utilizado una aproximación de software libre. Esto permite contribuir al común y que cualquier persona pueda hacer uso de nuestro código si lo necesita. Se ha usado software libre tanto con las herramientas necesarias para el desarrollo de código y documentación como para el resultado final de la aplicación. Con esto se da la posibilidad a que otros usuarios puedan visualizar el código desarrollado o utilizarlo libremente. Para ello se realizaron aportaciones a toda la comunidad subiendo el código del proyecto a \textbf{GitHub} bajo una licencia \textbf{GNU GPLv3} \cite{ref:GPLv3}.
 
-A continuación se expone un breve resumen del software libre utilizado y las licencias que poseen:
+En la tabla \ref{fig:tableLicenses} se expone un breve resumen del software libre utilizado y las licencias que poseen.
 
 \begin{table}[h]
 \centering
@@ -27,11 +27,26 @@ Java           & GNU GPL                        \\ \hline
 OpenShift      & Apache License 2.0             \\ \hline
 \end{tabular}
 \caption{Software libre utilizado durante el desarrollo.}
+\label{fig:tableLicenses}
 \end{table}
 
 \section{Patrones de Diseño}
 
-TABLA
+La figura \ref{fig:tablePatrones} representa los patrones utilizados en el desarrollo de todo el proyecto.
+
+\begin{table}[!]
+\centering
+\caption{Patrones de diseño empleados en el proyecto.}
+\label{my-label}
+\begin{tabular}{|c|m{5cm}|l|c|}
+\hline
+{\bf Patrón} & \multicolumn{1}{c|}{{\bf Decripción}}                                                                                                & \multicolumn{1}{c|}{{\bf Utilización}} & {\bf Referencia} \\ \hline
+MVC          & Modelo-Vista-Controlador. Separa la lógica del modelo y la vista, que se comunican a través del controlador.                         & Servicio Web Laravel.                  & Sección          \\ \hline
+Singleton    & Mantiene una única instancia de un objeto, pudiento instanciarse desde cualquier clase.                                              & Aplicación Android.                    & Sección          \\ \hline
+Factoría     & Permite crear, mediante una interfaz, conjuntos o familias de que dependen, mutuamuente, sin especificar cual es el objeto concreto. & Servicio SellRT.                       & Sección          \\ \hline
+\end{tabular}
+\label{fig:tablePatrones}
+\end{table}
 
 \section{Migración de Wave/SwellRT a Android}
 
@@ -39,7 +54,35 @@ PROCESO DE MIGRACION.
 
 \section{Diseño de la Aplicación}
 
-BRAINSTORMING Y DGO
+  \subsection{\textit{Brainstorming}}
+  
+  El \textit{brainstorming} \cite{ref:bookBrainStorming} (o lluvia de ideas en español) es una técnica de trabajo en grupo que persigue que todos sus integrantes se junten para generar ideas originales en un ambiente distendido. El objetivo es primar la cantidad por encima de la calidad de éstas para después de la sesión realizar un proceso de selección de las más interesantes. De esta manera pueden salir ideas que a priori podrian resultar absurdas pero que otros integrantes del grupo pueden aprovechar para que surjan otras nuevas.  
+  
+  \subsection{Diseño Guiado por Objetivos (DGO)}\label{ssec:dgoDesign}
+  
+  Para elaborar el diseño de la aplicación, nos hemos basado en la metodología del Diseño Guiado por Objetivos (\textbf{DGO} o \textit{Goal-Directed Design}), que implementa el proceso de la Ingeniería de la Usabilidad propuesto por Alan Cooper \cite{ref:bookAlanCooper}. Este proceso constará de las siguientes fases:
+
+\begin{enumerate}
+
+\item \textbf{Investigación}
+
+Esta fase consistirá en la realización de estudios para obtener datos cualitativos sobre los usuarios y/o reales de la aplicación y cuáles son sus necesidades. Se realizarán tareas para comprender a los usuarios, saber sus inquietudes y lograr empatía. A lo largo de esta fase se irán identificando patronos de comportamiento que sugerirán los objetivos y motivaciones del usuario. Por último se realizarán estudios de mercado, revisiones y auditorías que ayudarán al diseñador a comprender el dominio, el modelo y las restricciones técnicas que el sistema debe cumplir.
+
+\item \textbf{Modelado}
+
+A lo largo de esta fase se utilizarán los datos provenientes de la fase previa para crar los modelos del dominio y los usuarios. En esta parte se crearán las \textit{personas}, aquetipos de usuarios que contienen información sobre obejtivlos, motivaciones y comportamientos de los usuarios con el sistema. El resultado final de esta fase serán los tipos de \textit{persona} que representarán a los usuarios del sistema, y que más adelante serán utilizados fases para proporcionar algún tipo de \textit{feedback}.
+
+\item \textbf{Definición de Requisitos}
+
+Durante esta fase se utilizarán las personas y los datos de la fase anterior, para crear los \textit{escenarios} de contexto e identificar los requisitos o necesidades del usuario. Estos requisitos serán definidos en tres componentes: objeto, acciones y contexto. También se definirán requisitos relacionados con el negiocio, la apclicación, requisitos técnicos, etcétera.
+
+\item \textbf{Definición del framework de Diseño}
+
+En esta fase se creará el concepto general del sistema, definiendo los comportamientos y diseño visual. Identificaremos el \textbf{framework de interacción}, como un concepto de diseño estable que define la estructura del sistema a partir de patrones y principios de diseño. Por último, se definirá el \textit{framework visual}, como el aspecto visual de la aplicacion (diseño, tipografía, colores, iconos, etcétera).
+
+\end{enumerate}
+
+Queremos insistir eso sí en que únicamente nos hemos basado en esta metodología para seguir el proceso del diseño de la aplicación. No seguiremos todas las fases de esta metodología al pie de la letra ya que el alcance en tiempo de este proyecto escapa a una metodología tan formal y laboriosa (que implica gran cantidad de pruebas y procesos) como esta.
 
 \section{Implementación de la Aplicación}
 
