@@ -7,7 +7,7 @@
 \BOOKMARK [1][-]{section.1.2}{Estructura del Documento}{chapter.1}% 7
 \BOOKMARK [0][-]{chapter.2}{Construyendo la idea de la aplicaci\363n: DemoCritics}{}% 8
 \BOOKMARK [1][-]{section.2.1}{Introducci\363n}{chapter.2}% 9
-\BOOKMARK [2][-]{section*.8}{Brainstorming de ideas}{section.2.1}% 10
+\BOOKMARK [2][-]{subsubsection.2.1.0.1}{Brainstorming de ideas}{section.2.1}% 10
 \BOOKMARK [1][-]{section.2.2}{Marco te\363rico de la idea}{chapter.2}% 11
 \BOOKMARK [2][-]{subsection.2.2.1}{Pol\355tica en el mundo de la Inform\341tica}{section.2.2}% 12
 \BOOKMARK [1][-]{section.2.3}{Adentr\341ndonos en la idea}{chapter.2}% 13
@@ -16,156 +16,154 @@
 \BOOKMARK [2][-]{subsection.3.1.1}{Apache Wave: Wave In A Box \(WIAB\)}{section.3.1}% 16
 \BOOKMARK [1][-]{section.3.2}{Edici\363n Colaborativa en Tiempo Real}{chapter.3}% 17
 \BOOKMARK [2][-]{subsection.3.2.1}{APIs Centralizadas}{section.3.2}% 18
-\BOOKMARK [3][-]{section*.11}{Google Realtime API}{subsection.3.2.1}% 19
-\BOOKMARK [3][-]{section*.11}{Microsoft RTC Client API}{subsection.3.2.1}% 20
-\BOOKMARK [3][-]{section*.11}{WebRTC}{subsection.3.2.1}% 21
-\BOOKMARK [3][-]{section*.11}{Mozilla TogetherJS}{subsection.3.2.1}% 22
-\BOOKMARK [3][-]{section*.11}{ShareJS}{subsection.3.2.1}% 23
-\BOOKMARK [3][-]{section*.11}{Goodow}{subsection.3.2.1}% 24
+\BOOKMARK [3][-]{subsubsection.3.2.1.1}{Google Realtime API}{subsection.3.2.1}% 19
+\BOOKMARK [3][-]{subsubsection.3.2.1.2}{Microsoft RTC Client API}{subsection.3.2.1}% 20
+\BOOKMARK [3][-]{subsubsection.3.2.1.3}{WebRTC}{subsection.3.2.1}% 21
+\BOOKMARK [3][-]{subsubsection.3.2.1.4}{Mozilla TogetherJS}{subsection.3.2.1}% 22
+\BOOKMARK [3][-]{subsubsection.3.2.1.5}{ShareJS}{subsection.3.2.1}% 23
+\BOOKMARK [3][-]{subsubsection.3.2.1.6}{Goodow}{subsection.3.2.1}% 24
 \BOOKMARK [2][-]{subsection.3.2.2}{Plataformas Web y Android}{section.3.2}% 25
-\BOOKMARK [3][-]{section*.12}{Google Docs}{subsection.3.2.2}% 26
-\BOOKMARK [3][-]{figure.caption.13}{Etherpad}{subsection.3.2.2}% 27
-\BOOKMARK [3][-]{figure.caption.14}{Colorillo}{subsection.3.2.2}% 28
-\BOOKMARK [3][-]{figure.caption.15}{ShareLaTeX}{subsection.3.2.2}% 29
-\BOOKMARK [3][-]{figure.caption.16}{Samepage}{subsection.3.2.2}% 30
-\BOOKMARK [3][-]{figure.caption.17}{Quip}{subsection.3.2.2}% 31
+\BOOKMARK [3][-]{subsubsection.3.2.2.1}{Google Docs}{subsection.3.2.2}% 26
+\BOOKMARK [3][-]{subsubsection.3.2.2.2}{Etherpad}{subsection.3.2.2}% 27
+\BOOKMARK [3][-]{subsubsection.3.2.2.3}{Colorillo}{subsection.3.2.2}% 28
+\BOOKMARK [3][-]{subsubsection.3.2.2.4}{ShareLaTeX}{subsection.3.2.2}% 29
+\BOOKMARK [3][-]{subsubsection.3.2.2.5}{Samepage}{subsection.3.2.2}% 30
+\BOOKMARK [3][-]{subsubsection.3.2.2.6}{Quip}{subsection.3.2.2}% 31
 \BOOKMARK [1][-]{section.3.3}{Aplicaci\363n Android: DemoCritics}{chapter.3}% 32
 \BOOKMARK [2][-]{subsection.3.3.1}{Programas Pol\355ticos}{section.3.3}% 33
-\BOOKMARK [3][-]{section*.19}{UPyD Parla}{subsection.3.3.1}% 34
-\BOOKMARK [3][-]{figure.caption.20}{RecuperaC\363rdoba}{subsection.3.3.1}% 35
-\BOOKMARK [3][-]{figure.caption.21}{PSOE Andaluc\355a}{subsection.3.3.1}% 36
-\BOOKMARK [3][-]{figure.caption.22}{PP Canarias}{subsection.3.3.1}% 37
+\BOOKMARK [3][-]{subsubsection.3.3.1.1}{UPyD Parla}{subsection.3.3.1}% 34
+\BOOKMARK [3][-]{subsubsection.3.3.1.2}{RecuperaC\363rdoba}{subsection.3.3.1}% 35
+\BOOKMARK [3][-]{subsubsection.3.3.1.3}{PSOE Andaluc\355a}{subsection.3.3.1}% 36
+\BOOKMARK [3][-]{subsubsection.3.3.1.4}{PP Canarias}{subsection.3.3.1}% 37
 \BOOKMARK [2][-]{subsection.3.3.2}{Participaci\363n Ciudadana}{section.3.3}% 38
-\BOOKMARK [3][-]{section*.24}{Reddit}{subsection.3.3.2}% 39
-\BOOKMARK [3][-]{figure.caption.25}{Change.org}{subsection.3.3.2}% 40
-\BOOKMARK [3][-]{figure.caption.26}{Programas Colaborativos de Ahora Madrid y Zaragoza en Com\372n}{subsection.3.3.2}% 41
-\BOOKMARK [3][-]{figure.caption.28}{Appgree}{subsection.3.3.2}% 42
+\BOOKMARK [3][-]{subsubsection.3.3.2.1}{Reddit}{subsection.3.3.2}% 39
+\BOOKMARK [3][-]{subsubsection.3.3.2.2}{Change.org}{subsection.3.3.2}% 40
+\BOOKMARK [3][-]{subsubsection.3.3.2.3}{Programas Colaborativos de Ahora Madrid y Zaragoza en Com\372n}{subsection.3.3.2}% 41
+\BOOKMARK [3][-]{subsubsection.3.3.2.4}{Appgree}{subsection.3.3.2}% 42
 \BOOKMARK [0][-]{chapter.4}{Tecnolog\355as del Proyecto}{}% 43
 \BOOKMARK [1][-]{section.4.1}{Tecnolog\355as de Wave}{chapter.4}% 44
 \BOOKMARK [2][-]{subsection.4.1.1}{Google Wave}{section.4.1}% 45
 \BOOKMARK [2][-]{subsection.4.1.2}{Apache Wave}{section.4.1}% 46
 \BOOKMARK [2][-]{subsection.4.1.3}{Caracter\355sticas de Wave}{section.4.1}% 47
-\BOOKMARK [3][-]{section*.32}{Federaci\363n}{subsection.4.1.3}% 48
-\BOOKMARK [3][-]{section*.32}{Consistencia en tiempo real}{subsection.4.1.3}% 49
-\BOOKMARK [3][-]{section*.32}{Escalabilidad}{subsection.4.1.3}% 50
-\BOOKMARK [2][-]{subsection.4.1.4}{Servidores Wave}{section.4.1}% 51
-\BOOKMARK [3][-]{section*.33}{Wave in a Box}{subsection.4.1.4}% 52
-\BOOKMARK [3][-]{section*.33}{SwellRT}{subsection.4.1.4}% 53
-\BOOKMARK [2][-]{subsection.4.1.5}{Eclipse}{section.4.1}% 54
-\BOOKMARK [2][-]{subsection.4.1.6}{Java}{section.4.1}% 55
-\BOOKMARK [2][-]{subsection.4.1.7}{GWT}{section.4.1}% 56
-\BOOKMARK [2][-]{subsection.4.1.8}{JavaScript}{section.4.1}% 57
-\BOOKMARK [2][-]{subsection.4.1.9}{HTTP}{section.4.1}% 58
-\BOOKMARK [2][-]{subsection.4.1.10}{WebSocket}{section.4.1}% 59
-\BOOKMARK [2][-]{subsection.4.1.11}{Git}{section.4.1}% 60
-\BOOKMARK [2][-]{subsection.4.1.12}{GitHub}{section.4.1}% 61
-\BOOKMARK [1][-]{section.4.2}{Tecnolog\355as de la Aplicaci\363n Android}{chapter.4}% 62
-\BOOKMARK [2][-]{subsection.4.2.1}{Android Studio}{section.4.2}% 63
-\BOOKMARK [2][-]{subsection.4.2.2}{Android}{section.4.2}% 64
-\BOOKMARK [2][-]{subsection.4.2.3}{XML}{section.4.2}% 65
-\BOOKMARK [2][-]{subsection.4.2.4}{JSON}{section.4.2}% 66
-\BOOKMARK [2][-]{subsection.4.2.5}{SQL}{section.4.2}% 67
-\BOOKMARK [2][-]{subsection.4.2.6}{MySQL}{section.4.2}% 68
-\BOOKMARK [2][-]{subsection.4.2.7}{PhpMyAdmin}{section.4.2}% 69
-\BOOKMARK [2][-]{subsection.4.2.8}{PHP}{section.4.2}% 70
-\BOOKMARK [2][-]{subsection.4.2.9}{Laravel 5}{section.4.2}% 71
-\BOOKMARK [2][-]{subsection.4.2.10}{OpenShift}{section.4.2}% 72
-\BOOKMARK [2][-]{subsection.4.2.11}{Sublime Text}{section.4.2}% 73
-\BOOKMARK [2][-]{subsection.4.2.12}{POP: Prototyping On Paper}{section.4.2}% 74
-\BOOKMARK [0][-]{chapter.5}{Metodolog\355a del Proyecto}{}% 75
-\BOOKMARK [1][-]{section.5.1}{Uso de Software Libre}{chapter.5}% 76
-\BOOKMARK [1][-]{section.5.2}{Metodolog\355a de Migraci\363n de Wave a Android}{chapter.5}% 77
-\BOOKMARK [2][-]{subsection.5.2.1}{Objetivo}{section.5.2}% 78
-\BOOKMARK [2][-]{subsection.5.2.2}{Plataforma: Entorno de Desarrollo, Construcci\363n y Depuraci\363n}{section.5.2}% 79
-\BOOKMARK [3][-]{section*.35}{Eclipse}{subsection.5.2.2}% 80
-\BOOKMARK [3][-]{figure.caption.36}{Proceso de Construcci\363n por Consola}{subsection.5.2.2}% 81
-\BOOKMARK [3][-]{lstnumber.-4.1}{Proceso de Depuraci\363n}{subsection.5.2.2}% 82
-\BOOKMARK [2][-]{subsection.5.2.3}{Migraci\363n: Identificaci\363n y Soluci\363n de Problemas}{section.5.2}% 83
-\BOOKMARK [3][-]{section*.38}{Conexi\363n HTTP}{subsection.5.2.3}% 84
-\BOOKMARK [3][-]{figure.caption.39}{Conexi\363n WebSocket}{subsection.5.2.3}% 85
-\BOOKMARK [3][-]{lstnumber.-6.2}{Conexi\363n final y Logging}{subsection.5.2.3}% 86
-\BOOKMARK [3][-]{figure.caption.40}{Organizaci\363n del c\363digo: Servicio Android}{subsection.5.2.3}% 87
-\BOOKMARK [2][-]{subsection.5.2.4}{Dependencias}{section.5.2}% 88
-\BOOKMARK [2][-]{subsection.5.2.5}{Resultado de la Migraci\363n}{section.5.2}% 89
-\BOOKMARK [1][-]{section.5.3}{Dise\361o de la Aplicaci\363n: Dise\361o Guiado Por Objetivos}{chapter.5}% 90
-\BOOKMARK [2][-]{subsection.5.3.1}{Investigaci\363n}{section.5.3}% 91
-\BOOKMARK [3][-]{section*.45}{Intenci\363n Inicial: Prototipo b\341sico}{subsection.5.3.1}% 92
-\BOOKMARK [3][-]{section*.45}{Hip\363tesis de personas}{subsection.5.3.1}% 93
-\BOOKMARK [3][-]{section*.45}{Entrevista con Labodemo}{subsection.5.3.1}% 94
-\BOOKMARK [3][-]{section*.45}{Conclusi\363n}{subsection.5.3.1}% 95
-\BOOKMARK [3][-]{section*.45}{Entrevista con Javier de la Cueva}{subsection.5.3.1}% 96
-\BOOKMARK [3][-]{section*.45}{Conclusi\363n}{subsection.5.3.1}% 97
-\BOOKMARK [2][-]{subsection.5.3.2}{Modelado de Personas}{section.5.3}% 98
-\BOOKMARK [2][-]{subsection.5.3.3}{Definici\363n de personas}{section.5.3}% 99
-\BOOKMARK [2][-]{subsection.5.3.4}{Definici\363n de Escenarios y Requisitos}{section.5.3}% 100
-\BOOKMARK [2][-]{subsection.5.3.5}{Framework de dise\361o}{section.5.3}% 101
-\BOOKMARK [3][-]{section*.48}{Framework de interacci\363n}{subsection.5.3.5}% 102
-\BOOKMARK [2][-]{subsection.5.3.6}{Principios de Dise\361o}{section.5.3}% 103
-\BOOKMARK [1][-]{section.5.4}{Implementaci\363n de DemoCritics}{chapter.5}% 104
-\BOOKMARK [2][-]{subsection.5.4.1}{Metodolog\355a}{section.5.4}% 105
-\BOOKMARK [3][-]{section*.55}{Control de versiones}{subsection.5.4.1}% 106
-\BOOKMARK [3][-]{section*.55}{GitHub}{subsection.5.4.1}% 107
-\BOOKMARK [3][-]{section*.55}{Reparto de tareas}{subsection.5.4.1}% 108
-\BOOKMARK [3][-]{section*.55}{Revisiones de c\363digo}{subsection.5.4.1}% 109
-\BOOKMARK [3][-]{section*.55}{Evaluaciones de usabilidad}{subsection.5.4.1}% 110
-\BOOKMARK [1][-]{section.5.5}{Evaluaci\363n con Usuarios}{chapter.5}% 111
-\BOOKMARK [2][-]{subsection.5.5.1}{Prop\363sitos y objetivos de la evaluaci\363n}{section.5.5}% 112
-\BOOKMARK [2][-]{subsection.5.5.2}{Preguntas de investigaci\363n}{section.5.5}% 113
-\BOOKMARK [2][-]{subsection.5.5.3}{Requisitos para los participantes de la evaluaci\363n}{section.5.5}% 114
-\BOOKMARK [2][-]{subsection.5.5.4}{Dise\361o experimental}{section.5.5}% 115
-\BOOKMARK [2][-]{subsection.5.5.5}{Lista de tareas a realizar}{section.5.5}% 116
-\BOOKMARK [2][-]{subsection.5.5.6}{Entorno y herramientas que vamos a emplear}{section.5.5}% 117
-\BOOKMARK [2][-]{subsection.5.5.7}{Tareas del moderador}{section.5.5}% 118
-\BOOKMARK [2][-]{subsection.5.5.8}{Resultados de la evaluaci\363n con los usuarios}{section.5.5}% 119
-\BOOKMARK [3][-]{section*.56}{Comentarios sobre la interfaz}{subsection.5.5.8}% 120
-\BOOKMARK [3][-]{section*.56}{Resultados de las tareas}{subsection.5.5.8}% 121
-\BOOKMARK [3][-]{table.caption.58}{Informe de hallazgos y recomendaciones}{subsection.5.5.8}% 122
-\BOOKMARK [0][-]{chapter.6}{Arquitectura del Proyecto}{}% 123
-\BOOKMARK [1][-]{section.6.1}{Arquitectura de Wave}{chapter.6}% 124
-\BOOKMARK [2][-]{subsection.6.1.1}{Modelo Conversacional Wave}{section.6.1}% 125
-\BOOKMARK [2][-]{subsection.6.1.2}{Modelo de Contenidos SwellRT}{section.6.1}% 126
-\BOOKMARK [1][-]{section.6.2}{Arquitectura de la aplicaci\363n}{chapter.6}% 127
-\BOOKMARK [2][-]{subsection.6.2.1}{Base de datos}{section.6.2}% 128
-\BOOKMARK [3][-]{figure.caption.63}{political\137party}{subsection.6.2.1}% 129
-\BOOKMARK [3][-]{figure.caption.63}{section}{subsection.6.2.1}% 130
-\BOOKMARK [3][-]{figure.caption.63}{proposal}{subsection.6.2.1}% 131
-\BOOKMARK [3][-]{figure.caption.63}{comment}{subsection.6.2.1}% 132
-\BOOKMARK [3][-]{figure.caption.63}{opinion}{subsection.6.2.1}% 133
-\BOOKMARK [2][-]{subsection.6.2.2}{Service REST}{section.6.2}% 134
-\BOOKMARK [3][-]{table.caption.66}{Arquitectura}{subsection.6.2.2}% 135
-\BOOKMARK [3][-]{figure.caption.67}{Rutas}{subsection.6.2.2}% 136
-\BOOKMARK [3][-]{lstnumber.-9.1}{Controladores}{subsection.6.2.2}% 137
-\BOOKMARK [2][-]{subsection.6.2.3}{Cliente Android}{section.6.2}% 138
-\BOOKMARK [3][-]{section*.69}{Interfaz Gr\341fica}{subsection.6.2.3}% 139
-\BOOKMARK [3][-]{table.caption.72}{Estructuraci\363n de Programas Pol\355ticos}{subsection.6.2.3}% 140
-\BOOKMARK [3][-]{figure.caption.74}{Conexi\363n y Peticiones a Service REST y Base de Datos}{subsection.6.2.3}% 141
-\BOOKMARK [3][-]{lstnumber.-11.1}{Gesti\363n de Usuarios: ID de Android}{subsection.6.2.3}% 142
-\BOOKMARK [3][-]{lstnumber.-11.1}{Servicio Android, Conexi\363n con Wave/SwellRT y Gesti\363n de Propuestas Colaborativas}{subsection.6.2.3}% 143
-\BOOKMARK [0][-]{chapter.7}{Resultados, Conclusiones y Trabajo Futuro}{}% 144
-\BOOKMARK [1][-]{section.7.1}{Discusi\363n de Resultados}{chapter.7}% 145
-\BOOKMARK [2][-]{subsection.7.1.1}{El porqu\351 de DemoCritics}{section.7.1}% 146
-\BOOKMARK [2][-]{subsection.7.1.2}{Usando Wave/SwellRT en DemoCritics}{section.7.1}% 147
-\BOOKMARK [2][-]{subsection.7.1.3}{Incentivando el uso social de DemoCritics}{section.7.1}% 148
-\BOOKMARK [2][-]{subsection.7.1.4}{Aspectos t\351cnicos de DemoCritics}{section.7.1}% 149
-\BOOKMARK [1][-]{section.7.2}{Reparto de Trabajo entre los componentes del grupo}{chapter.7}% 150
-\BOOKMARK [1][-]{section.7.3}{Conclusiones}{chapter.7}% 151
-\BOOKMARK [1][-]{section.7.4}{Trabajo Futuro}{chapter.7}% 152
-\BOOKMARK [2][-]{subsection.7.4.1}{Mejoras a la versi\363n actual}{section.7.4}% 153
-\BOOKMARK [2][-]{subsection.7.4.2}{Nuevas caracter\355sticas}{section.7.4}% 154
-\BOOKMARK [2][-]{subsection.7.4.3}{SwellRT Android}{section.7.4}% 155
-\BOOKMARK [0][-]{appendix.Alph1}{Listados de C\363digo Fuente}{}% 156
-\BOOKMARK [1][-]{section.Alph1.1}{Migraci\363n de Wave a Android: SwellRT}{appendix.Alph1}% 157
-\BOOKMARK [2][-]{subsection.Alph1.1.1}{Esquema de conexi\363n HTTP}{section.Alph1.1}% 158
-\BOOKMARK [2][-]{subsection.Alph1.1.2}{Esquema de conexi\363n con AsyncTask}{section.Alph1.1}% 159
-\BOOKMARK [2][-]{subsection.Alph1.1.3}{Esquema de uso de WAsync}{section.Alph1.1}% 160
-\BOOKMARK [1][-]{section.Alph1.2}{Service REST \(Laravel\)}{appendix.Alph1}% 161
-\BOOKMARK [2][-]{subsection.Alph1.2.1}{Esquema de Rutas Simple}{section.Alph1.2}% 162
-\BOOKMARK [2][-]{subsection.Alph1.2.2}{Esquema de Rutas Agrupadas}{section.Alph1.2}% 163
-\BOOKMARK [2][-]{subsection.Alph1.2.3}{Esquema de Rutas de Propuestas Agrupadas}{section.Alph1.2}% 164
-\BOOKMARK [2][-]{subsection.Alph1.2.4}{Esquema de Controlador de Propuestas}{section.Alph1.2}% 165
-\BOOKMARK [1][-]{section.Alph1.3}{Aplicaci\363n Android}{appendix.Alph1}% 166
-\BOOKMARK [2][-]{subsection.Alph1.3.1}{Funci\363n de construcci\363n del \341rbol de Programa Pol\355tico}{section.Alph1.3}% 167
-\BOOKMARK [2][-]{subsection.Alph1.3.2}{Registrar Usuario en SwellRT}{section.Alph1.3}% 168
-\BOOKMARK [2][-]{subsection.Alph1.3.3}{Crear nueva Wave \(Model\) en SwellRT}{section.Alph1.3}% 169
-\BOOKMARK [2][-]{subsection.Alph1.3.4}{Abrir Pad colaborativo en SwellRT}{section.Alph1.3}% 170
-\BOOKMARK [0][-]{subsection.Alph1.3.4}{Bibliograf\355a}{}% 171
+\BOOKMARK [3][-]{subsubsection.4.1.3.1}{Federaci\363n}{subsection.4.1.3}% 48
+\BOOKMARK [3][-]{subsubsection.4.1.3.2}{Consistencia en tiempo real}{subsection.4.1.3}% 49
+\BOOKMARK [3][-]{subsubsection.4.1.3.3}{Escalabilidad}{subsection.4.1.3}% 50
+\BOOKMARK [2][-]{subsection.4.1.4}{Servidores Wave: SwellRT}{section.4.1}% 51
+\BOOKMARK [2][-]{subsection.4.1.5}{Eclipse}{section.4.1}% 52
+\BOOKMARK [2][-]{subsection.4.1.6}{Java}{section.4.1}% 53
+\BOOKMARK [2][-]{subsection.4.1.7}{GWT}{section.4.1}% 54
+\BOOKMARK [2][-]{subsection.4.1.8}{JavaScript}{section.4.1}% 55
+\BOOKMARK [2][-]{subsection.4.1.9}{HTTP}{section.4.1}% 56
+\BOOKMARK [2][-]{subsection.4.1.10}{WebSocket}{section.4.1}% 57
+\BOOKMARK [2][-]{subsection.4.1.11}{Git}{section.4.1}% 58
+\BOOKMARK [2][-]{subsection.4.1.12}{GitHub}{section.4.1}% 59
+\BOOKMARK [1][-]{section.4.2}{Tecnolog\355as de la Aplicaci\363n Android}{chapter.4}% 60
+\BOOKMARK [2][-]{subsection.4.2.1}{Android Studio}{section.4.2}% 61
+\BOOKMARK [2][-]{subsection.4.2.2}{Android}{section.4.2}% 62
+\BOOKMARK [2][-]{subsection.4.2.3}{XML}{section.4.2}% 63
+\BOOKMARK [2][-]{subsection.4.2.4}{JSON}{section.4.2}% 64
+\BOOKMARK [2][-]{subsection.4.2.5}{SQL}{section.4.2}% 65
+\BOOKMARK [2][-]{subsection.4.2.6}{MySQL}{section.4.2}% 66
+\BOOKMARK [2][-]{subsection.4.2.7}{PhpMyAdmin}{section.4.2}% 67
+\BOOKMARK [2][-]{subsection.4.2.8}{PHP}{section.4.2}% 68
+\BOOKMARK [2][-]{subsection.4.2.9}{Laravel 5}{section.4.2}% 69
+\BOOKMARK [2][-]{subsection.4.2.10}{OpenShift}{section.4.2}% 70
+\BOOKMARK [2][-]{subsection.4.2.11}{Sublime Text}{section.4.2}% 71
+\BOOKMARK [2][-]{subsection.4.2.12}{POP: Prototyping On Paper}{section.4.2}% 72
+\BOOKMARK [0][-]{chapter.5}{Metodolog\355a del Proyecto}{}% 73
+\BOOKMARK [1][-]{section.5.1}{Uso de Software Libre}{chapter.5}% 74
+\BOOKMARK [1][-]{section.5.2}{Metodolog\355a de Migraci\363n de Wave a Android}{chapter.5}% 75
+\BOOKMARK [2][-]{subsection.5.2.1}{Objetivo}{section.5.2}% 76
+\BOOKMARK [2][-]{subsection.5.2.2}{Plataforma: Entorno de Desarrollo, Construcci\363n y Depuraci\363n}{section.5.2}% 77
+\BOOKMARK [3][-]{subsubsection.5.2.2.1}{Eclipse}{subsection.5.2.2}% 78
+\BOOKMARK [3][-]{subsubsection.5.2.2.2}{Proceso de Construcci\363n por Consola}{subsection.5.2.2}% 79
+\BOOKMARK [3][-]{subsubsection.5.2.2.3}{Proceso de Depuraci\363n}{subsection.5.2.2}% 80
+\BOOKMARK [2][-]{subsection.5.2.3}{Migraci\363n: Identificaci\363n y Soluci\363n de Problemas}{section.5.2}% 81
+\BOOKMARK [3][-]{subsubsection.5.2.3.1}{Conexi\363n HTTP}{subsection.5.2.3}% 82
+\BOOKMARK [3][-]{subsubsection.5.2.3.2}{Conexi\363n WebSocket}{subsection.5.2.3}% 83
+\BOOKMARK [3][-]{subsubsection.5.2.3.3}{Conexi\363n final y Logging}{subsection.5.2.3}% 84
+\BOOKMARK [3][-]{subsubsection.5.2.3.4}{Organizaci\363n del c\363digo: Servicio Android}{subsection.5.2.3}% 85
+\BOOKMARK [2][-]{subsection.5.2.4}{Dependencias}{section.5.2}% 86
+\BOOKMARK [2][-]{subsection.5.2.5}{Resultado de la Migraci\363n}{section.5.2}% 87
+\BOOKMARK [1][-]{section.5.3}{Dise\361o de la Aplicaci\363n: Dise\361o Guiado Por Objetivos}{chapter.5}% 88
+\BOOKMARK [2][-]{subsection.5.3.1}{Investigaci\363n}{section.5.3}% 89
+\BOOKMARK [3][-]{subsubsection.5.3.1.1}{Intenci\363n Inicial: Prototipo b\341sico}{subsection.5.3.1}% 90
+\BOOKMARK [3][-]{subsubsection.5.3.1.2}{Hip\363tesis de personas}{subsection.5.3.1}% 91
+\BOOKMARK [3][-]{subsubsection.5.3.1.3}{Entrevista con Labodemo}{subsection.5.3.1}% 92
+\BOOKMARK [3][-]{subsubsection.5.3.1.4}{Conclusi\363n}{subsection.5.3.1}% 93
+\BOOKMARK [3][-]{subsubsection.5.3.1.5}{Entrevista con Javier de la Cueva}{subsection.5.3.1}% 94
+\BOOKMARK [3][-]{subsubsection.5.3.1.6}{Conclusi\363n}{subsection.5.3.1}% 95
+\BOOKMARK [2][-]{subsection.5.3.2}{Modelado de Personas}{section.5.3}% 96
+\BOOKMARK [2][-]{subsection.5.3.3}{Definici\363n de personas}{section.5.3}% 97
+\BOOKMARK [2][-]{subsection.5.3.4}{Definici\363n de Escenarios y Requisitos}{section.5.3}% 98
+\BOOKMARK [2][-]{subsection.5.3.5}{Framework de dise\361o}{section.5.3}% 99
+\BOOKMARK [3][-]{subsubsection.5.3.5.1}{Framework de interacci\363n}{subsection.5.3.5}% 100
+\BOOKMARK [2][-]{subsection.5.3.6}{Principios de Dise\361o}{section.5.3}% 101
+\BOOKMARK [1][-]{section.5.4}{Implementaci\363n de DemoCritics}{chapter.5}% 102
+\BOOKMARK [2][-]{subsection.5.4.1}{Metodolog\355a}{section.5.4}% 103
+\BOOKMARK [3][-]{subsubsection.5.4.1.1}{Control de versiones}{subsection.5.4.1}% 104
+\BOOKMARK [3][-]{subsubsection.5.4.1.2}{GitHub}{subsection.5.4.1}% 105
+\BOOKMARK [3][-]{subsubsection.5.4.1.3}{Reparto de tareas}{subsection.5.4.1}% 106
+\BOOKMARK [3][-]{subsubsection.5.4.1.4}{Revisiones de c\363digo}{subsection.5.4.1}% 107
+\BOOKMARK [3][-]{subsubsection.5.4.1.5}{Evaluaciones de usabilidad}{subsection.5.4.1}% 108
+\BOOKMARK [1][-]{section.5.5}{Evaluaci\363n con Usuarios}{chapter.5}% 109
+\BOOKMARK [2][-]{subsection.5.5.1}{Prop\363sitos y objetivos de la evaluaci\363n}{section.5.5}% 110
+\BOOKMARK [2][-]{subsection.5.5.2}{Preguntas de investigaci\363n}{section.5.5}% 111
+\BOOKMARK [2][-]{subsection.5.5.3}{Requisitos para los participantes de la evaluaci\363n}{section.5.5}% 112
+\BOOKMARK [2][-]{subsection.5.5.4}{Dise\361o experimental}{section.5.5}% 113
+\BOOKMARK [2][-]{subsection.5.5.5}{Lista de tareas a realizar}{section.5.5}% 114
+\BOOKMARK [2][-]{subsection.5.5.6}{Entorno y herramientas que vamos a emplear}{section.5.5}% 115
+\BOOKMARK [2][-]{subsection.5.5.7}{Tareas del moderador}{section.5.5}% 116
+\BOOKMARK [2][-]{subsection.5.5.8}{Resultados de la evaluaci\363n con los usuarios}{section.5.5}% 117
+\BOOKMARK [3][-]{subsubsection.5.5.8.1}{Comentarios sobre la interfaz}{subsection.5.5.8}% 118
+\BOOKMARK [3][-]{subsubsection.5.5.8.2}{Resultados de las tareas}{subsection.5.5.8}% 119
+\BOOKMARK [3][-]{subsubsection.5.5.8.3}{Informe de hallazgos y recomendaciones}{subsection.5.5.8}% 120
+\BOOKMARK [0][-]{chapter.6}{Arquitectura del Proyecto}{}% 121
+\BOOKMARK [1][-]{section.6.1}{Arquitectura de Wave}{chapter.6}% 122
+\BOOKMARK [2][-]{subsection.6.1.1}{Modelo Conversacional Wave}{section.6.1}% 123
+\BOOKMARK [2][-]{subsection.6.1.2}{Modelo de Contenidos SwellRT}{section.6.1}% 124
+\BOOKMARK [1][-]{section.6.2}{Arquitectura de la aplicaci\363n}{chapter.6}% 125
+\BOOKMARK [2][-]{subsection.6.2.1}{Base de datos}{section.6.2}% 126
+\BOOKMARK [3][-]{subsubsection.6.2.1.1}{political\137party}{subsection.6.2.1}% 127
+\BOOKMARK [3][-]{subsubsection.6.2.1.2}{section}{subsection.6.2.1}% 128
+\BOOKMARK [3][-]{subsubsection.6.2.1.3}{proposal}{subsection.6.2.1}% 129
+\BOOKMARK [3][-]{subsubsection.6.2.1.4}{comment}{subsection.6.2.1}% 130
+\BOOKMARK [3][-]{subsubsection.6.2.1.5}{opinion}{subsection.6.2.1}% 131
+\BOOKMARK [2][-]{subsection.6.2.2}{Service REST}{section.6.2}% 132
+\BOOKMARK [3][-]{subsubsection.6.2.2.1}{Arquitectura}{subsection.6.2.2}% 133
+\BOOKMARK [3][-]{subsubsection.6.2.2.2}{Rutas}{subsection.6.2.2}% 134
+\BOOKMARK [3][-]{subsubsection.6.2.2.3}{Controladores}{subsection.6.2.2}% 135
+\BOOKMARK [2][-]{subsection.6.2.3}{Cliente Android}{section.6.2}% 136
+\BOOKMARK [3][-]{subsubsection.6.2.3.1}{Interfaz Gr\341fica}{subsection.6.2.3}% 137
+\BOOKMARK [3][-]{subsubsection.6.2.3.2}{Estructuraci\363n de Programas Pol\355ticos}{subsection.6.2.3}% 138
+\BOOKMARK [3][-]{subsubsection.6.2.3.3}{Conexi\363n y Peticiones a Service REST y Base de Datos}{subsection.6.2.3}% 139
+\BOOKMARK [3][-]{subsubsection.6.2.3.4}{Gesti\363n de Usuarios: ID de Android}{subsection.6.2.3}% 140
+\BOOKMARK [3][-]{subsubsection.6.2.3.5}{Servicio Android, Conexi\363n con Wave/SwellRT y Gesti\363n de Propuestas Colaborativas}{subsection.6.2.3}% 141
+\BOOKMARK [0][-]{chapter.7}{Resultados, Conclusiones y Trabajo Futuro}{}% 142
+\BOOKMARK [1][-]{section.7.1}{Discusi\363n de Resultados}{chapter.7}% 143
+\BOOKMARK [2][-]{subsection.7.1.1}{El porqu\351 de DemoCritics}{section.7.1}% 144
+\BOOKMARK [2][-]{subsection.7.1.2}{Usando Wave/SwellRT en DemoCritics}{section.7.1}% 145
+\BOOKMARK [2][-]{subsection.7.1.3}{Incentivando el uso social de DemoCritics}{section.7.1}% 146
+\BOOKMARK [2][-]{subsection.7.1.4}{Aspectos t\351cnicos de DemoCritics}{section.7.1}% 147
+\BOOKMARK [1][-]{section.7.2}{Reparto de Trabajo entre los componentes del grupo}{chapter.7}% 148
+\BOOKMARK [1][-]{section.7.3}{Conclusiones}{chapter.7}% 149
+\BOOKMARK [1][-]{section.7.4}{Trabajo Futuro}{chapter.7}% 150
+\BOOKMARK [2][-]{subsection.7.4.1}{Mejoras a la versi\363n actual}{section.7.4}% 151
+\BOOKMARK [2][-]{subsection.7.4.2}{Nuevas caracter\355sticas}{section.7.4}% 152
+\BOOKMARK [2][-]{subsection.7.4.3}{SwellRT Android}{section.7.4}% 153
+\BOOKMARK [0][-]{appendix.Alph1}{Listados de C\363digo Fuente}{}% 154
+\BOOKMARK [1][-]{section.Alph1.1}{Migraci\363n de Wave a Android: SwellRT}{appendix.Alph1}% 155
+\BOOKMARK [2][-]{subsection.Alph1.1.1}{Esquema de conexi\363n HTTP}{section.Alph1.1}% 156
+\BOOKMARK [2][-]{subsection.Alph1.1.2}{Esquema de conexi\363n con AsyncTask}{section.Alph1.1}% 157
+\BOOKMARK [2][-]{subsection.Alph1.1.3}{Esquema de uso de WAsync}{section.Alph1.1}% 158
+\BOOKMARK [1][-]{section.Alph1.2}{Service REST \(Laravel\)}{appendix.Alph1}% 159
+\BOOKMARK [2][-]{subsection.Alph1.2.1}{Esquema de Rutas Simple}{section.Alph1.2}% 160
+\BOOKMARK [2][-]{subsection.Alph1.2.2}{Esquema de Rutas Agrupadas}{section.Alph1.2}% 161
+\BOOKMARK [2][-]{subsection.Alph1.2.3}{Esquema de Rutas de Propuestas Agrupadas}{section.Alph1.2}% 162
+\BOOKMARK [2][-]{subsection.Alph1.2.4}{Esquema de Controlador de Propuestas}{section.Alph1.2}% 163
+\BOOKMARK [1][-]{section.Alph1.3}{Aplicaci\363n Android}{appendix.Alph1}% 164
+\BOOKMARK [2][-]{subsection.Alph1.3.1}{Funci\363n de construcci\363n del \341rbol de Programa Pol\355tico}{section.Alph1.3}% 165
+\BOOKMARK [2][-]{subsection.Alph1.3.2}{Registrar Usuario en SwellRT}{section.Alph1.3}% 166
+\BOOKMARK [2][-]{subsection.Alph1.3.3}{Crear nueva Wave \(Model\) en SwellRT}{section.Alph1.3}% 167
+\BOOKMARK [2][-]{subsection.Alph1.3.4}{Abrir Pad colaborativo en SwellRT}{section.Alph1.3}% 168
+\BOOKMARK [0][-]{subsection.Alph1.3.4}{Bibliograf\355a}{}% 169

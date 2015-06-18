@@ -115,18 +115,11 @@ Esta tabla será la referencia que almacenará las opiniones o valoraciones de u
 
 \subsection{Service REST} \label{ssec:seviceREST}
 
-Para establecer la conexión de la aplicación desarrollada en Android con la Base de Datos hemos utilizado \textbf{Laravel} como \textit{framework} para desarrollo de servicios Web. Laravel \cite{ref:laravel} es un framework de código abierto para desarrollar aplicaciones web con PHP 5. Laravel permite además desarrollar una API REST (Representational State Transfer), un estilo de arquitectura software para sistemas hipermedia. Este término se originó en una tesis doctoral sobre la web escrita por Roy Fielding \cite{ref:RESTPhd}. La elección de Laravel como framework PHP se debió a su flexibilidad, la facilidad para programar la aplicación y el gran soporte que tiene de la comunidad. Además Laravel cuenta con una licencia de software libre MIT, lo que nos permite continuar utilizando software open-source en todo el proyecto. Es uno de los frameworks más populares actualmente.
-
-\begin{figure}[H]
-\centering
-\includegraphics[keepaspectratio, scale=0.30]{Media/Captures/frameworkPopularity.png}
-\caption{Frameworks PHP más populares. Fuente: SitePoint}
-\label{fig:laravel5popularity}
-\end{figure}
+Para establecer la conexión de la aplicación desarrollada en Android con la Base de Datos hemos utilizado \textbf{Laravel} como \textit{framework} para desarrollo de servicios Web. Laravel \cite{ref:laravel} es un framework de código abierto para desarrollar aplicaciones web con PHP 5. Laravel permite además desarrollar una API REST (Representational State Transfer), un estilo de arquitectura software para sistemas hipermedia. Este término se originó en una tesis doctoral sobre la web escrita por Roy Fielding \cite{ref:RESTPhd}.
 
 Laravel nos permite implementar un sistema RESTful para que el cliente móvil pueda hacer peticiones al servicio web y que dicho servicio responda a éstas de la forma que queramos. Estas peticiones se realizan mediante el protocolo HTTP. En función de la operación que deseemos hacer, clasificaremos estas funciones en el acrónimo \textbf{CRUD} \cite{ref:CRUD} (del original en inglés: \textbf{C}reate, \textbf{R}ead, \textbf{U}pdate and \textbf{D}elete).
 
-\begin{table}[H]
+\begin{table}[!]
 \begin{tabular}{|c|c|c|m{6.25cm}|}
 \hline
 {\bf Petición} & {\bf Operación} & {\bf SQL} & \multicolumn{1}{c|}{{\bf Utilidad}}              \\ \hline
@@ -141,7 +134,7 @@ DELETE         & Borrar          & DELETE    & Eliminar un recurso almacenado en
 
 Dependiendo de las peticiones que realicemos al servicio mediante el protocolo HTTP, el servidor nos devolverá un código de estado para obtener \textit{feedback} de lo sucedido. Por tanto distinguiremos diferentes códigos de estado cuando queramos obtener un recurso, actualizar un recurso, crear uno nuevo o borrarlo. En la siguiente tabla se definen los códigos de estado que puede devolvernos el servidor en función de nuestras peticiones.
 
-\begin{table}[H]
+\begin{table}[!]
 \begin{tabular}{|c|c|m{7.5cm}|}
 \hline
 {\bf Petición} & {\bf Status Code} & \multicolumn{1}{c|}{{\bf Descripción}}                         \\ \hline
@@ -166,7 +159,7 @@ Usar un servicio RESTful nos proporciona una gran flexibilidad a la hora de inde
 
 Laravel utiliza e implementa un funcionamiento basado en el patrón \textbf{MVC} (Model–View–Controller), separando el modelo de la vista, y delegando la gestión al controlador. En nuestro caso tendríamos un modelo almacenado en las tablas de la Base de Datos, donde se guardará toda la información dinámica y estática de la aplicación. El controlador sería en elcargado de gestionar las peticiones del cliente en Android en función del tipo de operación que requiera. Por último, tendríamos como vista el resultado devuelto por el servidor con los datos solicitados por el cliente, que a su vez los representaría en la aplicación móvil. Esta estructura de comportamiento hace independiente el modelo controlado por el servidor de la vista que obtiene el usuario final en su cliente móvil. Con esto conseguimos eleborar un código más claro y sencillo, así como también evitar conflictos entre el modelo y la vista.
 
-\begin{figure}[H]
+\begin{figure}[!]
 \centering
 \includegraphics[keepaspectratio, scale=0.8]{Media/Captures/laravelArch.jpg}
 \caption{Arquitectura de Laravel}
@@ -217,7 +210,7 @@ De esta forma podemos visualizar todas las posibilidades agrupadas dentro de la 
 
 Los \textbf{controladores} son los encargados de procesar todas las operaciones que intervienen en el modelo, es decir, en la información almacenada en la base de datos. Un controlador es un fichero escrito en PHP que será almacenado en la ruta \textit{/app/Http/Controllers} de la aplicación. Este fichero estará formado por una métodos y atributos que serán llamados desde las rutas definidas en la aplicación. Cada controlador hereda de una clase abstracta llamada \textit{Controller}, que a su vez hereda de la clase abstracta \textit{BaseController}. La cual implementa la funcionalidad básica de los controladores.
 
-\begin{figure}[H]
+\begin{figure}[!]
 \centering
 \includegraphics[keepaspectratio, scale=1]{Media/Captures/getDiagramMethod.png}
 \caption{Camino desde la ruta al método del controlador.}

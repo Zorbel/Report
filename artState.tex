@@ -6,10 +6,10 @@
 
 	Wave es a la vez un protocolo de comunicaciones basado en XMPP\cite{ref:wave_over_xmpp} y una plataforma web de código libre, que permiten a sus usuarios comunicarse y colaborar entre sí en tiempo real y de forma federada (Ver sección \ref{sssec:federation}) a través de Internet. Fue anunciado originalmente por Google en 2009 \cite{ref:wave_announcement} con la intención de aunar en una sola plataforma servicios como el correo electrónico, las redes sociales y la mensajería instantánea. Sin embargo, debido a su poca aceptación, en 2010 Google abandona el proyecto \cite{ref:google_wave_end} y reorienta la tecnología a su plataforma Google Docs \cite{ref:google_docs}. Desde ese momento el proyecto original pasa a manos de la Apache Software Foundation bajo el nombre de Apache Wave.
 
-	\subsection{Apache Wave: Wave In A Box (WIAB)}
-	
-	Al pasar el proyecto a las manos de Apache como software de código libre bajo licencia Apache \cite{ref:apache_license}, el desarrollo se centra en conseguir implementar una plataforma que integre un servidor Wave y un cliente Web sencillo donde crear y manipular el contenido de las waves: algo parecido a ''documentos'' editables de forma colaborativa en tiempo real (Ver Sección \ref{ssec:waveModel}). A esta plataforma se le denomina Wave In A Box (WIAB) y actualmente sigue en desarrollo por parte de la comunidad y se distribuye en forma de código fuente, accesible entre otras formas desde su repositorio de \textit{GitHub} \cite{ref:wave_in_a_box_github}. Cualquiera puede descargar y ''jugar'' con WIAB en su ordenador siguiendo los pasos que nos proporcionan en su wiki \cite{ref:wave_in_a_box_wiki}. Existen también servidores de prueba ya desplegados en Internet sobre los que se puede observar el funcionamiento de WIAB \cite {ref:wave_in_a_box_server}.
-	
+	\subsection{Apache Wave: Wave In A Box (WIAB)}\label{ssec:wiab}
+	    
+	Wave In a Box (WIAB) \cite{ref:wave_in_a_box} es el código fuente liberado por Google y completado por la comunidad de Apache tras pasar el proyecto a sus manos en el año 2012. Al igual que el resto del código de la tecnología que heredó de Google, está implementado en Java usando OpenJDK \cite{ref:openjdk}. La instalación trae consigo un cliente web desarrollado en Java usando el framework Google Web Toolkit (GWT) \cite{ref:gwt}, lo que genera código JavaScript ejecutable en el navegador. Este cliente web sirve como prueba de concepto de las funcionalidades básicas del Modelo Conversacional de Wave, pudiendo gesionar waves, usuarios y extensiones. Actualmente cualquiera puede descargar y desplegar WIAB en su ordenador siguiendo los pasos que nos proporcionan en su wiki \cite{ref:wave_in_a_box_wiki}. La aplicación se distribuye en forma de código fuente, accesible entre otras formas desde su repositorio de GitHub \cite{ref:wave_in_a_box_github}. Existen asimismo servidores de prueba ya desplegados en Internet sobre los que se puede observar el funcionamiento de WIAB \cite{ref:wave_in_a_box_server}.
+   		
 	\begin{figure}[H]
       \centering
 		\includegraphics[keepaspectratio, scale=0.3]{Media/Captures/WIAB_Server.png}
@@ -372,7 +372,7 @@ Por ejemplo: en mayo de 2011, en relación con las movilizaciones del Movimiento
 
 Desde su creación en 2007, Change.org ha logrado muchas de sus peticiones demandadas entre los que se incluyen la atención de pacientes con enfermedades complejas, protección sobre animales y medio ambiente, derechos públicos, leyes, etc.
 
-\begin{figure}[H]
+\begin{figure}[!]
 \centering
 \includegraphics[keepaspectratio, scale=0.30]{Media/Captures/changeOrg.png}
 \caption{Change.org · La mayor plataforma de peticiones del mundo}
@@ -398,7 +398,7 @@ Para las pasadas elecciones municipales del 24 de Mayo, la candidatura de unidad
 
 El resultado final fue determinar las cinco propuestas más votadas que fueron incluidas en el programa final como medidas urgentes para realizar en los 100 primeros días de gobierno. 
 
-\begin{figure}[H]
+\begin{figure}[!]
 \centering
 \includegraphics[keepaspectratio, scale=0.25]{Media/Captures/programaAhoraMadrid.jpg}
 \caption{Creación colaborativa del programa de Ahora Madrid.}
@@ -407,7 +407,7 @@ El resultado final fue determinar las cinco propuestas más votadas que fueron i
 
 También utilizaron una plataforma similar en la candidatura zaragozana de unidad popular Zaragoza en Común \cite{ref:ganemosZaragoza}.
 
-\begin{figure}[H]
+\begin{figure}[!]
 \centering
 \includegraphics[keepaspectratio, scale=0.30]{Media/Captures/programaColaborativoGanemosZaragoza.png}
 \caption{Creación colaborativa del programa de Zaragoza en Común.}

@@ -138,7 +138,7 @@ Una vez hecho esto, cada vez que ejecutemos la aplicacion saldrá un mensaje de 
 	  \item Migrando Conexión HTTP a Android \ref{sssec:conHttp}.
 	  \item Migrando Conexión WebSocket a Android \ref{sssec:conWave}.
 	  \item Migrando Logging a Android \ref{sssec:conFinAndLogin}.
-	  \item Creando el Servicio Android \ref{orgCodServAnd}.
+	  \item Creando el Servicio Android \ref{sssec:orgCodServAnd}.
 	\end{itemize}
 
 	  El objetivo de esta parte del proyecto es conseguir que el cliente de SwellRT se pueda desplegar en Android para asi conseguir que se conecte al servidor WIAB que tambien incluye. Para ello lo primero que haremos será desplegar el servidor en nuestro ordenador clonando el repositorio de GitHub de SwellRT y siguiendo los pasos descritos en el Readme del proyecto \cite{ref:swellRT_github}. Para comprobar que el servidor se ha instalado correctamente, podemos ejecutarlo por consola (ver Readme) y abrir un navegador web con la dirección http://localhost:9898. Si nos aparece una ventana de Login de WIAB es que ya tenemos un servidor WIAB corriendo en nuestro ordenador. Creamos entonces un usuario y contraseña de prueba. Este paso es importante ya que la aplicación Android intentará conectarse contra este servidor mientras estemos haciendo pruebas de desarrollo. \\[.2cm]
@@ -203,7 +203,7 @@ Una vez hecho esto, cada vez que ejecutemos la aplicacion saldrá un mensaje de 
 	
 	Como la arquitectura Wave utilizaba el patrón factoria, fue necesario sustituir la clase de WebSocket GWT por una de nueva creación llamada \textbf{WaveSocketWAsync.java}\cite{ref:wave_migration_github} que implementa los métodos de creación y configuración de un Websocket y de callback antes descritos. Asimismo se modificó la clase WaveSocketFactory.java para hacer uso ahora de esta nueva implementación del WebSocket compatible con Android. 
 	
-	Sin embargo, ejecutamos esta nueva versión de código y nos encontramos con que la librería WAsync incluye dependencias a código que no está presente en la propia librería y que es necesario para crear el cliente AsyncHTTPClient que gestiona la conexión HTTP que subyace por debajo del WebSocket. Concretamente hace falta utilizar un HTTPProvider compatible con Atmosphere, tal y como recomienda hacer wAsync en su wiki\ref{cite:httpProvider_wAsync}. Para ello basta con añadir al proyecto las librerias oportunas (Ver Tabla de dependencias \ref{fig:dependencies_swellRT}) y configurar el cliente segun lo descrito en dicha wiki:
+	Sin embargo, ejecutamos esta nueva versión de código y nos encontramos con que la librería WAsync incluye dependencias a código que no está presente en la propia librería y que es necesario para crear el cliente AsyncHTTPClient que gestiona la conexión HTTP que subyace por debajo del WebSocket. Concretamente hace falta utilizar un HTTPProvider compatible con Atmosphere, tal y como recomienda hacer wAsync en su wiki \cite{ref:httpProvider_wAsync}. Para ello basta con añadir al proyecto las librerias oportunas (Ver Tabla de dependencias \ref{fig:dependencies_swellRT}) y configurar el cliente segun lo descrito en dicha wiki:
 		
 	\lstset{language=Java, breaklines=true, autogobble=true, basicstyle=\ttfamily\footnotesize, commentstyle=\color{OliveGreen}, keywordstyle=\color{MidnightBlue}}
 	  \begin{lstlisting}[frame=single]	
@@ -248,20 +248,13 @@ Una vez hecho esto, cada vez que ejecutemos la aplicacion saldrá un mensaje de 
     
     Pero un Servicio se ejecuta dentro del mismo proceso que el UI Thread, por lo que aun así tendremos que utilizar métodos para ejecutar el código que nos interese en otros hilos de ejecución dentro del propio Servicio. De esta manera \textbf{se dividió la reorganización en dos: la conexión Http y la conexión WebSocket.}
     
-    Para la conexión HTTP, se decidió utilizar un AsyncTask llamado LoginTask muy similar al ya explicado anteriormente (ver Sección \ref{sssec:conHttp}) pero esta vez definido dentro del propio Servicio y con un callback que notificaba a la aplicación si la conexión se realizaba correctamente. Además, se puso el código de la conexión en una clase aparte llamada WaveHttpLogin.java para tenerlo más organizado. El siguiente es un esquema en forma de Diagrama de Secuencia de la conexión Http:
-    
-  \begin{figure}[H]
-   \centering
-	\includegraphics[keepaspectratio, scale=0.6]{Media/Diagrams/loginHttpSequenceDiagram.png}
-    \caption{Proceso de conexión Http con Servicio}
-   \label{fig:sequenceDiagram_waveHttp}
-  \end{figure}
+    Para la conexión HTTP, se decidió utilizar un AsyncTask llamado LoginTask muy similar al ya explicado anteriormente (ver Sección \ref{sssec:conHttp}) pero esta vez definido dentro del propio Servicio y con un callback que notificaba a la aplicación si la conexión se realizaba correctamente. Además, se puso el código de la conexión en una clase aparte llamada WaveHttpLogin.java para tenerlo más organizado.
     
     Como vemos, cuando se realiza esta conexión Http la Actividad inicial (WaveAndroid.java) es informada de ello mediante su callback onLogin() para poder notificar al usuario e iniciar la conexión por WebSocket. 
     
     Para dicha conexión se debía buscar una solución que permitiera al WebSocket responder a eventos del servidor (recordemos el funcionamiento de WAsync descrito en la Sección \ref{sssec:conWave}) para, mediante callbacks, informar a la aplicación de dichos eventos. \textbf{La solución final encontrada fue combinar el uso de un Thread y un Handler}. El Thread se encarga de crear el socket y configurar su respuesta a eventos en forma de mensajes, que enviará entonces al Handler, encargado de quedar a la espera de recibir estos mensajes de forma asíncrona y llamar al callback adecuado. Esta imnplementación se puede ver concretamente dentro de la clase WaveSocketWAsync.java, donde se define el Thread llamado WebSocketRunnable y el Handler UIHandler. El siguiente es un esquema en forma de Diagrama de Secuencia de la conexión inicial con WebSocket al servidor Wave:
     
-  \begin{figure}[H]
+  \begin{figure}[!]
    \centering
 	\includegraphics[keepaspectratio, scale=0.43]{Media/Diagrams/waveServerConnectionSequenceDiagram.png}
     \caption{Proceso de conexión WebSocket con Servicio}
@@ -269,6 +262,13 @@ Una vez hecho esto, cada vez que ejecutemos la aplicacion saldrá un mensaje de 
   \end{figure}
      
       Como vemos, cuando se realiza esta conexión al Servidor Wave la Actividad es notificada de ello mediante la propagación de callbacks onConnect() que informan del éxito de la conexión. A partir de este momento el socket informará de la misma forma (mediante el envío de mensajes al UIHandler) de otros eventos que se produzcan, ya sea la recepción de datos o la desconexión por ejemplo. De la misma forma la aplicación podrá enviar datos al servidor, ya que el socket se mantiene en el Servicio. 
+      
+        \begin{figure}[!]
+   \centering
+	\includegraphics[keepaspectratio, scale=0.6]{Media/Diagrams/loginHttpSequenceDiagram.png}
+    \caption{Proceso de conexión Http con Servicio}
+   \label{fig:sequenceDiagram_waveHttp}
+  \end{figure}
       
     \subsection{Dependencias}
     
@@ -300,19 +300,16 @@ Una vez hecho esto, cada vez que ejecutemos la aplicacion saldrá un mensaje de 
        
     \subsection{Resultado de la Migración} \label{ssec:migrationResult}
     
-    Después de todos estos pasos disponíamos de una versión funcional de SwellRT capaz de conectarse al servidor WIAB de forma nativa desde Android. \textbf{El resultado de esto se puede ver en el GitHub de esta parte del proyecto}\cite{ref:wave_migration_github}. El siguiente es un esquema en forma de Diagrama de Clases del resultado final:
+    Después de todos estos pasos disponíamos de una versión funcional de SwellRT capaz de conectarse al servidor WIAB de forma nativa desde Android. \textbf{El resultado de esto se puede ver en el GitHub de esta parte del proyecto}\cite{ref:wave_migration_github}.
     
-  \begin{figure}[H]
+  \begin{figure}[!]
    \centering
 	\includegraphics[keepaspectratio, scale=0.5]{Media/Diagrams/waveServiceClassDiagram.png}
     \caption{Esquema de Clases de SwellRT-Android con Servicio}
    \label{fig:sequenceDiagram_waveWebSocket}
   \end{figure}
     
-    Solo restaba poner el API de SwellRT en una capa superior para poder acceder y trabajar a nivel de wave con el modelo de datos de SwellRT. De esto se encargó uno de los desarrolladores del proyecto inicial, Pablo Ojanguren, con el cual habiamos trabajado para realizar lo anteriormente descrito.
-    
-    El API con el cliente de SwellRT adaptado a Android, con el cual trabajaremos en la siguiente parte del proyecto para crear una aplicación Android que haga uso de ello, se encuentra en el GitHub de SwellRT\cite{ref:swellRT_android_github}. 
-
+    Solo restaba poner el API de SwellRT en una capa superior para poder acceder y trabajar a nivel de wave con el modelo de datos de SwellRT. De esto se encargó el director de proyecto Pablo, desarrollador del proyecto inicial Web de SwellRT. Con este API trabajaremos en la siguiente parte del proyecto para crear una aplicación Android que haga uso de las funcionalidades de SwellRT. El API se encuentra en el GitHub de SwellRT.
 
 \section{Diseño de la Aplicación: Diseño Guiado Por Objetivos}
 

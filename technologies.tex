@@ -79,14 +79,7 @@ Para hacerse una idea general de las tecnologías utilizadas se recomienda ver e
     
     Wave fue desarrollado como un protocolo de alta escalabilidad que permite gestionar la existencia de una gran cantidad de conversaciones y participantes sin que por ello se resienta la productividad del sistema.
     
-    \subsection{Servidores Wave}
-  
-    \subsubsection{Wave in a Box}\label{sssec:wiab}
-    
-    Wave In a Box (WIAB) \cite{ref:wave_in_a_box} es el código fuente liberado por Google y completado por la comunidad de Apache tras pasar el proyecto a sus manos en el año 2012. Al igual que el resto del código de la tecnología que heredó de Google, está implementado en Java usando OpenJDK \cite{ref:openjdk}. La instalación trae consigo un cliente web desarrollado en Java usando el framework Google Web Toolkit (GWT) \cite{ref:gwt}, lo que genera código JavaScript ejecutable en el navegador. Este cliente web sirve como prueba de concepto de las funcionalidades básicas del Modelo Conversacional de Wave, pudiendo gesionar waves, usuarios y extensiones. Actualmente cualquiera puede descargar y desplegar WIAB en su ordenador siguiendo los pasos que nos proporcionan en su wiki \cite{ref:wave_in_a_box_wiki}. La aplicación se distribuye en forma de código fuente, accesible entre otras formas desde su repositorio de GitHub \cite{ref:wave_in_a_box_github}. Existen asimismo servidores de prueba ya desplegados en Internet sobre los que se puede observar el funcionamiento de WIAB \cite{ref:wave_in_a_box_server}.
-   
-   
-    \subsubsection{SwellRT}\label{sssec:swellRT}
+    \subsection{Servidores Wave: SwellRT}\label{sssec:swellRT}
     
     Como parte del proyecto europeo de investigación P2PValue \cite{ref:p2pvalue} se ha desarrollado SwellRT (Swell Real Time), un fork de WIAB que amplía las características de éste último añadiendo un nuevo modelo de datos (Modelo de Datos Colaborativo) más allá del Modelo de Datos Conversacional de Wave original. Proporciona también un API escrito en Java que permite trabajar sobre los datos de ese nuevo modelo en forma de tres tipos básicos: mapas, listas y strings. Es por tanto un framework de colaboración en tiempo real que basa su funcionamiento en Apache Wave y cuyo principal popósito es permitir la integracion de la tecnología Wave en otras aplicaciones, que podrán compartir objetos (de los tipos antes mencionados) de forma federada y en tiempo real. Su código fuente está disponible en GitHub \cite{ref:swellRT_github}, así como sus instrucciones de instalación (Ver el Readme en GitHub).\\[.2cm]
 
@@ -197,6 +190,15 @@ Para hacerse una idea general de las tecnologías utilizadas se recomienda ver e
 	Laravel \cite{ref:laravel} es un framework que permite desarrollar aplicaciones y servicios web con PHP 5. Fue desarrollado por Taylor Otwell en 2011 y su versión actual 5.0 se distribuye en forma de código abierto (bajo licencia MIT) en su propio repositorio público en GitHub \cite{ref:laravel_github}. Su funcionalidad es extensible mediante módulos.
 	
 	En este proyecto utilizaremos Laravel 5 para construir en PHP el Service REST que hará de intermediario entre las peticiones HTTP del cliente Android y la Base de Datos de la aplicación.
+	
+	La elección de Laravel como framework PHP se debió a su flexibilidad, la facilidad para programar la aplicación y el gran soporte que tiene de la comunidad. Además, es uno de los frameworks más populares actualmente en uso.
+	
+\begin{figure}[!]
+\centering
+\includegraphics[keepaspectratio, scale=0.30]{Media/Captures/frameworkPopularity.png}
+\caption{Frameworks PHP más populares. Fuente: SitePoint}
+\label{fig:laravel5popularity}
+\end{figure}
     
     \subsection{OpenShift}\label{ssec:openshift}
     
