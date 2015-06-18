@@ -46,6 +46,7 @@ Por otro lado, se pretendía elegir un nombre para la aplicación que fuera a la
 
 \section{Diseño Guiado Por Objetivos (DGO)}
 
+<<<<<<< HEAD
 Como ya se ha planteado en la metodología del proyecto (ver Sección \ref{ssec:dgoDesign} el diseño de la aplicación se inspirará en una metodología de Diseño Guiado por Objetivos (DGO) cuyo objetivo final es producir una versión de la aplicación usable y funcional- Para ello se llevarán a cabo las siguientes actividades:
 
 - Investigación \ref{ssec:investigation}
@@ -57,26 +58,31 @@ Como ya se ha planteado en la metodología del proyecto (ver Sección \ref{ssec:
 \subsection{Investigación} \label{ssec:investigation}
 
 Durante las siguientes secciones se detallará el proceso de investigación previo realizado para concretar la funcionalidad que ofrecería la aplicación, así como su diseño gŕafico y características técnicas.
-
+=======
 En este capítulo se desarrollan las fases de la metodología del Diseño Guiado por Objetivos (ver sección \ref{ssec:dgoDesign}). Cada una de ellas especificará los pasos a seguir durante su progreso y el resultado final de cada una.
 
 \subsection{Investigación}
+>>>>>>> 9cd61d373f093d8474d8e150c492c493e49ea39e
 
 \subsubsection{Intención Inicial: Prototipo básico}  
 
+La actual en una época donde la política parece estar de moda. Esto puede ser debido al cabreo general que muestra la ciudadanía frente a gobiernos conservadores, situaciones de austeridad provocada por la crisis económica, el nacimiento de nuevas fuerzas políticas,... pero sobre todo por las numerosas citas electorales a las que seremos citados en 2015. Por tanto, el proyecto podría ponerse a prueba en un escenario real durante la campaña de las elecciones generales previsiblemente convocadas durante el último trimestre del 2015.
+
 \underline{Programas electorales}
 
-Vivimos en una sociedad digital, donde cada vez son más las personas que utilizan sus smartphones para realizar todo tipo de tareas en su vida cotidiana.
+La intención fundamental de la aplicación es llevar los programas electorales a los bolsillos de los ciudadanos y generar interés en participar más activamente en la política, ya sea emitiendo opiniones sobre dichos programas o elaborando nuevas propuestas. Vivimos en una sociedad digital, donde cada vez son más las personas que utilizan sus smartphones para realizar todo tipo de tareas en su vida cotidiana.
 
 En los últimos años las diferentes formaciones políticas han subido sus programas electorales a un documento en formato PDF que suele estar disponible para su descarga en su página web. Este documento tiene generalmente una gran extensión (los hay de 200 páginas), lo cual no hace sino dificultar que las personas se animen a leerlo. Por ello pensamos que una aplicación que pudiera visualizar las principales secciones de los programas políticos podría ser especialmente útil para acercar los programas a los electores.
 
-Además también intentaríamos darle una estructura a estos programas, de manera que el usuario pudiera navegar por ellos a nivel de Sección, a diferencia del método actual de leer un ''macro-documento'' en PDF. Así, la gente podría opinar sobre los programas políticos a nivel de sección mediante acciones familiares para ellos: ''Me gusta'', ''No me gusta'' y realizar ''Comentarios''. Añadimos también una acción de ''No lo entiendo'' que pensamos que seria util para indicar cuándo la redacción de la sección era de significado difuso.
+Además también intentariamos darle una estructura a estos programas, de manera que el usuario pudiera navegar por ellos a nivel de Sección, a diferencia del método actual de leer un "macro-documento" en PDF. Así, la gente podría opinar sobre los programas políticos a nivel de sección mediante acciones familiares para ellos: "Me gusta", "No me gusta" y realizar "Comentarios". Añadimos también una acción de "No lo entiendo" que pensamos que seria util para indicar cuándo la redacción de la sección era de significado difuso.
 
 En definitiva, queríamos crear un espacio donde poder informarse sobre las distintas ofertas electorales y poder debatir sobre las propuestas que propone cada formación política, todo ello en forma una aplicación que podremos consultar en cualquier momento. 
 
 \underline{Propuestas y Wave}
 
 Por otro lado,y en línea con los últimos movimientos políticos ciudadanos, pretendíamos crear también un portal de propuestas ciudadanas en el móvil. Los usuarios podrían visualizar las propuestas de otros usuarios y tener la posibilidad de crear nuevas propuestas. Además, como queríamos aprovechar las características de la migración de Wave previamente desarrollada, pensamos en la posibilidad de elaborar estas propuestas de forma colaborativa y en tiempo real entre muchos usuarios.
+
+Actualmente existen multitud de portales (en su gran mayoría web) donde la ciudadanía puede expresar su opinión, pero creemos que la integración de una aplicación donde puedan situarse las opiniones de los partidos políticos (en forma de sus programas) y la actividad ciudadana (en forma de propuestas), genera una nueva manera de tratar la política en los medios sociales.
 
 También pensamos en la posibilidad de categorizar el contenido de la aplicación (Programas y Propuestas) por temas, para proporcionar filtros a la hora de navegar por dicho contenido. Sin embargo no teníamos muy clara la elección de temas, asi como si debiamos darle al usuario la posibilidad de crear nuevos temas o dar nosotros unos temas preestablecidos.
  
@@ -100,11 +106,7 @@ El siguiente paso sería estudiar la viabilidad de esta aplicación entrevistand
 
 A continuación detallamos las entrevistas que realizamos en la investigación:
 
-\subsubsection{Entrevistas}
-
-En este aparatdo se recopilarán todas las entrevistas realizadas en la fase de investigación del diseño de la aplicación.
-
-\paragraph{Entrevista con Labodemo}
+\subsubsection{Entrevista con Labodemo}
 
 Tuvimos la oportunidad de mantener una conversación con dos miembros de Labodemo \cite{ref:labodemo}, en la que aprovechamos para mostrarles un prototipo de la aplicación que estábamos desarrollando. Ambos tenían experiencia en el desarrollo de plataformas de participación ciudadana en Internet: fueron los responsables del desarrollo de los portales de participación del partido político Podemos y la candidatura ciudadana de unidad popular Ahora Madrid.
 
@@ -118,7 +120,7 @@ Esto sería útil también para usuarios que buscaran información sobre un dete
 
 Nos insistieron mucho en el tema de las comparativas. Sería de gran utilidad que la aplicación tuviera una parte de comparativas en la que los usuarios pudieran comparar los programas políticos en vez de leerlos sección por sección. Resultaría de gran interés a un autónomo visualizar las medidas que proponen los diferentes partidos políticos para los autónomos. Pero estas comparativas no podría realizarlas cualquiera, por lo que deberían realizarlas periodistas o expertos que hubieran realizado algún tipo de comparativa similar anteriormente. Nos sugirieron contactar con periodistas o colectivos que hubieran publicado algún tipo de comparativa en cuanto a programas o medidas, para obtener algún tipo de ayuda o consejo a seguir.
 
-\subparagraph{Conclusión}
+\subsubsection{Conclusión}
 
 \underline{Puntos positivos}:
 
@@ -144,7 +146,7 @@ Nos insistieron mucho en el tema de las comparativas. Sería de gran utilidad qu
  \item Contactar con colectivos, asociaciones y/o periodistas que anteriormente hayan elaborado comparativas entre programas políticos en puntos concretos
 \end{itemize}
 
-\paragraph{Entrevista con Javier de la Cueva}
+\subsubsection{Entrevista con Javier de la Cueva}
 
 La entrevista con Javier de la Cueva resultó bastante productiva. Ya le conocíamos de algunas conferencias que impartió en la facultad. Javier es abogado y doctorado en Filosofía, estando especializado en temas relacionados con tecnología, Internet y propiedad intelectual. Además, en sus últimas conferencias Javier habla sobre acciones micropolíticas \cite{ref:manualCiberactivista}. Estas acciones definen la capacidad que tienen los ciudadanos para realizar aportaciones a la sociedad, el estado o el gobierno que favorezcan la participación ciudadana en una democracia participativa.
 
@@ -156,7 +158,7 @@ Pero si en algo nos insistió Javier, fue en la importancia de categorizar el co
 
 Por último, centrándonos en las Propuestas ciudadanas, surgió la idea de elaborar propuestas que tuvieran una especificación concreta. Es decir, a parte de tener una idea de propuesta y redactarla, esta propuesta debería ir acompañada de los recursos que serían necesarios y sobre todo cómo se llevaría a cabo de una forma aproximada. También resultaría interesante definir un pequeño presupuesto de lo que conllevaría realizar la propuesta o cómo se podría financiar. Así evitaríamos una elaboración de propuestas más real, evitando un listado de propuestas infinito sin planterase cómo se llevarían a cabo o cómo se financiarían.
 
-\subparagraph{Conclusión}
+\subsubsection{Conclusión}
 
 \underline{Puntos positivos}:
 
@@ -306,15 +308,15 @@ En esta sección detallaremos todos los aspectos relacionados con el desarrollo 
 
 Para definir el Framework de interacción realizaremos un proceso de seis etapas:
 
-\paragraph{Factor de forma, postura y métodos de entrada}
+\textbf{Factor de forma, postura y métodos de entrada}
 
 La aplicación será visualizada en un smartphone bajo el sistema operativo Android (con API 15 como mínimo), con tamaños de pantalla entre 3,5 y 6 pulgadas. Que pueda visualizarse en interiores y exteriores.
 
-La \textbf{postura} será \textbf{temporal}. El usuario puede utilizarlo en periodos de tiempo muy breves como puede ser la consulta de alguna sección, propuesta o dar su valoración. Elaborando una propuesta o participando en el desarrollo de una, el usuario necesitará algo más de tiempo, pero seguirá utilizando funciones básicas. Propias de una postura temporal.
+La \textbf{postura} será \textbf{temporal}. El usuario puede utilizarlo en periodos de tiempo muy breves como puede ser la consulta de alguna sección, propuesta o dar su valoración. Elaborando una propuesta o participando en el desarrollo de una, el usuario necesitará algo más de tiempo, pero seguirá utilizando funciones básicas. Propias de una postura temporal. \\[2cm.]
 
-\paragraph{Elementos y datos funcionales} 
+\textbf{Elementos y datos funcionales} 
 
-\subparagraph{Elementos de datos}
+\underline{Elementos de datos}:
 
 \begin{itemize}
  \item Programa político
@@ -348,7 +350,7 @@ La \textbf{postura} será \textbf{temporal}. El usuario puede utilizarlo en peri
  \end{itemize}
 \end{itemize}
 
-\subparagraph{Elementos funcionales}
+\underline{Elementos funcionales}:
 
  \begin{itemize}
   \item Visualizar los partidos políticos que se presentan a las elecciones.
@@ -361,7 +363,7 @@ La \textbf{postura} será \textbf{temporal}. El usuario puede utilizarlo en peri
   \item Crear una nueva propuesta incompleta para desarrollarla de forma colaborativa.
  \end{itemize}
 
-\paragraph{Grupos funcionales y jerarquías}
+\textbf{Grupos funcionales y jerarquías}
 
 Pantalla principal de la aplicación. Grupos de elementos funcionales que contiene:
 
@@ -400,7 +402,7 @@ Pantalla principal de la aplicación. Grupos de elementos funcionales que contie
  \end{itemize}
 \end{itemize}
 
-\paragraph{Boceto del framework de interacción}
+\textbf{Boceto del framework de interacción}
 
 El proceso de desarrollo de bocetos se ha realizado en espiral, de tal forma que una vez que identificábamos una determinada funcionalidad, la representábamos en un mockup a papel para debatirlo y discutirlo en las entrevistas. A continuación trasladábamos el mockup a un prototipo de alto nivel desarrollado en Android. Para las siguientes implementaciones que añadían nueva funcionalidad el proceso era el mismo:
 
@@ -422,9 +424,9 @@ De esta forma tuvimos que dar un total de tres vueltas a nuestro modelo en espir
 \begin{enumerate}
  \item \textbf{Programas Políticos}
  
- En la figura \ref{fig:protPrograms} se pueden observar los primeros bocetos que definían la interacción de la visualización de los programas políticos:
+ Estos fueron los primeros bocetos que definían la interacción de la visualización de los programas políticos:
  
- 	\begin{figure}[!]
+ 	\begin{figure}[H]
         \centering
         \begin{subfigure}[b]{0.3\textwidth}
                 \includegraphics[width=\textwidth]{Media/Captures/prot1_1.png}
@@ -446,7 +448,7 @@ De esta forma tuvimos que dar un total de tres vueltas a nuestro modelo en espir
         \caption{Primeros protitipos sobre programas electorales.}\label{fig:protPrograms}
 	\end{figure}
 	
-\subparagraph{Elementos del protitipo en papel}
+\underline{Elementos del protitipo en papel}:
 
 \begin{enumerate}
  \item Partidos políticos
@@ -455,7 +457,7 @@ De esta forma tuvimos que dar un total de tres vueltas a nuestro modelo en espir
  \item Secciones de proramas políticos
 \end{enumerate}
 
-\subparagraph{Funcionalidades del protitipo interactivo}
+\underline{Funcionalidades del protitipo interactivo}:
 
 \begin{enumerate}
  \item Visualizar la lista de partidos políticos.
@@ -464,7 +466,7 @@ De esta forma tuvimos que dar un total de tres vueltas a nuestro modelo en espir
  \item Visualizar secciones de un programa, valorarla y comentarla.
 \end{enumerate}
 
-\subparagraph{Implementación en Android}
+\underline{Implementación en Android}:
 
 \begin{enumerate}
  \item Descargar la lista de partidos políticos del servidor.
@@ -479,7 +481,7 @@ De esta forma tuvimos que dar un total de tres vueltas a nuestro modelo en espir
 
 A partir de lo desarrollado hasta el momento, se procedió a diseñar las propuestas en la aplicación. Manteniendo la coherencia con el diseño anterior, contuamos desarollando los protitipos que añadían la funcionalidad de las propuestas ciudadanas.
 
-	\begin{figure}[!]
+	\begin{figure}[H]
         \centering
         \begin{subfigure}[b]{0.3\textwidth}
                 \includegraphics[width=\textwidth]{Media/Captures/prot2_1.jpg}
@@ -501,7 +503,7 @@ A partir de lo desarrollado hasta el momento, se procedió a diseñar las propue
         \caption{Prototipos para el desarrollo de propuestas.}\label{fig:protProposals}
 	\end{figure}
 
-\subparagraph{Elementos del protipo en papel}
+\underline{Elementos del protipo en papel}:
 
 \begin{enumerate}
  \item Propuestas ciudadanas.
@@ -511,7 +513,7 @@ A partir de lo desarrollado hasta el momento, se procedió a diseñar las propue
  \item Pantalla principal rediseñada.
 \end{enumerate}
 
-\subparagraph{Funcionalidades del prototipo interactivo con POP}
+\underline{Funcionalidades del prototipo interactivo con POP}:
 
 \begin{enumerate}
  \item Visualizar propuesta.
@@ -521,7 +523,7 @@ A partir de lo desarrollado hasta el momento, se procedió a diseñar las propue
  \item Pantalla principal rediseñada.
 \end{enumerate}
 
-\subparagraph{Implementación en Android}
+\underline{Implementación en Android}:
 
 \begin{enumerate}
  \item Visualizar propuesta almacenada en el servidor.
@@ -534,7 +536,7 @@ A partir de lo desarrollado hasta el momento, se procedió a diseñar las propue
 
 \end{enumerate}
 
-\paragraph{Escenarios \textit{key path}}
+\textbf{Escenarios \textit{key path}}
 
 En esta sección describiremos los escenarios \textit{key path}, que descrien cómo interactúa una persona con la interfaz diseñada en el framework de interacción. Son la evolución de los escenarios de contexto, pero describiendo cómo interactúa la persona con los elemenos de datos funcionales en la interfaz.
 
@@ -558,7 +560,7 @@ Sofía lleva varios años trabajando en la adminsitración pública del estado, 
 
 \end{enumerate}
 
-\paragraph{Escenarios de validación}
+\textbf{Escenarios de validación}
 
 En esta fase se pondrán a prueba los escenarios, validando a ciertas situaciones que nos ayudarán a encontrar fallos o posibles mejoras en el diseño. Utilizaremos preguntas para definir la respuesta del sistema para problemas o dudas que puedan surgir.
 
