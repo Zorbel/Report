@@ -50,7 +50,7 @@ En este capítulo se estudiarán aspectos técnicos destacados relacionados con 
 	
 	\subsection{Modelo de Contenidos SwellRT}\label{ssec:swellRTModel}
 	
-	SwellRT \cite{ref:swellRT_github} (Swell Real Time) es un framework de desarrollo para Wave que forma parte del proyecto europeo P2P Value \cite{ref:p2pvalue}. Está basado en el servidor Wave In A Box \cite{ref:wave_in_a_box} (WIAB) y extiende sus funcionalidades cambiando el Modelo Conversacional original creado por Google por uno nuevo de propósito más general llamado Modelo de Contenidos. En este modelo nuevo se pueden intercambiar estructuras de datos de forma colaborativa, federada y en tiempo real que combinen los siguientes 4 tipos: \textbf{Mapas, Listas, Strings y Documentos de Texto.}
+	SwellRT \cite{ref:swellRT_github} (Swell Real Time) es un framework de desarrollo para Wave que forma parte del proyecto europeo P2Pvalue \cite{ref:p2pvalue}. Está basado en el servidor Wave In A Box \cite{ref:wave_in_a_box} (WIAB) y extiende sus funcionalidades cambiando el Modelo Conversacional original creado por Google por uno nuevo de propósito más general llamado Modelo de Contenidos. En este modelo nuevo se pueden intercambiar estructuras de datos de forma colaborativa, federada y en tiempo real que combinen los siguientes 4 tipos: \textbf{Mapas, Listas, Strings y Documentos de Texto.}
 	
 	De esta manera la estructura de datos intercambiada constará siempre de un Mapa inicial (llamado ''root'') del cual colgarán a modo de árbol el resto de estructuras (de cualquiera de los cuatro tipos que maneja SwellRT) cuyos datos se gestionarán en tiempo real. Para ello existe también una API nueva que se encarga de la gestión de dicho arbol mediante la utilización de eventos que notifican de cambios en las estructuras de datos. Este modelo será el que se utilizará para la aplicación Android. El siguiente es un esquema de los cambios en el modelo original introducidos por SwellRT:
 	
@@ -258,7 +258,7 @@ La conexión a la base de datos se encuentra configurada en el archivo \textit{/
 		De esta manera, solo es necesario decirle al elemento que contiene la lista de Partidos Políticos (en este caso un ''GridView'' que permite visualizarlos en forma de una rejilla que se adapta al tamaño de pantalla) que use como adaptador el PartyWidgetAdapter con los datos de la lista de Partidos Políticos que previamente han sido descargados. \\
 		
 				
-		\underline{Navegación por Tabs}
+		\paragraph{\underline{Navegación por Tabs}:}
 		
 		Tras la fase de investigación se decidió que sería interesante incluir en la aplicación distintos filtros para ver tanto las secciones como las propuestas más valoradas positivamente, más vistas, más comentadas, etc. Para implementar la vista de esta funcionalidad se decidió utilizar un diseño muy parecido al que utiliza Google en su tienda de aplicaciones ''Google Play'' para navegar de forma lateral mediante pestañas (''tabs'') deslizantes. En este caso cada una de las tabs mostraría una lista (elemento ''ListView'' de Android) de elementos ordenados por distinto filtro.
 		
@@ -266,7 +266,7 @@ La conexión a la base de datos se encuentra configurada en el archivo \textit{/
 		
 		Sin embargo, la vista (Layout) de una Sección y de una Propuesta dentro de esta lista sería muy similar (con su foto, título e indicadores sociales de número de likes, vistas, etc.) por lo que ¿cómo hacer para utilizar la misma vista en dos objetos que son de tipos distintos? La solución que se encontró para utilizar el mismo elemento de visualización (definido en el layout llamado ''top\_ranking\_item'') en ambos casos fue utilizar una interfaz que implementarían tanto la clase  ''Section'' como la clase ''Proposal'': la interfaz ''TopItem''.
 		
-	\begin{figure}[H]
+	\begin{figure}[!]
 	  \centering
 	    \includegraphics[keepaspectratio, scale=0.6]{Media/Diagrams/classDiagramTopItemAdapter.png}
 	  \caption{Esquema de Implementación de TopItem (Con vista de Section y Proposal)}
@@ -275,7 +275,7 @@ La conexión a la base de datos se encuentra configurada en el archivo \textit{/
 	
 	De esta forma, las clases Section y Proposal implementan los métodos ''isSection()'' e ''isProposal()'' de la interfaz devolviendo true en cada caso respectivamente. Así, cuando dentro de el Adaptador (''TopItemAdapter'') se traten los elementos de su lista de TopItems en su método ''getView()'', se podrá preguntar si se trata de un Section o un Proposal para rellenar la vista del ListView con los datos correspondientes a cada caso. Solo hace falta por tanto crear listas de Secciones o Propuestas y pasárselas al adaptador personalizado después de definirlo como adaptador para el ListView. \\
 		
-		\underline{Menús de Navegación}
+		\paragraph{\underline{Menús de Navegación}:}
 		
 		Con el objetivo de proporcionar al usuario una navegación por la aplicación que permita ir a cualquiera de sus secciones independientemente de en qué pantalla te encuentres actualmente, se decidió utilizar un menú lateral que se puede deslizar desde el lado izquierdo de la pantalla. Android permite añadir menús \cite{ref:android_menu} a las Actividades mediante métodos específicos de éstas, aunque en este caso son menús fotantes sencillos a los que se accede mediante el botón de opciones del móvil o de la app. 
 		
@@ -295,7 +295,7 @@ La conexión a la base de datos se encuentra configurada en el archivo \textit{/
 \begin{table}[H]
 	\footnotesize
 	\begin{center}
-	\begin{tabular}{| c | c | c | m{4cm} |}
+	\begin{tabular}{| c | c | c | m{3.5cm} |}
 		\hline
 		Adapter & Layout & Clase & Descripción \\ \hline
 		PartyWidgetAdapter & party\_widget.xml & PartyWidgetView & Widget para mostrar un elemento de la lista de Partidos Políticos \\ \hline
@@ -315,7 +315,7 @@ La conexión a la base de datos se encuentra configurada en el archivo \textit{/
 
 		A la hora de almacenar los Programas Políticos en la Base de Datos hubo que estudiar la forma más adecuada de hacerlo para poder estructurar dichos programas en distintos niveles de secciones y subsecciones. En definitiva, el problema radicaba en cómo codificar la información de a qué nivel de anidamiento pertenecía cada Sección. Además, había dos opciones: o bien el service REST devolvía un programa ya estructurado o la propia aplicación se encargaba de estructurarlos. \\
 		
-		\underline{Codificación en Base de Datos}
+		\paragraph{\underline{Codificación en Base de Datos}:} 
 		
 		En principio se quería elegir una codificación que permitiera realizar una consulta a la base de Datos que devolviera las distintas secciones y subsecciones \textbf{en el orden en el que aparecen en el Programa}. Tras varios intentos con distintos campos de Strings y enteros como atributo de la tabla de Secciones en Base de Datos, se decidió que lo mejor sería utilizar un único número entero que codificara dicha información. Tras estudiar la composición de diversos programas se identificó que \textbf{no serían necesarios más de 4 niveles de anidamiento en subsecciones}. En consecuencia, el número estaría formado por 8 cifras, siendo cada dos cifras un nivel distinto de anidamiento. Los siguientes ejemplos muestran cómo funciona esta codificación:
 		
@@ -328,7 +328,7 @@ La conexión a la base de datos se encuentra configurada en el archivo \textit{/
 	
 	Utilizando esta codificación se consiguió que mediante una simple consulta SQL la Base de Datos devuelva todas las secciones del programa de un determinado partido de forma ordenada, siendo luego el Servicio Web REST (Ver Sección \ref{ssec:seviceREST}) el que pasará los resultados de esta consulta en JSON a la aplicación Android. \\ 
 	
-	\underline{Estructuración y Almacenamiento de Secciones}
+	\paragraph{\underline{Estructuración y Almacenamiento de Secciones}:}
 	
 	Con dicha codificación se consiguió ordenar las secciones en el orden en el que aparecen en el programa, pero ahora se debían guardar en la aplicación en una estructura que permitiera navegar por el programa de forma estructurada, pudiendo en cada momento ver las subsecciones o volver a la sección anterior. Se decidió por tanto \textbf{guardar el programa en una estructura en árbol formada por listas de listas}. De esta forma cada elemento de la lista sería un objeto del tipo Section que contendría la información de dicha sección (título, texto, etc.) y otra lista con las subsecciones.
 	
@@ -351,9 +351,9 @@ La conexión a la base de datos se encuentra configurada en el archivo \textit{/
 		
 		Así, en función de la operación que se quiera hacer en Base de Datos, para cada tipo de consulta existirá un AsyncTask encargado de conectarse al servidor con la URL apropiada y tratar los datos en JSON que éste le pueda devolver, ya sea para mostrarlos o guardarlos en algún objeto de la aplicación. De forma general se pueden identificar cuatro tipos de peticiones al servidor (Ver tabla \ref{fig:CRUDtable}).
 
-Con el objetivo de no repetir código se decidió estructurar el esquema de peticiones HTTP mediante herencia de AsyncTasks. El siguiente diagrama esquematiza la estructura: 
+Con el objetivo de no repetir código se decidió estructurar el esquema de peticiones HTTP mediante herencia de AsyncTasks. El diagrama \ref{fig:classConnectionTree} esquematiza la estructura.
 
-	\begin{figure}[H]
+	\begin{figure}[!]
 	  \centering
 	    \includegraphics[keepaspectratio, scale=0.6]{Media/Diagrams/classDiagramAsyncTask.png}
 	  \caption{Esquema de Clases de Conexión HTTP mediante AsyncTask}
@@ -362,7 +362,7 @@ Con el objetivo de no repetir código se decidió estructurar el esquema de peti
 	
 	Hace falta también actualizar la vista del usuario cuando se reciban los datos. Como un AsyncTask se ejecuta en un hilo aparte diferente del UI Thread (para no bloquear la interacción con el usuario), a priori no tiene acceso a la vista (Layout) que se le está mostrando al usuario. Por esta razón la solución que se encontró fue guardar una referencia a la vista del usuario dentro del AsyncTask (ver clase ''URLConnection''). De esta manera en su método ''onPostExecute()'' que se ejecuta nada más terminar la operacion de conexión del ''doInbackground()'', se obtiene dicha vista y se actualiza con los datos recién descargados. Este método de actualización de la vista es el que se utiliza en todos los casos. \\
 		
-		\underline{Comprobación de Conexión a Internet}
+		\paragraph{\underline{Comprobación de Conexión a Internet}:}
 		
 		Por otro lado, para llevar a cabo un control de errores en la conexión al Servicio Web REST, antes de ejecutar la tarea en el AsyncTask se comprueba el estado de la conexión del dispositivo móvil para asegurarse de que el usuario dispone de conexión a Internet. En caso contrario se le muestra un mensaje de aviso para que compruebe sus conexiones y no se lleva a cabo la tarea de conexión en el AsyncTask. Aprovechando que todas las actividades extienden de ''MenuActivity'' dicho método de comprobación se encuentra dentro de esa clase. Además, fue necesario definir el siguiente permiso en el ''AndroidManifest.xml'' de la aplicación para acceder a la información de estado de la conexión del dispositivo:
 		
@@ -398,13 +398,14 @@ Con el objetivo de no repetir código se decidió estructurar el esquema de peti
 		
 		Un ejemplo de cómo registrarse con SwellRT se puede encontrar en el Apéndice \ref{ssec:waveRegister}. \\
 
-		\underline{Crear Propuesta Colaborativa}
+		\paragraph{\underline{Crear Propuesta Colaborativa}:}
 		
 		Esta es una opción que se le ofrece al usuario en el caso de que, al hacer una propuesta nueva, deje alguno de los campos de ''¿Cómo lo haría?'' o de ''¿Cómo lo financiaría?'' en blanco. En tal caso, lo primero que se hace es hacer un login en el servidor Wave llamando al método ''startSession'' del Service. Una vez que se ha iniciado sesión, se abre un nuevo modelo  (wave) en el servidor (ver Sección \ref{ssec:swellRTModel}) para esta propuesta y se obtiene el Id (''WaveId'') de dicho modelo creado para guardarlo en la base de datos junto al resto de datos de la propuesta. Además, se le asocian al elemento ''root'' del modelo uno o dos documentos colaborativos del tipo TextType llamados ''padHow'' y ''padCost'', en función de si ha dejado los dos campos vacíos o sólo uno. Por último se añade como participante del modelo creado al usuario que lo ha creado (su ID\_USER). Cabe destacar que la mayor parte de la programación con el serviceSwellRT se lleva a cabo mediante callbacks que responden a eventos como iniciar sesión, crear modelos, etc.
 		
 		Un ejemplo simplificado del código encargado de crear el modelo se puede ver en el Apéndice \ref{ssec:waveCreateModel}.\\
 		
-		\underline{Editar Propuesta Colaborativa}
+			
+		\paragraph{\underline{Editar Propuesta Colaborativa}:}
 
 		Cuando un usuario quiere echar una mano a otro en la redacción de su propuesta, puede acceder a la propuesta colaborativa y editar los campos de ''¿Cómo lo haría?'' o de ''¿Cómo lo financiaría?'' en función de en qué necesite ayuda el usuario. Para cada uno de estos campos existe un ''pad'' en el servidor wave asociado a una wave (ver Sección \ref{ssec:swellRTModel}) cuyo identificador ''WaveId'' está guardado en la base de datos. Cuando el usuario pulsa en uno de los dos campos, se abre una nueva actividad ''EditWaveActivity'' que le ofrece un campo ''EditText'' de Android en el que puede escribir y ver lo que otros escriben en tiempo real. Para esto hace falta abrir una sesión en Wave, abrir el modelo con su WaveId, obtener el modelo y el pad, y asociar (''bind'') el pad a el EditText del usuario para que el servicio sea capaz de obtener los eventos de escritura del usuario.
 		

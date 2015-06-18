@@ -8,9 +8,6 @@
   
     El framework de SwellRT utiliza un servidor WIAB y el protocolo Wave, ambos desarrollados en Java/GWT. El \textbf{SDK de Android} \cite{ref:android_sdk} es compatible con Java, así que a priori la implantación del servidor no supone problemas en los dispositivos móviles. Sin embargo, existe un problema con el API de SwellRT, ya que el lado del cliente fue desarrollado en Javascript usando el framework GWT. Android no soporta de forma nativa estas tecnologías, así que es necesario estudiar el código de SwellRT para sustituir todo el código que haga uso de Javascript/GWT por código compatible con Android. 
     
-    No obstante, al principio hubo ciertas dificultades relacionadas con la integración del código de SwellRT original en el entorno de desarrollo de Android. 
-    
-    
     \textbf{El objetivo de esta parte del proyecto es conseguir que un cliente desplegado en Android sea capaz de conectarse e interactuar con un servidor Wave/SwellRT sin problemas para hacer uso de sus características.}  
 
 	\subsection{Migración: Identificación y Solución de Problemas}	
@@ -18,15 +15,22 @@
 	\textbf{Resumen}:
 	
 	\begin{itemize}
+	  \item Construcción y Depuración de la Migración \ref{sssec:consDep}
 	  \item Migrando la Conexión HTTP a Android \ref{sssec:conHttp}.
 	  \item Migrando la Conexión WebSocket a Android \ref{sssec:conWave}.
 	  \item Migrando el Logging a Android \ref{sssec:conFinAndLogin}.
 	  \item Creando el Servicio Android \ref{sssec:orgCodServAnd}.
 	\end{itemize}
 	
-	El objetivo de esta parte del proyecto es conseguir que el cliente de SwellRT se pueda desplegar en Android para así conseguir que se conecte al servidor Wave In a Box (Ver sección \ref{sssec:wiab}) que también incluye. Para ello lo primero que se hará será desplegar el servidor en el ordenador clonando el repositorio de GitHub \cite{ref:swellRT_github} de SwellRT y siguiendo los pasos descritos en el Readme del proyecto. Para comprobar que el servidor se ha instalado correctamente, se puede ejecutar por consola (ver Readme) y abrir un navegador Web con la dirección http://localhost:9898. Se crea entonces un usuario y contraseña de prueba. Este paso es importante ya que la aplicación Android intentará conectarse contra este servidor mientras estemos haciendo pruebas de desarrollo. 
+	 	\subsubsection{Construcción y Depuración} \label{sssec:consDep}
+	
+	El objetivo de esta parte del proyecto es conseguir que el cliente de SwellRT se pueda desplegar en Android para así conseguir que se conecte al servidor Wave In a Box (Ver sección \ref{sssec:wiab}) que también incluye. Para ello lo primero que se hará será desplegar el servidor en el ordenador clonando el repositorio de GitHub \cite{ref:swellRT_github} de SwellRT y siguiendo los pasos descritos en el Readme del proyecto. Para comprobar que el servidor se ha instalado correctamente, se puede ejecutar por consola (ver Readme) y abrir un navegador Web con la dirección http://localhost:9898. Se crea entonces un usuario y contraseña de prueba. Este paso es importante ya que la aplicación Android intentará conectarse contra este servidor mientras estemos haciendo pruebas de desarrollo. A continuación se crea un proyecto Android en Eclipse y se incluyen en él todas las clases de SwellRT. 
 	  
-	  A continuación se crea un proyecto Android en Eclipse y se incluyen en él todas las clases de SwellRT. Uno de los componentes principales de Android a la hora de desarrollar en esta plataforma son las \textbf{Actividades} \cite{ref:android_activities}, que representan las pantallas que se le muestran al usuario y que responden a su interacción programáticamente. Por tanto, se crea una nueva actividad  principal (waveAndroid.java) que se ejecutará al lanzar la aplicación y que por el momento intentará conectarse al servidor especificando por código el usuario y contraseña que hemos creado antes en el servidor. SwellRT realiza este login contra el servidor usando dos tecnologias: HTTP \cite{ref:http_authentication} y WebSockets \cite{ref:webSocket_ref}.
+	  Existe un problema con la construcción y depuración del código de SwellRT en Eclipse. Android \textbf{limita el número de métodos máximos de una aplicacion a 65K} \cite{ref:android_limit65k} por cuestiones de eficiencia. Para evitar esta limitación, durante el proceso de construcción el SDK de Android utiliza, entre otras, una herramienta llamada \textbf{ProGuard} \cite{ref:android_proguard}. Esta herramienta se encarga de optimizar el código de la aplicacion buscando remover clases que no se utilizan y ofuscando el código para prevenir la ingeniería inversa. En el caso de SwellRT, el código posee un gran número de clases java necesarias para desplegar el servidor y el cliente de la herramienta, por lo que es necesaria dicha optimización de código realizada por ProGuard. El sistema de compilación de aplicaciones de Android tiene dos formas: compilación de la aplicación en modo debug (para hacer pruebas cuando todavía se encuentra en fase de desarrollo) y en modo release (la aplicación se encuentra en su versión final y se empaqueta y se firma digitalmente para lanzarla al público). En el caso de Eclipse, ProGuard solo se ejecuta cuando se construye en modo release, por lo que cuando se intenta compilar una aplicación con tantas clases como SwellRT mientras se desarrolla (modo debug) el sistema da error y no se puede compilar el código para probarlo en el emulador.
+
+	La solución que se encontró fue desarrollar en Eclipse (por las facilidades que el entorno proporciona para escribir código) pero realizar el proceso de construcción del código por consola de comandos, ya que en este caso sí que se puede compilar la aplicación en modo debug utilizando ProGuard.	  
+	  
+	  Una vez aclarado el problema de la construcción y depuración se pasa a desarrollar el proyecto de la migración. Uno de los componentes principales de Android a la hora de desarrollar en esta plataforma son las \textbf{Actividades} \cite{ref:android_activities}, que representan las pantallas que se le muestran al usuario y que responden a su interacción programáticamente. Por tanto, se crea una nueva actividad  principal (waveAndroid.java) que se ejecutará al lanzar la aplicación y que por el momento intentará conectarse al servidor especificando por código el usuario y contraseña que hemos creado antes en el servidor. SwellRT realiza este login contra el servidor usando dos tecnologias: HTTP \cite{ref:http_authentication} y WebSockets \cite{ref:webSocket_ref}.
 	  
   
     		\subsubsection{Conexión HTTP}\label{sssec:conHttp}

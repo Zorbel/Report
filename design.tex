@@ -306,13 +306,13 @@ En esta sección detallaremos todos los aspectos relacionados con el desarrollo 
 
 Para definir el Framework de interacción realizaremos un proceso de seis etapas:
 
-\paragraph{Factor de forma, postura y métodos de entrada}
+\paragraph{\underline{Factor de forma, postura y métodos de entrada}:}
 
 La aplicación será visualizada en un smartphone bajo el sistema operativo Android (con API 15 como mínimo), con tamaños de pantalla entre 3,5 y 6 pulgadas. Que pueda visualizarse en interiores y exteriores.
 
 La \textbf{postura} será \textbf{temporal}. El usuario puede utilizarlo en periodos de tiempo muy breves como puede ser la consulta de alguna sección, propuesta o dar su valoración. Elaborando una propuesta o participando en el desarrollo de una, el usuario necesitará algo más de tiempo, pero seguirá utilizando funciones básicas. Propias de una postura temporal.
 
-\paragraph{Elementos y datos funcionales} 
+\paragraph{\underline{Elementos y datos funcionales}:}
 
 \subparagraph{Elementos de datos}
 
@@ -361,7 +361,7 @@ La \textbf{postura} será \textbf{temporal}. El usuario puede utilizarlo en peri
   \item Crear una nueva propuesta incompleta para desarrollarla de forma colaborativa.
  \end{itemize}
 
-\paragraph{Grupos funcionales y jerarquías}
+\paragraph{\underline{Grupos funcionales y jerarquías}:}
 
 Pantalla principal de la aplicación. Grupos de elementos funcionales que contiene:
 
@@ -400,7 +400,7 @@ Pantalla principal de la aplicación. Grupos de elementos funcionales que contie
  \end{itemize}
 \end{itemize}
 
-\paragraph{Boceto del framework de interacción}
+\paragraph{\underline{Boceto del framework de interacción}:}
 
 El proceso de desarrollo de bocetos se ha realizado en espiral, de tal forma que una vez que identificábamos una determinada funcionalidad, la representábamos en un mockup a papel para debatirlo y discutirlo en las entrevistas. A continuación trasladábamos el mockup a un prototipo de alto nivel desarrollado en Android. Para las siguientes implementaciones que añadían nueva funcionalidad el proceso era el mismo:
 
@@ -534,7 +534,7 @@ A partir de lo desarrollado hasta el momento, se procedió a diseñar las propue
 
 \end{enumerate}
 
-\paragraph{Escenarios \textit{key path}}
+\paragraph{\underline{Escenarios \textit{key path}}:}
 
 En esta sección describiremos los escenarios \textit{key path}, que descrien cómo interactúa una persona con la interfaz diseñada en el framework de interacción. Son la evolución de los escenarios de contexto, pero describiendo cómo interactúa la persona con los elemenos de datos funcionales en la interfaz.
 
@@ -558,7 +558,7 @@ Sofía lleva varios años trabajando en la adminsitración pública del estado, 
 
 \end{enumerate}
 
-\paragraph{Escenarios de validación}
+\paragraph{\underline{Escenarios de validación}:}
 
 En esta fase se pondrán a prueba los escenarios, validando a ciertas situaciones que nos ayudarán a encontrar fallos o posibles mejoras en el diseño. Utilizaremos preguntas para definir la respuesta del sistema para problemas o dudas que puedan surgir.
 
@@ -600,20 +600,7 @@ En esta fase se pondrán a prueba los escenarios, validando a ciertas situacione
 
 Con el objetivo de verificar los principios de diseño que cumple la aplicación, utilizaremos los 10 principios de diseño propuestos por Jakob Nielsen \cite{ref:nielsen} para evaluar la calidad del sistema.
 
-\begin{enumerate}
-  \item \textbf{Visibilidad del estado del sistema}: Siempre que el sistema ejecuta tareas o no puede continuar por algún motivo, se mantiene informado al usuario sobre lo que está pasando. Esto podemos encontrarlo cuando el usuario accede a los programas políticos y el sistema procede a descargar la información. Mientras se descarga la información, se muestra un pequeño diálogo indicando la descarga de los datos para mantener al usuario informado.
-  \item \textbf{Relación entre el sistema y el mundo real (Metáforas y lenguaje familiares)}: El sistema mantiene un lenguaje próximo al usuario, evitando terminos más formales del sistema. Cuando visualizamos una sección de un programa o una propuesta, el sistema emplea el lenguaje común de términos como \textit{like} (mano con pulgar hacia arriba), \textit{dislike} (mano con pulgar hacia abajo), etcétera, para valorar las secciones de un programa o una propuesta.
-  \item \textbf{Control y libertad del usuario}: La aplicación permite deshacer acciones fácilmente, como puede ser cambiar la opinión de un \textit{like} o \textit{dislike}, o cancelar la acción de publicar una nueva propuesta o comentario.
-  \item \textbf{Consistencia y estándares}: La aplicación sigue las pautas de diseño propuestas por las pautas de diseño \textit{Material Design} \cite{ref:materialdesign}. Este estilo de diseño plano fue propuesto por Google en 2014, y en la actualidad la mayor parte de aplicaciones móviles Android lo utilizan a la hora de diseñar sus pantallas. Por esto, los usuarios no deberían tener problemas navegando y utilizando los controles de la aplicación, ya que son familiare al encontrarse en un amplio catálogo de aplicaciones. Agregar una propuesta desde un botón de lapiz inferior situado a la derecha, representar un listado de objetos mediante \textit{tabs} deslizables, son algunas de las características destacables de \textit{Material Design}.
-  \item \textbf{Prevención de errores}: La aplicación muestra mensajes de error cuando algo le impide funcionar con normalidad. De esta forma se avisa al usuario de que algo no está funcionando como debería. Cuando ejecutamos la aplicación y el sistema detecta que no hay conexión, la aplicación notifica al usuario en un sencillo diálogo la necesidad de tener conexión a internet para operar con la aplicacion.
-  \item \textbf{Reconocimiento mejor que recuerdo}: Para agregar una nueva propuesta o comentario, tan sólo se necesita una transición entre dos pantallas. De esta forma facilitamos al usuario la generación de nuevos contenidos sin saturarle la memoria u obligarle a recordar mucha información para llegar a su objetivo. Este principio se encuentra en la mayor parte de las aplicaciones móviles, pues el usuario suele interactuar con el dispositivo en pequeños intervalos de tiempo y además no suele tener una postura cómoda que le facilite la concentración. Por lo que se requieren pocas transiciones entre pantallas, tareas sencillas y elementos sencillos y distinguibles. Por ejemplo, también identificamos las distintas partes de la aplicaión (Secciones, Categorías, Propuestas) con colores distintos para que el usuario sepa en todo momento dónde se encuentra.
-  \item \textbf{Flexibilidad y eficiencia}: Se utilizan atajos a funcionalidades disponible desde la mayor parte de las pantallas del sistema. Haciendo uso del botón ''\textit{hamburguesa}'' en \textit{material design} nos da la posibilidad de abrir un menú con accesos directos a las principales partes de la aplicación. De tal forma que no necesitemos volver hacia atrás para seleccionar otra opción. No obstante, ambos caminos pueden ser utilizados en función de la habilidad o conocimiento del usuario respecto a la aplicación.
-  \item \textbf{Estética y diseño minimalista}: Tanto los diálogos que muestra el sistema como la información visible en la mayoría de las pantallas del sistema es clara y concisa. Así evitamos dar información innecesaria al usuario o distraer su atención para evitar su confusión.
-  \item \textbf{Ayudar a los usuarios a reconocer, diagnosticar y recuperarse de los errores}: Cuando el usuario da con un error inesperado, el sistema informa de lo ocurrido mendiante un sencillo diálogo de error. Simplificando el mensaje mostrado al usuario para que pueda resolverlo sin grandes problemas.
-  \item \textbf{Ayuda y documentación}: Cuando el usuario genera contenido, el sistema  va indicando al usuario los pasos que tiene que seguir para completar su tarea de forma satisfactoria. Esto sucede por ejemplo en el caso en el que un usuario construye una nueva propuesta, donde el sistema le indica los campos que tiene que rellenar y la información que debe ir en cada campo.
-\end{enumerate}
-
-	\begin{figure}[!]
+\begin{figure}[H]
         \centering
         \begin{subfigure}[b]{0.3\textwidth}
                 \includegraphics[width=\textwidth]{Media/Captures/principio01.png}
@@ -634,3 +621,16 @@ Con el objetivo de verificar los principios de diseño que cumple la aplicación
         \end{subfigure}
         \caption{Principios de diseño en la aplicación.}\label{fig:designPrinciplesCaptures}
 	\end{figure}
+
+\begin{enumerate}
+  \item \textbf{Visibilidad del estado del sistema}: Siempre que el sistema ejecuta tareas o no puede continuar por algún motivo, se mantiene informado al usuario sobre lo que está pasando. Esto podemos encontrarlo cuando el usuario accede a los programas políticos y el sistema procede a descargar la información. Mientras se descarga la información, se muestra un pequeño diálogo indicando la descarga de los datos para mantener al usuario informado.
+  \item \textbf{Relación entre el sistema y el mundo real (Metáforas y lenguaje familiares)}: El sistema mantiene un lenguaje próximo al usuario, evitando terminos más formales del sistema. Cuando visualizamos una sección de un programa o una propuesta, el sistema emplea el lenguaje común de términos como \textit{like} (mano con pulgar hacia arriba), \textit{dislike} (mano con pulgar hacia abajo), etcétera, para valorar las secciones de un programa o una propuesta.
+  \item \textbf{Control y libertad del usuario}: La aplicación permite deshacer acciones fácilmente, como puede ser cambiar la opinión de un \textit{like} o \textit{dislike}, o cancelar la acción de publicar una nueva propuesta o comentario.
+  \item \textbf{Consistencia y estándares}: La aplicación sigue las pautas de diseño propuestas por las pautas de diseño \textit{Material Design} \cite{ref:materialdesign}. Este estilo de diseño plano fue propuesto por Google en 2014, y en la actualidad la mayor parte de aplicaciones móviles Android lo utilizan a la hora de diseñar sus pantallas. Por esto, los usuarios no deberían tener problemas navegando y utilizando los controles de la aplicación, ya que son familiare al encontrarse en un amplio catálogo de aplicaciones. Agregar una propuesta desde un botón de lapiz inferior situado a la derecha, representar un listado de objetos mediante \textit{tabs} deslizables, son algunas de las características destacables de \textit{Material Design}.
+  \item \textbf{Prevención de errores}: La aplicación muestra mensajes de error cuando algo le impide funcionar con normalidad. De esta forma se avisa al usuario de que algo no está funcionando como debería. Cuando ejecutamos la aplicación y el sistema detecta que no hay conexión, la aplicación notifica al usuario en un sencillo diálogo la necesidad de tener conexión a internet para operar con la aplicacion.
+  \item \textbf{Reconocimiento mejor que recuerdo}: Para agregar una nueva propuesta o comentario, tan sólo se necesita una transición entre dos pantallas. De esta forma facilitamos al usuario la generación de nuevos contenidos sin saturarle la memoria u obligarle a recordar mucha información para llegar a su objetivo. Este principio se encuentra en la mayor parte de las aplicaciones móviles, pues el usuario suele interactuar con el dispositivo en pequeños intervalos de tiempo y además no suele tener una postura cómoda que le facilite la concentración. Por lo que se requieren pocas transiciones entre pantallas, tareas sencillas y elementos sencillos y distinguibles. Por ejemplo, también identificamos las distintas partes de la aplicaión (Secciones, Categorías, Propuestas) con colores distintos para que el usuario sepa en todo momento dónde se encuentra. 
+  \item \textbf{Flexibilidad y eficiencia}: Se utilizan atajos a funcionalidades disponible desde la mayor parte de las pantallas del sistema. Haciendo uso del botón ''\textit{hamburguesa}'' en \textit{material design} nos da la posibilidad de abrir un menú con accesos directos a las principales partes de la aplicación. De tal forma que no necesitemos volver hacia atrás para seleccionar otra opción. No obstante, ambos caminos pueden ser utilizados en función de la habilidad o conocimiento del usuario respecto a la aplicación.
+  \item \textbf{Estética y diseño minimalista}: Tanto los diálogos que muestra el sistema como la información visible en la mayoría de las pantallas del sistema es clara y concisa. Así evitamos dar información innecesaria al usuario o distraer su atención para evitar su confusión.
+  \item \textbf{Ayudar a los usuarios a reconocer, diagnosticar y recuperarse de los errores}: Cuando el usuario da con un error inesperado, el sistema informa de lo ocurrido mendiante un sencillo diálogo de error. Simplificando el mensaje mostrado al usuario para que pueda resolverlo sin grandes problemas.
+  \item \textbf{Ayuda y documentación}: Cuando el usuario genera contenido, el sistema  va indicando al usuario los pasos que tiene que seguir para completar su tarea de forma satisfactoria. Esto sucede por ejemplo en el caso en el que un usuario construye una nueva propuesta, donde el sistema le indica los campos que tiene que rellenar y la información que debe ir en cada campo.
+\end{enumerate}

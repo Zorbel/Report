@@ -7,78 +7,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%% APPEND A %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\chapter{Migración de SwellRT a Android: Aspectos Técnicos}
- 	
-	Existe un problema con la construcción y depuración del código de SwellRT en Eclipse. Android \textbf{limita el número de métodos máximos de una aplicacion a 65K} \cite{ref:android_limit65k} por cuestiones de eficiencia. Para evitar esta limitación, durante el proceso de construcción el SDK de Android utiliza, entre otras, una herramienta llamada \textbf{ProGuard} \cite{ref:android_proguard}. Esta herramienta se encarga de optimizar el código de la aplicacion buscando remover clases que no se utilizan y ofuscando el código para prevenir la ingeniería inversa. En el caso de SwellRT, el código posee un gran número de clases java necesarias para desplegar el servidor y el cliente de la herramienta, por lo que es necesaria dicha optimización de código realizada por ProGuard. El sistema de compilación de aplicaciones de Android tiene dos formas: compilación de la aplicación en modo debug (para hacer pruebas cuando todavía se encuentra en fase de desarrollo) y en modo release (la aplicación se encuentra en su versión final y se empaqueta y se firma digitalmente para lanzarla al público). En el caso de Eclipse, ProGuard solo se ejecuta cuando se construye en modo release, por lo que cuando se intenta compilar una aplicación con tantas clases como SwellRT mientras se desarrolla (modo debug) el sistema da error y no se puede compilar el código para probarlo en el emulador.
-
-	La solución que se encontró fue desarrollar en Eclipse (por las facilidades que el entorno proporciona para escribir código) pero realizar el proceso de construcción del código por consola de comandos, ya que en este caso sí que se puede compilar la aplicación en modo debug utilizando ProGuard.
-
-\section{Proceso de Construcción por Consola}
-
-		Para construir la aplicación por consola de comandos, Android utiliza la herramienta Apache Ant \cite{ref:ant} para automatizar el proceso de construcción \cite{ref:android_cmd_line}. Es importante asimismo tener definida la variable de entorno JAVA\_HOME con la ruta de acceso al JDK de java instalado en la máquina. Conviene también, por comodidad a la hora de trabajar con la consola, añadir al PATH del sistema las rutas a la carpeta donde esta el SDK de android (/sdk) y dentro de esta ruta añadir asimismo rutas a las carpetas /tools y /platform-tools. 
-
-Existen dos formas de realizar la construcción en modo debug de una app:  
-
-\textbf{1 - Sin tener previamente lanzado un emulador o conectado al ordenador un dispositivo android en modo debug \cite{ref:android_device_setUp}:} 
- 
- 	 En este caso es necesario construir la aplicación y luego lanzar el emulador para después instalar la aplicación en él. Para construir la aplicacion en modo debug,  estando en la carpeta raíz de nuestro proyecto y ejecutando el siguiente comando: 
-
- 	 \begin{lstlisting}[style=console, numbers=none]
-		$ ant clean debug
-	 \end{lstlisting}
- 	 
- 	 Esto generará una aplicacion instalable en el directorio /bin del proyecto bajo el formato que Android usa para sus aplicaciones (.apk). El siguiente paso es ejecutar un emulador o conectar un dispositivo android por USB. Para ejecutar un emulador, abrimos otra consola y utilizamos el siguiente comando:
- 	 
- 	 \begin{lstlisting}[style=console, numbers=none]
-		$ android avd
-	 \end{lstlisting}
- 	 
- 	 Lo que despliega la herramienta Android Virtual Device Manager (Ver Sección \ref{sssec:eclipse}) para elegir/crear el emulador que se quiera ejecutar. Se pueden elegir multitud de parámetros \cite{ref:android_avd_params} para el dispositivo que emula (resolución y tamaño de pantalla, de memoria Ram, elementos hardware emulados, etcétera.) siendo lo más importante elegir un API (versión de Android) que se corresponda con el API que se haya elegido para la aplicación (en este caso API 19). Es recomendable también elegir una imagen del sistema que use un procesador con arquitectura Intel x86, ya que si se elige la opción por defecto de ARM (los dispositivos móviles actuales usan procesadores ARM) la ejecución del emulador se ralentiza mucho al tener que emular una arquitectura de procesador distinta a la suya (los ordenadores actuales usan arquitectura Intel x86 en su mayoría). Esto únicamente afecta al rendimiento del emulador, la aplicación es independiente de la arquitectura que haya por debajo. \\[.2cm]
- 
-     Una vez lanzado el emulador/dispositivo móvil, se procede a instalar la aplicación en él ejecutando el siguiente comando en la primera consola (en la que se construyó la aplicación):
-		      	 
- 	 \begin{lstlisting}[style=console, numbers=none]
-		$ adb install XXXX.apk
-	 \end{lstlisting}		
- 	 
- 	 Siendo XXXX la ruta a donde se encuentra el .apk de la aplicación que previamente se ha construido (/bin). La herramienta ADB (Android Debug Bridge) \cite{ref:android_adb} es la que permite la comunicación entre el proceso de la consola de comandos y el emulador/dispositivo móvil. Es importante destacar que si se tienen varios emuladores/dispositivos móviles en ejecución/conectados hay que especificar en cual se quiere instalar la aplicación añadiendo al comando lo siguiente: \textbf{-s emulator -YYYY} siendo esto último el identificador del emulador que podemos encontrar en el título de la ventana del emulador. 
-	     
-	\begin{figure}[H]
-      \centering
-	\includegraphics[keepaspectratio, scale=0.3]{Media/Captures/emulator_api_19.png}
-      \caption{Emulador Android API 19}
-      \label{fig:android_emulator19}
-    \end{figure} 
-    
-    De esta manera se puede probar la aplicación, que será lanzada en el emulador/dispositivo una vez termine su instalación. 
-
-	\textbf{2 - Teniendo un emulador previamente lanzado (ver sección anterior para ver cómo se lanza) o un dispositivo móvil ya conectado por USB:} \
-	
-	En este caso es todavía más sencillo el proceso de construcción. Estando en la carpeta raíz del proyecto se puede compilar e instalar la aplicación con un solo comando:
-
- 	 \begin{lstlisting}[style=console, numbers=none]
-		$ ant debug install
-	\end{lstlisting}	
- 	 
- 	 Es importante destacar que este comando solo funciona si se tiene un único emulador o dispositivo conectado, de lo contrario habrá que utilizar el método anterior. 
-
-    
-\section{Proceso de Depuración} \label{sec:debug}
-    
-    Una vez instalada una aplicación, se puede depurar su código en ejecución usando la herramienta DDMS del ADT en conjunto con la vista de Debug de Eclipse. Pero antes hay que especificar qué aplicación queremos depurar de las que puedan estar instaladas en el dispositivo o emulador. 
-
-En el caso del emulador se debe lanzar la aplicación llamada “Dev Tools” y abrir el menú “Developer Options”. Dentro de este menú habilitaremos las opciones de “USB debugging” y de  “Wait for debugger”. Se pulsará sobre “Select Debug app” y se seleccionará la aplicación que se quiera depurar. 
-
-En el caso de un dispositivo Android se debe ir a los Ajustes del dispositivo y seleccionar el menú de Opciones de Desarrollador. Aquí se habilitan las opciones de "Depuración de USB"  (si no están habilitadas ya) y de "Esperar al depurador". Se pulsa donde pone "Seleccione una aplicación para depurar" y se elige la aplicación que se quiera depurar. 
-
-Una vez hecho esto, cada vez que se jecute la aplicacion saldrá un mensaje de advertencia y se quedará esperando a que se conecte un depurador para continuar con su ejecución. Para esto, en Eclipse se abre la vista de DDMS. Aquí aparecerá, entre otras cosas, un espacio con todos los procesos en ejecución en el dispositivo/emulador. Se localiza el proceso de nuestra aplicación y se pulsa sobre el ''escarabajo'' verde para conectar el depurador a ella. Llegados a este punto la aplicacion continua su ejecución en el emulador y aparece un escarabajo verde al lado del proceso de la app en la ventana de DDMS, que indica que se esta depurando ese proceso. Es entonces cuando se puede abrir la vista de depuración de Eclipse y proceder a trabajar con breakpoints para depurar y estudiar el código con el fin de solucionar errores.
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%% APPEND B %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
 \chapter{Listados de Código Fuente}
 
 En este apéndice se recogen solo algunos fragmentos de código que se estiman representativos para complementar la información que se expone a lo largo de todo este documento. Se recoge código tanto de la Migración de SwellRT a Android, del desarrollo del Servicio Web REST y de la implementación de la aplicación Android.
@@ -453,7 +381,11 @@ public class NewProposalActivity extends SwellRTActivity {
 	  
 \subsection{Abrir Pad colaborativo en SwellRT} \label{ssec:waveOpenPad}
 	  
+	  \lstset{language=Java, breaklines=true, autogobble=true, basicstyle=\ttfamily\footnotesize, commentstyle=\color{OliveGreen}, keywordstyle=\color{MidnightBlue}}
+	 \begin{lstlisting}[frame=single] 
+		  
 	  
+	  \end{lstlisting}
 
 \addcontentsline{toc}{chapter}{\numberline{}Bibliografía} %add bibliography to the index
 
