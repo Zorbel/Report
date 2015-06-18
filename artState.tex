@@ -2,13 +2,15 @@
 \thispagestyle{sectioned}
 \chapter{Estado del Arte}
 
+En este capítulo se procederá a explorar las diferentes soluciones Software que se encuentran actualmente mercado. Se analizará cada una de ellas de forma resumida, obteniendo una visión general de las características que lo componen y la funcionalidad que ofrece.
 
+Las plataformas quedarán dividas en dos secciones principales. Por un lado se analizarán las soluciones Software que proporcionan edición de contenidos en tiempo real (ver sección \ref{sec:ecitColArt}), desde un editor de texto colaborativo hasta una pizarra de dibujo. La segunda sección \ref{sec:apPolYC} explorará herramientas de contenido político relacionado por una parte con las candidaturas o programas electorales de unas elecciones, y herramientas de participación ciudadana y activismo social.
 
-\section{Edición Colaborativa en Tiempo Real}
+\section{Edición Colaborativa en Tiempo Real}\label{sec:ecitColArt}
 
-En esta sección veremos algunas de las soluciones disponibles actualmente que, al igual que Wave, permiten editar contenido de forma colaborativa y en tiempo real. Este contenido puede ser muy variado, aunque lo más usual suele ser proporcionar edición de texto en tiempo real mediante el uso de Transformaciones Operacionales (OT) \cite{ref:how_ot_works}. Sin embargo, todas estas plataformas utilizan una arquitectura de servidor centralizado para ofrecer estas funcionalidades, mientras que Wave utiliza una arquitectura federada en la que no existe un servidor central (Ver Sección \ref{sssec:federation}).
+En esta sección veremos algunas de las soluciones disponibles actualmente que, al igual que Wave, permiten editar contenido de forma colaborativa y en tiempo real. Este contenido puede ser muy variado, aunque lo más usual suele ser proporcionar edición de texto en tiempo real mediante el uso de Transformaciones Operacionales (OT) \cite{ref:how_ot_works}. Sin embargo, todas estas plataformas utilizan una arquitectura de servidor centralizado para ofrecer estas funcionalidades, mientras que Wave utiliza una arquitectura federada en la que no existe un servidor central (Ver Sección \ref{sssec:federation}). FALTA EXPLICAR WAVE, FEDERADA, P2P,...
 
-De esta manera, primero veremos las principales herramientas de desarrollo (APIs) más utilizadas actualmente, para después pasar a ver algunas de las plataformas que hacen uso de esta tecnología. En su mayoría son para web, aunque existen unas pocas para Android. 
+De esta manera, primero veremos las principales herramientas de desarrollo (APIs) más utilizadas actualmente, para después pasar a ver algunas de las plataformas que hacen uso de esta tecnología. En su mayoría son para web, aunque existen unas pocas para Android. HABLAR DE QUE WAVE ES LA ÚNICA FEDERADA Y EN TIEMPO REAL.
 	
 	\subsection{APIs Centralizadas}
 	
@@ -16,7 +18,7 @@ De esta manera, primero veremos las principales herramientas de desarrollo (APIs
 	
 	\subsubsection{Google Realtime API}\label{sssec:googleAPI}
 	
-	Google Realtime API \cite{ref:google_api} permite construir aplicaciones de colaboración en tiempo real utilizando la tecnología de Transformaciones Operacionales (OT) presente en Google Docs. Utiliza JavaScript para poder construir construir en nuestro cliente web un modelo de datos (\textit{Realtime Data Model}) que se guarda en sus servidores y gestiona automaticamente los cambios realizados por cualquiera de los usuarios que colaboran en tiempo real. Estos cambios en el modelo son notificados al servidor y al resto de usuarios mediante eventos que se lanzan al modificar los datos sobre los que se está colaborando. Para utilizarlo es necesario tener cuenta en la Consola de Desarrolladores de Google y activar el uso de esta API con nuestras credenciales de usuario. Existe asimismo una versión (privativa) de esta API compatible con Android.
+	Google Drive Realtime API \cite{ref:google_api} permite construir aplicaciones de colaboración en tiempo real utilizando la tecnología de Transformaciones Operacionales (OT) \cite{ref:how_ot_works} presente en Google Docs. Utiliza JavaScript para poder construir construir en nuestro cliente web un modelo de datos (\textit{Realtime Data Model}) que se guarda en sus servidores y gestiona automaticamente los cambios realizados por cualquiera de los usuarios que colaboran en tiempo real. Estos cambios en el modelo son notificados al servidor y al resto de usuarios mediante eventos que se lanzan al modificar los datos sobre los que se está colaborando. Para utilizarlo es necesario tener cuenta en la Consola de Desarrolladores de Google y activar el uso de esta API con nuestras credenciales de usuario. Existe asimismo una versión (privativa) de esta API compatible con Android.
 	
 	\subsubsection{Microsoft RTC Client API}
 	
@@ -29,7 +31,7 @@ De esta manera, primero veremos las principales herramientas de desarrollo (APIs
 	
 	\subsubsection{Mozilla TogetherJS}
 
-	Mozilla TogetherJS \cite{ref:togetherjs_api} es una librería gratuita y de código libre (bajo licencia pública Mozilla v2) que permite añadir capacidades de colaboración en tiempo real a una página web. Utiliza WebRTC y webSockets para establecer comunicaciones peer-to-peer (P2P) entre dos o más navegadores Web. No proporciona alamcenamiento persistente de los datos y es necesario tener un Servidor que establezca la conexión. Con esta herramienta se puede editar texto en tiempo real (usando Transformaciones Operacionales), establecer chats de audio/video y sincronizar el contenido de los navegadores. Está disponible en \textit{GitHub} \cite{ref:github} para contribuir a su desarrollo. 	
+	Mozilla TogetherJS \cite{ref:togetherjs_api} es una librería gratuita y de código libre (bajo licencia pública Mozilla v2) que permite añadir capacidades de colaboración en tiempo real a una página web. Utiliza WebRTC y webSockets para establecer comunicaciones peer-to-peer (P2P) entre dos o más navegadores Web. No proporciona alamcenamiento persistente de los datos y es necesario tener un Servidor que establezca la conexión. Con esta herramienta se puede editar texto en tiempo real (usando Transformaciones Operacionales), establecer chats de audio/video y sincronizar el contenido de los navegadores. Está disponible en \textit{GitHub} \cite{ref:github} para contribuir a su desarrollo.
 	
 	\subsubsection{ShareJS}
 
@@ -156,7 +158,7 @@ De esta manera, primero veremos las principales herramientas de desarrollo (APIs
 	
 	
 
-\section{Aplicaciones de Participación Política y Ciudadana}
+\section{Aplicaciones de Participación Política y Ciudadana}\label{sec:apPolYC}
 
 En esta sección exploraremos algunas de las principales aplicaciones informáticas que existen en la actualidad destinadas a la participación ciudadana en propuestas, lectura de programas electorales o divulgación de candidaturas.
 
@@ -168,7 +170,7 @@ Lo más parecido que hemos podido encontrar han sido aplicaciones elaboradas por
 Pasamos ahora a analizar algunas de las aplicaciones móviles encontradas, identificando en cada caso aspectos e ideas que nos han resultado positivos y negativos.
 
 \subsubsection{UPyD Parla}
-La aplicación presenta al candidato de UpyD Carlos Alt Bustelo para la alcaldía de Parla. Se trata de una alicación divulgativa donde podemos conocer todo lo esencial de la candidatura de UpyD para las elecciones del municipio de Parla en Mayo de 2015: los candidatos, el programa, vídeos, etc.
+La aplicación presenta \cite{ref:UPyDParla} al candidato de UPyD Carlos Alt Bustelo para la alcaldía de Parla. Se trata de una alicación divulgativa donde podemos conocer todo lo esencial de la candidatura de UpyD para las elecciones del municipio de Parla en Mayo de 2015: los candidatos, el programa, vídeos, etc.
 
 \begin{figure}[H]
         \centering
@@ -207,7 +209,7 @@ La aplicación presenta al candidato de UpyD Carlos Alt Bustelo para la alcaldí
 \end{itemize}
 
 \subsubsection{$\sharp$RecuperaCórdoba}
-Esta app presenta la candidatura de Pedro García de Izquierda Unida a la provincia de Córdoba, informando de su propuesta de gobierno de forma resumida. En la aplicación podremos encontrar la lista de los candidatos propuestos a la comunidad cordobesa, el programa electoral de la formación, las propuestas del partido, noticias de última hora y vídeos.
+Esta aplicación \cite{ref:recpCordoba}  presenta la candidatura de Pedro García de Izquierda Unida a la provincia de Córdoba, informando de su propuesta de gobierno de forma resumida. En la aplicación podremos encontrar la lista de los candidatos propuestos a la comunidad cordobesa, el programa electoral de la formación, las propuestas del partido, noticias de última hora y vídeos.
 
 \begin{figure}[H]
         \centering
@@ -252,7 +254,7 @@ Esta app presenta la candidatura de Pedro García de Izquierda Unida a la provin
 
 \subsubsection{PSOE Andalucía}
 
-Esta app presenta la candidatura del PSOE a la junta de Andalucía para las elecciones del 22 de Marzo, promocionando básicamente su programa electoral y a la candidata Susana Díaz. Permite también estar al día de noticias y eventos relacionados con dicha candidatura.
+Esta aplicación \cite{ref:psoeAnd}  presenta la candidatura del PSOE a la junta de Andalucía para las elecciones del 22 de Marzo, promocionando básicamente su programa electoral y a la candidata Susana Díaz. Permite también estar al día de noticias y eventos relacionados con dicha candidatura.
 
 La navegación por el programa, aunque estructurada en un primer nivel, se realiza directamente visualizando páginas que parecen extraidas del programa en PDF.
 
@@ -295,7 +297,7 @@ La navegación por el programa, aunque estructurada en un primer nivel, se reali
 
 \subsubsection{PP Canarias}
 
-La delegación del Partido Popular en Canarias presenta su aplicación móvil para promocionar a sus candidatos para las elecciones autonómicas y municipales de Mayo de 2015. La aplicación nos avisará de los eventos electorales, podremos consultar los candidatos, novedades, galería de imágenes y por supuesto ver el programa electoral.
+La delegación del Partido Popular en Canarias presenta su aplicación móvil \cite{ref:ppCan} para promocionar a sus candidatos para las elecciones autonómicas y municipales de Mayo de 2015. La aplicación nos avisará de los eventos electorales, podremos consultar los candidatos, novedades, galería de imágenes y por supuesto ver el programa electoral.
 
 \begin{figure}[H]
         \centering
