@@ -29,7 +29,7 @@
 
 \newcommand\anotacion[1]{\Large\textcolor{red}{\\#1\\}\normalsize} %Comamands for annotations
 \newcommand\ant[1]{{\color{green}{#1}}}
-\includeonly{summary, abstract, introduction, artState, technologies, androidApp, methodology, architecture, results, ref, append} %include archives
+\includeonly{summary, abstract, introduction, artState, methodology, technologies, waveMigration, design, architecture, evaluation, results, conclusions, ref, append} %include archives
 
 %\renewcommand{\chaptername}{}
 %\renewcommand{\thechapter}{}
@@ -38,7 +38,7 @@
 \fancypagestyle{cover}
 {
    \fancyhf{} % delete the current heading/footer configuration
-   \lfoot{\includegraphics[keepaspectratio, scale=0.8]{Media/cc.png}} %include image on left foote
+   \lfoot{\includegraphics[keepaspectratio, scale=0.9]{Media/cc.png}} %include image on left foote
    \renewcommand{\headrulewidth}{0pt}
 }
 
@@ -93,12 +93,15 @@ backgroundcolor=\color{gray!70},
 \lhead{}
 
 \include{introduction}
-\include{androidApp}
 \include{artState}
-\include{technologies}
 \include{methodology}
+\include{technologies}
+\include{waveMigration}
+\include{design}
 \include{architecture}
+\include{evaluation}
 \include{results}
+\include{conclusions}
 \include{append}
 \bibliographystyle{unsrt}
 \bibliography{bibliography}

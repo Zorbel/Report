@@ -4,6 +4,31 @@
 \chapter{Introducción}
 
 A continuación se exponen de forma resumida los objetivos que se persiguen al realizar este Trabajo de Fin de Grado y un esquema de la estructura de esta Memoria.
+
+ANTECEDENTES Y ALARGAR
+
+\section{Marco teórico de la idea: Política en el mundo de la Informática}
+
+En los siguientes párrafos se discutirá acerca de una serie de consideraciones sobre el estado actual de la política y la democracia. Se centrará sobre todo en su relación con las nuevas tecnologías como herramientas capaces de cambiar la manera en la que se conciben ambas disciplinas.
+
+A primera vista se puede pensar que la política no parece entusiasmar a las personas dedicadas al mundo de la informática. Se puede ubicar la política como una parte de las ciencias sociales o la actividad política, situando la informática en ciencias exactas o formales. Pero pensando en factores como la gestión de los privilegios de una aplicación entre los que se define de alguna forma una jerarquía, indirectamente se estará haciendo política. También se pueden encontrar características políticas en el diseño relacional de una base de datos. Definiendo los campos de una base de datos se pueden ver algunos valores como el sexo, la nacionalidad, la edad o incluso las relaciones o restricciones que existen entre las tablas. Se estarán definiendo unas reglas básicas de funcionamiento de la base de datos establecidas por unos principios políticos.
+
+Adentrándose en el mundo de las Licencias (copia, modificación, distribución, etcétera) en el desarrollo de \textit{Software} se encuentra más contenido político. Licencias que determinan el uso de un tipo de \textit{Software}, ya sea para compartir, vender o distribuir copias. Multitud de ''reglas políticas'' definidas en un documento de licencia de uso. Así como las restricciones que se establecen en la metodología del desarrollo orientado a objetos, estableciendo las relaciones de herencia, restricción de métodos, variables, etcétera.
+
+Regresando a la actualidad y basándose en no muy lejanos acontecimientos pasados, se ha oído cómo algunos gobiernos recopilan datos de la actividad de los usuarios en las redes sociales \cite{ref:NSAData}, analizando todo el contenido que generan. Incluso cómo algunas aplicaciones móviles piden aprobar permisos con los que operar libremente en los dispositivos.
+
+Se observa por tanto que la política está más integrada en la informática de lo que parece, sobre todo si se deja a un lado la informática más científica y formal y se pasa a la informática más social, la de los gobiernos, la de los negocios o la de las relaciones sociales.
+
+\section{Adentrándonos en la idea}
+
+La idea a desarrollar está generada en una época en la que la política parece haber despertado el interés de una parte considerable de la ciudadanía. Podría ser por tanto una herramienta útil para participar en temas políticos de forma sencilla y atractiva. Dejando así atrás los tópicos a menudo escuchados de \textit{"yo no entiendo de política"}, \textit{"la política es aburrida"}, \textit{"no sé a quién votar"} o \textit{"no he leído nunca un programa electoral"} entre otros.
+
+La herramienta ofrecería una nueva forma de participar en la política y de llevar a los ciudadanos los programas electorales expuestos por las diferentes formaciones políticas. De forma que, para potenciar el uso social de la aplicación, los ciudadanos podrían leer aquellos puntos de los programas más vistos, debatidos, comentados, etc. Así, cualquier usuario tendría a su disposición todos los programas electorales en su bolsillo, por lo que no tendría que ir a la página web de cada formación política y descargarse un documento de 200 páginas. Pensamos que esta forma tradicional de presentar un programa político en un solo documento en un mundo donde las posibilidades de comunicarnos se han desarrollado exponencialmente mediante las nuevas tecnologías no es la mejor manera de generar interés por su lectura y la implicación en política de las personas.
+
+Por otra parte, y teniendo en cuenta la tendencia actual de los nuevos movimientos ciudadanos de elaborar programas políticos en base a propuestas de los ciudadanos, \textbf{la aplicación también debía ofrecer alguna manera de realizar Propuestas y debatirlas entre todos}. De esta forma tanto la ciudadanía como las formaciones políticas podrían saber en cualquier momento cuáles son las principales preocupaciones de los ciudadanos y qué medidas o soluciones proponen para resolverlas. \textbf{Además pensamos que podríamos aprovechar las características de Wave para realizar estas Propuestas de forma colaborativa y en tiempo real}, aportando un valor diferenciador respecto a las actuales soluciones desarrolladas para web (Ver sección \ref{ssec:artProposals}).
+
+Por tanto, desde un primer punto de vista subjetivo, la aplicación quedó dividida en dos partes. Por un lado tendríamos la presentación estructurada de los programas políticos que presentan las formaciones políticas. Y por otro todas las propuestas que elaboran de forma colaborativa los ciudadanos, ya sea individualmente o en colectivos sociales.
+ 
  
 \section{Objetivos del Proyecto}
 
@@ -13,25 +38,21 @@ El objetivo principal de este proyecto es desarrollar una aplicación Android de
   \item {
     1ª parte: Migración de Wave (SwellRT) a Android
     \begin{itemize}
-      \item Estudiar la implementación Web actual de SwellRT en Java y GWT.
-      \item Adaptar la implementación actual para hacer uso de las características nativas de Android.
-      \item Probar con una aplicación sencilla que el resultado funciona.
+      \item Proporcionar un entorno de colaboración en tiempo real federado para Android basado en SwellRT.
     \end{itemize}
   }
   \item {
     2ª parte: Creación de la aplicación Android.
     \begin{itemize}
-      \item Evaluar posibles ideas de aplicación y estudiar su viabilidad.
-      \item Diseñar la aplicación mediante una metodología basada en el Diseño Guiado por Objetivos.
-      \item Implementar la aplicación.
-      \item Testear y evaluar con usuarios el resultado.
+      \item Desarrollar una aplicación que recopile y permita interactuar con los programas electorales de los partidos políticos.
+      \item Desarrollar una aplicación que permita la participación colectiva de ciudadanos mediante propuestas colaborativas editables en tiempo real.
     \end{itemize}
   }
 \end{itemize}
 
 \section{Estructura del Documento}
 
-En esta memoria hemos querido reflejar los aspectos más destacados del proceso de desarrollo de este Trabajo de Fin de Grado. Aunque a lo largo del documento se detallen aspectos técnicos queremos dejar patente que no se trata de un tutorial de cómo funciona Wave o Android. Aunque a veces se entre en mayor detalle por cuestiones de claridad a la hora de entender el funcionamiento de la tecnología, se anima al lector si quiere profundizar más en el tema a que haga uso de las múltiples referencias bibliográficas que se incluyen en este documento.  
+En esta memoria se han querido reflejar los aspectos más destacados del proceso de desarrollo de este Trabajo de Fin de Grado. Aunque a lo largo del documento se detallen aspectos técnicos queremos dejar patente que no se trata de un tutorial de cómo funciona Wave o Android. Aunque a veces se entre en mayor detalle por cuestiones de claridad a la hora de entender el funcionamiento de la tecnología, se anima al lector si quiere profundizar más en el tema a que haga uso de las múltiples referencias bibliográficas que se incluyen en este documento.  
 
 A lo largo de este documento el lector se encontrará con una estructura basada en capítulos en los que se irán detallando distintas facetas del desarrollo del proyecto: 
 
