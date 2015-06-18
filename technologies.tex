@@ -87,7 +87,7 @@ Para hacerse una idea general de las tecnologías utilizadas se recomienda ver e
     
     \subsection{Eclipse}\label{ssec:eclipse} 
     
-	Eclipse \cite{ref:eclipse} es un Entorno de Desarrollo Integrado (IDE) open-source (bajo licencia Eclipse Public License) desarrollado por la Eclipse Foundation. Lanzado en 2003 alcanza actualmente su versión 4.4, también denominada Eclipse ''Luna''. Se trata de uno de los IDEs más utilizados que proporciona herramintas que permiten el desarrollo de código para múltiples lenguajes y tecnologías. Posee además la capacidad de extender sus capacidades gracias al uso de plug-ins que se pueden descargar desde su marketplace. Es el caso por ejemplo del plugin ADT (Android Developer Tools), que permite utilizar el SDK de Android para desarrollar para esta plataforma utilizando Eclipse como IDE. Hasta finales del año 2014 Eclipse + ADT era el IDE recomendado por Google para el desarrollo en su plataforma móvil, aunque recientemente ha pasado a utilizar su propio IDE llamado Android Studio (Ver Sección \ref{ssec:androidStudio})
+	Eclipse \cite{ref:eclipse} es un Entorno de Desarrollo Integrado (IDE) de código libre (bajo licencia Eclipse Public License) desarrollado por la Eclipse Foundation. Lanzado en 2003 alcanza actualmente su versión 4.4, también denominada Eclipse ''Luna''. Se trata de uno de los IDEs más utilizados que proporciona herramintas que permiten el desarrollo de código para múltiples lenguajes y tecnologías. Posee además la capacidad de extender sus capacidades gracias al uso de plug-ins que se pueden descargar desde su marketplace. Es el caso por ejemplo del plugin ADT (Android Developer Tools), que permite utilizar el SDK de Android para desarrollar para esta plataforma utilizando Eclipse como IDE. Hasta finales del año 2014 Eclipse + ADT era el IDE recomendado por Google para el desarrollo en su plataforma móvil, aunque recientemente ha pasado a utilizar su propio IDE llamado Android Studio (Ver Sección \ref{ssec:androidStudio})
 	
 	En este proyecto usaremos Eclipse con el plugin ADT como IDE para estudiar el código del cliente web de SwellRT y llevar a cabo una migración a Android que permita hacer uso de las características nativas de esta plataforma.
     
@@ -95,13 +95,13 @@ Para hacerse una idea general de las tecnologías utilizadas se recomienda ver e
     
 	Java \cite{ref:java} es un lenguaje de programación de próposito general y orientado objetos. Fue desarrollado en 1995 por Sun Microsystems, actualmente parte de Oracle, y se distribuye en forma de JDK (Java Development Kit), cuya versión oficial privativa alcanza hoy en día la 8. Existe no obstante una versión de código libre (bajo licencia GPLv2) llamada Open JDK \cite{ref:openjdk} disponible actualmente en su versión 7. Java tiene como ventaja su independencia del hardware, ya que cualquier código compilado en java se traduce a un formato bytecode que se ejecuta en una Máquina Virtual Java (JVM) que es independiente del hardware que haya por debajo.
 	
-	En este proyecto usaremos Java para la Migración del cliente SwellRT a Android, pues dicho cliente (y el que desarrollo Google inicialmente) esta escrito en su mayor parte en este lenguaje de programación. Lo utilizaremos también para el desarrollo de la app, ya que el SDK de Android se basa en Java para desarrollar código para dicha plataforma.
+	En este proyecto se usará Java para la Migración del cliente SwellRT a Android, pues dicho cliente (y el que desarrollo Google inicialmente) está escrito en su mayor parte en este lenguaje de programación. Se utilizará también para el desarrollo de la aplicación Android, ya que el SDK de esta plataforma se basa en Java para desarrollar código compatible.
     
     \subsection{GWT}\label{ssec:gwt}
     
-	GWT \cite{ref:gwt} (Google Web Toolkit) es un framework de código libre (bajo licencia Apache 2.0) que facilita el desarrollo de aplicaciones web basadas en AJAX y JavaScript. Concretamente el API de GWT permite desarollar cñódigo en Java que posteriormente será traducido a JavaScript. Fue creado por Google en 2006 y actualmente es un proyecto independiente open-source que alcanza ya su versión 2.7
+	GWT \cite{ref:gwt} (Google Web Toolkit) es un framework de código libre (bajo licencia Apache 2.0) que facilita el desarrollo de aplicaciones web basadas en AJAX y JavaScript. Concretamente el API de GWT permite desarollar cñódigo en Java que posteriormente será traducido a JavaScript. Fue creado por Google en 2006 y actualmente es un proyecto independiente de Software libre que alcanza ya su versión 2.7
 	
-	En este proyecto utilizaremos GWT durante la Migración de Wave a Android. ya que una parte significativa del cliente web de SwellRT está desarrollada con esta tecnología y es necesario estudiar el código para sustituirla por código nativo de Android, ya que la plataforma móvil de Google no es compatible con GWT.
+	En este proyecto se utilizará GWT durante la Migración de Wave a Android. Puesto que una parte significativa del cliente web de SwellRT está desarrollada con esta tecnología y es necesario estudiar el código para sustituirla por código nativo de Android, ya que la plataforma móvil de Google no es compatible con GWT.
     
     \subsection{JavaScript}\label{ssec:javascript}
     
@@ -113,25 +113,25 @@ Para hacerse una idea general de las tecnologías utilizadas se recomienda ver e
     
 	HTTP \cite{ref:HTTP} (HyperText Transfer Protocol) es el protocolo de capa de aplicación más utilizado para establecer comunicaciones en la World Wide Web. Fue desarrollado en 1996 conjuntamente por la World Wide Web Consortium (W3C) y el Internet Engineering Taskforce (IETF), aunque la definición de su versión más actual (1.1) se encuentra especificada en la serie de RFCs (Request For Comments) 7230 \cite{ref:HTTP}. Se trata de un protocolo orientado a transacciones que siguen un esquema de petición-respuesta entre cliente y servidor. 
 	
-	En este proyecto utilizaremos el protocolo HTTP para establecer las conexiones con ambos servidores: el servidor SwellRT que aloja las Waves y el servidor Openshift que aloja el Service REST y la Base de Datos de la aplicación. Concretamente con este protocolo realizaremos el proceso de login en Wave y las peticiones al Service REST en la aplicación Android.
+	En este proyecto se utilizará el protocolo HTTP para establecer las conexiones con ambos servidores: el servidor SwellRT que aloja las Waves y el servidor Openshift que aloja el Service REST y la Base de Datos de la aplicación. Concretamente con este protocolo se realizará el proceso de login en Wave y las peticiones al Service REST en la aplicación Android.
     
     \subsection{WebSocket}\label{ssec:websocket}
     
 	WebSocket \cite{ref:webSocket_ref} es un protocolo que permite establecer comunicaciones bidireccionales (de cliente a servidor y viceversa) y full-dúplex (de forma simúltánea en ambos sentidos) en la red. Permite utilizar la tecnología de los sockets TCP en la capa de aplicación.  Se trata de un protocolo estandarizado por la IETF en 2011 en el RFC 6455 \cite{ref:webSocket_ref}. 
 	
-	En este proyecto utilizaremos esta tecnología para establecer un canal de comunicación basado en sockets con el servidor Wave de SwellRT, pues la característica de bidireccionalidad full-dúplex es necesaria para aprovechar la potencialidad de consistencia en tiempo real de Wave. Concretamente en la Migración deberemos sustituir la implementación actual de WebSocket en GWT por otra que sea compatible de forma nativa con Android.
+	En este proyecto se utilizará esta tecnología para establecer un canal de comunicación basado en sockets con el servidor Wave de SwellRT, pues la característica de bidireccionalidad full-dúplex es necesaria para aprovechar la potencialidad de consistencia en tiempo real de Wave. Concretamente en la Migración se deberá sustituir la implementación actual de WebSocket en GWT por otra que sea compatible de forma nativa con Android.
     
     \subsection{Git}\label{ssec:git} 
     
 	Git \cite{ref:git} es un Sistema de Control de Versiones (VCS) distribuido y open-source (bajo licencia pública GNU) diseñado para gestionar las distintas versiones de una aplicación independientemente del tamaño de la aplicación y del número de personas que trabajan en ella. Fue creado por Linus Torvalds en 2005 para trabajar en el desarrollo del kernel de Linux, aunque  su versión actual (2.4.2) es una de las herramientas  de control de versiones mas utilizada para gestionar proyectos software. Su interfaz es por consola de comandos.
 	
-	En este proyecto usaremos Git por consola de comandos como Sistema de Control de Versiones de todo el software generado, tanto de la Migración de Wave/SwellRT a Android como del desarrollo de la app y el Service REST del que hace uso. Incluso las distintas versiones del código látex de esta Memoria estará gestionado con Git.
+	En este proyecto se usará Git por consola de comandos como Sistema de Control de Versiones de todo el software generado, tanto de la Migración de Wave/SwellRT a Android como del desarrollo de la app y el Service REST del que hace uso. Incluso las distintas versiones del código látex de esta Memoria estarán gestionadas con Git.
      
     \subsection{GitHub}\label{ssec:github}
     
     GitHub \cite{ref:github} es una plataforma web lanzada en 2008 que permite alojar de forma gratuita y en sitios llamados repositorios, proyectos software que utilicen Git como Sistema de Control de Versiones. Los repositorios gratutos son públicos y accesibles por todo el mundo, de manera que cualquiera puede participar en la elaboración de código, aunque existe la opción de pagar por tener acceso a repositorios privados. GitHub proporciona una interfaz web que además de gestionar los repositorios permite alojar wikis, páginas web, gestión de tareas pendientes (issues) y control de acceso entre otras funcionalidades.
     
-    Para este proyecto utilizaremos GitHub como plataforma para alojar todo el código open-source desarrollado durante el proyecto: la Migración de SwellRT a Android (cuyo cliente web antiguo también está disponible en GitHub \cite{ref:swellRT_github}), el desarrollo de la aplicación Android, el Service REST y la Memoria. Todo esto esta disponible en forma de repositorios bajo la organización llamada ''Zorbel'' en la siguiente URL:
+    Para este proyecto se utilizará GitHub como plataforma para alojar todo el código de Software libre desarrollado durante el proyecto: la Migración de SwellRT a Android (cuyo cliente web antiguo también está disponible en GitHub \cite{ref:swellRT_github}), el desarrollo de la aplicación Android, el Service REST y la Memoria. Todo esto está disponible en forma de repositorios bajo la organización llamada ''Zorbel'' en la siguiente URL:
     
     \url{HTTPs://github.com/Zorbel}    
 
@@ -141,7 +141,7 @@ Para hacerse una idea general de las tecnologías utilizadas se recomienda ver e
     
 	Android Studio \cite{ref:android_studio} es el Entorno de Desarrollo Integrado (IDE), basado en IntelliJ IDEA \cite{ref:intelliJ_Idea}, oficial que Google proporciona para desarrollar aplicaciones para Android. Fue anunciado en 2013 y en diciembre de 2014 dejó su fase de beta y pasó a ser el IDE de referencia para el desarrollo en Android, dejando atrás el antiguo IDE de Eclipse junto al plug-in ADT. Android Studio integra en un solo lugar todas las herramientas necesarias para desarrollar en esta plataforma como un gestor de versiones de Android (SDK Manager), un gestor de emuladores virtuales (AVD Manager) o una herramienta de Debug (DDMS) entre otras. Permite asimismo trabajar tanto con código de aplicación como con la interfaz gráfica (XML), la cual podremos previsualizar en el propio IDE.
 	
-	En este proyecto, y ya que desde principio de año es el IDE de referencia, utilizaremos Android Studio para el desarrollo de la aplicación Android que hará uso de las funcionalidades de Wave.
+	En este proyecto, y ya que desde principio de año es el IDE de referencia, se utilizará Android Studio para el desarrollo de la aplicación Android que hará uso de las funcionalidades de Wave.
     
     \subsection{Android}\label{ssec:android}
     
@@ -162,7 +162,7 @@ Para hacerse una idea general de las tecnologías utilizadas se recomienda ver e
 	
 	Teniendo en cuenta la distribucion actual de versiones instaladas en dispositivos Android \cite{ref:android_dist} (Ver figura \ref{fig:android_Usage}) se ha decidido realizar la migración de SwellRT con el API 19 de Android (Version 4.4 "KitKat") para no tener problemas de compatibilidad. El emulador desplegado para las pruebas de desarrollo en la Migración utilizará por tanto Android 4.4 .
 	
-	Por otro lado en este proyecto utilizaremos Android como plataforma móvil sobre la que llevar a cabo el desarrollo de una aplicación que haga uso de las funcionalidades y características de Wave. En esta aplicación utilizaremos el API 21 (Android 5.0 Lollipop) para tener acceso a la interfaz gráfica de diseño plano ''Material Design'' que incluye. Esto no supone un problema, ya que dicha interfaz gráfica sí que es compatible con versiones previas de Android.
+	Por otro lado en este proyecto se utilizará Android como plataforma móvil sobre la que llevar a cabo el desarrollo de una aplicación que haga uso de las funcionalidades y características de Wave. En esta aplicación se utilizará el API 21 (Android 5.0 Lollipop) para tener acceso a la interfaz gráfica de diseño plano ''Material Design'' que incluye. Esto no supone un problema, ya que dicha interfaz gráfica sí que es compatible con versiones previas de Android.
 
 	\begin{figure}[H]
       \centering
@@ -189,31 +189,31 @@ Para hacerse una idea general de las tecnologías utilizadas se recomienda ver e
     
 	SQL \cite{ref:sql} (Structured Query Language) es un lenguaje diseñado específicamente para interactuar con Bases de Datos Relacionales pudiendo definir la estructura de los datos y manipularlos. Desarrollado en 1986, actualmente está estandarizado por la International Standards Organization (ISO) en el estándar ISO/IEC 9075 SQL \cite{ref:sql}. Este lenguaje permite mediante la construcción de ''consultas'' crear tablas, acceder a sus datos y modificarlos entre otras cosas.
 	
-	En este proyecto utilizaremos SQL en el Service REST para construir las consultas a Base de Datos necesarias para devolver al cliente de la aplicación Android los datos que solicite o pida cambiar.  
+	En este proyecto se utilizará SQL en el Service REST para construir las consultas a Base de Datos necesarias para devolver al cliente de la aplicación Android los datos que solicite o pida cambiar.  
     
     \subsection{MySQL}\label{ssec:mysql}
     
-	MySQL \cite{ref:mysql} es un Sistema Gestor de Base de Datos (SGBD) Relacionales que permite el almacenamiento, creación y modificación de dicho tipo de Bases de Datos. Desarrollado por Oracle, su versión actual (5.7.4) se distribuye tanto en forma open-source (bajo licencia GPL) o de uso comercial.     
+	MySQL \cite{ref:mysql} es un Sistema Gestor de Base de Datos (SGBD) Relacionales que permite el almacenamiento, creación y modificación de dicho tipo de Bases de Datos. Desarrollado por Oracle, su versión actual (5.7.4) se distribuye tanto en forma de Software libre (bajo licencia GPL) o de uso comercial.     
 	
-	En este proyecto usaremos MySQL como SGBD para almacenar la Base de Datos de nuestra aplicaión Android.
+	En este proyecto se usará MySQL como SGBD para almacenar la Base de Datos de nuestra aplicaión Android.
     
     \subsection{PhpMyAdmin}\label{ssec:phpmyadmin}
     
 	PhpMyAdmin \cite{ref:phpMyAdmin} es una herramienta de código libre (bajo licencia pública GNU) escrita en PHP y que proporciona un sistema de administración de SGBD MysQL a través de una interfaz web. Fue desarrollado en 1998 y actualmente la versión 4.4.8 es desarrollada y mantenida por The PhpMyAdmin Project. Posee una interfaz sencilla que permite administrar la Base de Datos mediante las operaciones básicas de creación, modificación, eliminación de tablas,  creación de consultas SQL y gestión de permisos y usuarios entre otros.
 	
-	En este proyecto usaremos PhpMyAdmin como sistema de administración de la Base de Datos MySQL que contiene los datos de la aplicación Android.
+	En este proyecto se usará PhpMyAdmin como sistema de administración de la Base de Datos MySQL que contiene los datos de la aplicación Android.
     
     \subsection{PHP}\label{ssec:php}
     
 	PHP \cite{ref:php} es un lenguaje de propósito general del lado del servidor diseñado originalmente para crear aplicaciones web que generaran contenido dinámico. Diseñado en 1996 por Rasmus Lerdorf, su versión actual 5.6.7 es de código libre y se distribuye bajo licencia PHP. Tiene la ventaja de poder ser fácilmente incorporado dentro de los documentos HTML.
 	
-	Para este proyecto utilizaremos el lenguaje PHP para programar el comportamiento del Service REST que hace de intermediario entre las peticiones de la aplicación Android y la Base de Datos MySQL.
+	Para este proyecto se utilizará el lenguaje PHP para programar el comportamiento del Service REST que hace de intermediario entre las peticiones de la aplicación Android y la Base de Datos MySQL.
     
     \subsection{Laravel 5}\label{ssec:laravel}
     
 	Laravel \cite{ref:laravel} es un framework que permite desarrollar aplicaciones y servicios web con PHP 5. Fue desarrollado por Taylor Otwell en 2011 y su versión actual 5.0 se distribuye en forma de código abierto (bajo licencia MIT) en su propio repositorio público en GitHub \cite{ref:laravel_github}. Su funcionalidad es extensible mediante módulos.
 	
-	En este proyecto utilizaremos Laravel 5 para construir en PHP el Service REST que hará de intermediario entre las peticiones HTTP del cliente Android y la Base de Datos de la aplicación.
+	En este proyecto se utilizará Laravel 5 para construir en PHP el Service REST que hará de intermediario entre las peticiones HTTP del cliente Android y la Base de Datos de la aplicación.
 	
 	La elección de Laravel como framework PHP se debió a su flexibilidad, la facilidad para programar la aplicación y el gran soporte que tiene de la comunidad. Además, es uno de los frameworks más populares actualmente en uso.
 	
@@ -228,7 +228,7 @@ Para hacerse una idea general de las tecnologías utilizadas se recomienda ver e
     
 	OpenShift \cite{ref:OpenShift} es una plataforma de computación en la nube que ofrece alojar servicios de forma gratuita en sus servidores mediante un modelo de arquitectura Software as a Service (SaaS). Disponible desde 2011, se distribuye bajo licencia Apache 2.0. Dispone también de planes de pago que aumentan las prestaciones del servidor.
 	
-	En este proyecto usaremos OpenShift como servidor web para alojar los servicios de los que hace uso nuestra aplicación Android: el Service REST y la Base de Datos. Concretamente nuestro servidor esta accesible desde la siguiente URL:
+	En este proyecto se usará OpenShift como servidor web para alojar los servicios de los que hace uso nuestra aplicación Android: el Servicio Web REST y la Base de Datos. Concretamente el servidor esta accesible desde la siguiente URL:
 	
 	\url{HTTPs://apptfg-servicerest.rhcloud.com/}    
     
@@ -236,11 +236,11 @@ Para hacerse una idea general de las tecnologías utilizadas se recomienda ver e
     
     Sublime Text \cite{ref:sublime} es un editor de texto gratuito multiplataforma muy versátil que proporciona características de atajos de teclado y resaltado de código para diferentes lenguajes de programación muy útiles cuando se desarrolla sin un IDE. Fue desarrollado en 2008 por Jon Skinner y actualmente se encuentra en su versión 2.0.2.
     
-    En este proyecto utilizaremos Sublime como editor de texto sobre todo para configurar y programar el Service REST en PHP, pues no vemos necesario utilizar un IDE específico para ello.
+    En este proyecto se utilizará Sublime como editor de texto sobre todo para configurar y programar el Service REST en PHP, pues no se ve necesario utilizar un IDE específico para ello.
     
     \subsection{POP: Prototyping On Paper}\label{ssec:pop}
     
     POP \cite{ref:pop} (Prototyping On Paper) es una aplicación con versiones web y para dispositivos móviles que permite elaborar en pocos pasos prototipos (mockups) interactivos basados en fotos de prototipos realizados en papel. De esta forma se puede elaborar un prototipo de interfaz gráfica de bajo coste con la que el usuario pueda interactuar.
     
-    Ene este proyecto se utilizará POP durante la fase de diseño de la aplicación Android para elaborar mockups sencillos e interactivos que podamos enseñar a la gente y que nos ayuden a refinar el diseño de la interfaz gráfica de la aplicación. Tiene además la ventaja de que se puede enseñar en la aplicación móvil de POP para simular el aspecto final que tendría la aplicación y que el usuario se haga una mejor idea de lo que pretendemos diseñar.
+    Ene este proyecto se utilizará POP durante la fase de diseño de la aplicación Android para elaborar mockups sencillos e interactivos que podamos enseñar a la gente y que nos ayuden a refinar el diseño de la interfaz gráfica de la aplicación. Tiene además la ventaja de que se puede enseñar en la aplicación móvil de POP para simular el aspecto final que tendría la aplicación y que el usuario se haga una mejor idea de lo que se pretende diseñar.
     

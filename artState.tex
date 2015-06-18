@@ -4,17 +4,27 @@
 
 En este capítulo se procederá a explorar las diferentes soluciones Software que se encuentran actualmente mercado. Se analizará cada una de ellas de forma resumida, obteniendo una visión general de las características que lo componen y la funcionalidad que ofrece.
 
-Las plataformas quedarán dividas en dos secciones principales. Por un lado se analizarán las soluciones Software que proporcionan edición de contenidos en tiempo real (ver sección \ref{sec:ecitColArt}), desde un editor de texto colaborativo hasta una pizarra de dibujo. La segunda sección \ref{sec:apPolYC} explorará herramientas de contenido político relacionado por una parte con las candidaturas o programas electorales de unas elecciones, y herramientas de participación ciudadana y activismo social.
+Las plataformas quedarán dividas en dos secciones principales. Por un lado se analizarán las soluciones Software que proporcionan edición de contenidos en tiempo real (ver sección \ref{sec:ecitColArt}), desde un editor de texto colaborativo hasta una pizarra de dibujo. La segunda parte (ver Sección \ref{sec:apPolYC}) explorará herramientas de contenido político relacionado por una parte con las candidaturas o programas electorales de unas elecciones, y por otra parte con herramientas de participación ciudadana y activismo social.
 
 \section{Edición Colaborativa en Tiempo Real}\label{sec:ecitColArt}
 
-En esta sección veremos algunas de las soluciones disponibles actualmente que, al igual que Wave, permiten editar contenido de forma colaborativa y en tiempo real. Este contenido puede ser muy variado, aunque lo más usual suele ser proporcionar edición de texto en tiempo real mediante el uso de Transformaciones Operacionales (OT) \cite{ref:how_ot_works}. Sin embargo, todas estas plataformas utilizan una arquitectura de servidor centralizado para ofrecer estas funcionalidades, mientras que Wave utiliza una arquitectura federada en la que no existe un servidor central (Ver Sección \ref{sssec:federation}). FALTA EXPLICAR WAVE, FEDERADA, P2P,...
+En esta sección se verán algunas de las soluciones disponibles actualmente que, al igual que Wave, permiten editar contenido de forma colaborativa y en tiempo real. Este contenido puede ser muy variado, aunque lo más usual suele ser proporcionar edición de texto en tiempo real mediante el uso de Transformaciones Operacionales (OT) \cite{ref:how_ot_works}. Sin embargo, todas estas plataformas utilizan una arquitectura de servidor centralizado para ofrecer estas funcionalidades. Las soluciones no centralizadas actuales incluyen las arquitecturas P2P y federadas \cite{ref:distributed_networks}. En las P2P (''Peer to Peer'') todos los participantes de la red son iguales (''peers'') a efectos de controlar los datos que circulan por la red y el Software/Hardware utilizado, pudiendo interactur directamente entre ellos. La arquitectura federada es una solución no centralizada que permite que múltiples nodos (servidores) centrales interactúen entre si, pudiendo los usuarios (clientes) pertenecer a cualquier nodo sin que ello impida que se comuniquen con otros nodos distintos al que pertenecen. Wave utiliza una arquitectura federada en la que no existe un único servidor central que controle los datos de los usuarios (Ver Sección \ref{sssec:federation}).
 
-De esta manera, primero veremos las principales herramientas de desarrollo (APIs) más utilizadas actualmente, para después pasar a ver algunas de las plataformas que hacen uso de esta tecnología. En su mayoría son para web, aunque existen unas pocas para Android. HABLAR DE QUE WAVE ES LA ÚNICA FEDERADA Y EN TIEMPO REAL.
+	\begin{figure}[H]
+      \centering
+		\includegraphics[keepaspectratio, scale=0.5]{Media/Diagrams/Centralised-decentralised-distributed.png}
+      \caption{Tipos de Arquitecturas de Red}
+      \label{fig:wiab_client}
+    \end{figure} 
+
+\textbf{Para desarrollar este proyecto se ha escogido Wave porque es la única plataforma de Software libre que permite utilizar la tecnología de colaboración en tiempo real mediante una arquitectura no centralizada de tipo federado.}
+
+De esta manera, primero se verán las principales herramientas de desarrollo (APIs) más utilizadas actualmente, para después pasar a ver algunas de las plataformas que hacen uso de esta tecnología. En su mayoría son para Web, aunque existen unas pocas para Android. 
+
 	
 	\subsection{APIs Centralizadas}
 	
-	La mayor parte del desarrollo de tecnologías de Colaboración en Tiempo Real (RTC) se realiza mediante APIs que son propiedad de determinadas compañias y que no utilizan una arquitectura federada, sino que toda la información pasa por un servidor central que controla el RTC. A continuación veremos algunas de las más utilizadas hoy en día.
+	La mayor parte del desarrollo de tecnologías de Colaboración en Tiempo Real (RTC) se realizan mediante APIs que son propiedad de determinadas compañias y que no utilizan una arquitectura federada, sino que toda la información pasa por un servidor central que controla el RTC. A continuación veremos algunas de las más utilizadas hoy en día.
 	
 	\subsubsection{Google Realtime API}\label{sssec:googleAPI}
 	
@@ -26,7 +36,7 @@ De esta manera, primero veremos las principales herramientas de desarrollo (APIs
 	
 	\subsubsection{WebRTC}
 	
-	WebRTC \cite{ref:webRTC} (Web Real-Time Communication) es un API open-source (bajo licencia BSD) actualmente en desarrollo por Google y la World Wide Web Consortium (W3C) y que pretende dotar a los navegadores web de capacidades de comnicación en tiempo real entre sí sin necesidad de plugins externos. En la actualidad se encuentra en su versión 1.0 y soporta los navegadores Firefox y Chrome. 
+	WebRTC \cite{ref:webRTC} (Web Real-Time Communication) es un API de Software Libre (bajo licencia BSD) actualmente en desarrollo por Google y la World Wide Web Consortium (W3C) y que pretende dotar a los navegadores web de capacidades de comnicación en tiempo real entre sí sin necesidad de plugins externos. En la actualidad se encuentra en su versión 1.0 y soporta los navegadores Firefox y Chrome. 
 	
 	
 	\subsubsection{Mozilla TogetherJS}
@@ -35,11 +45,11 @@ De esta manera, primero veremos las principales herramientas de desarrollo (APIs
 	
 	\subsubsection{ShareJS}
 
-	ShareJS \cite{ref:shareJS} es una plataforma open-source (bajo licencia MIT) que dispone de un pequeño servidor basado en Node.js y una librería de cliente JavaScript que permiten la edición colaborativa de contenido mediante Transformaciones Operacionales. Permite actuar sobre objetos JSON o sobre texto plano. Está disponible en \textit{GitHub} para scontribuir a su desarrollo.
+	ShareJS \cite{ref:shareJS} es una plataforma de Software Libre (bajo licencia MIT) que dispone de un pequeño servidor basado en Node.js y una librería de cliente JavaScript que permiten la edición colaborativa de contenido mediante Transformaciones Operacionales. Permite actuar sobre objetos JSON o sobre texto plano. Está disponible en \textit{GitHub} para scontribuir a su desarrollo.
 	
 	\subsubsection{Goodow}
 	
-	Goodow \cite{ref:goodow} es un framework open-source de reciente desarrollo que proporciona un API muy similar a \textit{Google Real-Time API} (Ver Sección \ref{sssec:googleAPI}) para colaboración en tiempo real mediante el uso de Transformaciones Operacionales. Dispone asimismo de dos clientes básicos para Android e iOS, utilizando una implementación del Servidor propia.	
+	Goodow \cite{ref:goodow} es un framework de código libre de reciente desarrollo que proporciona un API muy similar a \textit{Google Real-Time API} (Ver Sección \ref{sssec:googleAPI}) para colaboración en tiempo real mediante el uso de Transformaciones Operacionales. Dispone asimismo de dos clientes básicos para Android e iOS, utilizando una implementación del Servidor propia.	
 	
 	\subsection{Plataformas Web y Android}
 
@@ -47,7 +57,7 @@ De esta manera, primero veremos las principales herramientas de desarrollo (APIs
 	
 	\subsubsection{Wave: Wave In A Box (WIAB)}\label{sssec:wiab}
 	    
-	Wave In a Box (WIAB) \cite{ref:wave_in_a_box} es el código fuente liberado por Google y completado por la comunidad de Apache tras pasar el proyecto a sus manos en el año 2012. Al igual que el resto del código de la tecnología que heredó de Google, está implementado en Java usando OpenJDK \cite{ref:openjdk}. La instalación trae consigo un cliente web desarrollado en Java usando el framework Google Web Toolkit (GWT) \cite{ref:gwt}, lo que genera código JavaScript ejecutable en el navegador. Este cliente web sirve como prueba de concepto de las funcionalidades básicas del Modelo Conversacional de Wave, pudiendo gesionar waves, usuarios y extensiones. Actualmente cualquiera puede descargar y desplegar WIAB en su ordenador siguiendo los pasos que nos proporcionan en su wiki \cite{ref:wave_in_a_box_wiki}. La aplicación se distribuye en forma de código fuente, accesible entre otras formas desde su repositorio de GitHub \cite{ref:wave_in_a_box_github}. Existen asimismo servidores de prueba ya desplegados en Internet sobre los que se puede observar el funcionamiento de WIAB \cite{ref:wave_in_a_box_server}.
+	Wave In a Box (WIAB) \cite{ref:wave_in_a_box} es el código fuente liberado por Google y completado por la comunidad de Apache tras pasar el proyecto a sus manos en el año 2012. Al igual que el resto del código de la tecnología que heredó de Google, está implementado en Java usando OpenJDK \cite{ref:openjdk}. La instalación trae consigo un cliente web desarrollado en Java usando el framework Google Web Toolkit (GWT) \cite{ref:gwt}, lo que genera código JavaScript ejecutable en el navegador. Este cliente Web sirve como prueba de concepto de las funcionalidades básicas del Modelo Conversacional de Wave, pudiendo gesionar waves, usuarios y extensiones. Actualmente cualquiera puede descargar y desplegar WIAB en su ordenador siguiendo los pasos que nos proporcionan en su wiki \cite{ref:wave_in_a_box_wiki}. La aplicación se distribuye en forma de código fuente, accesible entre otras formas desde su repositorio de GitHub \cite{ref:wave_in_a_box_github}. Existen asimismo servidores de prueba ya desplegados en Internet sobre los que se puede observar el funcionamiento de WIAB \cite{ref:wave_in_a_box_server}.
    		
 	\begin{figure}[H]
       \centering
@@ -78,7 +88,7 @@ De esta manera, primero veremos las principales herramientas de desarrollo (APIs
 	
 	\subsubsection{Etherpad}
 	
-	Etherpad \cite{ref:etherpad} es un editor colaborativo en tiempo real open-source (bajo licencia Apache 2.0). Permite a varios autores editar a la vez un mismo documento de texto, resaltando en distintos colores lo editado por cada persona y con la opción de un chat para comunicarse entre sí. Existen múltiples servicios que hacen uso de este editor, siendo uno de las más conocidas TitanPad \cite{ref:titanpad}.
+	Etherpad \cite{ref:etherpad} es un editor colaborativo en tiempo real de Software Libre (bajo licencia Apache 2.0). Permite a varios autores editar a la vez un mismo documento de texto, resaltando en distintos colores lo editado por cada persona y con la opción de un chat para comunicarse entre sí. Existen múltiples servicios que hacen uso de este editor, siendo uno de las más conocidas TitanPad \cite{ref:titanpad}.
 	
 	\begin{figure}[H]
 		\centering
@@ -100,7 +110,7 @@ De esta manera, primero veremos las principales herramientas de desarrollo (APIs
 	
 	\subsubsection{ShareLaTeX}
 	
-	ShareLaTeX \cite{ref:shareLatex} es un editor web colaborativo de documentos escritos en LaTeX en tiempo real. Permite elaborar documentos LaTeX entre varias personas, ofreciendo una interfaz que incluye una previsualización del resultado en PDF. Desde 2014 es open-source (bajo licencia AGPL v3) y cualquiera puede descargarselo de \textit{GitHub} e instalar su propio servidor (escrito en Node.js) de ShareLaTeX. En su web ofrecen también opciones de pago con extras como un control de versiones o sincronización con Dropbox.
+	ShareLaTeX \cite{ref:shareLatex} es un editor web colaborativo de documentos escritos en LaTeX en tiempo real. Permite elaborar documentos LaTeX entre varias personas, ofreciendo una interfaz que incluye una previsualización del resultado en PDF. Desde 2014 es Software libre (bajo licencia AGPL v3) y cualquiera puede descargarselo de \textit{GitHub} e instalar su propio servidor (escrito en Node.js) de ShareLaTeX. En su web ofrecen también opciones de pago con extras como un control de versiones o sincronización con Dropbox.
 	
 	\begin{figure}[H]
 		\centering
@@ -162,7 +172,7 @@ De esta manera, primero veremos las principales herramientas de desarrollo (APIs
 
 En esta sección exploraremos algunas de las principales aplicaciones informáticas que existen en la actualidad destinadas a la participación ciudadana en propuestas, lectura de programas electorales o divulgación de candidaturas.
 
-\subsection{Programas Políticos}
+\subsection{Programas Políticos} \label{ssec:artPrograms}
 
 En la actualidad no existe ningún tipo de aplicación móvil orientada a debatir los programas electorales de los partidos políticos en su conjunto. Concretamente no existe ningún tipo de plataforma que agrupe en un solo sitio los programas electorales de las diferentes candidaturas.
 Lo más parecido que hemos podido encontrar han sido aplicaciones elaboradas por un partido político, orientadas a dar a conocer su candidatura. En ellas podemos ver normalmente, entre otros, la presentación de la candidatura, vídeos propagandísticos y el programa electoral. 

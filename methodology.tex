@@ -1,6 +1,6 @@
 \newpage
 \thispagestyle{sectioned}
-\chapter{Metodología del Proyecto}
+\chapter{Metodologías del Proyecto}
 
 A continuación se exponen las diferentes metodologías que hemos utilizado durante el desarrollo de este \textit{Trabajo de Fin de Grado}.
 
@@ -30,6 +30,8 @@ OpenShift      & Apache License 2.0             \\ \hline
 \label{fig:tableLicenses}
 \end{table}
 
+<<<<<<< HEAD
+=======
 \section{Patrones de Diseño}
 
 La figura \ref{fig:tablePatrones} representa los patrones utilizados en el desarrollo de todo el proyecto.
@@ -48,12 +50,35 @@ Factoría     & Permite crear, mediante una interfaz, conjuntos o familias de qu
 \label{fig:tablePatrones}
 \end{table}
 
+>>>>>>> 9cd61d373f093d8474d8e150c492c493e49ea39e
 \section{Migración de Wave/SwellRT a Android}
 
-PROCESO DE MIGRACION.
+Para llevar la tecnología de Software libre de colaboración en tiempo real ya existente en Web de SwellRT a Android, se utilizó una metodología que implicaba los siguientes pasos:
+
+    \begin{itemize}
+      \item Estudiar el funcionamiento de la implementación Web actual de SwellRT en Java y GWT.
+      \item Identificar los problemas de la implementación actual al desplegarla en Android. 
+      \item Implementar los cambios necesarios para hacer la tecnología compatible con las características nativas de Android.
+      \item Probar con una aplicación sencilla que el resultado funciona.
+    \end{itemize}
+    
+El desarrollo de esta parte del proyecto se puede ver en el capítulo\ref{sec:migration} de este documento, dedicado en su totalidad a describir los aspectos más destacados dicha migración a Android. 
 
 \section{Diseño de la Aplicación}
 
+<<<<<<< HEAD
+	Tras conseguir migrar SwellRT a Android había que llevar a cabo el diseño de la aplicación Android que utilizara las características de colaboración en tiempo real de SwellRT. Para ello se utilizó una metodología de brainstorming con el fin de dar con una idea interesante de aplicación y una metodología formal de Diseño Guiado por Objetivos (DGO) para diseñarla.
+
+  \subsection{\textit{Brainstorming}}
+  
+  El \textit{brainstorming} \cite{ref:bookBrainStorming} (o lluvia de ideas en español) es una técnica de trabajo en grupo que persigue que todos sus integrantes se junten para generar ideas originales en un ambiente distendido. El objetivo es primar la cantidad por encima de la calidad de éstas para después de la sesión realizar un proceso de selección de las más interesantes. De esta manera pueden salir ideas que a priori podrian resultar absurdas pero que otros integrantes del grupo pueden aprovechar para que surjan otras nuevas. 
+  
+  Con esta técnica se ha decidido la aplicación que se le dará a la tecnología de SwellRT en Android. (Ver Sección \ref{sec:ideaBrain}).
+  
+  \subsection{Diseño Guiado por Objetivos (DGO)}\label{ssec:dgoDesign}
+  
+  Se basará el diseño de la aplicación en la metodología del Diseño Guiado por Objetivos (\textbf{DGO} o \textit{Goal-Directed Design}), que implementa el proceso de la Ingeniería de la Usabilidad propuesto por Alan Cooper \cite{ref:bookAlanCooper}. Este proceso constará de las siguientes fases:
+=======
   \subsection{\textit{Brainstorming}}
   
   El \textit{brainstorming} \cite{ref:bookBrainStorming} (o lluvia de ideas en español) es una técnica de trabajo en grupo que persigue que todos sus integrantes se junten para generar ideas originales en un ambiente distendido. El objetivo es primar la cantidad por encima de la calidad de éstas para después de la sesión realizar un proceso de selección de las más interesantes. De esta manera pueden salir ideas que a priori podrian resultar absurdas pero que otros integrantes del grupo pueden aprovechar para que surjan otras nuevas.  
@@ -61,6 +86,7 @@ PROCESO DE MIGRACION.
   \subsection{Diseño Guiado por Objetivos (DGO)}\label{ssec:dgoDesign}
   
   Para elaborar el diseño de la aplicación, nos hemos basado en la metodología del Diseño Guiado por Objetivos (\textbf{DGO} o \textit{Goal-Directed Design}), que implementa el proceso de la Ingeniería de la Usabilidad propuesto por Alan Cooper \cite{ref:bookAlanCooper}. Este proceso constará de las siguientes fases:
+>>>>>>> 9cd61d373f093d8474d8e150c492c493e49ea39e
 
 \begin{enumerate}
 
@@ -82,7 +108,11 @@ En esta fase se creará el concepto general del sistema, definiendo los comporta
 
 \end{enumerate}
 
+<<<<<<< HEAD
+Queremos insistir eso sí en que únicamente se ha basado este proyecto en esta metodología para seguir el proceso del diseño de la aplicación. No se seguirán todas las fases de esta metodología al pie de la letra ya que el alcance en tiempo de este proyecto escapa a una metodología tan formal y laboriosa (que implica gran cantidad de pruebas y procesos) como esta.
+=======
 Queremos insistir eso sí en que únicamente nos hemos basado en esta metodología para seguir el proceso del diseño de la aplicación. No seguiremos todas las fases de esta metodología al pie de la letra ya que el alcance en tiempo de este proyecto escapa a una metodología tan formal y laboriosa (que implica gran cantidad de pruebas y procesos) como esta.
+>>>>>>> 9cd61d373f093d8474d8e150c492c493e49ea39e
 
 \section{Implementación de la Aplicación}
 
@@ -90,7 +120,7 @@ En esta fase se llevó a cabo la implementación de un prototipo final de la apl
 
 \subsection{Control de versiones}
 
-Para mantener una copia de las versiones locales, se ha utilizado utilizado GIT como herramienta de control de versiones. Realizando \textit{commits} y subiendo los cambios de cada versión en un repositorio público alojado en GitHub.
+Para mantener una copia de las versiones locales, se ha utilizado GIT como herramienta de control de versiones. Realizando \textit{commits} y subiendo los cambios de cada versión en un repositorio público alojado en GitHub.
 
 \subsection{GitHub}
 
@@ -104,7 +134,26 @@ Durante la implementación del proyecto se dividieron las tareas en dos grupos p
 
 Cada vez que se completaba una funcionalidad se subía a \textit{GitHub} y se realizaba una pequeña revisión de código para verificar cómo se había implementado el objetivo a desarrollar. De esta forma se evitaba malinterpretar algunos aspectos que durante la implementación pueden diferir de su planteamiento inicial. También se recibieron revisiones de código externas por parte de los directores del Trabajo de Fin de Grado, que aportaron una visión más eficiente y organizada del código desarrollado.
 
+
 \subsection{Evaluaciones de usabilidad}
 
 Se recibió una evaluación de usabilidad externa por parte del director del TFG Pablo, que valoraba aspectos a mejorar de la Intefaz de Usuario (UI). Esta evaluación sivió para modificar algunos aspectos de representación gráfica que mejorararían la interpretación de los elementos por parte del usuario.
+
+\section{Patrones de Diseño}
+
+La figura \ref{fig:tablePatrones} representa los patrones utilizados en el desarrollo de todo el proyecto.
+
+\begin{table}[!]
+\centering
+\caption{Patrones de diseño empleados en el proyecto.}
+\label{my-label}
+\begin{tabular}{|c|m{5cm}|l|c|}
+\hline
+{\bf Patrón} & \multicolumn{1}{c|}{{\bf Decripción}}                                                                                                & \multicolumn{1}{c|}{{\bf Utilización}} & {\bf Sección} \\ \hline
+MVC & Modelo-Vista-Controlador. Separa la lógica del modelo y la vista, que se comunican a través del controlador. & Servicio Web REST Laravel.                  & \ref{ref:sssec:laravelArch} \\ \hline
+Singleton & Mantiene una única instancia de un objeto, pudiento instanciarse desde cualquier clase. & Aplicación Android. & \ref{sssec:politicalProgramArch} \\ \hline
+Factoría & Permite crear, mediante una interfaz abstracta, conjuntos o familias de objetos relacionados, sin especificar cual es la implementación concreta del objeto. & Servicio SellRT.                       & \ref{sssec:conWave} \\ \hline
+\end{tabular}
+\label{fig:tablePatrones}
+\end{table}
 

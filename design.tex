@@ -2,15 +2,20 @@
 \thispagestyle{sectioned}
 \chapter{Diseño de la Aplicación}
 
+En este capítulo se expondrá el proceso de diseño de la aplicación que hará uso de las características de colaboración en tiempo real presentes en SwellRT para Android. 
+
 \section{Introducción}
 
-Tras haber adaptado (Ver Sección \ref{sec:migration}) la tecnología de Wave/SwellRT a Android que soportaría el núcleo de nuestra aplicación, era hora de decidir qué aplicación le íbamos a dar de cara a desarrollar una aplicación Android que hiciera uso de ello. Era importante tener en cuenta las características que nos ofrecía Wave:
+Tras haber adaptado (Ver Sección \ref{sec:migration}) la tecnología de Wave/SwellRT a Android que soportaría el núcleo de la aplicación, era hora de decidir qué utilidad se le iba a dar de cara a desarrollar una aplicación Android que hiciera uso de ello. Se decidió tener sobre todo en cuenta estas características que nos ofrecía Wave:
 
- - Edición colaborativa.
-
- - Consistencia en Tiempo Real.
+ - \textbf{Edición colaborativa.} \\
+ - \textbf{Consistencia en Tiempo Real.}
  
+<<<<<<< HEAD
+\section{Brainstorming de ideas} \label{sec:ideaBrain} 
+=======
 \section{Brainstorming de ideas}  
+>>>>>>> 9cd61d373f093d8474d8e150c492c493e49ea39e
 
 Después de considerar posibles ideas de implementaciones que podrían hacer uso de estas características, decidimos realizar una sesión de \textit{brainstorming} junto a nuestros directores de proyecto para identificar ideas potenciales. En esta sesión aparecieron temas tan variados como wikis colaborativas, aplicaciones de inteligencia artificial, aportaciones colaborativas en política, edición de vídeos y música, cursos de formación colaborativos, visualizacion de mapas, etc.
 
@@ -31,24 +36,37 @@ Después de considerar posibles ideas de implementaciones que podrían hacer uso
 	\end{figure}
 	
 
+Con un gran repertorio de ideas expuestas en la sesión, se decidió centrarse primero en descartar aquellas que no motivaba llevar a cabo. De esta manera se quedaron cuatro ideas fundamentales a desarrollar en la aplicación: Política, Música, Inteligencia Artificial y Mapas. Centrándose ahora solo en estos temas, surgieron varias ideas colaborativas como: desarrollar documentos políticos, programas electorales, comunicación entre colectivos en tiempo real, aprendizaje de música, edición de partituras y obras, aplicaciones colaborativas con inteligencia artificial, edición de mapas en tiempo real, lexicalización, etc.
 
-Con un gran repertorio de ideas expuestas en la sesión, decidimos centrarnos primero en descartar aquellas que a nosotros no nos motivaba llevar a cabo. De esta manera nos quedamos con cuatro ideas fundamentales a desarrollar en nuestra aplicación: Política, Música, Inteligencia Artificial y Mapas. Centrándonos ahora solo en estos temas, surgieron varias ideas colaborativas como: desarrollar documentos políticos, programas electorales, comunicación entre colectivos en tiempo real, aprendizaje de música, edición de partituras y obras, aplicaciones colaborativas con inteligencia artificial, edición de mapas en tiempo real, lexicalización, etc.
+Finalmente, ya que ambos componentes del trabajo tenían interés por la política, se decidió realizar una aplicación colaborativa relacionada con dicho mundo. En esta aplicación se podría recurrir a la edición de contenidos en tiempo real, ya fueran propuestas políticas, programas electorales u otro tipo de documentos. Más adelante también se podría hacer uso incluso de alguna herramienta de Inteligencia Artificial para automatizar algunas tareas o realizar recomendaciones sociales.
 
-Finalmente, ya que ambos teníamos interes por la política, decidimos realizar una aplicación colaborativa relacionada con dicho mundo. En esta aplicación podríamos recurrir a la edición de contenidos en tiempo real, ya fueran propuestas políticas, programas electorales u otro tipo de documentos. Más adelante también podríamos hacer uso incluso de alguna herramienta de Inteligencia Artificial para automatizar algunas tareas o realizar recomendaciones sociales.
+Lo que sí que se tuvo claro desde el principio es la idoneidad del momento actual para desarrollar una aplicación de temática política, dado que el actual es un año electoral. Se propuso el objetivo de desarrollar algo que pudiera tener cierta repercusión y utilidad en las próximas citas electorales de este año 2015. Se intentaría pensar en la aplicación no solo como un Trabajo de Fin de Grado sino como algo que se pudiera llevar más allá y que resultara útil a la sociedad.
 
-Lo que sí que tuvimos claro desde el principio es la idoneidad del momento actual para desarrollar una aplicación de temática política, dado que nos encontramos en año electoral. Nos propusimos el objetivo de desarrollar algo que pudiera tener cierta repercusión y utilidad en las próximas citas electorales de este año 2015. Intentariamos pensar en la aplicación no solo como un Trabajo de Fin de Grado sino como algo que pudiéramos llevar más allá y que resultara útil a la sociedad.
-
-Por otro lado, queriamos elegir un nombre para la aplicación que fuera a la vez atractivo y significativo de la participación ciudadana que representa. Para esto hicimos tambien una sesión de \textit{brainstorming} con varias personas, de la cual sacamos varias posibilidades por el nombre. Tras someter a votación estos nombres nos quedamos con el que más gustó a todos: \textbf{DemoCritics}.
+Por otro lado, se pretendía elegir un nombre para la aplicación que fuera a la vez atractivo y significativo de la participación ciudadana que representa. Para esto se hizo tambien una sesión de \textit{brainstorming} con varias personas, de la cual se sacaron varias posibilidades para el nombre. Tras someter a votación estos nombres se eligió con el que más gustó a todos: \textbf{DemoCritics}.
 
 \section{Diseño Guiado Por Objetivos (DGO)}
 
+<<<<<<< HEAD
+Como ya se ha planteado en la metodología del proyecto (ver Sección \ref{ssec:dgoDesign} el diseño de la aplicación se inspirará en una metodología de Diseño Guiado por Objetivos (DGO) cuyo objetivo final es producir una versión de la aplicación usable y funcional- Para ello se llevarán a cabo las siguientes actividades:
+
+- Investigación \ref{ssec:investigation}
+- Modelado y Definición de Personas \ref{ssec:persons}
+- Definición de Escenarios y Requisitos \ref{ssec:requisites}
+- Framework de Diseño \ref{ssec:prototypes}
+- Verificación: Principios de Diseño \ref{ssec:designPrinciples}
+
+\subsection{Investigación} \label{ssec:investigation}
+
+Durante las siguientes secciones se detallará el proceso de investigación previo realizado para concretar la funcionalidad que ofrecería la aplicación, así como su diseño gŕafico y características técnicas.
+=======
 En este capítulo se desarrollan las fases de la metodología del Diseño Guiado por Objetivos (ver sección \ref{ssec:dgoDesign}). Cada una de ellas especificará los pasos a seguir durante su progreso y el resultado final de cada una.
 
 \subsection{Investigación}
+>>>>>>> 9cd61d373f093d8474d8e150c492c493e49ea39e
 
 \subsubsection{Intención Inicial: Prototipo básico}  
 
-Vivimos en una época donde la política parece estar de moda. Esto puede ser debido al cabreo general que muestra la ciudadanía frente a gobiernos conservadores, situaciones de austeridad provocada por la crisis económica, el nacimiento de nuevas fuerzas políticas, …, pero sobre todo las numerosas citas electorales a las que seremos citados en 2015. Por tanto, el proyecto podría ponerse a prueba en un escenario real durante la campaña de las elecciones generales previsiblemente convocadas durante el último trimestre del 2015.
+La actual en una época donde la política parece estar de moda. Esto puede ser debido al cabreo general que muestra la ciudadanía frente a gobiernos conservadores, situaciones de austeridad provocada por la crisis económica, el nacimiento de nuevas fuerzas políticas,... pero sobre todo por las numerosas citas electorales a las que seremos citados en 2015. Por tanto, el proyecto podría ponerse a prueba en un escenario real durante la campaña de las elecciones generales previsiblemente convocadas durante el último trimestre del 2015.
 
 \underline{Programas electorales}
 
@@ -166,11 +184,11 @@ Por último, centrándonos en las Propuestas ciudadanas, surgió la idea de elab
   \item Informar sobre la legilación actual cuando visualicemos una propuesta o sección de un porgrama que quiera mejorar o cambiar la legislación actual.
 \end{itemize}
 
-\subsection{Modelado de Personas}
+\subsection{Modelado y Definición de Personas} \label{ssec:persons}
 
 Las \textit{personas} son una herramienta de diseño y ayuda al diseño de la aplicación. El objetivo es centrar el diseño en este tipo de persona, para lograr los objetivos a la hora de utilziar un sistema. La \textit{persona} será nuestro modelo, una descripción detallada de un individuo imaginario que representa a un grupo de usuarios a los que va destinada la aplicación. Es una representación ficticia pero desarrollada con gran detalle, que será fruto de los datos recogidos en la investigación previa de la fase anterior.
 
-En esta fase definiremos el tipo de persona que interactuará con nuestra aplicación. Para ello hemos identificado dos tipos de personas primarias; un \textbf{activista social} y un \textbf{ciudadano} de a pie que forme parte del electorado.
+En esta fase se definirá el tipo de persona que interactuará con nuestra aplicación. Para ello se han identificado dos tipos de personas primarias; un \textbf{activista social} y un \textbf{ciudadano} de a pie que forme parte del electorado.
 
 \textbf{- Activista social, 16 años en adelante}
 
@@ -207,18 +225,16 @@ En esta fase definiremos el tipo de persona que interactuará con nuestra aplica
 \item Tiene cierta indecisión a la hora de acudir a las urnas, no sabe que propone cada partido.
 \end{itemize}
 
-\subsection{Definición de personas}
-
 En las figuras \ref{fig:studentPerson} y \ref{fig:activistPerson} se exponen una serie de personas ficticias que podrían representar en la vida real los tipos de \textit{persona} a la que va dirigida la aplicación.
 
-	\begin{figure}[!]
+	\begin{figure}[H]
       \centering
 	\includegraphics[keepaspectratio, scale=0.45]{Media/Captures/person1.png}
       \caption{Estudiante universitario}
       \label{fig:studentPerson}
     \end{figure}
     
-	\begin{figure}[!]
+	\begin{figure}[H]
       \centering
 	\includegraphics[keepaspectratio, scale=0.45]{Media/Captures/person2.png}
       \caption{Activista político}
@@ -226,7 +242,7 @@ En las figuras \ref{fig:studentPerson} y \ref{fig:activistPerson} se exponen una
     \end{figure}
 
 
-\subsection{Definición de Escenarios y Requisitos}
+\subsection{Definición de Escenarios y Requisitos}\label{ssec:requisites}
 
 En esta sección se definirán los posibles escenarios que puedan surgir en la aplicación. La idea es situarnos en un escenario real que pudera ocurrir en cualquier momento a lo largo del día, para detallar la solución al problema. En cada uno se especificarán los requisitos necesarios para solventar el problema o los pasos a seguir para lograr el objetivo. Diferenciaremos los términos de \textbf{acción}, como la actividad inmediata que requiere la solución. El \textbf{objeto}, como el sujeto principal del escenario. Y por último definimos \textbf{contexto} reflejando el objetivo final del requisito.
 
@@ -582,7 +598,7 @@ En esta fase se pondrán a prueba los escenarios, validando a ciertas situacione
  
 \end{enumerate}
 
-\subsection{Principios de Diseño}
+\subsection{Verificación: Principios de Diseño} \label{ssec:designPrinciples}
 
 Con el objetivo de verificar los principios de diseño que cumple la aplicación, utilizaremos los 10 principios de diseño propuestos por Jakob Nielsen \cite{ref:nielsen} para evaluar la calidad del sistema.
 
@@ -604,19 +620,19 @@ Con el objetivo de verificar los principios de diseño que cumple la aplicación
         \begin{subfigure}[b]{0.3\textwidth}
                 \includegraphics[width=\textwidth]{Media/Captures/principio01.png}
                 \caption{Visibilidad del estado del sistema.}
-                \label{fig:quipDesktop}
+                \label{fig:designPrinciplesVisibility}
         \end{subfigure}
         ~
         \begin{subfigure}[b]{0.3\textwidth}
                 \includegraphics[width=\textwidth]{Media/Captures/principio03.png}
                 \caption{Control y libertad del usuario.}
-                \label{fig:quipText}
+                \label{fig:designPrinciplesControl}
         \end{subfigure}
         ~
         \begin{subfigure}[b]{0.3\textwidth}
                 \includegraphics[width=\textwidth]{Media/Captures/principio07.png}
                 \caption{Flexibilidad y eficiencia.}
-                \label{fig:quipComments}
+                \label{fig:designPrinciplesFlexibility}
         \end{subfigure}
-        \caption{Principios de diseño en la aplicación.}\label{fig:quipCaptures}
+        \caption{Principios de diseño en la aplicación.}\label{fig:designPrinciplesCaptures}
 	\end{figure}

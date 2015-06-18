@@ -2,19 +2,19 @@
 \thispagestyle{sectioned}
 \chapter{Resultados y Trabajo Futuro}
 
-En este capitulo analizaremos y discutiremos los resultados en conjunto de todo el Trabajo de Fin de Grado, las conclusiones que se pueden sacar tras su desarrollo y algunas líneas de trabajo futuro para este proyecto.
+En este capítulo se analizarán y discutirán los resultados en conjunto de todo el Trabajo de Fin de Grado, así como algunas líneas de trabajo futuro para este proyecto.
 
-Todo el código open-source desarrollado por nosotros está disponible en el GitHub de la organización del proyecto:
+Todo el código de Software libre desarrollado por nosotros está disponible en el GitHub de la organización del proyecto:
 
 \url{https://github.com/Zorbel}
 
 \section{Discusión de Resultados}
 
-Inicialmente este proyecto nació para migrar la tecnología de colaboración en tiempo real de Apache Wave, presente en el proyecto SwellRT para plataformas web, a dispositivos móviles Android para posteriormente desarrollar una app que hiciera uso de esta tecnología. No habíamos trabajado nunca con tecnologías en tiempo real, así que tuvimos que realizar una pequeña investigación previa de los protocolos implicados (XMPP y WebSockets) y del funcionanmiento de Wave para ponernos al día. Además trabajamos junto a uno de los desarrolladores de SwellRT, que nos orientó a la hora de ''navegar'' por el código de la versión web para identificar las incompatibilidades con Android y subsanarlas. En poco tiempo tuvimos lista una versión simple del cliente capaz de conectarse al servidor Wave desde Android. Se trata de un desarrollo en código libre, por lo que realizamos una aportación a a un proyecto que cualquiera podría utilizar en su propio desarrollo Android. El resultado está deisponible en el GitHub de SwellRT:
+Inicialmente este proyecto nació para migrar la tecnología de colaboración en tiempo real de Apache Wave, presente en el proyecto SwellRT para plataformas web, a dispositivos móviles Android para posteriormente desarrollar una app que hiciera uso de esta tecnología. Se trata de un desarrollo en código libre, por lo que realizamos una aportación a a un proyecto que cualquiera podría utilizar en su propio desarrollo Android. El resultado está deisponible en el GitHub de SwellRT:
 
 \url{https://github.com/P2Pvalue/swellrt/tree/master/android}
 
-Tocaba entonces embarcarse en la el desarrollo de la idea de alguna aplicación que hiciera uso de la tecnología de SwellRT. Se nos dejó total libertad para empezar este proyecto de aplicación desde cero y decidimos que si haciamos algo tenía que tener utilidad en el mundo real, más allá del alcance de este Trabajo de Fin de Grado. A continuación discutimos el por qué de DemoCritics y la utilidad de los resultados obtenidos. 
+Tocó entonces embarcarse en el desarrollo de la idea de alguna aplicación que hiciera uso de la tecnología de SwellRT. Se nos dejó total libertad para empezar este proyecto de aplicación desde cero y se decidió que si hacíamos algo tenía que tener utilidad en el mundo real, más allá del alcance de este Trabajo de Fin de Grado. A continuación discutimos el por qué de DemoCritics y la utilidad de los resultados obtenidos. 
 
 
 \subsection{El porqué de DemoCritics}
@@ -56,7 +56,7 @@ Desde un punto de vista técnico lo primero que el desarrollo de DemoCritics nos
 
 Por otro lado, el diseño de la arquitectura del sistema nos llevó a plantearnos cómo desarrollar una plataforma que no nos restringiera su uso exclusivamente a Android. Queríamos que la interfaz de los datos fuera independiente de los datos en sí. En consecuencia, y tras evaluar distintas opciones, desarrollamos un Service REST que accediera a la Base de Datos. Este Service REST hace de intermediario entre las peticiones HTTP recibidas y el acceso a Base de Datos. De esta manera cualquier tipo de cliente con posibilidad de conexión a Internet puede acceder a dichos datos mediante peticiones HTTP. Los datos son entonces devueltos en formato JSON y tratados por el cliente.
 
-Ambos teníamos conocimientos previos de Bases de Datos como para desarrollar la parte del alamacenamiento de los datos, pero ninguno de los dos conocía la tecnología detrás del Service REST. Sin embargo, si que teníamos algunos conocimientos de programación en PHP. Por tanto, dentro de la convicción de utilizar software libre, buscamos un framework que pudiera agilizar el desarrollo del Service REST en PHP y una plataforma online donde alojarlo. Como resultado utilizamos el framework open-source Laravel 5 para desarrollar el Service REST que alojamos en el servidor gratuito de RedHat OpenShift. 
+Ambos teníamos conocimientos previos de Bases de Datos como para desarrollar la parte del alamacenamiento de los datos, pero ninguno de los dos conocía la tecnología detrás del Service REST. Sin embargo, si que teníamos algunos conocimientos de programación en PHP. Por tanto, dentro de la convicción de utilizar software libre, buscamos un framework que pudiera agilizar el desarrollo del Service REST en PHP y una plataforma online donde alojarlo. Como resultado utilizamos el framework de Software libre Laravel 5 para desarrollar el Service REST que alojamos en el servidor gratuito de RedHat OpenShift. 
 
 El Service REST es accesible desde la siguiente URL:
 
@@ -126,13 +126,7 @@ Asimismo, y gracias a la flexibilidad que nos permite el uso de un Service REST,
 
 Por otro lado, en el desarrollo de este proyecto hemos centrado la plataforma en los programas políticos, pero se podría utilizar para mostrar otros tipos de documentos estructurados susceptibles de ser sometidos a debate y opinión. Como por ejemplo normativas, leyes, manuales, etc.
 
-\subsection{SwellRT Android}
 
-El trabajo realizado para hacer compatible la tecnología de colaboración en tiempo real de Wave presente en SwellRT con dispositivos Android, aporta por primera vez la posibilidad de utilizar estas características de forma nativa en Android en un API de software libre. Hasta este momento las soluciones disponibles pasaban por utilizar librerías privativas como la de Google (Real Time API). Esta nueva aportación se encuentra ahora disponible para los desarrolladores de Android en el GitHub del proyecto de SwellRT: \url{https://github.com/P2Pvalue/swellrt/tree/master/android}
-
-Es además plenamente compatible con el cliente web, por lo que las posibilidades de desarrollo de aplicaciones multi-plataforma son claras. Además, en este proyecto se ha optado por realizar una pequeña prueba de concepto con edición de texto en tiempo real, pero el desarrollo de plataformas colaborativas en tiempo real va más allá e incluye aplicaciones tan diversas como herramientas de dibujo, visualizado de contenidos (como vídeo y música) de forma sincronizada, mapas con información en tiempo real, generación de estadísticas en tiempo real, ...
-
-En definitiva, \textbf{se ha puesto la colaboración en tiempo real a disposición de la comunidad de desarrolladores open-source Android para que hagan uso de estas funcionalidades en sus futuras aplicaciones}.
 
 
 

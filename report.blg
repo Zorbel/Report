@@ -21,7 +21,7 @@ Warning--empty journal in ref:webSocket_ref
 Warning--empty journal in ref:http_authentication
 You've used 118 entries,
             1791 wiz_defined-function locations,
-            890 strings with 17238 characters,
+            890 strings with 17240 characters,
 and the built_in function-call counts, 14704 in all, are:
 = -- 1180
 > -- 458

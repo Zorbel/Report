@@ -2,6 +2,8 @@
 \thispagestyle{sectioned}
 \chapter{Arquitectura del Proyecto}
 
+En este capítulo se estudiarán aspectos técnicos destacados relacionados con la arquitectura y organización del Software desarrollado durante todo el proyecto.
+
 \section{Arquitectura de Wave}
 
 	La arquitectura que soporta Wave tal y como la diseñó originalmente Google está estructurada en forma de capas que interactuan entre sí. De forma general y de abajo hacia arriba disponemos de las siguientes capas:
@@ -113,7 +115,7 @@ Para almacenar los comentarios generados por los usuarios en la aplicación, se 
 
 Esta tabla será la referencia que almacenará las opiniones o valoraciones de un usuario en las propuestas y secciones de programas de la aplicación. De tal forma que se guardará el identificador del usuario que ha añadido esa opinión, acompañado del identficador de la propuesta si es el caso o el identificador de la sección del programa y el partido político en el caso de que se encuentre valorando una sección. Para indicar el valor de la opinión del usuario, es decir si ha valorado la sección o propuesta como \textit{like}, \textit{dislike}, etc, se utilizarán columnas que contendrán un entero que indicará el tipo de valoración que ha pulsado el usuario. De tal forma que el usuario siempre pueda cambiar su opinión o borrarla.
 
-\subsection{Service REST} \label{ssec:seviceREST}
+\subsection{Servicio Web REST} \label{ssec:seviceREST}
 
 Para establecer la conexión de la aplicación desarrollada en Android con la Base de Datos se ha utilizado \textbf{Laravel} como \textit{framework} para desarrollo de servicios Web. Laravel \cite{ref:laravel} es un framework de código abierto para desarrollar aplicaciones web con PHP 5. Laravel permite además desarrollar una API REST (Representational State Transfer), un estilo de arquitectura software para sistemas hipermedia. Este término se originó en una tesis doctoral sobre la web escrita por Roy Fielding \cite{ref:RESTPhd}.
 
@@ -155,7 +157,7 @@ DELETE         & 404 (Not Found)   & El recurso solicitado para borrar, no ha si
 
 Usar un servicio RESTful proporciona una gran flexibilidad a la hora de independizar la tecnología del servidor de la del cliente. Mediante la arquitectura basada en peticiones HTTP no solo se podrán hacer peticiones desde el cliente en Android, sino que más adelante se podría desarrollar una versión web o incluso un cliente para iOS sin tener que modificar el servicio, ya que las peticiones HTTP serán las mismas.
 
-\subsubsection{Arquitectura}
+\subsubsection{Arquitectura} \label{ref:sssec:laravelArch}
 
 Laravel utiliza e implementa un funcionamiento basado en el patrón \textbf{MVC} (Model–View–Controller), separando el modelo de la vista, y delegando la gestión al controlador. En este caso tendríamos un modelo almacenado en las tablas de la Base de Datos, donde se guardará toda la información dinámica y estática de la aplicación. El controlador sería en elcargado de gestionar las peticiones del cliente en Android en función del tipo de operación que requiera. Por último, se tendría como vista el resultado devuelto por el servidor con los datos solicitados por el cliente, que a su vez los representaría en la aplicación móvil. Esta estructura de comportamiento hace independiente el modelo controlado por el servidor de la vista que obtiene el usuario final en su cliente móvil. Con esto se consigue elaborar un código más claro y sencillo, así como también evitar conflictos entre el modelo y la vista.
 
