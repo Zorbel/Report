@@ -46,7 +46,7 @@
 	  
 	 Lo siguiente que se hará será ejecutar el código de Login del cliente SwellRT para intentar localizar dónde se lleva a cabo la conexion HTTP. Para ello se llama desde la actividad principal (WaveAndroid.java) al método startSession() de la clase WaveClient.java pasándole el usuario y la contraseña antes creados.
  
-	 Esto provoca un error de ejecución y la aplicación se cierra. Lo siguiente que hacemos es depurar la aplicación (Ver Seccion \ref{sssec:debug}) estudiando el LogCat \cite{ref:android_logcat} (Ver Figura \ref{fig:android_logcat}) para ver dónde se produce el error. Se descubre que el problema esta localizado en el método login() de la misma clase, que intentaba realizar una \textbf{petición POST HTTP} al servidor utilizando un \textbf{RequestBuilder} de la librería \textbf{com.google.gwt.http.client}. He aquí el primer problema: la actual conexión utiliza métodos de GWT/Javascript para hacer la petición Post y Android no es compatible con esta tecnología.   
+	 Esto provoca un error de ejecución y la aplicación se cierra. Lo siguiente que hacemos es depurar la aplicación estudiando el LogCat \cite{ref:android_logcat} (Ver Figura \ref{fig:android_logcat}) para ver dónde se produce el error. Se descubre que el problema esta localizado en el método login() de la misma clase, que intentaba realizar una \textbf{petición POST HTTP} al servidor utilizando un \textbf{RequestBuilder} de la librería \textbf{com.google.gwt.http.client}. He aquí el primer problema: la actual conexión utiliza métodos de GWT/Javascript para hacer la petición Post y Android no es compatible con esta tecnología.   
 	 
 	\begin{figure}[H]
       \centering
