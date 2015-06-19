@@ -238,14 +238,11 @@ protected int getLevel(Section sec) {
   int id_sec = sec.getmSection(), level;
   
   if (id_sec % 100 != 0) {
-      level = 4;
-      
+      level = 4;     
   } else if (id_sec % 10000 != 0) {
-      level = 3;
-      
+      level = 3;      
   } else if (id_sec % 1000000 != 0) {
-      level = 2;
-      
+      level = 2;    
   } else
       level = 1;
       
@@ -309,10 +306,8 @@ public class MainActivity implements ServiceConnection, SwellRTServiceCallback {
     public void onServiceDisconnected(ComponentName name) {
         mSwellRT = null;
         Log.d(this.getClass().getSimpleName(), "SwellRT Service unBound");
-}	
-    
-    }
-    
+	}	   
+}
 	  \end{lstlisting}
 	  
 \subsection{Crear nueva Wave (Model) en SwellRT} \label{ssec:waveCreateModel}
@@ -352,8 +347,7 @@ public class NewProposalActivity extends SwellRTActivity {
     }
    
     @Override
-    public void onCreate(Model model) {  // Callback called when a model is created.
-        
+    public void onCreate(Model model) {  // Callback called when a model is created.      
         // Get the Id of the wave/model to store in the database
         WaveId idW = model.getWaveId();
         String idWave = idW.toString();
@@ -383,8 +377,81 @@ public class NewProposalActivity extends SwellRTActivity {
 	  
 	  \lstset{language=Java, breaklines=true, autogobble=true, basicstyle=\ttfamily\footnotesize, commentstyle=\color{OliveGreen}, keywordstyle=\color{MidnightBlue}}
 	 \begin{lstlisting}[frame=single] 
-		  
-	  
+public class EditWaveActivity extends SwellRTActivity implements ServiceConnection, SwellRTService.SwellRTServiceCallback {
+	 @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_edit_wave);
+
+		//Get the id of the model from the intent
+        if (mModelId == null)
+            mModelId = getIntent().getStringExtra("MODEL_ID");
+		
+		//Get the id of the model from the intent		
+        padName = getIntent().getStringExtra("PAD_NAME");
+        
+        //Get the reference to the editable EditText
+        mEditor = (EditText) findViewById(R.id.textWave);
+    }
+    
+    //Start the session in the SwellRT Server
+    public void doStartSession() {
+        try {
+            getService().startSession(MainActivity.WAVE_SERVER,
+                    "" + User.ID_USER + "@local.net", "password");
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (InvalidParticipantAddress invalidParticipantAddress) {
+            invalidParticipantAddress.printStackTrace();
+        }
+    }
+    
+    //Connection and Events Callbacks
+    @Override
+    public void onConnect() {
+        doStartSession();
+    }
+
+    @Override
+    public void onDisconnect() {
+        // Eventually unbind the EditText from the Doc
+        mDocBinder.unbind();
+    }
+
+    @Override
+    public void onStartSessionSuccess(String s) {
+        getService().openModel(mModelId);
+    }
+
+    @Override
+    public void onOpen(Model model) {
+
+        // Gets a reference to an already open Model
+        mModel = getService().getModel(mModelId);
+
+        //Add actual participant
+        mModel.addParticipant("" + User.ID_USER + "@local.net");
+
+        // Get the text document supporting the Pad from the Model
+        Type instance = mModel.getRoot().get(padName);
+        mText = (TextType) instance;
+
+        // Connect the EditText component to the Wave's Doc
+        mDocBinder = WaveDocEditorBinder.bind(mEditor, getService().getReadableDocument(mText));
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
+    @Override
+    public void onBackPressed() {
+        getService().closeModel(mModelId);
+        getService().stopSession();
+        super.onBackPressed();
+    }
+}  
 	  \end{lstlisting}
 
 \addcontentsline{toc}{chapter}{\numberline{}Bibliografía} %add bibliography to the index

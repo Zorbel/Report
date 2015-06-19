@@ -397,6 +397,13 @@ Con el objetivo de no repetir código se decidió estructurar el esquema de peti
 		En el caso de DemoCritics lo primero que se tendrá que hacer será registrar al usuario usando su ID (Ver Sección \ref{sssec:idUser}). Esto se hace en el ''MainActivity'' al ejecutar la aplicación.  Una vez registrado solo será necesario utilizar el ServiceSwellRT para llevar a cabo dos actividades: crear una nueva propuesta colaborativa y editar una propuesta ya creada. 
 		
 		Un ejemplo de cómo registrarse con SwellRT se puede encontrar en el Apéndice \ref{ssec:waveRegister}. \\
+		
+	\begin{figure}[H]
+	  \centering
+	    \includegraphics[keepaspectratio, scale=0.5]{Media/Diagrams/waveRegisterSequenceDiagram.png}
+	  \caption{Esquema de Registro en SwellRT}
+	  \label{fig:diagramRegisterSwellRT}
+	\end{figure}
 
 		\paragraph{\underline{Crear Propuesta Colaborativa}:}
 		
@@ -404,6 +411,12 @@ Con el objetivo de no repetir código se decidió estructurar el esquema de peti
 		
 		Un ejemplo simplificado del código encargado de crear el modelo se puede ver en el Apéndice \ref{ssec:waveCreateModel}.\\
 		
+	\begin{figure}[H]
+	  \centering
+	    \includegraphics[keepaspectratio, scale=0.5]{Media/Diagrams/waveCreationSequenceDiagram.png}
+	  \caption{Esquema de Creación de Pad Colaborativo en SwellRT}
+	  \label{fig:diagramCreateWave}
+	\end{figure}
 			
 		\paragraph{\underline{Editar Propuesta Colaborativa}:}
 
@@ -411,5 +424,10 @@ Con el objetivo de no repetir código se decidió estructurar el esquema de peti
 		
 		Un ejemplo simplificado del código encargado de abrir el modelo y asociar el pad colaborativo se puede ver en el Apéndice \ref{ssec:waveOpenPad}.
 		
-		
+	\begin{figure}[H]
+	  \centering
+	    \includegraphics[keepaspectratio, scale=0.5]{Media/Diagrams/waveEditionSequenceDiagram.png}
+	  \caption{Esquema de Apertura y Edición de Pad Colaborativo en SwellRT}
+	  \label{fig:diagramEditWave}
+	\end{figure}
 
