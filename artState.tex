@@ -10,7 +10,7 @@ Las plataformas quedarán dividas en dos secciones principales. Por un lado se a
 
 En esta sección se verán algunas de las soluciones disponibles actualmente que, al igual que Wave, permiten editar contenido de forma colaborativa y en tiempo real. Este contenido puede ser muy variado, aunque lo más usual suele ser proporcionar edición de texto en tiempo real mediante el uso de Transformaciones Operacionales (OT) \cite{ref:how_ot_works}. Sin embargo, todas estas plataformas utilizan una arquitectura de servidor centralizado para ofrecer estas funcionalidades. Las soluciones no centralizadas actuales incluyen las arquitecturas P2P y federadas \cite{ref:distributed_networks}. En las P2P (''Peer to Peer'') todos los participantes de la red son iguales (''peers'') a efectos de controlar los datos que circulan por la red y el Software/Hardware utilizado, pudiendo interactur directamente entre ellos. La arquitectura federada es una solución no centralizada que permite que múltiples nodos (servidores) centrales interactúen entre si, pudiendo los usuarios (clientes) pertenecer a cualquier nodo sin que ello impida que se comuniquen con otros nodos distintos al que pertenecen. Wave utiliza una arquitectura federada en la que no existe un único servidor central que controle los datos de los usuarios (Ver Sección \ref{sssec:federation}).
 
-	\begin{figure}[H]
+	\begin{figure}[!]
       \centering
 		\includegraphics[keepaspectratio, scale=0.5]{Media/Diagrams/Centralised-decentralised-distributed.png}
       \caption{Tipos de Arquitecturas de Red}
@@ -59,7 +59,7 @@ De esta manera, primero se verán las principales herramientas de desarrollo (AP
 	    
 	Wave In a Box (WIAB) \cite{ref:wave_in_a_box} es el código fuente liberado por Google y completado por la comunidad de Apache tras pasar el proyecto a sus manos en el año 2012. Al igual que el resto del código de la tecnología que heredó de Google, está implementado en Java usando OpenJDK \cite{ref:openjdk}. La instalación trae consigo un cliente web desarrollado en Java usando el framework Google Web Toolkit (GWT) \cite{ref:gwt}, lo que genera código JavaScript ejecutable en el navegador. Este cliente Web sirve como prueba de concepto de las funcionalidades básicas del Modelo Conversacional de Wave, pudiendo gesionar waves, usuarios y extensiones. Actualmente cualquiera puede descargar y desplegar WIAB en su ordenador siguiendo los pasos que nos proporcionan en su wiki \cite{ref:wave_in_a_box_wiki}. La aplicación se distribuye en forma de código fuente, accesible entre otras formas desde su repositorio de GitHub \cite{ref:wave_in_a_box_github}. Existen asimismo servidores de prueba ya desplegados en Internet sobre los que se puede observar el funcionamiento de WIAB \cite{ref:wave_in_a_box_server}.
    		
-	\begin{figure}[H]
+	\begin{figure}[!]
       \centering
 		\includegraphics[keepaspectratio, scale=0.3]{Media/Captures/WIAB_Server.png}
       \caption{Cliente Wave In A Box}
@@ -70,7 +70,7 @@ De esta manera, primero se verán las principales herramientas de desarrollo (AP
 	
 	Google Docs \cite{ref:google_docs} es la plataforma de Google para edición de documentos de forma colaborativa y en Tiempo Real usando su API Realtime (Ver Sección \ref{sssec:googleAPI}). Permite que varios usuarios con cuenta de Google creen y editen colaborativamente un documento a la vez. Puedes ver los cursores de cada usuario e interactuar con ellos mediante un chat. También permite escribir sugerencias a modo de notas en el margen sobre lo ya escrito. Dispone de versión web y móvil, pudiendo interactuar entre ellas sin problemas.
 	
-	\begin{figure}[H]
+	\begin{figure}[!]
         \centering
         \begin{subfigure}[b]{0.6\textwidth}
                 \includegraphics[width=\textwidth, height=6cm]{Media/Captures/googleDocsWeb.png}
@@ -90,7 +90,7 @@ De esta manera, primero se verán las principales herramientas de desarrollo (AP
 	
 	Etherpad \cite{ref:etherpad} es un editor colaborativo en tiempo real de Software Libre (bajo licencia Apache 2.0). Permite a varios autores editar a la vez un mismo documento de texto, resaltando en distintos colores lo editado por cada persona y con la opción de un chat para comunicarse entre sí. Existen múltiples servicios que hacen uso de este editor, siendo uno de las más conocidas TitanPad \cite{ref:titanpad}.
 	
-	\begin{figure}[H]
+	\begin{figure}[!]
 		\centering
 			\includegraphics[keepaspectratio, scale=0.30]{Media/Captures/titanpadWeb.png}
 		\caption{Captura de TitanPad: Ejemplo de uso de EtherPad}
@@ -101,7 +101,7 @@ De esta manera, primero se verán las principales herramientas de desarrollo (AP
 	
 	Colorillo \cite{ref:colorillo} es una aplicación web básica de dibujo colaborativo en tiempo real. Cualquier usuario puede empezar a dibujar sobre un nuevo lienzo en blanco con diversos colores y compartir este lienzo con otros usuarios para dibujar entre todos. De cada usuario podemos ver su procedencia aproximada sobre un mapa y el color que actualmente está utilizando. Existe también opción para chatear con otros usuarios. Los dibujos se pueden descargar y tienen todos licencia Creative Commons BY 3.0.
 	
-	\begin{figure}[H]
+	\begin{figure}[!]
 		\centering
 			\includegraphics[keepaspectratio, scale=0.30]{Media/Captures/colorilloWeb.png}
 		\caption{Captura de Colorillo}
@@ -112,7 +112,7 @@ De esta manera, primero se verán las principales herramientas de desarrollo (AP
 	
 	ShareLaTeX \cite{ref:shareLatex} es un editor web colaborativo de documentos escritos en LaTeX en tiempo real. Permite elaborar documentos LaTeX entre varias personas, ofreciendo una interfaz que incluye una previsualización del resultado en PDF. Desde 2014 es Software libre (bajo licencia AGPL v3) y cualquiera puede descargarselo de \textit{GitHub} e instalar su propio servidor (escrito en Node.js) de ShareLaTeX. En su web ofrecen también opciones de pago con extras como un control de versiones o sincronización con Dropbox.
 	
-	\begin{figure}[H]
+	\begin{figure}[!]
 		\centering
 			\includegraphics[keepaspectratio, scale=0.60]{Media/Captures/shareLatexWeb.png}
 		\caption{Captura de ShareLaTeX}
@@ -123,7 +123,7 @@ De esta manera, primero se verán las principales herramientas de desarrollo (AP
 	
 	Samepage \cite{ref:samepage} es una aplicación, tanto para web como para plataformas móviles (Android e iOS), que permite crear documentos que pueden ser editados de forma colaborativa y en tiempo real por múltiples usuarios. Para ello es necesario solo es tener una cuenta de samepage. Tanto el cliente web como el móvil permiten interactuar entre ellos para crear nuevas páginas, editar texto y hacer comentarios, aunque la versión web permite también añadir tablas, imágenes y archivos.
 	
-	\begin{figure}[H]
+	\begin{figure}[!]
         \centering
         \begin{subfigure}[b]{0.6\textwidth}
                 \includegraphics[width=\textwidth, height=6cm]{Media/Captures/samepageWeb.png}
@@ -144,7 +144,7 @@ De esta manera, primero se verán las principales herramientas de desarrollo (AP
 	
 	Quip \cite{ref:quip} es una aplicación para dispositivos móviles (Android e iOS) desarrollada con el objetivo de aumentar la productividad en los trabajos en grupo. Permite elaborar documentos, hojas de cálculo y listas de tareas compartidas y editables de forma colaborativa en tiempo real, pudiendo realizar también comentarios sobre ellas. Dispone también de una versión web, pero es necesario tener cuenta para usarla.
 	
-	\begin{figure}[H]
+	\begin{figure}[!]
         \centering
         \begin{subfigure}[b]{0.3\textwidth}
                 \includegraphics[width=\textwidth]{Media/Captures/quipDesktop.jpg}

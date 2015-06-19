@@ -141,7 +141,7 @@
     
     Para dicha conexión se debía buscar una solución que permitiera al WebSocket responder a eventos del servidor (véase el funcionamiento de WAsync descrito en la Sección \ref{sssec:conWave}) para, mediante callbacks, informar a la aplicación de dichos eventos. \textbf{La solución final encontrada fue combinar el uso de un Thread y un Handler}. El Thread se encarga de crear el socket y configurar su respuesta a eventos en forma de mensajes, que enviará entonces al Handler, encargado de quedar a la espera de recibir estos mensajes de forma asíncrona y llamar al callback adecuado. Esta implementación se puede ver concretamente dentro de la clase WaveSocketWAsync.java, donde se define el Thread llamado WebSocketRunnable y el Handler UIHandler. El siguiente es un esquema en forma de Diagrama de Secuencia de la conexión inicial con WebSocket al servidor Wave:
     
-  \begin{figure}[!]
+  \begin{figure}[H]
    \centering
 	\includegraphics[keepaspectratio, scale=0.43]{Media/Diagrams/waveServerConnectionSequenceDiagram.png}
     \caption{Proceso de conexión WebSocket con Servicio}

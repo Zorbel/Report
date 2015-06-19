@@ -32,6 +32,16 @@
 \newcommand\ant[1]{{\color{green}{#1}}}
 \includeonly{summary, abstract, introduction, artState, methodology, technologies, waveMigration, design, architecture, evaluation, results, conclusions, append} %include archives
 
+\makeatletter % necesario para que reconozca a '@' como carácter normal
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{\z@}{-3.25ex \@plus
+-1ex \@minus -.2ex}{1.5ex \@plus .2ex}{\normalfont\normalsize\bfseries}}
+\makeatother % necesario para que restablezca '@' como carácter especial
+
+\makeatletter % necesario para que reconozca a '@' como carácter normal
+\renewcommand{\subparagraph}{\@startsection{paragraph}{4}{\z@}{-3.25ex \@plus
+-1ex \@minus -.2ex}{1.5ex \@plus .2ex}{\normalfont\normalsize\bfseries}}
+\makeatother % necesario para que restablezca '@' como carácter especial
+
 %\renewcommand{\chaptername}{}
 %\renewcommand{\thechapter}{}
 

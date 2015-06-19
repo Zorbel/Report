@@ -8,26 +8,24 @@ En este capítulo se expondrá el proceso de diseño de la aplicación que hará
 
 Tras haber adaptado (Ver Sección \ref{sec:migration}) la tecnología de Wave/SwellRT a Android que soportaría el núcleo de la aplicación, era hora de decidir qué utilidad se le iba a dar de cara a desarrollar una aplicación Android que hiciera uso de ello. Se decidió tener sobre todo en cuenta estas características que nos ofrecía Wave:
 
- - \textbf{Edición colaborativa.} \\
- - \textbf{Consistencia en Tiempo Real.}
- 
-<<<<<<< HEAD
+\begin{itemize}
+ \item Edición colaborativa.
+ \item Consistencia en Tiempo Real.
+\end{itemize}
+
 \section{Brainstorming de ideas} \label{sec:ideaBrain} 
-=======
-\section{Brainstorming de ideas}  
->>>>>>> 9cd61d373f093d8474d8e150c492c493e49ea39e
 
 Después de considerar posibles ideas de implementaciones que podrían hacer uso de estas características, decidimos realizar una sesión de \textit{brainstorming} junto a nuestros directores de proyecto para identificar ideas potenciales. En esta sesión aparecieron temas tan variados como wikis colaborativas, aplicaciones de inteligencia artificial, aportaciones colaborativas en política, edición de vídeos y música, cursos de formación colaborativos, visualizacion de mapas, etc.
 
-	\begin{figure}[H]
+	\begin{figure}[!]
         \centering
-        \begin{subfigure}[b]{0.7\textwidth}
+        \begin{subfigure}[b]{0.8\textwidth}
                 \includegraphics[width=\textwidth]{Media/Captures/brainstorming.jpg}
                 \caption{Idea de Aplicación}
                 \label{fig:brainstormingApp}
         \end{subfigure}
         ~
-        \begin{subfigure}[b]{0.7\textwidth}
+        \begin{subfigure}[b]{0.8\textwidth}
                 \includegraphics[width=\textwidth]{Media/Captures/appname.jpg}
                 \caption{Posibles Nombres}
                 \label{fig:brainstormingName}
@@ -64,7 +62,7 @@ En este capítulo se desarrollan las fases de la metodología del Diseño Guiado
 
 \subsubsection{Intención Inicial: Prototipo básico}  
 
-\underline{Programas electorales}
+\paragraph{Programas electorales}
 
 Vivimos en una sociedad digital, donde cada vez son más las personas que utilizan sus smartphones para realizar todo tipo de tareas en su vida cotidiana.
 
@@ -74,7 +72,7 @@ Además también intentaríamos darle una estructura a estos programas, de maner
 
 En definitiva, queríamos crear un espacio donde poder informarse sobre las distintas ofertas electorales y poder debatir sobre las propuestas que propone cada formación política, todo ello en forma una aplicación que podremos consultar en cualquier momento. 
 
-\underline{Propuestas y Wave}
+\paragraph{Propuestas y Wave}
 
 Por otro lado,y en línea con los últimos movimientos políticos ciudadanos, pretendíamos crear también un portal de propuestas ciudadanas en el móvil. Los usuarios podrían visualizar las propuestas de otros usuarios y tener la posibilidad de crear nuevas propuestas. Además, como queríamos aprovechar las características de la migración de Wave previamente desarrollada, pensamos en la posibilidad de elaborar estas propuestas de forma colaborativa y en tiempo real entre muchos usuarios.
 
@@ -227,14 +225,14 @@ En las figuras \ref{fig:studentPerson} y \ref{fig:activistPerson} se exponen una
 
 	\begin{figure}[H]
       \centering
-	\includegraphics[keepaspectratio, scale=0.45]{Media/Captures/person1.png}
+	\includegraphics[keepaspectratio, scale=0.5]{Media/Captures/person1.png}
       \caption{Estudiante universitario}
       \label{fig:studentPerson}
     \end{figure}
     
 	\begin{figure}[H]
       \centering
-	\includegraphics[keepaspectratio, scale=0.45]{Media/Captures/person2.png}
+	\includegraphics[keepaspectratio, scale=0.5]{Media/Captures/person2.png}
       \caption{Activista político}
       \label{fig:activistPerson}
     \end{figure}
@@ -419,7 +417,7 @@ El proceso de desarrollo de bocetos se ha realizado en espiral, de tal forma que
   
 De esta forma tuvimos que dar un total de tres vueltas a nuestro modelo en espiral para completar el desarrollo.
 
-\begin{enumerate}
+\begin{enumerate}[label=\textbf{\arabic*})]
  \item \textbf{Programas Políticos}
  
  En la figura \ref{fig:protPrograms} se pueden observar los primeros bocetos que definían la interacción de la visualización de los programas políticos:

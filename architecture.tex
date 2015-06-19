@@ -68,7 +68,7 @@ La arquitectura de DemoCritics está compuesta por cuatro módulos principales d
 
 \begin{figure}[H]
 \centering
-\includegraphics[keepaspectratio, scale=0.55]{Media/Diagrams/generalArchitectureDiagram.png}
+\includegraphics[keepaspectratio, scale=0.65]{Media/Diagrams/generalArchitectureDiagram.png}
 \caption{Arquitectura general de la aplicación.}
 \label{fig:architecture}
 \end{figure}
@@ -136,7 +136,7 @@ DELETE         & Borrar          & DELETE    & Eliminar un recurso almacenado en
 
 Dependiendo de las peticiones que se realicen al servicio mediante el protocolo HTTP, el servidor devolverá un código de estado para obtener \textit{feedback} de lo sucedido. Por tanto se distinguirán diferentes códigos de estado cuando se quiera obtener un recurso, actualizar un recurso, crear uno nuevo o borrarlo. En la siguiente tabla se definen los códigos de estado que puede devolver el servidor en función de las peticiones.
 
-\begin{table}[!]
+\begin{table}[H]
 \begin{tabular}{|c|c|m{7.5cm}|}
 \hline
 {\bf Petición} & {\bf Status Code} & \multicolumn{1}{c|}{{\bf Descripción}}                         \\ \hline
@@ -387,7 +387,7 @@ Con el objetivo de no repetir código se decidió estructurar el esquema de peti
 		
 		En SwellRT se accede a estos objetos a partir del identificador que se les otorgue al crearlos. En este caso se creará dentro de cada wave dos TextTypes con identificadores "howProp" y "costProp" para cada uno de los textos colaborativos antes mencionados. Asímismo, cada propuesta tendrá asociada una wave con un identificador único generado por el servidor al crearse la wave. Este identificador será el que se guarde en la base de datos para que cualquier usuario pueda acceder a la edición colaborativa de la propuesta. El siguiente es un esquema del uso de SwellRT en el proyecto.
 		
-	\begin{figure}[H]
+	\begin{figure}[!]
 	  \centering
 	    \includegraphics[keepaspectratio, scale=0.5]{Media/Diagrams/collaborativeProposalDiagram.png}
 	  \caption{Esquema de Uso de Wave/SwellRT}
